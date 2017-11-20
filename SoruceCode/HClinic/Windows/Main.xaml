@@ -1,0 +1,56 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HClinic.Windows"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="HClinic.Windows.Main"
+        mc:Ignorable="d"
+        Title="Main" Height="408.737" Width="546.602" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Background="{x:Null}" WindowState="Maximized" WindowStyle="None">
+    <Grid Background="{StaticResource backgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" x:Name="GridRowTop" MouseDown="GridRowTop_MouseDown"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Background="{StaticResource foregroundBrush}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*" />
+                <ColumnDefinition Name="gridTitle" Width="0.8*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Horizontal">
+                <Label x:Name="btnClose" Style="{StaticResource FontAwesome}" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Content="&#xF00D;" FontSize="20" Cursor="Hand" MouseLeftButtonUp="btnClose_MouseLeftButtonUp" Margin="5"/>
+                <Label x:Name="btnMaximize" Style="{StaticResource FontAwesome}" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Content="&#xf2d0;" FontSize="20" Cursor="Hand" MouseLeftButtonUp="btnMaximize_MouseLeftButtonUp" Margin="5"/>
+                <Label x:Name="btnMinmize" Style="{StaticResource FontAwesome}" Height="Auto" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Content="&#xF2D1;" FontSize="20" Cursor="Hand" MouseLeftButtonUp="btnMinmize_MouseLeftButtonUp" Margin="5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="5">
+                <Label x:Name="lblTitle" Content="HClinic" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontFamily="Calibri" FontSize="16"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="1" FlowDirection="RightToLeft">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*" MaxWidth="200" MinWidth="150"/>
+                <ColumnDefinition Width="0.75*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Background="#CCC">
+                <StackPanel Name="btnHome" Cursor="Hand" Orientation="Horizontal" MouseLeftButtonUp="btnHome_MouseLeftButtonUp" Margin="2">
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf015;" VerticalContentAlignment="Center" FontSize="25"/>
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiBold}" Content="الرئيسية" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+                </StackPanel>
+                <StackPanel Name="btnClients" Cursor="Hand" Orientation="Horizontal" MouseLeftButtonUp="btnClients_MouseLeftButtonUp" Margin="2">
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf0c0;" VerticalContentAlignment="Center" FontSize="25"/>
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiBold}" Content="المراجعين" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+                </StackPanel>
+                <StackPanel Name="btnSettings" Cursor="Hand" Orientation="Horizontal" MouseLeftButtonUp="btnSettings_MouseLeftButtonUp" Margin="2">
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf085;" VerticalContentAlignment="Center" FontSize="25"/>
+                    <Label Foreground="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiBold}" Content="الأعدادات" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="100"/>
+                </StackPanel>
+            </StackPanel>
+            <Grid Grid.Column="1" Name="GridContent">
+
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="2" Background="{StaticResource foregroundBrush}"/>
+    </Grid>
+</Window>

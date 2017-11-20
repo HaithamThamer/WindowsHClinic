@@ -1,0 +1,34 @@
+﻿<Application x:Class="HClinic.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <Style x:Key="DroidKufiRegular">
+            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Assets/Fonts/#Droid Arabic Kufi" />
+        </Style>
+        <Style x:Key="FontAwesome">
+            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Assets/Fonts/#FontAwesome" />
+        </Style>
+        <Style x:Key="DroidKufiBold">
+            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Assets/Fonts/#Droid Arabic Kufi Bold" />
+        </Style>
+        <Style x:Key="myButton" TargetType="{x:Type StackPanel}">
+            <Setter Property="Background" Value="Red" />
+            <Style.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="Blue"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+        <Color x:Key="backgroundColor" A="255" R="241" G="241" B="241" />
+        <Color x:Key="foregroundColor" A="255" R="75" G="89" B="66" />
+        <Color x:Key="error" A="255" R="89" G="34" B="34"/>
+        <Color x:Key="note" A="255" R="196" G="193" B="41"/>
+        <Color x:Key="borderColor" A="255" R="204" G="204" B="204"/>
+        <SolidColorBrush x:Key="backgroundBrush" Color="{StaticResource backgroundColor}"/>
+        <SolidColorBrush x:Key="foregroundBrush" Color="{StaticResource foregroundColor}"/>
+        <SolidColorBrush x:Key="errorBrush" Color="{StaticResource error}"/>
+        <SolidColorBrush x:Key="noteBrush" Color="{StaticResource note}"/>
+        <SolidColorBrush x:Key="borderBrush" Color="{StaticResource borderColor}"/>
+    </Application.Resources>
+</Application>
