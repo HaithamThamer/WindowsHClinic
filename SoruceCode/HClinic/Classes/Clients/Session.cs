@@ -1,0 +1,58 @@
+﻿using HClinic.Classes.Users;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HClinic.Classes.Clients
+{
+    public class Session
+    {
+        public int id;
+        public Client client;
+        public User user;
+        public DateTime creation;
+        public int bloodPressureTop;
+        public int bloodPressureBottom;
+        public int sugar;
+        public int weight;
+        public string note;
+        public Session()
+        {
+
+        }
+        public Session(int id,Client client,User user,DateTime creation,int bloodPressureTop,int bloodPressureBottom, int sugar,int weight, string note)
+        {
+            this.id = id;
+            this.client = client;
+            this.user = user;
+            this.creation = creation;
+            this.bloodPressureTop = bloodPressureTop;
+            this.bloodPressureBottom = bloodPressureBottom;
+            this.sugar = sugar;
+            this.weight = weight;
+            this.note = note;
+        }
+        public static List<Session> get()
+        {
+            List<Session> sessions = new List<Session>();
+            System.Data.DataTable dt = App.databasceConnection.query(string.Format(""));
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                sessions.Add(new Session(
+                    int.Parse(dt.Rows[i]["id"].ToString()),
+                    new Client(),
+                    new User(),
+                    DateTime.Parse(dt.Rows[i]["creation"].ToString()),
+                    int.Parse(dt.Rows[i]["blood_pressure_top"].ToString()),
+                    int.Parse(dt.Rows[i]["blood_pressure_bottom"].ToString()),
+                    int.Parse(dt.Rows[i]["sugar"].ToString()),
+                    int.Parse(dt.Rows[i]["weight"].ToString()),
+                    dt.Rows[i]["note"].ToString()
+                    ));
+            }
+            return sessions;
+        }
+    }
+}

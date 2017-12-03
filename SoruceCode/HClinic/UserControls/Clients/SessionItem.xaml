@@ -1,0 +1,171 @@
+﻿<UserControl x:Class="HClinic.UserControls.Clients.SessionItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HClinic.UserControls.Clients"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="500" FlowDirection="RightToLeft" Margin="5" Padding="5" >
+    <Border Background="#fff" BorderBrush="#ccc" BorderThickness="1">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" Margin="5" BorderBrush="#ccc" BorderThickness="0,0,1,0">
+                    <StackPanel  Orientation="Vertical">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf007;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="أسم المراجع"/>
+                                </DockPanel>
+                                <Label Name="lblClientName" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf095;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="الهاتف"/>
+                                </DockPanel>
+                                <Label Name="lblClientPhone" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf1fd;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="المواليد"/>
+                                </DockPanel>
+                                <Label Name="lblClientBirthday" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf271;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ أنشاء الموعد"/>
+                                </DockPanel>
+                                <Label Name="lblDateCreation" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf073;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ الجلسة"/>
+                                </DockPanel>
+                                <Label Name="lblSessionDate" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf073;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ الموعد"/>
+                                </DockPanel>
+                                <Label Name="lblDateDateTime" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                        </Grid>
+
+
+                    </StackPanel>
+                </Border>
+                <Border Grid.Column="1" Margin="5" BorderBrush="#ccc" BorderThickness="0,0,0,0">
+                    <StackPanel  Orientation="Vertical">
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf066;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="الضغط"/>
+                                </DockPanel>
+
+                                <Label Name="lblSessionBloodPressure" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0" FlowDirection="LeftToRight"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf21e;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="السكر"/>
+                                </DockPanel>
+                                <Label Name="lblSessionSugar" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0" FlowDirection="LeftToRight"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf01c;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="الوزن"/>
+                                </DockPanel>
+                                <Label Name="lblSessionWeight" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0" FlowDirection="LeftToRight"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf1fd;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="معلومة 1"/>
+                                </DockPanel>
+                                <Label Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf271;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="معلومة 2"/>
+                                </DockPanel>
+                                <Label Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf249;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="ملاحظة"/>
+                                </DockPanel>
+                                <Label Name="lblSessionNote" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+
+                        </Grid>
+
+
+                    </StackPanel>
+                </Border>
+            </Grid>
+            <DockPanel Grid.Row="1" LastChildFill="False">
+                <StackPanel DockPanel.Dock="Left" Cursor="Hand" Margin="5,0" Name="btnPrint" MouseLeftButtonUp="btnPrint_MouseLeftButtonUp" Orientation="Horizontal">
+                    <Label Name="btnPrintIcon" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Padding="5" Content="&#xf02f;" />
+                    <Label Name="btnPrintName" Style="{StaticResource DroidKufiBold}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Padding="5" BorderBrush="#ccc" BorderThickness="0,0,1,0" Content="طباعة" />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Left" Cursor="Hand" Margin="5,0" Name="btnRemove" MouseLeftButtonUp="btnRemove_MouseLeftButtonUp" Orientation="Horizontal">
+                    <Label Name="btnRemoveIcon" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Padding="5" Content="&#xf00d;" />
+                    <Label Name="btnRemoveName" Style="{StaticResource DroidKufiBold}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Padding="5" BorderBrush="#ccc" BorderThickness="0,0,1,0" Content="حذف" />
+                </StackPanel>
+            </DockPanel>
+        </Grid>
+
+    </Border>
+</UserControl>

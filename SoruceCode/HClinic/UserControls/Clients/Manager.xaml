@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="HClinic.UserControls.Clients.Manager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HClinic.UserControls.Clients"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500" FlowDirection="RightToLeft">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="0,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="الأسم أو رقم الهاتف أو التسلسل" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}"/>
+            <TextBox Name="txtSearch" Grid.Column="1" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" TextChanged="txtSearch_TextChanged"/>
+            <Border Grid.Column="2" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0">
+                <DockPanel Grid.Column="2" LastChildFill="True">
+                    <Label DockPanel.Dock="Left" Style="{StaticResource FontAwesome}" Content="&#xf002;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Cursor="Hand" Padding="5"/>
+                    <Label DockPanel.Dock="Left" Style="{StaticResource DroidKufiRegular}" Content="بحث" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14" Cursor="Hand"/>
+                </DockPanel>
+            </Border>
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel Name="ClientsManagerContent">
+                
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

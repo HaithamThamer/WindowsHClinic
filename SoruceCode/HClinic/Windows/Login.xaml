@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HClinic.Windows"
         xmlns:p="clr-namespace:HClinic.Assets.Languages"
-        mc:Ignorable="d" Height="420.544" Width="325.378" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="{x:Null}">
+        mc:Ignorable="d" Height="420.544" Width="325.378" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="{x:Null}" Title="Login">
     <StackPanel x:Name="stackPanelMain" Orientation="Vertical" Background="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiRegular}">
 
         <StackPanel Orientation="Horizontal" Background="{StaticResource backgroundBrush}"  FlowDirection="RightToLeft">

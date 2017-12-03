@@ -18,6 +18,7 @@ namespace HClinic
         public static HRegsiter.Product registerConnection;
         public static Windows.Main windowMain;
         public Windows.Login windowLogin;
+        public static Classes.Users.User currentUser;
         //public Windows.SubWindows.Splash windowSplash;
         public enum RegisterNames
         {
@@ -39,6 +40,14 @@ namespace HClinic
                     Reception
                 }
             }
+        }
+        public static class Constants
+        {
+            public static string DateFormat { get { return "dd.MM.yyyy"; } }
+            public static string TimeFormat { get { return "hh:mm:ss"; } }
+            public static string DateTimeFormat { get { return "dd.MM.yyyy hh:mm:ss"; } }
+            public static string DateTimeFormatForMySQL { get { return "yyyy-MM-dd hh:mm:ss"; } }
+
         }
         protected override void OnStartup(StartupEventArgs e)
         {

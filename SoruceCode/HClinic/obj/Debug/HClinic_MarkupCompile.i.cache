@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\App.xaml
-9578090579
+121850339818
 42026476411
-201687383090
-27-1153777207
-Windows\Login.xaml;Windows\Main.xaml;Windows\SubWindows\ClientsWindows\Add.xaml;Windows\SubWindows\Confirm.xaml;Windows\UserControls\Clients.xaml;Windows\UserControls\ClientsControls\ClientBox.xaml;Windows\UserControls\ClientsControls\Manager.xaml;Windows\UserControls\Home.xaml;Windows\UserControls\Settings.xaml;
+291061650833
+45-856135845
+UserControls\Clients\ClientViewerItem.xaml;UserControls\Clients\DateItem.xaml;UserControls\Clients\Dates.xaml;UserControls\Clients\Main.xaml;UserControls\Clients\Manager.xaml;UserControls\Clients\ManagerItem.xaml;UserControls\Clients\SessionItem.xaml;UserControls\Clients\Sessions.xaml;Windows\Clients\Add.xaml;Windows\Confirm.xaml;Windows\Login.xaml;Windows\Main.xaml;
 
 True
 

@@ -19,68 +19,103 @@ namespace HClinic.Windows
     /// </summary>
     public partial class Main : Window
     {
-        UserControls.Clients clients;
-        UserControls.Home home;
-        UserControls.Settings settings;
+        UserControls.Clients.Main clientsMian;
         public Main()
         {
             InitializeComponent();
-            home = new UserControls.Home();
-            GridContent.Children.Add(home);
+
+            //set time and date every 1 sec. 
+            System.Windows.Threading.DispatcherTimer dispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            dispatcherTimer.Tick += DispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            dispatcherTimer.Start();
+            
         }
-        private void GridRowTop_MouseDown(object sender, MouseButtonEventArgs e)
+
+        private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
+            lblDate.Content = DateTime.Now.ToString(App.Constants.DateTimeFormat);
+        }
+
+        private void btnClose_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (new Confirm("","").ShowDialog() == true)
+            {
+                this.Close();
+            }
+        }
+        private void btnMaximize_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (this.WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = WindowState.Maximized;
+            }
+        }
+        private void btnMinimize_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void lblTitle_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+            }
             if (e.ChangedButton == MouseButton.Left)
             {
                 this.DragMove();
             }
         }
-        private void btnClose_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+
+        private void btnShortcutOne_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (new SubWindows.Confirm("الخروج من النظام", "هل تود بالفعل الخروج من النظام؟", "errorBrush").ShowDialog() == true)
-            {
-                this.Close();
-            }
+
         }
-        private void btnMinmize_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+
+        private void btnShortcutTwo_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            this.WindowState = WindowState.Minimized;
+
         }
+
+        private void btnShortcutThree_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void btnShortcutFour_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //set user name in footer
+            lblUsername.Content = App.currentUser.name;
+        }
+
         private void btnHome_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            GridContent.Children.Clear();
-            GridContent.Children.Add(home);
+
         }
-        private void btnMaximize_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (this.WindowState == WindowState.Normal)
-            {
-                this.WindowState = WindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = WindowState.Normal;
-            }
-        }
+
         private void btnClients_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            GridContent.Children.Clear();
-            if (clients == null)
+            MainContent.Children.Clear();
+            if (clientsMian == null)
             {
-                clients = new UserControls.Clients();
-                clients.Height = Double.NaN;
-                clients.Width = Double.NaN;
+                clientsMian = new UserControls.Clients.Main(this);
             }
-            GridContent.Children.Add(clients);
+            MainContent.Children.Add(clientsMian);
         }
+
         private void btnSettings_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            GridContent.Children.Clear();
-            if (settings == null)
-            {
-                settings = new UserControls.Settings();
-            }
-            GridContent.Children.Add(settings);
+
         }
     }
 }

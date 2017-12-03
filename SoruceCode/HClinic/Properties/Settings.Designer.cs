@@ -22,17 +22,5 @@ namespace HClinic.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int userId {
-            get {
-                return ((int)(this["userId"]));
-            }
-            set {
-                this["userId"] = value;
-            }
-        }
     }
 }

@@ -1,0 +1,39 @@
+﻿<Window x:Class="HClinic.Windows.Confirm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HClinic.Windows"
+        mc:Ignorable="d"
+        Title="Confirm" Height="300" Width="300" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" Margin="5" FlowDirection="RightToLeft" AllowsTransparency="True">
+    <Border Margin="5">
+        <Border.Effect>
+            <DropShadowEffect Direction="0" RenderingBias="Quality" Color="Black" ShadowDepth="0" />
+        </Border.Effect>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <DockPanel Name="TitleBar" Grid.Row="0" Background="{StaticResource foregroundBrush}" LastChildFill="True">
+                <Label Name="btnCloseSmall" DockPanel.Dock="Right" Style="{StaticResource FontAwesome}" Content="&#xf00d;" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Cursor="Hand" MouseLeftButtonUp="btnCloseLarge_MouseLeftButtonUp"/>
+                <Label Name="lblTitle" DockPanel.Dock="Right" Style="{StaticResource DroidKufiRegular}" Content="lblTitle" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" MouseDown="lblTitle_MouseDown"/>
+
+            </DockPanel>
+            <Grid Name="MainContent" Grid.Row="1" Background="{StaticResource backgroundBrush}">
+                <Label Content="&#xf128;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="182" Width="112" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource foregroundBrush}" FontSize="100" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,2,0"/>
+                <TextBlock Name="txtDescription" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Margin="127,10,0,0" Text="txtDescription" VerticalAlignment="Top" Width="155" Height="182" Foreground="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiRegular}"/>
+
+            </Grid>
+            <Grid Name="Buttons" Grid.Row="2" Background="{StaticResource foregroundBrush}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Label Name="btnDone" Grid.Column="0" Style="{StaticResource FontAwesome}" Content="&#xf00c;" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" MouseLeftButtonUp="btnDone_MouseLeftButtonUp" Cursor="Hand"/>
+                <Label Name="btnCloseLarge" Grid.Column="1" Style="{StaticResource FontAwesome}" Content="&#xf00d;" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" MouseLeftButtonUp="btnCloseLarge_MouseLeftButtonUp" Cursor="Hand"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

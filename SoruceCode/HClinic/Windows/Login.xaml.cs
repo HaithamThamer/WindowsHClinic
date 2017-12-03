@@ -40,7 +40,7 @@ namespace HClinic.Windows
 
         private void btnClose_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (new SubWindows.Confirm("الخروج من النظام","هل تود بالفعل الخروج من النظام؟", "errorBrush").ShowDialog() == true)
+            if (new Confirm("الخروج من النظام","هل تود بالفعل الخروج من النظام؟").ShowDialog() == true)
             {
                 this.Close();
             }
@@ -54,12 +54,19 @@ namespace HClinic.Windows
             }
             bool isLogin = false;
             HDatabaseConnection.HMySQLConnection db = App.databasceConnection;
-            DataTable dt = App.databasceConnection.query(string.Format("select id from tbl_users where tbl_users.name = '{0}' and tbl_users.password = md5('{1}')", txtUsername.Text, txtPassword.Password));
+            DataTable dt = App.databasceConnection.query(string.Format("select * from tbl_users where tbl_users.name = '{0}' and tbl_users.password = md5('{1}')", txtUsername.Text, txtPassword.Password));
             isLogin = dt.Rows.Count > 0;
 
             if (isLogin)
             {
-                Properties.Settings.Default.userId = int.Parse(dt.Rows[0][0].ToString());
+                App.currentUser = new Classes.Users.User(
+                    int.Parse(dt.Rows[0]["id"].ToString()),
+                    dt.Rows[0]["name"].ToString(),
+                    dt.Rows[0]["password"].ToString(),
+                    dt.Rows[0]["email"].ToString(),
+                    dt.Rows[0]["phone"].ToString(),
+                    (App.Tables.Users.UserTypes)int.Parse(dt.Rows[0]["type"].ToString())
+                    );
                 this.DialogResult = true;
                 this.Close();
             }
