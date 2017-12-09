@@ -25,7 +25,9 @@ namespace HClinic
             ServerIP,
             ServerUsername,
             ServerPassword,
-            DatabaseName
+            DatabaseName,
+            PrinterDefaultOne,
+            LanguageDefault
         }
         public class Tables
         {
@@ -49,6 +51,16 @@ namespace HClinic
             public static string DateTimeFormatForMySQL { get { return "yyyy-MM-dd hh:mm:ss"; } }
 
         }
+        public static class RegisterValues
+        {
+            public static string 
+                serverIP = "",
+                serverUsername = "",
+                serverPassword = "",
+                databaseName = "",
+                printerDefaultOne = "",
+                languageDefault = "";
+        }
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -58,18 +70,33 @@ namespace HClinic
             //});
             //threadSplash.SetApartmentState(ApartmentState.STA);
             //threadSplash.Start();
+
             registerConnection = new HRegsiter.Product(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            registerConnection.setValue((int)RegisterNames.ServerIP, HCrypt.StringCipher.Encrypt("192.168.22.1"));
+
+            //tempraory : set values of register (then must be installed from setup
+            registerConnection.setValue((int)RegisterNames.ServerIP, HCrypt.StringCipher.Encrypt("127.0.0.1"));
             registerConnection.setValue((int)RegisterNames.ServerUsername, HCrypt.StringCipher.Encrypt("root"));
             registerConnection.setValue((int)RegisterNames.ServerPassword, HCrypt.StringCipher.Encrypt("123123"));
             registerConnection.setValue((int)RegisterNames.DatabaseName, HCrypt.StringCipher.Encrypt("db_h_clinic"));
+            registerConnection.setValue((int)RegisterNames.PrinterDefaultOne, HCrypt.StringCipher.Encrypt("Adobe PDF"));
+            registerConnection.setValue((int)RegisterNames.LanguageDefault, HCrypt.StringCipher.Encrypt("ar-IQ"));
+
+            //Get register values
+            RegisterValues.serverIP = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerIP));
+            RegisterValues.serverUsername = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerUsername));
+            RegisterValues.serverPassword = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerPassword));
+            RegisterValues.databaseName = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.DatabaseName));
+            RegisterValues.printerDefaultOne = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.PrinterDefaultOne));
+            RegisterValues.languageDefault = HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.LanguageDefault));
+
+            //Create database connection
             try
             {
                 databasceConnection = new HDatabaseConnection.HMySQLConnection(
-                HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerIP)),
-                HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerUsername)),
-                HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.ServerPassword)),
-                HCrypt.StringCipher.Decrypt(registerConnection.getValue((int)RegisterNames.DatabaseName))
+                RegisterValues.serverIP,
+                RegisterValues.serverUsername,
+                RegisterValues.serverPassword,
+                RegisterValues.databaseName
                 );
             }
             catch (Exception)
@@ -77,9 +104,13 @@ namespace HClinic
 
                 throw;
             }
-            windowMain = new HClinic.Windows.Main();
+
+            //set default language
+            HClinic.Assets.Languages.Default.Culture = new System.Globalization.CultureInfo("it-IT");
+
             windowLogin = (e.Args.Length > 0 ? new HClinic.Windows.Login(e.Args[0],e.Args[1]) : new HClinic.Windows.Login());
-            
+            windowMain = new Windows.Main();
+
             if (windowLogin.ShowDialog() == true)
             {
                 windowMain.ShowDialog();

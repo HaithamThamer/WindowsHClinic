@@ -29,8 +29,8 @@ namespace HClinic.Windows.Clients
             if (id != -1)
             {
                 System.Data.DataTable dt = App.databasceConnection.query(string.Format("select * from tbl_clients where id = '{0}';", id));
-                lblTitle.Content = "تعديل المراجع - " + dt.Rows[0]["name"];
-                lblAdd.Content = "تعديل";
+                lblClientAddTitle.Content = "تعديل المراجع - " + dt.Rows[0]["name"];
+                btnAddName.Content = "تعديل";
                 txtAddress.Text = dt.Rows[0]["address"].ToString();
                 txtBirthday.Text = dt.Rows[0]["birthday"].ToString();
                 txtJob.Text = dt.Rows[0]["job"].ToString();
@@ -97,12 +97,12 @@ namespace HClinic.Windows.Clients
 
         private void changeChecked_Checked(object sender, RoutedEventArgs e)
         {
-            isActive.Content = "فعال";
+            isActive.Content = "Active";
         }
 
         private void changeChecked_Unchecked(object sender, RoutedEventArgs e)
         {
-            isActive.Content = "غير فعال";
+            isActive.Content = "Non-Active";
         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="500" FlowDirection="RightToLeft" Margin="5" Padding="5" >
+             d:DesignHeight="250" d:DesignWidth="500" FlowDirection="LeftToRight" Margin="5" Padding="5" >
     <Border Background="#fff" BorderBrush="#ccc" BorderThickness="1">
         <Grid>
             <Grid.RowDefinitions>
@@ -54,14 +54,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <DockPanel>
-                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf271;"/>
-                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ أنشاء الموعد"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf224;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="الجنس"/>
                                 </DockPanel>
-                                <Label Name="lblDateCreation" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                                <Label Name="lblClientGender" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
                             </StackPanel>
                         </Grid>
                         <Grid>
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
                                 <ColumnDefinition />
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
@@ -75,7 +76,15 @@
                             <StackPanel Grid.Column="1" Orientation="Vertical">
                                 <DockPanel>
                                     <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf073;"/>
-                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ الموعد"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ اخر جلسة"/>
+                                </DockPanel>
+                                <Label Name="lblLastSession" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2" Orientation="Vertical">
+                                <DockPanel>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf073;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="تاريخ اخر موعد"/>
                                 </DockPanel>
                                 <Label Name="lblDateDateTime" Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
                             </StackPanel>
@@ -123,7 +132,7 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Column="0" Orientation="Vertical">
                                 <DockPanel>
-                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf1fd;"/>
+                                    <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  FontSize="12" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf224;"/>
                                     <Label DockPanel.Dock="Left" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"    FontSize="9" Style="{StaticResource DroidKufiRegular}" Content="معلومة 1"/>
                                 </DockPanel>
                                 <Label Style="{StaticResource DroidKufiRegular}" Content="1" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0"/>
@@ -163,6 +172,10 @@
                 <StackPanel DockPanel.Dock="Left" Cursor="Hand" Margin="5,0" Name="btnRemove" MouseLeftButtonUp="btnRemove_MouseLeftButtonUp" Orientation="Horizontal">
                     <Label Name="btnRemoveIcon" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Padding="5" Content="&#xf00d;" />
                     <Label Name="btnRemoveName" Style="{StaticResource DroidKufiBold}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Padding="5" BorderBrush="#ccc" BorderThickness="0,0,1,0" Content="حذف" />
+                </StackPanel>
+                <StackPanel DockPanel.Dock="Left" Cursor="Hand" Margin="5,0" Name="btnDocuments" MouseLeftButtonUp="btnDocuments_MouseLeftButtonUp" Orientation="Horizontal">
+                    <Label Name="btnDocumentsIcon" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Padding="5" Content="&#xf15c;" />
+                    <Label Name="btnDocumentsName" Style="{StaticResource DroidKufiBold}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Padding="5" BorderBrush="#ccc" BorderThickness="0,0,1,0" Content="المستندات" />
                 </StackPanel>
             </DockPanel>
         </Grid>

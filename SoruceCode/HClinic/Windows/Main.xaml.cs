@@ -19,7 +19,10 @@ namespace HClinic.Windows
     /// </summary>
     public partial class Main : Window
     {
-        UserControls.Clients.Main clientsMian;
+        UserControls.Clients.Main clientMain;
+        UserControls.Home.Main homeMain;
+        UserControls.Settings.Main settingsMain;
+        UserControls.AssistantDoctor.Main assistantDoctorMain;
         public Main()
         {
             InitializeComponent();
@@ -29,7 +32,10 @@ namespace HClinic.Windows
             dispatcherTimer.Tick += DispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
             dispatcherTimer.Start();
+
+            //set home as main for specfic user
             
+
         }
 
         private void DispatcherTimer_Tick(object sender, EventArgs e)
@@ -41,6 +47,7 @@ namespace HClinic.Windows
         {
             if (new Confirm("","").ShowDialog() == true)
             {
+                this.DialogResult = true;
                 this.Close();
             }
         }
@@ -100,22 +107,74 @@ namespace HClinic.Windows
 
         private void btnHome_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            MainContent.Children.Clear();
+            if (homeMain == null)
+            {
+                homeMain = new UserControls.Home.Main(this);
+            }
+            MainContent.Children.Add(homeMain);
         }
 
         private void btnClients_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             MainContent.Children.Clear();
-            if (clientsMian == null)
+            if (clientMain == null)
             {
-                clientsMian = new UserControls.Clients.Main(this);
+                clientMain = new UserControls.Clients.Main(this);
             }
-            MainContent.Children.Add(clientsMian);
+            MainContent.Children.Add(clientMain);
         }
 
         private void btnSettings_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
+            MainContent.Children.Clear();
+            if (settingsMain == null)
+            {
+                settingsMain = new UserControls.Settings.Main(this);
+            }
+            MainContent.Children.Add(settingsMain);
+        }
 
+        private void btnAssistantDoctor_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            MainContent.Children.Clear();
+            if (assistantDoctorMain == null)
+            {
+                assistantDoctorMain = new UserControls.AssistantDoctor.Main(this);
+            }
+            MainContent.Children.Add(assistantDoctorMain);
+        }
+
+        private void btnDoctor_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+        bool isFirst = true;
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            if (isFirst)
+            {
+                switch (App.currentUser.type)
+                {
+                    case App.Tables.Users.UserTypes.Guest:
+                        break;
+                    case App.Tables.Users.UserTypes.Admin:
+
+                        break;
+                    case App.Tables.Users.UserTypes.Assistant:
+                        btnAssistantDoctor_MouseLeftButtonUp(null, null);
+                        break;
+                    case App.Tables.Users.UserTypes.Doctor:
+                        btnDoctor_MouseLeftButtonUp(null, null);
+                        break;
+                    case App.Tables.Users.UserTypes.Reception:
+                        btnHome_MouseLeftButtonUp(null, null);
+                        break;
+                    default:
+                        break;
+                }
+                isFirst = false;
+            }
         }
     }
 }

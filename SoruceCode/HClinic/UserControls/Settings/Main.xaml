@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="HClinic.UserControls.Settings.Main"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HClinic.UserControls.Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500" FlowDirection="LeftToRight" Margin="5" Padding="5">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="{StaticResource foregroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource FontAwesome}" FontSize="18" Content="&#xf0c1;" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource DroidKufiBold}" FontSize="18" Content="أعدادات الشبكة" />
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <Grid Background="{StaticResource backgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0a3;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="عنوان السيرفر" />
+                        <TextBox Name="txtServerIP" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Style="{StaticResource DroidKufiRegular}" />
+                    </Grid>
+                    <Grid Background="{StaticResource backgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0a3;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="أسم المستخدم" />
+                        <TextBox Name="txtServerUsername" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Style="{StaticResource DroidKufiRegular}" />
+                    </Grid>
+                    <Grid Background="{StaticResource backgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0a3;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="كلمة المرور" />
+                        <PasswordBox Name="txtServerPasseword" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Style="{StaticResource DroidKufiRegular}" />
+                    </Grid>
+                    <Grid Background="{StaticResource backgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0a3;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="قاعدة البيانات" />
+                        <TextBox Name="txtDatabaseName" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Style="{StaticResource DroidKufiRegular}" />
+                    </Grid>
+                    <Grid Name="btnServerApply" MouseLeftButtonUp="btnServerApply_MouseLeftButtonUp" Background="{StaticResource foregroundBrush}" Cursor="Hand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf00c;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}" Content="تطبيق" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Grid Margin="0,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="{StaticResource foregroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource FontAwesome}" FontSize="18" Content="&#xf02f;" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource DroidKufiBold}" FontSize="18" Content="أعدادات شريحة الرسائل" />
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    
+                    <Grid Background="{StaticResource foregroundBrush}" Cursor="Hand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf00c;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}" Content="تطبيق" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0" Background="{StaticResource foregroundBrush}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource FontAwesome}" FontSize="18" Content="&#xf02f;" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource DroidKufiBold}" FontSize="18" Content="أعدادات الطباعة" />
+                </Grid>
+                <StackPanel Grid.Row="1" Orientation="Vertical">
+                    <Grid Background="{StaticResource backgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30" />
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0a3;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="الطابعة الحرارية" />
+                        <ComboBox Name="cmbHeaterPrinter" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Style="{StaticResource DroidKufiRegular}" />
+                    </Grid>
+                    <Grid Name="btnPrinterApply" MouseLeftButtonUp="btnPrinterApply_MouseLeftButtonUp" Background="{StaticResource foregroundBrush}" Cursor="Hand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf00c;" />
+                        <Label Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}" Content="تطبيق" />
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

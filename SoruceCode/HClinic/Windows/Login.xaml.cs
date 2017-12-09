@@ -70,7 +70,10 @@ namespace HClinic.Windows
                 this.DialogResult = true;
                 this.Close();
             }
-            lblNote.Content = "أسم المستخدم او كلمة المرور خاطئة";
+            else
+            {
+                lblNote.Content = "أسم المستخدم او كلمة المرور خاطئة";
+            }
         }
 
         private void txtPassword_KeyDown(object sender, KeyEventArgs e)

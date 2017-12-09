@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HClinic.Windows"
         mc:Ignorable="d"
-        Title="Confirm" Height="300" Width="300" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" Margin="5" FlowDirection="RightToLeft" AllowsTransparency="True">
+        Title="Confirm" Height="300" Width="300" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" Margin="5" FlowDirection="LeftToRight" AllowsTransparency="True">
     <Border Margin="5">
         <Border.Effect>
             <DropShadowEffect Direction="0" RenderingBias="Quality" Color="Black" ShadowDepth="0" />

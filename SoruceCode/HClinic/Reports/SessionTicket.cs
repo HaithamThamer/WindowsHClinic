@@ -13,6 +13,7 @@ namespace HClinic.Reports
         {
             InitializeComponent();
             this.client = client;
+            this.PrinterName = App.RegisterValues.printerDefaultOne;
             lblSessionId.Text = cardNumber.ToString();
             lblSessionIdBarcode.Text = lblSessionId.Text;
             lblClientName.Text = client.name;

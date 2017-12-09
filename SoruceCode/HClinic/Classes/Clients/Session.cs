@@ -12,27 +12,33 @@ namespace HClinic.Classes.Clients
         public int id;
         public Client client;
         public User user;
+        public int cardNumber;
         public DateTime creation;
         public int bloodPressureTop;
         public int bloodPressureBottom;
         public int sugar;
         public int weight;
         public string note;
+        public DateTime lastDate;
+        public DateTime lastSession;
         public Session()
         {
 
         }
-        public Session(int id,Client client,User user,DateTime creation,int bloodPressureTop,int bloodPressureBottom, int sugar,int weight, string note)
+        public Session(int id,Client client,User user,int cardNumber,DateTime creation,int bloodPressureTop,int bloodPressureBottom, int sugar,int weight,DateTime lastDate,DateTime lastSession, string note)
         {
             this.id = id;
             this.client = client;
             this.user = user;
+            this.cardNumber = cardNumber;
             this.creation = creation;
             this.bloodPressureTop = bloodPressureTop;
             this.bloodPressureBottom = bloodPressureBottom;
             this.sugar = sugar;
             this.weight = weight;
             this.note = note;
+            this.lastDate = lastDate;
+            this.lastSession = lastSession;
         }
         public static List<Session> get()
         {
@@ -40,17 +46,18 @@ namespace HClinic.Classes.Clients
             System.Data.DataTable dt = App.databasceConnection.query(string.Format(""));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                sessions.Add(new Session(
-                    int.Parse(dt.Rows[i]["id"].ToString()),
-                    new Client(),
-                    new User(),
-                    DateTime.Parse(dt.Rows[i]["creation"].ToString()),
-                    int.Parse(dt.Rows[i]["blood_pressure_top"].ToString()),
-                    int.Parse(dt.Rows[i]["blood_pressure_bottom"].ToString()),
-                    int.Parse(dt.Rows[i]["sugar"].ToString()),
-                    int.Parse(dt.Rows[i]["weight"].ToString()),
-                    dt.Rows[i]["note"].ToString()
-                    ));
+                //sessions.Add(new Session(
+                //    int.Parse(dt.Rows[i]["id"].ToString()),
+                //    new Client(),
+                //    new User(),
+                //    int.Parse(dt.Rows[i]["card_number"].ToString()),
+                //    DateTime.Parse(dt.Rows[i]["creation"].ToString()),
+                //    int.Parse(dt.Rows[i]["blood_pressure_top"].ToString()),
+                //    int.Parse(dt.Rows[i]["blood_pressure_bottom"].ToString()),
+                //    int.Parse(dt.Rows[i]["sugar"].ToString()),
+                //    int.Parse(dt.Rows[i]["weight"].ToString()),
+                //    dt.Rows[i]["note"].ToString()
+                //    ));
             }
             return sessions;
         }

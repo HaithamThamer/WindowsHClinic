@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="600" FlowDirection="RightToLeft">
+             d:DesignHeight="100" d:DesignWidth="600" FlowDirection="LeftToRight">
     <Border Name="BorderMain" Margin="5" Padding="5" BorderBrush="#ccc" Background="#fff" BorderThickness="2">
         <Grid>
             <Grid.ColumnDefinitions>

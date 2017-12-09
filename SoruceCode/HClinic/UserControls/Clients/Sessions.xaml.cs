@@ -33,6 +33,8 @@ namespace HClinic.UserControls.Clients
         {
             InitializeComponent();
             sessions = new List<SessionItem>();
+            dateSessionFrom.Text = DateTime.Now.ToString("yyyy-MM-dd 00:00:00");
+            dateSessionTo.Text = DateTime.Now.ToString("yyyy-MM-dd 23:59:59");
         }
         public Sessions(Main parent):this()
         {
@@ -68,7 +70,8 @@ namespace HClinic.UserControls.Clients
                         dt.Rows[i]["job"].ToString(),
                         dt.Rows[i]["address"].ToString(),
                         DateTime.Parse(dt.Rows[i]["birthday"].ToString()),
-                        bool.Parse(dt.Rows[i]["is_active"].ToString()),
+                        dt.Rows[i]["is_active"].ToString() == "True",
+                        dt.Rows[i]["is_male"].ToString() == "True",
                         DateTime.Parse(dt.Rows[i]["creation"].ToString()),
                         new User()
                         )));
@@ -104,7 +107,7 @@ namespace HClinic.UserControls.Clients
         {
             SessionsContent.Children.Clear();
             sessions.Clear();
-            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_sessions.id as session_id, tbl_sessions.client_id as session_client_id,  tbl_sessions.user_id as session_user_id, tbl_sessions.creation as session_creation,tbl_sessions.blood_pressure_top as session_blood_pressure_top,tbl_sessions.blood_pressure_bottom as session_blood_pressure_bottom,tbl_sessions.sugar as session_sugar,tbl_sessions.weight as session_weight,tbl_sessions.note as session_note,tbl_clients.id as client_id,tbl_clients.name as client_name,tbl_clients.phone as client_phone,tbl_clients.job as client_job,tbl_clients.address as client_address,tbl_clients.birthday as client_birthday,tbl_clients.is_active as client_is_active,tbl_clients.creation as client_creation,tbl_clients.user_id as client_user_id,tbl_users.id as user_id,tbl_users.name as user_name,tbl_users.password as user_password, tbl_users.email as user_email, tbl_users.phone as user_phone, tbl_users.`type` as user_type from tbl_sessions,tbl_clients,tbl_users where tbl_sessions.client_id = tbl_clients.id and tbl_sessions.user_id = tbl_users.id and tbl_sessions.creation between '{0}' and '{1}' {2} {3}", sessionFrom.ToString("yyyy-MM-dd 00:00:00"), sessionTo.ToString("yyyy-MM-dd 23:59:59"), client == "" ? "" : " and tbl_clients.name = '" + client + "' ", user == "" ? "" : " and tbl_users.name = '" + user + "' "));
+            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_sessions.id as session_id, tbl_sessions.client_id as session_client_id,  tbl_sessions.user_id as session_user_id,  tbl_sessions.card_number as session_card_number, tbl_sessions.creation as session_creation,tbl_sessions.blood_pressure_top as session_blood_pressure_top,tbl_sessions.blood_pressure_bottom as session_blood_pressure_bottom,tbl_sessions.sugar as session_sugar,tbl_sessions.weight as session_weight,tbl_sessions.note as session_note,tbl_clients.id as client_id,tbl_clients.name as client_name,tbl_clients.phone as client_phone,tbl_clients.job as client_job,tbl_clients.address as client_address,tbl_clients.birthday as client_birthday,tbl_clients.is_active as client_is_active,tbl_clients.is_male as client_is_male,tbl_clients.creation as client_creation,tbl_clients.user_id as client_user_id,tbl_users.id as user_id,tbl_users.name as user_name,tbl_users.password as user_password, tbl_users.email as user_email, tbl_users.phone as user_phone, tbl_users.`type` as user_type, ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.client_id = tbl_sessions.client_id order by tbl_dates.datetime desc limit 0,1),'2017-01-01 00:00:00') as date_last_datetime,getLastSessionDatetime(tbl_sessions.client_id,tbl_sessions.id) as session_last_datetime from tbl_sessions,tbl_clients,tbl_users where tbl_sessions.client_id = tbl_clients.id and tbl_sessions.user_id = tbl_users.id and tbl_sessions.creation between '{0}' and '{1}' {2} {3} order by tbl_sessions.id desc", sessionFrom.ToString("yyyy-MM-dd 00:00:00"), sessionTo.ToString("yyyy-MM-dd 23:59:59"), client == "" ? "" : " and tbl_clients.name = '" + client + "' ", user == "" ? "" : " and tbl_users.name = '" + user + "' "));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 sessions.Add(new SessionItem(
@@ -119,6 +122,7 @@ namespace HClinic.UserControls.Clients
                             dt.Rows[i]["client_address"].ToString(),
                             DateTime.Parse(dt.Rows[i]["client_birthday"].ToString()),
                             dt.Rows[i]["client_is_active"].ToString() == "True",
+                            dt.Rows[i]["client_is_male"].ToString() == "True",
                             DateTime.Parse(dt.Rows[i]["client_creation"].ToString()),
                             new User()
                             ),
@@ -130,11 +134,15 @@ namespace HClinic.UserControls.Clients
                             dt.Rows[i]["user_phone"].ToString(),
                             (App.Tables.Users.UserTypes)int.Parse(dt.Rows[i]["user_type"].ToString())
                             ),
+                        
+                        int.Parse(dt.Rows[i]["session_card_number"].ToString()),
                         DateTime.Parse(dt.Rows[i]["session_creation"].ToString()),
                         int.Parse(dt.Rows[i]["session_blood_pressure_top"].ToString()),
                         int.Parse(dt.Rows[i]["session_blood_pressure_bottom"].ToString()),
                         int.Parse(dt.Rows[i]["session_sugar"].ToString()),
                         int.Parse(dt.Rows[i]["session_weight"].ToString()),
+                        DateTime.Parse(dt.Rows[i]["date_last_datetime"].ToString()),
+                        DateTime.Parse(dt.Rows[i]["session_last_datetime"].ToString()),
                         dt.Rows[i]["session_note"].ToString()
                         )
                     ));
@@ -177,7 +185,7 @@ namespace HClinic.UserControls.Clients
                 btnSessionNew.Cursor = Cursors.Arrow;
                 selectedClient = null;
                 txtClient.Text = "";
-                btnSessionNew_MouseLeftButtonUp(null, null);
+                btnSearch_MouseLeftButtonUp(null, null);
             }
         }
     }

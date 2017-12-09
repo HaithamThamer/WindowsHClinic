@@ -102,20 +102,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Assets\Languages\kurdish.Designer.cs">
-      <DependentUpon>kurdish.resx</DependentUpon>
+    <Compile Include="Assets\Languages\Default.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Assets\Languages\english.Designer.cs">
-      <DependentUpon>english.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Assets\Languages\arabic.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>arabic.resx</DependentUpon>
+      <DependentUpon>Default.resx</DependentUpon>
     </Compile>
     <Compile Include="Classes\Clients\Client.cs" />
     <Compile Include="Classes\Clients\Date.cs" />
@@ -126,6 +116,12 @@
     </Compile>
     <Compile Include="Reports\SessionTicket.Designer.cs">
       <DependentUpon>SessionTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AssistantDoctor\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AssistantDoctor\SessionRow.xaml.cs">
+      <DependentUpon>SessionRow.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Clients\ClientViewerItem.xaml.cs">
       <DependentUpon>ClientViewerItem.xaml</DependentUpon>
@@ -151,8 +147,17 @@
     <Compile Include="UserControls\Clients\Sessions.xaml.cs">
       <DependentUpon>Sessions.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Home\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Settings\Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Clients\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Clients\Documents.xaml.cs">
+      <DependentUpon>Documents.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Confirm.xaml.cs">
       <DependentUpon>Confirm.xaml</DependentUpon>
@@ -179,17 +184,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Assets\Icons\main.ico" />
-    <EmbeddedResource Include="Assets\Languages\kurdish.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>kurdish.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Languages\english.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>english.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\Languages\arabic.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>arabic.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="Assets\Languages\Default.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Default.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -224,6 +221,14 @@
     <Folder Include="Assets\Bins\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="UserControls\AssistantDoctor\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AssistantDoctor\SessionRow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\Clients\ClientViewerItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -256,7 +261,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\Home\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\Settings\Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Clients\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Clients\Documents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

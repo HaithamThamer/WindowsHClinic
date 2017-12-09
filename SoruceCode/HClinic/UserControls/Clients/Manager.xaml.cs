@@ -42,14 +42,15 @@ namespace HClinic.UserControls.Clients
             {
                 clients.Add(new ManagerItem(
                     this,
-                    new Classes.Clients.Client(
+                    new Client(
                         int.Parse(dt.Rows[i]["id"].ToString()),
                         dt.Rows[i]["name"].ToString(),
                         dt.Rows[i]["phone"].ToString(),
                         dt.Rows[i]["job"].ToString(),
                         dt.Rows[i]["address"].ToString(),
                         DateTime.Parse(dt.Rows[i]["birthday"].ToString()),
-                        bool.Parse(dt.Rows[i]["is_active"].ToString()),
+                        dt.Rows[i]["is_active"].ToString() == "True",
+                        dt.Rows[i]["is_male"].ToString() == "True",
                         DateTime.Parse(dt.Rows[i]["creation"].ToString()),
                         App.currentUser
                         )

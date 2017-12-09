@@ -4,22 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="600" FlowDirection="RightToLeft">
+             d:DesignHeight="300" d:DesignWidth="600" FlowDirection="LeftToRight">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <DockPanel Background="{StaticResource foregroundBrush}" LastChildFill="True">
-            <Border Name="ClientsManager" DockPanel.Dock="Top" Margin="0,15,0,5"  Cursor="Hand" Padding="5,0" MouseLeftButtonUp="ClientsManager_MouseLeftButtonUp">
+            <Border Name="btnClients" DockPanel.Dock="Top" Margin="0,15,0,5"  Cursor="Hand" Padding="5,0" MouseLeftButtonUp="ClientsManager_MouseLeftButtonUp">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30" />
                         <ColumnDefinition  />
                     </Grid.ColumnDefinitions>
                     <Label BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Grid.Column="0" Padding="0" FontSize="20" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf007;" />
-                    <Label Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="المراجعين" />
+                    <Label Name="btnClientsName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnClientsName}" />
                 </Grid>
             </Border>
             <Border Name="ClientsDates" DockPanel.Dock="Top" Cursor="Hand" Margin="0,0,0,5" Padding="5,0" MouseLeftButtonUp="ClientsDates_MouseLeftButtonUp">

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
              xmlns:ClientDates="clr-namespace:HClinic.UserControls.Clients"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="500" FlowDirection="RightToLeft">
+             d:DesignHeight="600" d:DesignWidth="500" FlowDirection="LeftToRight">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300" />

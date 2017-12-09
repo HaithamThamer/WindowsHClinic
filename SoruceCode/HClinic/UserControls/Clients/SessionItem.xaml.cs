@@ -39,12 +39,16 @@ namespace HClinic.UserControls.Clients
             lblClientName.Content = session.client.name;
             lblClientPhone.Content = session.client.phone;
             lblClientBirthday.Content = session.client.birthday.ToString(App.Constants.DateFormat);
+            lblClientGender.Content = session.client.isMale ? "ذكر" : "أنثى";
 
             lblSessionDate.Content = session.creation.ToString(App.Constants.DateFormat);
             lblSessionBloodPressure.Content = string.Format("{0} Top , {1} Bottom", session.bloodPressureTop, session.bloodPressureBottom);
             lblSessionNote.Content = session.note;
             lblSessionSugar.Content = string.Format("{0}", session.sugar);
             lblSessionWeight.Content = string.Format("{0} KG", session.weight);
+
+            lblDateDateTime.Content = session.lastDate.ToString(App.Constants.DateFormat);
+            lblLastSession.Content = session.lastSession.ToString(App.Constants.DateFormat);
         }
         private void btnPrint_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -58,6 +62,11 @@ namespace HClinic.UserControls.Clients
                 App.databasceConnection.query(string.Format("delete from tbl_sessions where tbl_sessions.id = '{0}'", session.id));
                 parent.btnSearch_MouseLeftButtonUp(null, null);
             }
+        }
+
+        private void btnDocuments_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            new Windows.Clients.Documents( this.session).ShowDialog();
         }
     }
 }

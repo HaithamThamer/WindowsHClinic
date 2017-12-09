@@ -1,5 +1,7 @@
 ﻿D:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\obj\Debug\GeneratedInternalTypeHelper.g.i.cs
 
+FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\AssistantDoctor\Main.xaml;;
+FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\AssistantDoctor\SessionRow.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\ClientViewerItem.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\DateItem.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\Dates.xaml;;
@@ -8,7 +10,10 @@ FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\Mana
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\ManagerItem.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\SessionItem.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Clients\Sessions.xaml;;
+FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Home\Main.xaml;;
+FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\UserControls\Settings\Main.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\Windows\Clients\Add.xaml;;
+FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\Windows\Clients\Documents.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\Windows\Confirm.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\Windows\Login.xaml;;
 FD:\_CurrentProjects\WindowsHClinic\SoruceCode\HClinic\Windows\Main.xaml;;
