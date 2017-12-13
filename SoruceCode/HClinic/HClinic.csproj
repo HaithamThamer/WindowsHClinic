@@ -69,7 +69,8 @@
     <Reference Include="HCrypt">
       <HintPath>..\..\..\WindowsHCrypt\bin\Debug\HCrypt.dll</HintPath>
     </Reference>
-    <Reference Include="HDatabaseConnection">
+    <Reference Include="HDatabaseConnection, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\WindowsHDatabaseConnection\HDatabaseConnection\bin\Debug\HDatabaseConnection.dll</HintPath>
     </Reference>
     <Reference Include="HRegsiter">
