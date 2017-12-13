@@ -61,6 +61,15 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        public static string all {
+            get {
+                return ResourceManager.GetString("all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         public static string btnAddName {
@@ -106,11 +115,92 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Documents.
+        /// </summary>
+        public static string btnDocumentsName {
+            get {
+                return ResourceManager.GetString("btnDocumentsName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Documents.
+        /// </summary>
+        public static string btnDocumentsTitle {
+            get {
+                return ResourceManager.GetString("btnDocumentsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
         public static string btnHomeName {
             get {
                 return ResourceManager.GetString("btnHomeName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client ID.
+        /// </summary>
+        public static string btnIdentifyClientTitle {
+            get {
+                return ResourceManager.GetString("btnIdentifyClientTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Card Number.
+        /// </summary>
+        public static string btnIdentifySessionCardNumberTitle {
+            get {
+                return ResourceManager.GetString("btnIdentifySessionCardNumberTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string btnIdentifyTitle {
+            get {
+                return ResourceManager.GetString("btnIdentifyTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print.
+        /// </summary>
+        public static string btnPrintName {
+            get {
+                return ResourceManager.GetString("btnPrintName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string btnRemoveName {
+            get {
+                return ResourceManager.GetString("btnRemoveName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Search.
+        /// </summary>
+        public static string btnSearchName {
+            get {
+                return ResourceManager.GetString("btnSearchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Session.
+        /// </summary>
+        public static string btnSessionNewTitle {
+            get {
+                return ResourceManager.GetString("btnSessionNewTitle", resourceCulture);
             }
         }
         
@@ -124,11 +214,74 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string btnUpdate {
+            get {
+                return ResourceManager.GetString("btnUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string btnUpdateName {
+            get {
+                return ResourceManager.GetString("btnUpdateName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dates.
+        /// </summary>
+        public static string ClientsDatesName {
+            get {
+                return ResourceManager.GetString("ClientsDatesName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sessions.
+        /// </summary>
+        public static string ClientsSessionsName {
+            get {
+                return ResourceManager.GetString("ClientsSessionsName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to From.
+        /// </summary>
+        public static string dateFromName {
+            get {
+                return ResourceManager.GetString("dateFromName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string dateToName {
+            get {
+                return ResourceManager.GetString("dateToName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to LeftToRight.
         /// </summary>
         public static string FlowDirection {
             get {
                 return ResourceManager.GetString("FlowDirection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add Date.
+        /// </summary>
+        public static string lblAddDate {
+            get {
+                return ResourceManager.GetString("lblAddDate", resourceCulture);
             }
         }
         
@@ -160,6 +313,114 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Birthday.
+        /// </summary>
+        public static string lblClientBirthdayTitle {
+            get {
+                return ResourceManager.GetString("lblClientBirthdayTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gender.
+        /// </summary>
+        public static string lblClientGenderTitle {
+            get {
+                return ResourceManager.GetString("lblClientGenderTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client Name.
+        /// </summary>
+        public static string lblClientName {
+            get {
+                return ResourceManager.GetString("lblClientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client Name.
+        /// </summary>
+        public static string lblClientNameTitle {
+            get {
+                return ResourceManager.GetString("lblClientNameTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string lblClientPhone {
+            get {
+                return ResourceManager.GetString("lblClientPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Phone.
+        /// </summary>
+        public static string lblClientPhoneTitle {
+            get {
+                return ResourceManager.GetString("lblClientPhoneTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Session.
+        /// </summary>
+        public static string lblCurrentSessionTitle {
+            get {
+                return ResourceManager.GetString("lblCurrentSessionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string lblDate {
+            get {
+                return ResourceManager.GetString("lblDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Creation Date.
+        /// </summary>
+        public static string lblDateCreation {
+            get {
+                return ResourceManager.GetString("lblDateCreation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Date Datetime.
+        /// </summary>
+        public static string lblDateDateTimeTitle {
+            get {
+                return ResourceManager.GetString("lblDateDateTimeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Datetime.
+        /// </summary>
+        public static string lblDatetime {
+            get {
+                return ResourceManager.GetString("lblDatetime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Leave it empty to mean all.
+        /// </summary>
+        public static string lblEmptyMeanAll {
+            get {
+                return ResourceManager.GetString("lblEmptyMeanAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Is Active.
         /// </summary>
         public static string lblIsActive {
@@ -174,6 +435,24 @@ namespace HClinic.Assets.Languages {
         public static string lblJob {
             get {
                 return ResourceManager.GetString("lblJob", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Sessions.
+        /// </summary>
+        public static string lblLastSessionsTitle {
+            get {
+                return ResourceManager.GetString("lblLastSessionsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Last Date.
+        /// </summary>
+        public static string lblLastSessionTitle {
+            get {
+                return ResourceManager.GetString("lblLastSessionTitle", resourceCulture);
             }
         }
         
@@ -214,6 +493,15 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personal Information.
+        /// </summary>
+        public static string lblPersonalInformationTitle {
+            get {
+                return ResourceManager.GetString("lblPersonalInformationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Phone.
         /// </summary>
         public static string lblPhone {
@@ -223,11 +511,137 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ID OR Phone OR Client Name.
+        /// </summary>
+        public static string lblSearchIn {
+            get {
+                return ResourceManager.GetString("lblSearchIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BP.
+        /// </summary>
+        public static string lblSessionBloodPressureTitle {
+            get {
+                return ResourceManager.GetString("lblSessionBloodPressureTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session Date.
+        /// </summary>
+        public static string lblSessionDateTitle {
+            get {
+                return ResourceManager.GetString("lblSessionDateTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Type of Diabetes.
+        /// </summary>
+        public static string lblSessionDiabetesTypeTitle {
+            get {
+                return ResourceManager.GetString("lblSessionDiabetesTypeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HbAlC.
+        /// </summary>
+        public static string lblSessionHbAlCTitle {
+            get {
+                return ResourceManager.GetString("lblSessionHbAlCTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PR.
+        /// </summary>
+        public static string lblSessionHeartBeatTitle {
+            get {
+                return ResourceManager.GetString("lblSessionHeartBeatTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Note.
+        /// </summary>
+        public static string lblSessionNoteTitle {
+            get {
+                return ResourceManager.GetString("lblSessionNoteTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RBS.
+        /// </summary>
+        public static string lblSessionSugarTitle {
+            get {
+                return ResourceManager.GetString("lblSessionSugarTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Session.
+        /// </summary>
+        public static string lblSessionTitle {
+            get {
+                return ResourceManager.GetString("lblSessionTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        public static string lblSessionWeightTitle {
+            get {
+                return ResourceManager.GetString("lblSessionWeightTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User Name.
         /// </summary>
         public static string lblUsername {
             get {
                 return ResourceManager.GetString("lblUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not Reported.
+        /// </summary>
+        public static string notReported {
+            get {
+                return ResourceManager.GetString("notReported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reported.
+        /// </summary>
+        public static string reported {
+            get {
+                return ResourceManager.GetString("reported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client.
+        /// </summary>
+        public static string txtClientName {
+            get {
+                return ResourceManager.GetString("txtClientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User.
+        /// </summary>
+        public static string txtUserName {
+            get {
+                return ResourceManager.GetString("txtUserName", resourceCulture);
             }
         }
     }

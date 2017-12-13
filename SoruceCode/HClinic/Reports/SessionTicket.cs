@@ -16,6 +16,8 @@ namespace HClinic.Reports
             this.PrinterName = App.RegisterValues.printerDefaultOne;
             lblSessionId.Text = cardNumber.ToString();
             lblSessionIdBarcode.Text = lblSessionId.Text;
+            lblClientId.Text = client.id.ToString();
+            lblClientIdBarcode.Text = lblClientId.Text;
             lblClientName.Text = client.name;
         }
 

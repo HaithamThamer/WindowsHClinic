@@ -42,13 +42,15 @@ namespace HClinic.UserControls.Clients
             lblClientGender.Content = session.client.isMale ? "ذكر" : "أنثى";
 
             lblSessionDate.Content = session.creation.ToString(App.Constants.DateFormat);
-            lblSessionBloodPressure.Content = string.Format("{0} Top , {1} Bottom", session.bloodPressureTop, session.bloodPressureBottom);
+            lblSessionBloodPressure.Content = string.Format("{0} mmHg", session.BP);
             lblSessionNote.Content = session.note;
-            lblSessionSugar.Content = string.Format("{0}", session.sugar);
+            lblSessionRBS.Content = string.Format("{0} mg/dl", session.RBS);
             lblSessionWeight.Content = string.Format("{0} KG", session.weight);
 
             lblDateDateTime.Content = session.lastDate.ToString(App.Constants.DateFormat);
             lblLastSession.Content = session.lastSession.ToString(App.Constants.DateFormat);
+
+            lblSessionDiabetesType.Content = session.client.DiabetesType;
         }
         private void btnPrint_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {

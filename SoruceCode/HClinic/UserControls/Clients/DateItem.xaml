@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="600" FlowDirection="LeftToRight">
@@ -15,18 +16,18 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblClientName" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="أسم المراجع"/>
-            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblClientPhone" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="الهاتف"/>
-            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblDateCreation" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="تاريخ الانشاء"/>
-            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblDatetime" Grid.Column="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="تاريخ الموعد"/>
+            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblClientName" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientName}"/>
+            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblClientPhone" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientPhone}"/>
+            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblDateCreation" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblDateCreation}"/>
+            <Label BorderBrush="#ccc" BorderThickness="0,0,2,0" Name="lblDatetime" Grid.Column="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblDatetime}"/>
             <DockPanel Name="toolsStack" Grid.Column="4" Style="{StaticResource DroidKufiRegular}">
                 <StackPanel Name="btnRemove" DockPanel.Dock="Left" Orientation="Horizontal" MouseLeftButtonUp="btnRemove_MouseLeftButtonUp" Margin="5">
                     <Label Margin="0,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf00d;"/>
-                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="حذف"/>
+                    <Label Name="btnRemoveName" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnRemoveName}"/>
                 </StackPanel>
                 <StackPanel Name="btnUpdate" DockPanel.Dock="Left" Orientation="Horizontal" MouseLeftButtonUp="btnUpdate_MouseLeftButtonUp" Margin="5">
                     <Label Margin="0,0,5,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf021;"/>
-                    <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="تعديل"/>
+                    <Label Name="btnUpdateName" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnUpdateName}"/>
                 </StackPanel>
             </DockPanel>
         </Grid>

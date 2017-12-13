@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.AssistantDoctor"
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="700" FlowDirection="LeftToRight" >
     <Grid>
@@ -13,8 +14,8 @@
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="0" Background="{StaticResource foregroundBrush}">
             <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="5">
-                <Label Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Content="رقم البطاقة" />
-                <TextBox Name="txtCardNumber" KeyDown="txtCardNumber_KeyDown" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Text="" FontSize="25" />
+                <ToggleButton Name="btnIdentifyTitle" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource foregroundBrush}" Content="{x:Static resx:Default.btnIdentifyClientTitle}" Checked="lblIdentifyTitle_Checked" Unchecked="lblIdentifyTitle_Unchecked" IsChecked="True"/>
+                <TextBox Name="txtIdentify" KeyDown="txtIdentify_KeyDown" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FlowDirection="LeftToRight" Text="" FontSize="25" />
                 <Label Name="btnApply" MouseLeftButtonUp="btnApply_MouseLeftButtonUp" Style="{StaticResource FontAwesome}" FontSize="25" Cursor="Hand" Margin="0,5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="{StaticResource backgroundBrush}" Foreground="{StaticResource foregroundBrush}" Content="&#xf00c;" />
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5">
@@ -37,7 +38,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" Content="المعلومات الشخصية" FontSize="25"/>
+                            <Label Name="lblPersonalInformationTitle" Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.lblPersonalInformationTitle}" FontSize="25"/>
                         </Grid>
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -46,7 +47,7 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="أسم المراجع" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientNameTitle}" />
                             <Label Name="lblClientName" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
                         </Grid>
                         <Grid>
@@ -57,7 +58,7 @@
                                 <ColumnDefinition Width="59*"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="المواليد" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientBirthdayTitle}" />
                             <Label Name="lblClientBirthday" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" Grid.ColumnSpan="2" />
                         </Grid>
                         <Grid>
@@ -67,7 +68,7 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="الجنس" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientGenderTitle}" />
                             <Label Name="lblClientGender" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
                         </Grid>
                         <Grid>
@@ -77,7 +78,7 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="الهاتف" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientPhoneTitle}" />
                             <Label Name="lblClientPhone" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
                         </Grid>
                         <Grid>
@@ -87,13 +88,32 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
-                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="العمل" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblJob}" />
                             <Label Name="lblClientJob" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
                         </Grid>
-                        
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblAddress}" />
+                            <Label Name="lblClientAddress" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource FontAwesome}" HorizontalContentAlignment="Center" Content="&#xf04d;" />
+                            <Label Grid.Column="1" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblSessionDiabetesTypeTitle}" />
+                            <Label Name="lblClientDiabeteType" Grid.Column="2" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="" />
+                        </Grid>
                     </StackPanel>
                     <DockPanel Grid.Column="1" LastChildFill="True">
-                        <Label DockPanel.Dock="Top" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" FontSize="25" Content="جلسات سابقة" />
+                        <Label Name="lblLastSessionsTitle" DockPanel.Dock="Top" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" FontSize="25" Content="{x:Static resx:Default.lblLastSessionsTitle}" />
                         <ScrollViewer Grid.Column="1">
                             <StackPanel Name="lastSessions" Orientation="Vertical" Margin="5">
 
@@ -107,8 +127,8 @@
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <DockPanel Grid.Row="0" LastChildFill="False">
-                        <Label Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" Content="القراءات الحالية" FontSize="25"/>
-                        <Label Name="btnUpdate" MouseLeftButtonUp="btnUpdate_MouseLeftButtonUp" Margin="5,5" BorderBrush="#ccc" BorderThickness="0,0,0,1" Cursor="Hand" Background="{StaticResource foregroundBrush}" Foreground="{StaticResource backgroundBrush}" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="تحديث" FontSize="16"/>
+                        <Label Name="lblCurrentSessionTitle" Margin="5,0" BorderBrush="#ccc" BorderThickness="0,0,0,1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.lblCurrentSessionTitle}" FontSize="25"/>
+                        <Label Name="btnUpdate" MouseLeftButtonUp="btnUpdate_MouseLeftButtonUp" Margin="5,5" BorderBrush="#ccc" BorderThickness="0,0,0,1" Cursor="Hand" Background="{StaticResource foregroundBrush}" Foreground="{StaticResource backgroundBrush}" Padding="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnUpdate}" FontSize="16"/>
 
                     </DockPanel>
                     <ScrollViewer Grid.Row="1">
@@ -118,34 +138,43 @@
                                 <StackPanel Orientation="Vertical">
                                     <DockPanel LastChildFill="True" Background="{StaticResource foregroundBrush}">
                                         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
-                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="الضغط العالي" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionBloodPressureTitle}" />
                                     </DockPanel>
-                                    <TextBox Name="txtBloodPressureTop" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
+                                    <TextBox Name="txtBloodPressure" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
                                 </StackPanel>
                             </Border>
                             <Border Width="150" Height="100" Margin="5" Padding="5" Background="White" BorderBrush="#ccc" BorderThickness="1">
                                 <StackPanel Orientation="Vertical">
                                     <DockPanel LastChildFill="True" Background="{StaticResource foregroundBrush}">
                                         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
-                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="الضغط الواطي" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionHeartBeatTitle}" />
                                     </DockPanel>
-                                    <TextBox Name="txtBloodPressureBottom" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
+                                    <TextBox Name="txtPR" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
                                 </StackPanel>
                             </Border>
                             <Border Width="150" Height="100" Margin="5" Padding="5" Background="White" BorderBrush="#ccc" BorderThickness="1">
                                 <StackPanel Orientation="Vertical">
                                     <DockPanel LastChildFill="True" Background="{StaticResource foregroundBrush}">
                                         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
-                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="السكر" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionHbAlCTitle}" />
                                     </DockPanel>
-                                    <TextBox Name="txtSugar" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
+                                    <TextBox Name="txtHbAlC" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
                                 </StackPanel>
                             </Border>
                             <Border Width="150" Height="100" Margin="5" Padding="5" Background="White" BorderBrush="#ccc" BorderThickness="1">
                                 <StackPanel Orientation="Vertical">
                                     <DockPanel LastChildFill="True" Background="{StaticResource foregroundBrush}">
                                         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
-                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="الوزن" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionSugarTitle}" />
+                                    </DockPanel>
+                                    <TextBox Name="txtRBS" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
+                                </StackPanel>
+                            </Border>
+                            <Border Width="150" Height="100" Margin="5" Padding="5" Background="White" BorderBrush="#ccc" BorderThickness="1">
+                                <StackPanel Orientation="Vertical">
+                                    <DockPanel LastChildFill="True" Background="{StaticResource foregroundBrush}">
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionWeightTitle}" />
                                     </DockPanel>
                                     <TextBox Name="txtWeight" FlowDirection="LeftToRight" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="18" Text=""/>
                                 </StackPanel>
@@ -154,7 +183,7 @@
                                 <DockPanel LastChildFill="True" >
                                     <DockPanel DockPanel.Dock="Top" LastChildFill="True" Background="{StaticResource foregroundBrush}">
                                         <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="&#xf21e;" />
-                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="الملاحظة" />
+                                        <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Foreground="{StaticResource backgroundBrush}" Margin="5" Padding="5" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblSessionNoteTitle}" />
                                     </DockPanel>
                                     <TextBox Name="txtNote" DockPanel.Dock="Top" TextWrapping="Wrap" AcceptsReturn="True"  VerticalContentAlignment="Top" HorizontalContentAlignment="Left" FontSize="18" Text="" />
                                 </DockPanel>

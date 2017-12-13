@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HClinic.Windows.Clients"
         xmlns:resx="clr-namespace:HClinic.Assets.Languages"
         mc:Ignorable="d"
-        Title="Add" Height="380" Width="300" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Margin="5" Padding="5" FlowDirection="LeftToRight">
+        Title="Add" Height="450" Width="300" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Margin="5" Padding="5" FlowDirection="LeftToRight">
     <Border Margin="5">
         <Border.Effect>
             <DropShadowEffect Direction="0" RenderingBias="Quality" Color="Black" ShadowDepth="0" />
@@ -26,17 +26,28 @@
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf007;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
+                    <Label Name="lblId" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.btnIdentifyClientTitle}" />
+                    <TextBox Name="txtId" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
+                </Grid>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf007;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
                     <Label Name="lblName" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblName}" />
                     <TextBox Name="txtName" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
                 </Grid>
+                
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf095;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
@@ -47,7 +58,7 @@
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf0b1;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
@@ -57,7 +68,7 @@
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf124;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
@@ -68,7 +79,7 @@
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf1fd;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
@@ -79,12 +90,22 @@
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
-                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="70"/>
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf2d5;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
                     <Label Name="lblIsActive" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblIsActive}" />
                     <ToggleButton Name="isActive" Style="{StaticResource DroidKufiRegular}" Content="Active" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="changeChecked_Checked" Unchecked="changeChecked_Unchecked"/>
+                </Grid>
+                <Grid Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf2d5;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
+                    <Label Name="lblIsMale" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblClientGenderTitle}" />
+                    <ToggleButton Name="isMale" Style="{StaticResource DroidKufiRegular}" Content="Male" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="isMale_Checked" Unchecked="isMale_Unchecked"/>
                 </Grid>
 
             </StackPanel>

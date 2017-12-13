@@ -74,7 +74,7 @@ namespace HClinic.UserControls.Clients
                     this.parentDates.ClientViewerStack.Children.Clear();
                     this.parentDates.btnAddDate.Background = (Brush)new BrushConverter().ConvertFromString(FindResource("foregroundColor").ToString());
                     this.parentDates.btnAddDate.Cursor = Cursors.Hand;
-                    this.parentDates.btnAddDateName.Content = "أضافة";
+                    this.parentDates.btnAddDateName.Content = HClinic.Assets.Languages.Default.lblAddDate;
                     this.parentDates.btnAddDateIcon.Content = "\uf067";
                 }
                 else

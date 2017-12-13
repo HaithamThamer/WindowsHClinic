@@ -36,6 +36,10 @@ namespace HClinic.Windows.Clients
                 txtJob.Text = dt.Rows[0]["job"].ToString();
                 txtName.Text = dt.Rows[0]["name"].ToString();
                 txtPhone.Text = dt.Rows[0]["phone"].ToString();
+                txtId.Text = dt.Rows[0]["id"].ToString();
+
+                isMale.IsChecked = dt.Rows[0]["is_male"].ToString() == "True";
+                isActive.IsChecked = dt.Rows[0]["is_active"].ToString() == "True";
             }
         }
         private Add()
@@ -49,29 +53,33 @@ namespace HClinic.Windows.Clients
                 if (this.id == -1)
                 {
                     App.databasceConnection.query(string.Format("insert into tbl_clients " +
-                                        "(name,phone,job,address,birthday,is_active,user_id) " +
+                                        "("+(txtId.Text.Length > 0 ? "id," : "")+ "name,phone,job,address,birthday,is_active,is_male,user_id) " +
                                         "values " +
-                                        "('{0}','{1}','{2}','{3}','{4}','{5}','{6}');",
+                                        "(" + (txtId.Text.Length > 0 ? "'{0}'," : "") + "'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}');",
+                                        txtId.Text,
                                         txtName.Text,
                                         txtPhone.Text,
                                         txtJob.Text,
                                         txtAddress.Text,
                                         txtBirthday.Text,
                                         (bool)isActive.IsChecked ? "1" : "0",
+                                        (bool)isMale.IsChecked ? "1" : "0",
                                         App.currentUser.id));
                     
                     
                 }
                 else
                 {
-                    App.databasceConnection.query(string.Format("update tbl_clients set name = '{1}',phone = '{2}',job = '{3}',address = '{4}',birthday = '{5}',is_active = '{6}' where id = '{0}';",
+                    App.databasceConnection.query(string.Format("update tbl_clients set id = '{1}', name = '{2}',phone = '{3}',job = '{4}',address = '{5}',birthday = '{6}',is_active = '{7}',is_male = '{8}' where id = '{0}';",
                         id,
+                        (txtId.Text.Length > 0 ? txtId.Text : id.ToString()),
                         txtName.Text,
                         txtPhone.Text,
                         txtJob.Text,
                         txtAddress.Text,
                         txtBirthday.Text,
-                        (bool)isActive.IsChecked ? "1" : "0"));
+                        (bool)isActive.IsChecked ? "1" : "0",
+                        (bool)isMale.IsChecked ? "1" : "0"));
                 }
                 parent.parent.loadClients();
                 this.Close();
@@ -103,6 +111,16 @@ namespace HClinic.Windows.Clients
         private void changeChecked_Unchecked(object sender, RoutedEventArgs e)
         {
             isActive.Content = "Non-Active";
+        }
+
+        private void isMale_Checked(object sender, RoutedEventArgs e)
+        {
+            isMale.Content = "Male";
+        }
+
+        private void isMale_Unchecked(object sender, RoutedEventArgs e)
+        {
+            isMale.Content = "Female";
         }
     }
 }

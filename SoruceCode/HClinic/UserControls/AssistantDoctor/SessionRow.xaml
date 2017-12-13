@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.AssistantDoctor"
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              mc:Ignorable="d" 
-             d:DesignHeight="80" d:DesignWidth="500" Margin="5" Padding="5" FlowDirection="LeftToRight">
+             d:DesignHeight="80" d:DesignWidth="600" Margin="5" Padding="5" FlowDirection="LeftToRight">
     <Border Background="White" Padding="5" BorderBrush="#ccc" BorderThickness="1">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -13,15 +14,19 @@
                 <ColumnDefinition Width="80" />
                 <ColumnDefinition Width="80" />
                 <ColumnDefinition Width="80" />
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Name="lblSessionDate" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="التاريخ" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
-            <Label Name="lblSessionBloodPressure" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="الضغط" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
-            <Label Name="lblSessionSugar" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="السكر" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
-            <Label Name="lblSessionWeight" Grid.Column="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="الوزن" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
-            <DockPanel Grid.Column="4" LastChildFill="True" Margin="5" Background="{StaticResource foregroundBrush}" Cursor="Hand" Name="btnDocuments" MouseLeftButtonUp="btnDocuments_MouseLeftButtonUp">
+            <Label Name="lblSessionDate" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblDate}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <Label Name="lblSessionBloodPressure" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblSessionBloodPressureTitle}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <Label Name="lblSessionSugar" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblSessionSugarTitle}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <Label Name="lblSessionWeight" Grid.Column="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblSessionWeightTitle}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <Label Name="lblSessionHbAlC" Grid.Column="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblSessionHbAlCTitle}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <Label Name="lblSessionPR" Grid.Column="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" FontSize="18" Content="{x:Static resx:Default.lblSessionHeartBeatTitle}" BorderBrush="#ccc" BorderThickness="0,0,1,0"/>
+            <DockPanel Grid.Column="6" LastChildFill="True" Margin="5" Background="{StaticResource foregroundBrush}" Cursor="Hand" Name="btnDocuments" MouseLeftButtonUp="btnDocuments_MouseLeftButtonUp">
                 <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" Content="&#xf15b;"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}"  Content="المستندات"/>
+                <Label Name="btnDocumentsTitle" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}"  Content="{x:Static resx:Default.btnDocumentsTitle}"/>
             </DockPanel>
         </Grid>
     </Border>

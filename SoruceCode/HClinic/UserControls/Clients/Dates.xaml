@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              xmlns:ClientDates="clr-namespace:HClinic.UserControls.Clients"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="500" FlowDirection="LeftToRight">
@@ -20,7 +21,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf272;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="من" />
+                    <Label Name="dateFromName" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.dateFromName}" />
                 </Grid>
                 <DatePicker Name="dateFrom" SelectedDate="2017-01-01" />
             </StackPanel>
@@ -31,7 +32,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf271;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="الى" />
+                    <Label Name="dateToName" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.dateToName}" />
                 </Grid>
                 <DatePicker Name="dateTo" SelectedDate="2018-01-01"/>
             </StackPanel>
@@ -42,13 +43,13 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf007;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="المراجع" />
+                    <Label Name="txtClientName" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.txtClientName}" />
                 </Grid>
                 <!--<ComboBox Name="cmbClients" Text="الكل" IsEditable="True" >
                     <Button/>
                 </ComboBox>-->
                 <TextBox Name="txtClient" FontSize="18" TextChanged="txtClient_TextChanged"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="أترك الحقل فارغ لتقصد الكل" FontSize="9"/>
+                <Label Name="lblEmptyMeanAll" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
             </StackPanel>
             <StackPanel DockPanel.Dock="Top" Name="ClientViewerStack" Orientation="Vertical">
             </StackPanel>
@@ -59,18 +60,18 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0f0;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="المستخدم" />
+                    <Label Name="txtUserName" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.txtUserName}" />
                 </Grid>
                 <TextBox FontSize="18" Name="txtUser" TextChanged="txtUser_TextChanged"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="أترك الحقل فارغ لتقصد الكل" FontSize="9"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
             </StackPanel>
             <StackPanel Name="UserViewerStack" DockPanel.Dock="Top" Orientation="Vertical">
 
             </StackPanel>
             <DockPanel DockPanel.Dock="Top">
-                <CheckBox IsEnabled="False" DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkDelivered" Content="المستلم"/>
-                <CheckBox IsEnabled="False" DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkNonDelivered" Content="غير المستلم"/>
-                <CheckBox DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkAll" Content="الكل"/>
+                <CheckBox IsEnabled="False" DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkDelivered" Content="{x:Static resx:Default.reported}"/>
+                <CheckBox IsEnabled="False" DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkNonDelivered" Content="{x:Static resx:Default.notReported}"/>
+                <CheckBox DockPanel.Dock="Left" Padding="5" FlowDirection="LeftToRight" IsChecked="True" Name="chkAll" Content="{x:Static resx:Default.all}"/>
 
             </DockPanel>
             <StackPanel Name="btnSearch" MouseLeftButtonUp="btnSearch_MouseLeftButtonUp" DockPanel.Dock="Top" Orientation="Vertical" Margin="5" Cursor="Hand" Background="{StaticResource foregroundBrush}">
@@ -80,7 +81,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Foreground="{StaticResource backgroundBrush}" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf002;" FontSize="20" />
-                    <Label Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="بحث" FontSize="20"/>
+                    <Label Name="btnSearchName" Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnSearchName}" FontSize="20"/>
                 </Grid>
             </StackPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="5">
@@ -90,7 +91,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf271;" FontSize="20" BorderBrush="Black" BorderThickness="0,1,0,0" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="اضافة موعد" FontSize="12"  BorderBrush="Black" BorderThickness="0,1,0,0"/>
+                    <Label Name="lblAddDate" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblAddDate}" FontSize="12"  BorderBrush="Black" BorderThickness="0,1,0,0"/>
                 </Grid>
                 <DatePicker Name="dateAdd" SelectedDate="2018-01-01"/>
             </StackPanel>
@@ -101,7 +102,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Name="btnAddDateIcon" Foreground="{StaticResource backgroundBrush}" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf067;" FontSize="20" />
-                    <Label Name="btnAddDateName" Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="أضافة" FontSize="20"/>
+                    <Label Name="btnAddDateName" Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblAddDate}" FontSize="20"/>
                 </Grid>
             </StackPanel>
             <Label Content="&#xf073;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" FontSize="40" />

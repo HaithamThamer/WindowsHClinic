@@ -14,27 +14,33 @@ namespace HClinic.Classes.Clients
         public User user;
         public int cardNumber;
         public DateTime creation;
-        public int bloodPressureTop;
-        public int bloodPressureBottom;
-        public int sugar;
+        
+        //public int bloodPressureTop;
+        //public int bloodPressureBottom;
+        public string BP; // Top/Bottom
+        public double RBS; //sugar
+        public double PR; //bpm heart beat
+        public double HbAlC; // percentage value %
         public int weight;
         public string note;
         public DateTime lastDate;
         public DateTime lastSession;
+        
         public Session()
         {
 
         }
-        public Session(int id,Client client,User user,int cardNumber,DateTime creation,int bloodPressureTop,int bloodPressureBottom, int sugar,int weight,DateTime lastDate,DateTime lastSession, string note)
+        public Session(int id,Client client,User user,int cardNumber,DateTime creation,string BP, double RBS, double PR, double HbAlC, int weight,DateTime lastDate,DateTime lastSession, string note)
         {
             this.id = id;
             this.client = client;
             this.user = user;
             this.cardNumber = cardNumber;
             this.creation = creation;
-            this.bloodPressureTop = bloodPressureTop;
-            this.bloodPressureBottom = bloodPressureBottom;
-            this.sugar = sugar;
+            this.BP = BP;
+            this.RBS = RBS;
+            this.PR = PR;
+            this.HbAlC = HbAlC;
             this.weight = weight;
             this.note = note;
             this.lastDate = lastDate;

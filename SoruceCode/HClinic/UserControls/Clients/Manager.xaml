@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HClinic.UserControls.Clients"
+             xmlns:resx="clr-namespace:HClinic.Assets.Languages"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500" FlowDirection="LeftToRight">
     <Grid>
@@ -17,12 +18,12 @@
                 <ColumnDefinition />
                 <ColumnDefinition Width="100"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Content="الأسم أو رقم الهاتف أو التسلسل" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}"/>
+            <Label Name="lblSearchIn" Grid.Column="0" Content="{x:Static resx:Default.lblSearchIn}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}"/>
             <TextBox Name="txtSearch" Grid.Column="1" Text="" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" TextChanged="txtSearch_TextChanged"/>
             <Border Grid.Column="2" BorderBrush="#ccc" BorderThickness="0,0,0,1" Margin="5,0">
                 <DockPanel Grid.Column="2" LastChildFill="True">
                     <Label DockPanel.Dock="Left" Style="{StaticResource FontAwesome}" Content="&#xf002;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Cursor="Hand" Padding="5"/>
-                    <Label DockPanel.Dock="Left" Style="{StaticResource DroidKufiRegular}" Content="بحث" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14" Cursor="Hand"/>
+                    <Label DockPanel.Dock="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnSearchName}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="14" Cursor="Hand"/>
                 </DockPanel>
             </Border>
         </Grid>

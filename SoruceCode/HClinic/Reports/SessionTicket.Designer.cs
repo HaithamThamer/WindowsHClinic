@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator2 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.lblClientName = new DevExpress.XtraReports.UI.XRLabel();
@@ -40,11 +41,15 @@
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.lblClientId = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblClientIdBarcode = new DevExpress.XtraReports.UI.XRBarCode();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblClientIdBarcode,
+            this.lblClientId,
             this.lblClientName,
             this.lblSessionId,
             this.lblSessionIdBarcode,
@@ -76,13 +81,14 @@
             this.lblSessionId.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
             this.lblSessionId.Name = "lblSessionId";
             this.lblSessionId.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSessionId.SizeF = new System.Drawing.SizeF(270F, 63.08333F);
+            this.lblSessionId.SizeF = new System.Drawing.SizeF(10.62498F, 63.08333F);
             this.lblSessionId.StylePriority.UseBorders = false;
             this.lblSessionId.StylePriority.UseBorderWidth = false;
             this.lblSessionId.StylePriority.UseFont = false;
             this.lblSessionId.StylePriority.UseTextAlignment = false;
             this.lblSessionId.Text = "999";
             this.lblSessionId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblSessionId.Visible = false;
             // 
             // lblSessionIdBarcode
             // 
@@ -91,11 +97,12 @@
             this.lblSessionIdBarcode.Name = "lblSessionIdBarcode";
             this.lblSessionIdBarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.lblSessionIdBarcode.ShowText = false;
-            this.lblSessionIdBarcode.SizeF = new System.Drawing.SizeF(270F, 32.37498F);
+            this.lblSessionIdBarcode.SizeF = new System.Drawing.SizeF(10.62498F, 32.37498F);
             this.lblSessionIdBarcode.StylePriority.UseTextAlignment = false;
-            this.lblSessionIdBarcode.Symbology = code128Generator1;
+            this.lblSessionIdBarcode.Symbology = code128Generator2;
             this.lblSessionIdBarcode.Text = "999";
             this.lblSessionIdBarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblSessionIdBarcode.Visible = false;
             // 
             // xrLabel2
             // 
@@ -182,6 +189,35 @@
             this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrPageInfo1.TextFormatString = "{0:yyyy-MM-dd hh:mm:ss tt}";
             // 
+            // lblClientId
+            // 
+            this.lblClientId.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblClientId.BorderWidth = 2F;
+            this.lblClientId.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientId.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 0F);
+            this.lblClientId.Name = "lblClientId";
+            this.lblClientId.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblClientId.SizeF = new System.Drawing.SizeF(259.3751F, 63.08333F);
+            this.lblClientId.StylePriority.UseBorders = false;
+            this.lblClientId.StylePriority.UseBorderWidth = false;
+            this.lblClientId.StylePriority.UseFont = false;
+            this.lblClientId.StylePriority.UseTextAlignment = false;
+            this.lblClientId.Text = "999";
+            this.lblClientId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // lblClientIdBarcode
+            // 
+            this.lblClientIdBarcode.AutoModule = true;
+            this.lblClientIdBarcode.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 63.08333F);
+            this.lblClientIdBarcode.Name = "lblClientIdBarcode";
+            this.lblClientIdBarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.lblClientIdBarcode.ShowText = false;
+            this.lblClientIdBarcode.SizeF = new System.Drawing.SizeF(259.375F, 32.37498F);
+            this.lblClientIdBarcode.StylePriority.UseTextAlignment = false;
+            this.lblClientIdBarcode.Symbology = code128Generator1;
+            this.lblClientIdBarcode.Text = "999";
+            this.lblClientIdBarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // SessionTicket
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -215,5 +251,7 @@
         private DevExpress.XtraReports.UI.XRBarCode lblSessionIdBarcode;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRBarCode lblClientIdBarcode;
+        private DevExpress.XtraReports.UI.XRLabel lblClientId;
     }
 }

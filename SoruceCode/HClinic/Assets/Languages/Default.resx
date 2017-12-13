@@ -175,4 +175,142 @@
   <data name="lblUsername" xml:space="preserve">
     <value>User Name</value>
   </data>
+  <data name="all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="btnRemoveName" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="btnSearchName" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnUpdateName" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="ClientsDatesName" xml:space="preserve">
+    <value>Dates</value>
+  </data>
+  <data name="ClientsSessionsName" xml:space="preserve">
+    <value>Sessions</value>
+  </data>
+  <data name="dateFromName" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="dateToName" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="lblAddDate" xml:space="preserve">
+    <value>Add Date</value>
+  </data>
+  <data name="lblClientBirthdayTitle" xml:space="preserve">
+    <value>Birthday</value>
+  </data>
+  <data name="lblClientGenderTitle" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="lblClientName" xml:space="preserve">
+    <value>Client Name</value>
+  </data>
+  <data name="lblClientNameTitle" xml:space="preserve">
+    <value>Client Name</value>
+  </data>
+  <data name="lblClientPhone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="lblClientPhoneTitle" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="lblDateCreation" xml:space="preserve">
+    <value>Creation Date</value>
+  </data>
+  <data name="lblDateDateTimeTitle" xml:space="preserve">
+    <value>Last Date Datetime</value>
+  </data>
+  <data name="lblDatetime" xml:space="preserve">
+    <value>Datetime</value>
+  </data>
+  <data name="lblEmptyMeanAll" xml:space="preserve">
+    <value>Leave it empty to mean all</value>
+  </data>
+  <data name="lblLastSessionTitle" xml:space="preserve">
+    <value>Session Last Date</value>
+  </data>
+  <data name="lblSearchIn" xml:space="preserve">
+    <value>ID OR Phone OR Client Name</value>
+  </data>
+  <data name="lblSessionBloodPressureTitle" xml:space="preserve">
+    <value>BP</value>
+  </data>
+  <data name="lblSessionDateTitle" xml:space="preserve">
+    <value>Session Date</value>
+  </data>
+  <data name="lblSessionDiabetesTypeTitle" xml:space="preserve">
+    <value>Type of Diabetes</value>
+  </data>
+  <data name="lblSessionHbAlCTitle" xml:space="preserve">
+    <value>HbAlC</value>
+  </data>
+  <data name="lblSessionHeartBeatTitle" xml:space="preserve">
+    <value>PR</value>
+  </data>
+  <data name="lblSessionNoteTitle" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="lblSessionSugarTitle" xml:space="preserve">
+    <value>RBS</value>
+  </data>
+  <data name="lblSessionWeightTitle" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="notReported" xml:space="preserve">
+    <value>Not Reported</value>
+  </data>
+  <data name="reported" xml:space="preserve">
+    <value>Reported</value>
+  </data>
+  <data name="txtClientName" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="txtUserName" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="btnSessionNewTitle" xml:space="preserve">
+    <value>New Session</value>
+  </data>
+  <data name="lblSessionTitle" xml:space="preserve">
+    <value>Session</value>
+  </data>
+  <data name="btnDocumentsTitle" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="btnUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="lblCurrentSessionTitle" xml:space="preserve">
+    <value>Current Session</value>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="btnIdentifyTitle" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="lblLastSessionsTitle" xml:space="preserve">
+    <value>Last Sessions</value>
+  </data>
+  <data name="lblPersonalInformationTitle" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="btnDocumentsName" xml:space="preserve">
+    <value>Documents</value>
+  </data>
+  <data name="btnIdentifyClientTitle" xml:space="preserve">
+    <value>Client ID</value>
+  </data>
+  <data name="btnIdentifySessionCardNumberTitle" xml:space="preserve">
+    <value>Session Card Number</value>
+  </data>
+  <data name="btnPrintName" xml:space="preserve">
+    <value>Print</value>
+  </data>
 </root>

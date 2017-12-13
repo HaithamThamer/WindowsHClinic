@@ -33,10 +33,12 @@ namespace HClinic.UserControls.AssistantDoctor
         public SessionRow(Main parent,Classes.Clients.Session session):this(parent)
         {
             this.session = session;
-            lblSessionBloodPressure.Content = string.Format("{0} / {1}", session.bloodPressureTop, session.bloodPressureBottom);
+            lblSessionBloodPressure.Content = string.Format("{0} mmHg", session.BP);
             lblSessionDate.Content = session.creation.ToString(App.Constants.DateFormat);
-            lblSessionSugar.Content = session.sugar;
+            lblSessionSugar.Content = string.Format("{0} mg/dl", session.RBS);
             lblSessionWeight.Content = string.Format("{0} KG", session.weight);
+            lblSessionHbAlC.Content = string.Format("{0} %", session.HbAlC);
+            lblSessionPR.Content = string.Format("{0} bpm", session.PR);
         }
 
         private void btnDocuments_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
