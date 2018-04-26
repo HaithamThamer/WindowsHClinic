@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:HClinic.Windows.Clients"
         xmlns:resx="clr-namespace:HClinic.Assets.Languages"
         mc:Ignorable="d"
-        Title="Add" Height="450" Width="300" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Margin="5" Padding="5" FlowDirection="LeftToRight">
+        Title="Add" Height="500" Width="300" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" AllowsTransparency="True" Background="Transparent" Margin="5" Padding="5" FlowDirection="LeftToRight">
     <Border Margin="5">
         <Border.Effect>
             <DropShadowEffect Direction="0" RenderingBias="Quality" Color="Black" ShadowDepth="0" />
@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
             <DockPanel Name="TitleBar" Grid.Row="0" Background="{StaticResource foregroundBrush}" LastChildFill="True">
                 <Label Name="btnClose" DockPanel.Dock="Right" Style="{StaticResource FontAwesome}" Content="&#xf00d;" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Cursor="Hand" MouseLeftButtonUp="btnClose_MouseLeftButtonUp"/>
-                <Label Name="lblClientAddTitle" DockPanel.Dock="Right" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientAddTitle}" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" MouseDown="lblTitle_MouseDown"/>
+                <Label Name="lblClientAddTitle" DockPanel.Dock="Right"  Content="{x:Static resx:Default.lblClientAddTitle}" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" MouseDown="lblTitle_MouseDown"/>
 
             </DockPanel>
             <StackPanel Name="MainContent" Grid.Row="1" Background="{StaticResource backgroundBrush}" Orientation="Vertical" >
@@ -30,8 +30,8 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf007;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblId" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.btnIdentifyClientTitle}" />
-                    <TextBox Name="txtId" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
+                    <Label Name="lblId" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.btnIdentifyClientTitle}" />
+                    <TextBox Name="txtId" Grid.Column="2" MaxLength="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"  PreviewTextInput="txtId_PreviewTextInput"/>
                 </Grid>
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
@@ -40,7 +40,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf007;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblName" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblName}" />
+                    <Label Name="lblName" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblName}" />
                     <TextBox Name="txtName" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
                 </Grid>
                 
@@ -51,8 +51,8 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf095;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblPhone" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblPhone}" />
-                    <TextBox Name="txtPhone" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
+                    <Label Name="lblPhone" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblPhone}" />
+                    <TextBox Name="txtPhone" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" PreviewTextInput="txtId_PreviewTextInput"/>
                 </Grid>
 
                 <Grid Margin="5">
@@ -62,7 +62,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf0b1;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblJob" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblJob}" />
+                    <Label Name="lblJob" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblJob}" />
                     <TextBox Name="txtJob" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
                 </Grid>
                 <Grid Margin="5">
@@ -72,7 +72,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf124;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblAddress" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblAddress}" />
+                    <Label Name="lblAddress" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblAddress}" />
                     <TextBox Name="txtAddress" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
                 </Grid>
 
@@ -83,8 +83,8 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf1fd;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblBirthday" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblBirthday}" />
-                    <DatePicker Name="txtBirthday" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
+                    <Label Name="lblBirthday" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblBirthday}" />
+                    <TextBox MaxLength="4" Name="txtBirthday" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" PreviewTextInput="txtId_PreviewTextInput"/>
                 </Grid>
 
                 <Grid Margin="5">
@@ -94,8 +94,8 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf2d5;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblIsActive" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblIsActive}" />
-                    <ToggleButton Name="isActive" Style="{StaticResource DroidKufiRegular}" Content="Active" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="changeChecked_Checked" Unchecked="changeChecked_Unchecked"/>
+                    <Label Name="lblIsActive" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblIsActive}" />
+                    <ToggleButton Name="isActive"  Content="Active" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="changeChecked_Checked" Unchecked="changeChecked_Unchecked"/>
                 </Grid>
                 <Grid Margin="5">
                     <Grid.ColumnDefinitions>
@@ -104,8 +104,18 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf2d5;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
-                    <Label Name="lblIsMale" Grid.Column="1" Style="{StaticResource DroidKufiRegular}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblClientGenderTitle}" />
-                    <ToggleButton Name="isMale" Style="{StaticResource DroidKufiRegular}" Content="Male" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="isMale_Checked" Unchecked="isMale_Unchecked"/>
+                    <Label Name="lblIsMale" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.lblClientGenderTitle}" />
+                    <ToggleButton Name="isMale"  Content="Male" Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" IsChecked="True" Checked="isMale_Checked" Unchecked="isMale_Unchecked"/>
+                </Grid>
+                <Grid Margin="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="70"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Style="{StaticResource FontAwesome}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" DockPanel.Dock="Left" Content="&#xf2d5;" FontSize="18" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="1,0,0,0"/>
+                    <Label Name="cmbLanguageTitle" Grid.Column="1"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left" Content="{x:Static resx:Default.cmbLanguageTitle}" />
+                    <ComboBox Name="cmbLanguage"   Grid.Column="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" DockPanel.Dock="Left"/>
                 </Grid>
 
             </StackPanel>

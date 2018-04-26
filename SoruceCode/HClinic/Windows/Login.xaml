@@ -6,19 +6,26 @@
         xmlns:local="clr-namespace:HClinic.Windows"
         xmlns:resx="clr-namespace:HClinic.Assets.Languages"
         mc:Ignorable="d" Height="420.544" Width="325.378" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="{x:Null}" Title="Login" FlowDirection="LeftToRight">
-    <StackPanel x:Name="stackPanelMain" Orientation="Vertical" Background="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiRegular}">
-
+    <StackPanel x:Name="stackPanelMain" Orientation="Vertical" Background="{StaticResource foregroundBrush}" >
+        <StackPanel.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Calibri" />
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontFamily" Value="Calibri" />
+            </Style>
+        </StackPanel.Resources>
         <StackPanel Orientation="Horizontal" Background="{StaticResource backgroundBrush}"  FlowDirection="LeftToRight">
             <Label Style="{StaticResource FontAwesome}" Foreground="{StaticResource foregroundBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Content="&#xf090;" FontSize="32"/>
-            <Label x:Name="lblLoginTitle" Foreground="{StaticResource foregroundBrush}" Content="{x:Static resx:Default.lblLoginTitle}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" HorizontalContentAlignment="Center" MouseDown="lblTitle_MouseDown"/>
+            <Label x:Name="lblLoginTitle" Foreground="{StaticResource foregroundBrush}" Content="{x:Static resx:Default.lblLoginTitle}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Width="250" HorizontalContentAlignment="Center" MouseDown="lblTitle_MouseDown" FontFamily="Calibri"/>
             <Label x:Name="btnClose" Style="{StaticResource FontAwesome}" Foreground="{StaticResource foregroundBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" Content="&#xf00d;" FontSize="20" MouseLeftButtonUp="btnClose_MouseLeftButtonUp"/>
         </StackPanel>
         <Grid VerticalAlignment="Stretch" Height="379">
             <Label x:Name="lblIcon" Content="&#xF0F0;" Margin="10,10,10,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" FontSize="120" Height="125"/>
-            <TextBox x:Name="txtUsername" Padding="5" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="10,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305" Style="{StaticResource DroidKufiRegular}" MaxLines="32" />
-            <Label x:Name="lblUsername" Content="{x:Static resx:Default.lblUsername}" Margin="37,140,10,215" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" HorizontalContentAlignment="Left"/>
+            <TextBox x:Name="txtUsername" Padding="5" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="10,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="305"  MaxLines="32" />
+            <Label x:Name="lblUsername" Content="{x:Static resx:Default.lblUsername}" Margin="37,135,10,215" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" HorizontalContentAlignment="Left"/>
             <Label x:Name="lblUserIcon" Content="&#xF007;" Margin="10,140,288,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" FontSize="20" Height="29"/>
-            <PasswordBox x:Name="txtPassword" Padding="5" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="10,242,0,0"  VerticalAlignment="Top" Width="305" Style="{StaticResource DroidKufiRegular}" MaxLength="32" KeyDown="txtPassword_KeyDown"/>
+            <PasswordBox x:Name="txtPassword" Padding="5" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="34" Margin="10,242,0,0"  VerticalAlignment="Top" Width="305"  MaxLength="32" KeyDown="txtPassword_KeyDown"/>
             <Label x:Name="lblPassword" Content="{x:Static resx:Default.lblPassword}" Margin="42,208,10,140" VerticalContentAlignment="Center" Foreground="{StaticResource ResourceKey=backgroundBrush}" HorizontalContentAlignment="Left"/>
             <Label x:Name="lblPasswordIcon" Content="&#xF023;" Margin="10,208,288,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" FontSize="20" Height="29"/>
             <Label x:Name="btnLogin" Content="&#xF00C;" Margin="10,326,10,10" VerticalAlignment="Center" Style="{StaticResource FontAwesome}" Background="{StaticResource backgroundBrush}" Height="43" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource foregroundBrush}" FontSize="30" MouseLeftButtonUp="btnLogin_MouseLeftButtonUp"/>

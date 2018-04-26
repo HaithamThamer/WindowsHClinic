@@ -25,12 +25,13 @@ namespace HClinic.Classes.Clients
         public string note;
         public DateTime lastDate;
         public DateTime lastSession;
-        
+        public DateTime nextDate;
+        public bool isReported = false;
         public Session()
         {
 
         }
-        public Session(int id,Client client,User user,int cardNumber,DateTime creation,string BP, double RBS, double PR, double HbAlC, int weight,DateTime lastDate,DateTime lastSession, string note)
+        public Session(int id,Client client,User user,int cardNumber,DateTime creation,string BP, double RBS, double PR, double HbAlC, int weight,DateTime lastDate,DateTime lastSession, DateTime nextDate,bool isReported, string note)
         {
             this.id = id;
             this.client = client;
@@ -45,6 +46,8 @@ namespace HClinic.Classes.Clients
             this.note = note;
             this.lastDate = lastDate;
             this.lastSession = lastSession;
+            this.nextDate = nextDate;
+            this.isReported = isReported;
         }
         public static List<Session> get()
         {

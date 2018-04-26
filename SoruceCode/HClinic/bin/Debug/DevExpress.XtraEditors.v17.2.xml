@@ -761,6 +761,279 @@ Use the <see cref="P:DevExpress.XtraEditors.Controls.PictureEditOptionsMask.Rect
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.Camera.CameraControl">
+
+            <summary>
+                <para>Displays a video stream captured from a video input device, such as a webcam.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.#ctor">
+            <summary>
+                <para>Initializes a new instance of the CameraControl class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.AutoStartDefaultDevice">
+            <summary>
+                <para>Gets or sets whether the control, when displayed for the first time, automatically starts showing the video stream from the default device.
+</para>
+            </summary>
+            <value><b>true</b> if the control, when displayed for the first time, automatically starts showing the video stream from the default device; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonClick">
+            <summary>
+                <para>Fires when a context button is clicked.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonCustomize">
+            <summary>
+                <para>Allows you to customize the context buttons.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonOptions">
+            <summary>
+                <para>Provides access to the settings applied to the context buttons displayed in the control, and the panels containing these buttons.
+</para>
+            </summary>
+            <value>A <b>ContextItemCollectionOptions</b> object that comprises settings applied to the context buttons displayed in the control, and the panels containing these buttons.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ContextButtons">
+            <summary>
+                <para>Provides access to the collection of context buttons displayed in the control.
+</para>
+            </summary>
+            <value>A <b>ContextItemCollection</b> object that represents the collection of context buttons displayed in the control.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.Device">
+            <summary>
+                <para>Gets or sets the video capture device currently used by the control.
+</para>
+            </summary>
+            <value>A <see cref="CameraDevice"/> object that describes the video capture device currently used by the control.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.DeviceChanged">
+            <summary>
+                <para>Occurs when the camera device used by the control is changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.DeviceNotFoundString">
+            <summary>
+                <para>Gets or sets the notification displayed by the control if no capture device is found.
+</para>
+            </summary>
+            <value>A String value that specifies the notification displayed by the control if no capture device is found.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDefaultDevice">
+            <summary>
+                <para>Returns the video capture device used by default.
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object that the control uses by default.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDevice(DevExpress.Data.Camera.CameraDeviceInfo)">
+            <summary>
+                <para>Returns the new <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object created based on the specified information. This is a static method.
+</para>
+            </summary>
+            <param name="deviceInfo">
+		A <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> object.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDevices">
+            <summary>
+                <para>Returns the list of the <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> objects containing information about the available video capture devices. This is a static method.
+</para>
+            </summary>
+            <returns>A list of the <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> objects containing information about the available video capture devices.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.OnOptionsChanged(System.String,System.Object,System.Object)">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="propertyName">
+		 
+
+            </param>
+            <param name="oldValue">
+		 
+
+            </param>
+            <param name="newValue">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.RestoreSettingsFromRegistry(System.String)">
+            <summary>
+                <para>Loads the video settings stored in the system registry by the specified path.
+</para>
+            </summary>
+            <param name="path">
+		A <see cref="T:System.String"/> value that specifies the registry path from which to restore the video settings.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.RestoreSettingsFromXml(System.String)">
+            <summary>
+                <para>Loads the video settings stored in the specified XML file.
+</para>
+            </summary>
+            <param name="xmlFile">
+		A <see cref="T:System.String"/> value that specifies the file from which to restore the video settings.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.SaveSettingsToRegistry(System.String)">
+            <summary>
+                <para>Saves the video settings of the currently used capture device to the system registry.
+</para>
+            </summary>
+            <param name="path">
+		A <see cref="T:System.String"/> value specifying the system registry path to which the video settings are saved.
+
+            </param>
+            <returns><b>true</b>, if the operation is successfully completed; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.SaveSettingsToXml(System.String)">
+            <summary>
+                <para>Saves the video settings of the currently used capture device to the specified file in XML format.
+</para>
+            </summary>
+            <param name="xmlFile">
+		A <see cref="T:System.String"/> value that specifies the name of file to save the video settings.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ShowSettingsButton">
+            <summary>
+                <para>Gets or sets whether the context button that invokes the Camera Settings form is displayed in the top far corner of the control.
+</para>
+            </summary>
+            <value><b>true</b>, if the context button that invokes the Camera Settings form is displayed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.ShowSettingsForm">
+            <summary>
+                <para>Invokes the form that contains the camera device settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Start">
+            <summary>
+                <para>Starts showing the video stream from the currently used device. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Start(DevExpress.XtraEditors.Camera.CameraDevice)">
+            <summary>
+                <para>Starts showing the video stream from the specified device.
+</para>
+            </summary>
+            <param name="device">
+		A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object from which to capture and show the video stream.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Stop">
+            <summary>
+                <para>Stops showing the video stream from the currently used device.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.TakeSnapshot">
+            <summary>
+                <para>Returns the video frame currently captured by the device being used.
+</para>
+            </summary>
+            <returns>A <see cref="Bitmap"/> object that is the video frame currently captured by the device being used.
+
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.VideoSettings">
+            <summary>
+                <para>Provides access to the video settings (brightness, contrast, etc.) on the currently used device.
+</para>
+            </summary>
+            <value>A <see cref="DeviceVideoSettings"/> object that comprises the video settings (brightness, contrast, etc.) on the currently used device.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.VideoStretchMode">
+            <summary>
+                <para>Gets or sets how the video frame fits the control.
+</para>
+            </summary>
+            <value>A <see cref="VideoStretchMode"/> enumeration value that specifies how the video frame fits the control.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.Filtering.PopupMenuShowingEventHandler">
 
             <summary>
@@ -933,6 +1206,52 @@ Use the <see cref="P:DevExpress.XtraEditors.Controls.PictureEditOptionsMask.Rect
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.NumericRangeControlClient">
+
+            <summary>
+                <para>A <see cref="T:DevExpress.XtraEditors.RangeControl"/>'s client that supports numeric (integer, double, decimal or float) range selection.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.NumericRangeControlClient.#ctor">
+            <summary>
+                <para>Initializes a new instance of the NumericRangeControlClient class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.Maximum">
+            <summary>
+                <para>Gets or sets the end bound of the total range.
+</para>
+            </summary>
+            <value>An object that is the end bound of the total range.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.Minimum">
+            <summary>
+                <para>Gets or sets the start bound of the total range.
+</para>
+            </summary>
+            <value>An object that is the start bound of the total range.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.RulerDelta">
+            <summary>
+                <para>Gets or sets the ruler increment. This property also specifies the minimum increment for range selection.
+</para>
+            </summary>
+            <value>An object that is the ruler increment.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.WaitAnimationOptions">
 
             <summary>
@@ -965,60 +1284,6 @@ For the <see cref="T:DevExpress.XtraGrid.GridControl"/>, these operations are in
                 <para>Background operations are indicated within a special panel displayed above a control.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.FontEdit">
-
-            <summary>
-                <para>The editor to select a font from a dropdown list.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.FontEdit.#ctor">
-            <summary>
-                <para>Initializes a new instance of the FontEdit class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.FontEdit.ClosePopup">
-            <summary>
-                <para>Closes the popup window accepting the changes made. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.FontEdit.EditorTypeName">
-            <summary>
-                <para>Gets the editor's class name. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> object identifying the class name of the current editor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.FontEdit.Properties">
-            <summary>
-                <para>Gets an object which contains properties, methods and events specific to the <see cref="T:DevExpress.XtraEditors.FontEdit"/> control. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemFontEdit"/> object that contains a <see cref="T:DevExpress.XtraEditors.FontEdit"/> control's settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.FontEdit.SelectedIndex">
-            <summary>
-                <para>Gets or sets the index of the selected item. 
-</para>
-            </summary>
-            <value>An integer value that specifies the index of the selected item.
-</value>
 
 
         </member>
@@ -2736,54 +3001,6 @@ The object specifies dates that lie in the range between the DateRange.StartDate
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Docking.TabsPosition">
-
-            <summary>
-                <para>Lists values specifying the position of the tabs in a tab container.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Bottom">
-            <summary>
-                <para>The tabs are located across the bottom of the tab container.
-
-<para></para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Left">
-            <summary>
-                <para>The tabs are located along the left side of the tab container.
-
-<para></para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Right">
-            <summary>
-                <para>The tabs are located along the right side of the tab container.
-
-<para></para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Top">
-            <summary>
-                <para>The tabs are located across the top of the tab container.
-
-<para></para>
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraEditors.Controls.MRUItemAddReason">
 
             <summary>
@@ -2979,6 +3196,13 @@ The object specifies dates that lie in the range between the DateRange.StartDate
             </summary>
             <value>A System.Windows.Forms.Orientation value.
 </value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.RangeControl.PaintEx">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -3771,25 +3995,31 @@ The object specifies dates that lie in the range between the DateRange.StartDate
         </member>
         <member name="P:DevExpress.XtraEditors.HyperlinkLabelControl.AppearanceDisabled">
             <summary>
-                <para> </para>
+                <para>Provides access to appearance settings used to paint the HyperlinkLabelControl when it is disabled.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that specifies the appearance settings used to paint the control.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.HyperlinkLabelControl.AppearanceHovered">
             <summary>
-                <para> </para>
+                <para>Provides access to appearance settings used to paint the HyperlinkLabelControl when it is hovered.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that specifies the appearance settings used to paint the control.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.HyperlinkLabelControl.AppearancePressed">
             <summary>
-                <para> </para>
+                <para>Provides access to appearance settings used to paint the HyperlinkLabelControl when it is pressed.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that specifies the appearance settings used to paint the control.
+</value>
 
 
         </member>
@@ -3928,52 +4158,6 @@ The object specifies dates that lie in the range between the DateRange.StartDate
 The range's minimum value is the lowest column value, but not greater than <b>0</b>.
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.NumericRangeControlClient">
-
-            <summary>
-                <para>A <see cref="T:DevExpress.XtraEditors.RangeControl"/>'s client that supports numeric (integer, double, decimal or float) range selection.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.NumericRangeControlClient.#ctor">
-            <summary>
-                <para>Initializes a new instance of the NumericRangeControlClient class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.Maximum">
-            <summary>
-                <para>Gets or sets the end bound of the total range.
-</para>
-            </summary>
-            <value>An object that is the end bound of the total range.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.Minimum">
-            <summary>
-                <para>Gets or sets the start bound of the total range.
-</para>
-            </summary>
-            <value>An object that is the start bound of the total range.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.NumericRangeControlClient.RulerDelta">
-            <summary>
-                <para>Gets or sets the ruler increment. This property also specifies the minimum increment for range selection.
-</para>
-            </summary>
-            <value>An object that is the ruler increment.
-</value>
 
 
         </member>
@@ -6421,50 +6605,6 @@ The <b>FormatConditionAutomaticType.Default</b> value is equivalent to <b>Format
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.FormatConditionRuleDateOccuring">
-
-            <summary>
-                <para>Applies a format if a column's DateTime value refers to a specific date and/or date interval relative to today. These days and intervals include Today, Yesterday, This week, Earlier this month, Prior to this year, etc.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.#ctor">
-            <summary>
-                <para>Initializes a new instance of a FormatConditionRuleDateOccuring class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.CreateInstance">
-            <summary>
-                <para>Creates a new instance of the FormatConditionRuleDateOccuring class.
-</para>
-            </summary>
-            <returns>A new FormatConditionRuleDateOccuring object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.DateType">
-            <summary>
-                <para>Gets or sets the filter that identifies a target date or dates.
-</para>
-            </summary>
-            <value>The filter that identifies a target date or dates.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.ResetCurrentDate">
-            <summary>
-                <para>Reapplies the conditional formatting rule, taking into account the current date.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraEditors.FormatConditionRuleDataBar">
 
             <summary>
@@ -6978,328 +7118,6 @@ A search for rows is performed against the column specified by the editor's <b>P
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.Camera.VideoStretchMode">
-
-            <summary>
-                <para>Provides members that specify how the video frame is stretched to fit the <see cref="T:DevExpress.XtraEditors.Camera.CameraControl"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.Default">
-            <summary>
-                <para>The default mode. This value is equivalent to the ZoomInside value.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.None">
-            <summary>
-                <para>The video frame is not stretched.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.Stretch">
-            <summary>
-                <para>The video frame is stretched to fill the available client area.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.ZoomInside">
-            <summary>
-                <para>Zooms the video frame proportionally, so that it is displayed in the client area in its entirety.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.ZoomOutside">
-            <summary>
-                <para>Zooms the video frame proportionally, making its smaller side (width or height) displayed in its entirety. The frame is centered, so the larger side (height or width) is not displayed in its entirety.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.Camera.CameraControl">
-
-            <summary>
-                <para>Displays a video stream captured from a video input device, such as a webcam.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.#ctor">
-            <summary>
-                <para>Initializes a new instance of the CameraControl class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.AutoStartDefaultDevice">
-            <summary>
-                <para>Gets or sets whether the control, when displayed for the first time, automatically starts showing the video stream from the default device.
-</para>
-            </summary>
-            <value><b>true</b> if the control, when displayed for the first time, automatically starts showing the video stream from the default device; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonClick">
-            <summary>
-                <para>Fires when a context button is clicked.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonCustomize">
-            <summary>
-                <para>Allows you to customize the context buttons.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ContextButtonOptions">
-            <summary>
-                <para>Provides access to the settings applied to the context buttons displayed in the control, and the panels containing these buttons.
-</para>
-            </summary>
-            <value>A <b>ContextItemCollectionOptions</b> object that comprises settings applied to the context buttons displayed in the control, and the panels containing these buttons.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ContextButtons">
-            <summary>
-                <para>Provides access to the collection of context buttons displayed in the control.
-</para>
-            </summary>
-            <value>A <b>ContextItemCollection</b> object that represents the collection of context buttons displayed in the control.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.Device">
-            <summary>
-                <para>Gets or sets the video capture device currently used by the control.
-</para>
-            </summary>
-            <value>A <see cref="CameraDevice"/> object that describes the video capture device currently used by the control.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.Camera.CameraControl.DeviceChanged">
-            <summary>
-                <para>Occurs when the camera device used by the control is changed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.DeviceNotFoundString">
-            <summary>
-                <para>Gets or sets the notification displayed by the control if no capture device is found.
-</para>
-            </summary>
-            <value>A String value that specifies the notification displayed by the control if no capture device is found.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDefaultDevice">
-            <summary>
-                <para>Returns the video capture device used by default.
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object that the control uses by default.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDevice(DevExpress.Data.Camera.CameraDeviceInfo)">
-            <summary>
-                <para>Returns the new <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object created based on the specified information. This is a static method.
-</para>
-            </summary>
-            <param name="deviceInfo">
-		A <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> object.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.GetDevices">
-            <summary>
-                <para>Returns the list of the <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> objects containing information about the available video capture devices. This is a static method.
-</para>
-            </summary>
-            <returns>A list of the <see cref="T:DevExpress.Data.Camera.CameraDeviceInfo"/> objects containing information about the available video capture devices.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.OnOptionsChanged(System.String,System.Object,System.Object)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="propertyName">
-		 
-
-            </param>
-            <param name="oldValue">
-		 
-
-            </param>
-            <param name="newValue">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.RestoreSettingsFromRegistry(System.String)">
-            <summary>
-                <para>Loads the video settings stored in the system registry by the specified path.
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> value that specifies the registry path from which to restore the video settings.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.RestoreSettingsFromXml(System.String)">
-            <summary>
-                <para>Loads the video settings stored in the specified XML file.
-</para>
-            </summary>
-            <param name="xmlFile">
-		A <see cref="T:System.String"/> value that specifies the file from which to restore the video settings.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.SaveSettingsToRegistry(System.String)">
-            <summary>
-                <para>Saves the video settings of the currently used capture device to the system registry.
-</para>
-            </summary>
-            <param name="path">
-		A <see cref="T:System.String"/> value specifying the system registry path to which the video settings are saved.
-
-            </param>
-            <returns><b>true</b>, if the operation is successfully completed; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.SaveSettingsToXml(System.String)">
-            <summary>
-                <para>Saves the video settings of the currently used capture device to the specified file in XML format.
-</para>
-            </summary>
-            <param name="xmlFile">
-		A <see cref="T:System.String"/> value that specifies the name of file to save the video settings.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.ShowSettingsButton">
-            <summary>
-                <para>Gets or sets whether the context button that invokes the Camera Settings form is displayed in the top far corner of the control.
-</para>
-            </summary>
-            <value><b>true</b>, if the context button that invokes the Camera Settings form is displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.ShowSettingsForm">
-            <summary>
-                <para>Invokes the form that contains the camera device settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Start">
-            <summary>
-                <para>Starts showing the video stream from the currently used device. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Start(DevExpress.XtraEditors.Camera.CameraDevice)">
-            <summary>
-                <para>Starts showing the video stream from the specified device.
-</para>
-            </summary>
-            <param name="device">
-		A <see cref="T:DevExpress.XtraEditors.Camera.CameraDevice"/> object from which to capture and show the video stream.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.Stop">
-            <summary>
-                <para>Stops showing the video stream from the currently used device.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Camera.CameraControl.TakeSnapshot">
-            <summary>
-                <para>Returns the video frame currently captured by the device being used.
-</para>
-            </summary>
-            <returns>A <see cref="Bitmap"/> object that is the video frame currently captured by the device being used.
-
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.VideoSettings">
-            <summary>
-                <para>Provides access to the video settings (brightness, contrast, etc.) on the currently used device.
-</para>
-            </summary>
-            <value>A <see cref="DeviceVideoSettings"/> object that comprises the video settings (brightness, contrast, etc.) on the currently used device.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Camera.CameraControl.VideoStretchMode">
-            <summary>
-                <para>Gets or sets how the video frame fits the control.
-</para>
-            </summary>
-            <value>A <see cref="VideoStretchMode"/> enumeration value that specifies how the video frame fits the control.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel">
 
             <summary>
@@ -7310,248 +7128,308 @@ A search for rows is performed against the column specified by the editor's <b>P
         </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the RepositoryItemHypertextLabel class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AllowMouseWheel">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AllowNullInput">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AppearanceDisabled">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AppearanceFocused">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AppearanceReadOnly">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
             <summary>
-                <para> </para>
+                <para>Assigns property values of the specified <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object to the corresponding properties of this object.
+</para>
             </summary>
             <param name="item">
-		 
+		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object whose property values are copied to the current object.
+
             </param>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.AutoHeight">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.BrowserWindowStyle">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window state to use when a browser is opened.
+</para>
             </summary>
-            <value> </value>
+            <value>One of the enumeration values that indicates whether the process is started in a window that is maximized, minimized, normal (neither maximized nor minimized), or not visible.
+</value>
 
 
         </member>
         <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.CreateDefaultButton">
             <summary>
-                <para> </para>
+                <para>This method is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.DisplayFormat">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.EditFormat">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.EditorTypeName">
             <summary>
-                <para> </para>
+                <para>Gets the class name of an edit control corresponding to the current repository item.
+</para>
             </summary>
-            <value> </value>
+            <value>The string identifying the class name of a corresponding editor.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.EditValueChangedDelay">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.EditValueChangedFiringMode">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.ExportMode">
             <summary>
-                <para> </para>
+                <para>Gets whether the editor's value or display text is exported when data is exported to XLS and CSV formats.
+</para>
             </summary>
-            <value> </value>
+            <value>Always <see cref="F:DevExpress.XtraEditors.Repository.ExportMode.DisplayText"/>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.HideSelection">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.Mask">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.MaxLength">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.NullValuePrompt">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.NullValuePromptShowForEmptyValue">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="E:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.OpenHyperlink">
             <summary>
-                <para> </para>
+                <para>Fires when a hyperlink is clicked, and a browser is about to be opened.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.PasswordChar">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.Properties">
             <summary>
-                <para> </para>
+                <para>Provides access to properties specific to the control.
+</para>
             </summary>
-            <value> </value>
+            <value>The <see cref="RepositoryItemHypertextLabel"/> object comprising properties specific to the control.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.RequireDisplayTextSorting">
             <summary>
-                <para> </para>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code. 
+
+</para>
             </summary>
-            <value> </value>
+            <value>Always <b>true</b>. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.ShowNullValuePromptWhenFocused">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.SingleClick">
             <summary>
-                <para> </para>
+                <para>If the label contains a hyperlink, gets or sets whether a single or double click opens a browser.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to use a single click to open a browser; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.TextEditStyle">
             <summary>
-                <para> </para>
+                <para>Gets the style in which text is displayed the editor.
+</para>
             </summary>
-            <value> </value>
+            <value>Always <see cref="F:DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor"/>.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.UseReadOnlyAppearance">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.UseSystemPasswordChar">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel.ValidateOnEnterKey">
             <summary>
-                <para> </para>
+                <para>This property is not supported by the RepositoryItemHypertextLabel class.
+</para>
             </summary>
-            <value> </value>
+            <value> 
+</value>
 
 
         </member>
@@ -8303,235 +8181,6 @@ A search for rows is performed against the column specified by the editor's <b>P
 
 
         </member>
-        <member name="T:DevExpress.XtraBars.Alerter.AlertInfo">
-
-            <summary>
-                <para>Contains information to be displayed in an alert window.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified window caption, text, image and the text that is to be displayed when the text area is hot-tracked.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
-
-            </param>
-            <param name="text">
-		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
-
-            </param>
-            <param name="hotTrackedText">
-		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
-
-            </param>
-            <param name="image">
-		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified settings.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
-
-            </param>
-            <param name="text">
-		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
-
-            </param>
-            <param name="hotTrackedText">
-		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
-
-            </param>
-            <param name="image">
-		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
-
-            </param>
-            <param name="tag">
-		Any custom data to be associated with the current object. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Tag"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.Drawing.Image)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the window caption, text and image.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
-
-            </param>
-            <param name="text">
-		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
-
-            </param>
-            <param name="image">
-		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified window caption and text.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
-
-            </param>
-            <param name="text">
-		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified window caption, text, and the text that is to be displayed when the text area is hot-tracked.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
-
-            </param>
-            <param name="text">
-		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
-
-            </param>
-            <param name="hotTrackedText">
-		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified settings.
-</para>
-            </summary>
-            <param name="caption">
-		A String value that is the alert window caption.
-
-            </param>
-            <param name="text">
-		A String value that is the alert window text.
-
-            </param>
-            <param name="hotTrackedText">
-		A String value that is the alert window text, displayed only when hovered (see the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property).
-
-            </param>
-            <param name="image">
-		An Image that is the alert window icon.
-
-            </param>
-            <param name="tag">
-		An object that is the unique ID associated with this AlertInfo.
-
-
-            </param>
-            <param name="autoCloseFormOnClick">
-		<b>true</b>, if the alert window should be closed on click; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the AlertInfo class with the specified settings.
-</para>
-            </summary>
-            <param name="caption">
-		A String value that is the alert window caption.
-
-            </param>
-            <param name="text">
-		A String value that is the alert window text.
-
-            </param>
-            <param name="autoCloseFormOnClick">
-		<b>true</b>, if the alert window should be closed on click; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.AutoCloseFormOnClick">
-            <summary>
-                <para>Gets or sets whether or not an alert window associated with this AlertInfo object is automatically closed on click.
-</para>
-            </summary>
-            <value><b>true</b>, if an alert window associated with this AlertInfo object is automatically closed on click; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption">
-            <summary>
-                <para>Gets or sets the caption of an alert window. 
-</para>
-            </summary>
-            <value>A string that specifies the caption of an alert window.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText">
-            <summary>
-                <para>Gets or sets the text of an alert window, displayed when the text is hot-tracked.
-</para>
-            </summary>
-            <value>A string that specifies the hot-tracked text for an alert window.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Image">
-            <summary>
-                <para>Gets or sets an image to be displayed in an alert window.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Image"/> object that specifies an image to be displayed in an alert window.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Tag">
-            <summary>
-                <para>Gets or sets custom data associated with the current AlertInfo object.
-</para>
-            </summary>
-            <value>An object that represents custom data associated with the current AlertInfo object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Text">
-            <summary>
-                <para>Gets or sets the text of an alert window.
-</para>
-            </summary>
-            <value>A string that specifies the text of an alert window. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraEditors.Calendar.CalendarHitInfoType">
 
             <summary>
@@ -9091,134 +8740,6 @@ A search for rows is performed against the column specified by the editor's <b>P
         <member name="F:DevExpress.XtraEditors.RangeControlDateTimeGridAlignment.Year">
             <summary>
                 <para>Specifies a <b>year</b> as the date-time unit to which chart grid lines should be aligned.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraEditors.BaseCheckEdit">
-
-            <summary>
-                <para>The base class for editors that support two or three check states.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.#ctor">
-            <summary>
-                <para>Initializes a new instance of the BaseCheckEdit class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.AutoSizeInLayoutControl">
-            <summary>
-                <para>Gets or sets whether the editor's width is changed to display the editor's content in its entirety. This property is in effect when the editor resides within a <see cref="T:DevExpress.XtraLayout.LayoutControl"/>. 
-
-</para>
-            </summary>
-            <value><b>true</b>, if auto-size mode is enabled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.BorderStyle">
-            <summary>
-                <para>Gets or sets the style used to draw the check editor's border.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/>enumeration value identifying the style used to draw the check editor's border.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.CalcBestSize">
-            <summary>
-                <para>Calculates the minimum size the control needs to be to contain its contents. 
-</para>
-            </summary>
-            <returns>A System.Drawing.Size object representing the minimum size of the control that will best fit its content.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.EditorTypeName">
-            <summary>
-                <para>Gets the editor's class name. 
-
-</para>
-            </summary>
-            <value>A System.String object identifying the class name of the current editor. 
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.BaseCheckEdit.FormatEditValue">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.GetPreferredSize(System.Drawing.Size)">
-            <summary>
-                <para>Retrieves the size of a rectangular area into which the control will fit. 
-
-</para>
-            </summary>
-            <param name="proposedSize">
-		The custom-sized area for the control.
-
-            </param>
-            <returns>A System.Drawing.Size value.
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.BaseCheckEdit.ParseEditValue">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.PreferredSize">
-            <summary>
-                <para>Gets the size of a rectangular area into which the control can fit. 
-</para>
-            </summary>
-            <value>A System.Drawing.Size structure specifying the control's minimum size. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.Properties">
-            <summary>
-                <para>Gets an object containing properties, methods and events specific to a check editor.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.Repository.BaseRepositoryItemCheckEdit"/> object instance containing settings for the control.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.Text">
-            <summary>
-                <para>Gets or sets the text label associated with a check editor. 
-
-</para>
-            </summary>
-            <value>A System.String value representing the text label associated with a check editor.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.Toggle">
-            <summary>
-                <para>Changes the state of a check editor.
 </para>
             </summary>
 
@@ -10684,193 +10205,6 @@ In bound mode, this method populates the item collection before returning it.
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit">
-
-            <summary>
-                <para>Contains settings specific to a <see cref="T:DevExpress.XtraEditors.SparklineEdit"/> control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RepositoryItemSparklineEdit class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AllowAnimationOnValueChanged">
-            <summary>
-                <para>Gets or sets whether the sparkline reflects changes to the chart values using animation. This property is not in effect for in-place editors.
-
-</para>
-            </summary>
-            <value><b>True</b> if the sparkline reflects changes to the chart values using animation; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AllowInplaceAutoFilter">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
-            <summary>
-                <para>Copies settings of the specified repository item.
-</para>
-            </summary>
-            <param name="item">
-		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object or its descendant that represents the source of the operation.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AutoHeight">
-            <summary>
-                <para>Overrides the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItem.AutoHeight"/> property to hide it.
- 
-</para>
-            </summary>
-            <value>Always <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.DataSource">
-            <summary>
-                <para>Gets or sets the data source for the RepositoryItemSparklineEdit control.
-</para>
-            </summary>
-            <value>A System.Object class descendant which represents a datasource for a sparkline.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.EditorTypeName">
-            <summary>
-                <para>Gets the class name of an editor corresponding to the current repository item.
-</para>
-            </summary>
-            <value>The string identifying the class name of a corresponding editor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.EditValueMember">
-            <summary>
-                <para>Gets or sets the name of a data field containing the sparkline's edit value.
-
-
-</para>
-            </summary>
-            <value>A string value specifying a field name in the data source. 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.GetBrick(DevExpress.XtraEditors.PrintCellHelperInfo)">
-            <summary>
-                <para>Returns a brick object that contains information on how the current editor should be printed.
-</para>
-            </summary>
-            <param name="info">
-		A DevExpress.XtraEditors.PrintCellHelperInfo object that provides information on the editor's state and appearance settings that will be used when the editor is printed.
-
-            </param>
-            <returns>A DevExpress.XtraPrinting.IVisualBrick object that provides information on how the current editor should be printed. 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.IsNonSortableEditor">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.Padding">
-            <summary>
-                <para>Specifies the internal space between the editor's content and its edge, in pixels.
-
- 
-</para>
-            </summary>
-            <value> A <see cref="T:System.Windows.Forms.Padding"/> value.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointSortingMember">
-            <summary>
-                <para>Gets or sets the name of a data field containing values for sorting sparkline data points.
-
-
-
-</para>
-            </summary>
-            <value>A string value specifying a field name in the data source.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointSortOrder">
-            <summary>
-                <para>Specifies how data points are sorted.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointValueMember">
-            <summary>
-                <para>Gets or sets the name of a data field containing values for sparkline data points.
-
-
-</para>
-            </summary>
-            <value>A string value specifying a field name in the data source.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.ValueRange">
-            <summary>
-                <para>Provides access to the range settings.
-</para>
-            </summary>
-            <value>A <see cref="SparklineRange"/> object that specifies range settings for the <see cref="T:DevExpress.XtraEditors.SparklineEdit"/> control.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.View">
-            <summary>
-                <para>Gets or sets the view used to represent sparkline data.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Sparkline.SparklineViewBase"/> class descendant.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraTab.ClosePageButtonShowMode">
 
             <summary>
@@ -11765,6 +11099,17 @@ Always equal to <b>true</b>.
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.GetBrick(DevExpress.XtraEditors.PrintCellHelperInfo)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="info">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemTokenEdit.MaxExpandLines">
             <summary>
                 <para>Gets or sets the maximum number of lines this <see cref="T:DevExpress.XtraEditors.TokenEdit"/> can occupy. This property is ignored if the editor is used in-place.
@@ -12395,10 +11740,10 @@ In a <see cref="T:DevExpress.XtraEditors.BaseListBoxControl"/> control's descend
         </member>
         <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSearchControl.Client">
             <summary>
-                <para>Gets or sets an object through which a search is performed.
+                <para>Gets or sets an ISearchControlClient object whose data is filtered using the <see cref="T:DevExpress.XtraEditors.SearchControl"/>.
 </para>
             </summary>
-            <value>An object through which a search is performed.
+            <value>An <see cref="ISearchControlClient"/> object whose data is filtered using the <see cref="T:DevExpress.XtraEditors.SearchControl"/>.
 </value>
 
 
@@ -14368,133 +13713,6 @@ In a <see cref="T:DevExpress.XtraEditors.BaseListBoxControl"/> control's descend
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.TileItemFrameCollection">
-
-            <summary>
-                <para>Provides a collection for the <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> class objects.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.#ctor(DevExpress.XtraEditors.ITileItem)">
-            <summary>
-                <para>Initializes a new instance of the TileItemFrameCollection class with the specified owner.
-</para>
-            </summary>
-            <param name="item">
-		An object that is the owner of the created collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Add(DevExpress.XtraEditors.TileItemFrame)">
-            <summary>
-                <para>Adds a new <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> into a TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="item">
-		A <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> to be added.
-
-            </param>
-            <returns>An Int32 value indicating the position into which the new frame was added.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Assign(DevExpress.XtraEditors.TileItemFrameCollection)">
-            <summary>
-                <para>Clones all settings from the target TileItemFrameCollection to this TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="collection">
-		A target TileItemFrameCollection object whose settings are to be copied to this TileItemFrameCollection.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Contains(DevExpress.XtraEditors.TileItemFrame)">
-            <summary>
-                <para>Gets if the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> presents within the current TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="item">
-		A TileItemFrame object to be tested.
-
-            </param>
-            <returns><b>true</b> if the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> presents within the current TileItemFrameCollection; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.IndexOf(DevExpress.XtraEditors.TileItemFrame)">
-            <summary>
-                <para>Returns the position of the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> within the current TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="item">
-		A TileItemFrame object whose position within the current collection is to be obtained.
-
-            </param>
-            <returns>A zero-based Int32 value specifying the desired frame's position within the collection. Returns <b>-1</b> if the frame doesn't belong to the current collection.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Insert(System.Int32,DevExpress.XtraEditors.TileItemFrame)">
-            <summary>
-                <para>Adds the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> into the current TileItemFrameCollection and places it at the desired position.
-</para>
-            </summary>
-            <param name="index">
-		An Integer value indicating the newly added <see cref="T:DevExpress.XtraEditors.TileItem"/>'s position within the TileItemFrameCollection.
-
-            </param>
-            <param name="item">
-		A TileItem to be inserted.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.TileItemFrameCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual items in the TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer specifying the desired frame's position within the TileItemFrameCollection. If it's negative or exceeds the last available index, an exception is raised.
-
-            </param>
-            <value>A TileItemFrame object that is contained within the current TileItemFrameCollection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.TileItemFrameCollection.Owner">
-            <summary>
-                <para>Gets the collection's owner.
-</para>
-            </summary>
-            <value>A ITileItem object that is the collection's owner.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Remove(DevExpress.XtraEditors.TileItemFrame)">
-            <summary>
-                <para>Deletes a specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> from the current TileItemFrameCollection.
-</para>
-            </summary>
-            <param name="item">
-		A TileItemFrame to be deleted.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraSplashScreen.SplashFormProperties">
 
             <summary>
@@ -15504,207 +14722,45 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider">
+        <member name="T:DevExpress.XtraEditors.FormatConditionRuleDateOccuring">
 
             <summary>
-                <para>Provides data validation management for DevExpress bound and unbound editors.
+                <para>Applies a format if a column's DateTime value refers to a specific date and/or date interval relative to today. These days and intervals include Today, Yesterday, This week, Earlier this month, Prior to this year, etc.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor(System.ComponentModel.IContainer)">
+        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.#ctor">
             <summary>
-                <para>Initializes a new instance of the DXValidationProvider class with the specified container control.
-</para>
-            </summary>
-            <param name="container">
-		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface, and owns the created object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor(System.Windows.Forms.ContainerControl)">
-            <summary>
-                <para>Initializes a new instance of the DXValidationProvider class with the specified container control.
-</para>
-            </summary>
-            <param name="parentControl">
-		A <see cref="T:System.Windows.Forms.ContainerControl"/> object that owns the created object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DXValidationProvider class with default settings.
+                <para>Initializes a new instance of a FormatConditionRuleDateOccuring class.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.CanExtend(System.Object)">
+        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.CreateInstance">
             <summary>
-                <para>Indicates whether a control can be extended.
+                <para>Creates a new instance of the FormatConditionRuleDateOccuring class.
 </para>
             </summary>
-            <param name="extendee">
-		The control to be extended.
-
-            </param>
-            <returns><b>true</b> if the control can be extended; otherwise, <b>false</b>.
+            <returns>A new FormatConditionRuleDateOccuring object.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetIconAlignment(System.Windows.Forms.Control)">
+        <member name="P:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.DateType">
             <summary>
-                <para>Retrieves the alignment of an error icon for the specified control.
+                <para>Gets or sets the filter that identifies a target date or dates.
 </para>
             </summary>
-            <param name="control">
-		A target control.
-
-            </param>
-            <returns>An <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetInvalidControls">
-            <summary>
-                <para>Gets the collection of the controls whose values are invalid.
-</para>
-            </summary>
-            <returns>The collection of the controls whose values are invalid.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetValidationRule(System.Windows.Forms.Control)">
-            <summary>
-                <para>Returns a validation rule associated with the specified <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
-</para>
-            </summary>
-            <param name="control">
-		A <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase"/> descendant that represents the validation rule associated with the editor. <b>null</b> (<b>Nothing</b> in Visual Basic) if no validation rule is associated with the specified editor.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.InvalidControls">
-            <summary>
-                <para>Gets the collection of the controls whose values are invalid.
-</para>
-            </summary>
-            <value>The collection of the controls whose values are invalid.
+            <value>The filter that identifies a target date or dates.
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.RemoveControlError(System.Windows.Forms.Control)">
+        <member name="M:DevExpress.XtraEditors.FormatConditionRuleDateOccuring.ResetCurrentDate">
             <summary>
-                <para>Removes an error associated with the specified control.
-</para>
-            </summary>
-            <param name="control">
-		A control whose error must be removed.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
-            <summary>
-                <para>Sets the alignment of an error icon for the specified control.
-</para>
-            </summary>
-            <param name="control">
-		A target control.
-
-            </param>
-            <param name="alignment">
-		An <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment to be set for the control.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.SetValidationRule(System.Windows.Forms.Control,DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase)">
-            <summary>
-                <para>Associates a validation rule with the specified <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
-</para>
-            </summary>
-            <param name="control">
-		A <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant that represents the editor.
-
-            </param>
-            <param name="rule">
-		A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase"/> descendant that represents the validation rule.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate(System.Windows.Forms.Control)">
-            <summary>
-                <para>Validates the specified editor associated with the DXValidationProvider.
-</para>
-            </summary>
-            <param name="control">
-		A <see cref="T:System.Windows.Forms.Control"/> object or descendant that represents the editor to be validated.
-
-            </param>
-            <returns><b>true</b> if the editor has been successfully validated; otherwise <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate">
-            <summary>
-                <para>Validates all the editors associated with the DXValidationProvider.
-</para>
-            </summary>
-            <returns><b>true</b> if all the editors have been successfully validated; <b>false</b> if one or more editors haven't been validated.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidateHiddenControls">
-            <summary>
-                <para>Gets or sets whether hidden editors are validated when calling the <see cref="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate"/> method.
-</para>
-            </summary>
-            <value><b>true</b> if validation of hidden editors is enabled; otherwise, <b>false</b>
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationFailed">
-            <summary>
-                <para>Allows you to perform actions when a control's validation fails.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationMode">
-            <summary>
-                <para>Gets or sets the validation mode.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationMode"/> enumeration value that specifies the validation mode.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationSucceeded">
-            <summary>
-                <para>Occurs after the validation was successfully passed and allows you to perform certain post-validation actions.
+                <para>Reapplies the conditional formatting rule, taking into account the current date.
 </para>
             </summary>
 
@@ -16166,56 +15222,57 @@ Currently, <b>Default</b> is equivalent to <b>AboveParent</b>.
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.DropDownArrowStyle">
+        <member name="T:DevExpress.XtraEditors.FontEdit">
 
             <summary>
-                <para>Contains values that specify whether and how a dropdown arrow is displayed within the <see cref="T:DevExpress.XtraEditors.DropDownButton"/> control.
+                <para>The editor to select a font from a dropdown list.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Default">
+        <member name="M:DevExpress.XtraEditors.FontEdit.#ctor">
             <summary>
-                <para>Identical to the <see cref="F:DevExpress.XtraEditors.DropDownArrowStyle.SplitButton"/> option.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Hide">
-            <summary>
-                <para>The dropdown arrow is hidden. 
-<para>
-
-</para>
-A dropdown control is invoked on clicking the button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
+                <para>Initializes a new instance of the FontEdit class.
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Show">
+        <member name="M:DevExpress.XtraEditors.FontEdit.ClosePopup">
             <summary>
-                <para>The dropdown arrow is merged into the button.
-<para>
-
-</para>
-A dropdown control is invoked on clicking the button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
+                <para>Closes the popup window accepting the changes made. 
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.SplitButton">
+        <member name="P:DevExpress.XtraEditors.FontEdit.EditorTypeName">
             <summary>
-                <para>The dropdown arrow is displayed as a separate button. 
-<para>
-
-</para>
-A dropdown control is invoked on clicking the dropdown arrow button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
+                <para>Gets the editor's class name. 
 </para>
             </summary>
+            <value>A <see cref="T:System.String"/> object identifying the class name of the current editor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.FontEdit.Properties">
+            <summary>
+                <para>Gets an object which contains properties, methods and events specific to the <see cref="T:DevExpress.XtraEditors.FontEdit"/> control. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemFontEdit"/> object that contains a <see cref="T:DevExpress.XtraEditors.FontEdit"/> control's settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.FontEdit.SelectedIndex">
+            <summary>
+                <para>Gets or sets the index of the selected item. 
+</para>
+            </summary>
+            <value>An integer value that specifies the index of the selected item.
+</value>
 
 
         </member>
@@ -18170,365 +17227,6 @@ A dropdown control is invoked on clicking the dropdown arrow button unless the <
 
 
         </member>
-        <member name="T:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider">
-
-            <summary>
-                <para>Provides error management for DevExpress bound and unbound editors.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor(System.Windows.Forms.ContainerControl)">
-            <summary>
-                <para>Initializes a new instance of the DXErrorProvider class with the specified control container.
-</para>
-            </summary>
-            <param name="parentControl">
-		A parent of controls whose errors are monitored by the DXErrorProvider. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ContainerControl"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor(System.ComponentModel.IContainer)">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.StyleController"/> class with the specified container.
-</para>
-            </summary>
-            <param name="container">
-		An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DXErrorProvider class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.BindToDataAndErrors(System.Object,System.String)">
-            <summary>
-                <para>Sets the data source to be monitored for errors.
-</para>
-            </summary>
-            <param name="newDataSource">
-		A data set to be monitored for errors. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataSource"/> property.
-
-            </param>
-            <param name="newDataMember">
-		The name of the specified data set member. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataMember"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.CanExtend(System.Object)">
-            <summary>
-                <para>Gets a value indicating whether a control can be extended.
-</para>
-            </summary>
-            <param name="extendee">
-		The control to be extended. 
-
-            </param>
-            <returns><b>true</b> if the control can be extended; otherwise, <b>false</b>.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ClearErrors">
-            <summary>
-                <para>Visually clears all error icons that have been displayed by the current DXErrorProvider.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ContainerControl">
-            <summary>
-                <para>Gets or sets a control which owns the controls monitored for errors.
-
-</para>
-            </summary>
-            <value>The <see cref="T:System.Windows.Forms.ContainerControl"/> that contains the controls monitored for errors by the DXErrorProvider.
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataMember">
-            <summary>
-                <para>Gets or sets a data source member monitored for errors.
-
-</para>
-            </summary>
-            <value>A string value representing the data source member.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataSource">
-            <summary>
-                <para>Gets or sets the data source to be monitored for errors.
-</para>
-            </summary>
-            <value>An object which represents the data source.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetControlsWithError(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
-            <summary>
-                <para>Gets a list of the controls with which errors of the specified type are associated.
-</para>
-            </summary>
-            <param name="errorType">
-		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the type of error that editors to be returned must contain.
-
-            </param>
-            <returns>A list of the controls with which errors are associated.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetControlsWithError">
-            <summary>
-                <para>Gets a list of the controls with which errors are associated.
-</para>
-            </summary>
-            <returns>A list of the controls with which errors are associated.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetError(System.Windows.Forms.Control)">
-            <summary>
-                <para>Gets an error text associated with the specified control.
-</para>
-            </summary>
-            <param name="control">
-		A control whose error text is returned.
-
-            </param>
-            <returns>A <see cref="T:System.String"/> value that represents the error text associated with the specified control.
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIcon">
-            <summary>
-                <para>Allows you to provide custom error icons for editors.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIconInternal(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="type">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIconInternal(DevExpress.XtraEditors.DXErrorProvider.ErrorType,DevExpress.LookAndFeel.UserLookAndFeel)">
-            <summary>
-                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="type">
-		 
-
-            </param>
-            <param name="lookAndFeel">
-		 
-
-            </param>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorType(System.Windows.Forms.Control)">
-            <summary>
-                <para>Gets the type of error associated with the specified control.
-</para>
-            </summary>
-            <param name="control">
-		The control whose error type should be obtained.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the error type.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetIconAlignment(System.Windows.Forms.Control)">
-            <summary>
-                <para>Returns the alignment of the error icon associated with the specified control.
-</para>
-            </summary>
-            <param name="control">
-		A control whose error icon alignment is returned.
-
-            </param>
-            <returns>A <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment of the control's error icon.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetSvgErrorIcon(System.String)">
-            <summary>
-                <para>Creates an image from the specified manifest resource.
-</para>
-            </summary>
-            <param name="svgPath">
-		The case-sensitive name of the manifest resource being requested.
-
-            </param>
-            <returns>An <b>SvgBitmap</b> object specifying the required image.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.HasErrors">
-            <summary>
-                <para>Gets whether there is any error that is set via the DXErrorProvider's methods or on the data source level.
-</para>
-            </summary>
-            <value><b>true</b> if there is any error; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.HasErrorsOfType(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
-            <summary>
-                <para>Returns whether there is any error of the specified type.
-</para>
-            </summary>
-            <param name="errorType">
-		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that represents the error type to be located.
-
-            </param>
-            <returns><b>true</b> if there is an error of the specified type; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.RefreshControl(System.Windows.Forms.Control)">
-            <summary>
-                <para>Updates error information for the specified editor.
-</para>
-            </summary>
-            <param name="control">
-		The editor whose error information is to be updated.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.RefreshControls">
-            <summary>
-                <para>Updates error information for all editors managed by the DXErrorProvider.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetError(System.Windows.Forms.Control,System.String,DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
-            <summary>
-                <para>Sets an error, of a specific error type for a control.
-
-</para>
-            </summary>
-            <param name="control">
-		A control with which an error is associated.
-
-            </param>
-            <param name="errorText">
-		A string that specifies the error text.
-
-
-            </param>
-            <param name="errorType">
-		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that represents the error type, and the type of error icon that will be displayed.
-
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetError(System.Windows.Forms.Control,System.String)">
-            <summary>
-                <para>Sets a default type error for a control.
-</para>
-            </summary>
-            <param name="control">
-		A control with which an error is associated.
-
-            </param>
-            <param name="errorText">
-		A string that specifies the error text.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetErrorType(System.Windows.Forms.Control,DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
-            <summary>
-                <para>Sets the type of error associated with the specified control.
-</para>
-            </summary>
-            <param name="control">
-		The control whose error type is specified.
-
-            </param>
-            <param name="errorType">
-		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the error type.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
-            <summary>
-                <para>Specifies the alignment of an error icon for a control.
-</para>
-            </summary>
-            <param name="control">
-		The control for which the error icon alignment is specified.
-
-            </param>
-            <param name="alignment">
-		A <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment of the control's error icon.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.UpdateBinding">
-            <summary>
-                <para>Updates the binding and display error information, to reflect errors that could have been set on the data store level. 
-
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraEditors.FilterControl">
 
             <summary>
@@ -19083,6 +17781,365 @@ A dropdown control is invoked on clicking the dropdown arrow button unless the <
             </summary>
             <value><b>true</b> if a menu is used to select operands and operators in a FilterControl; <b>false</b> if a combobox editor is used.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider">
+
+            <summary>
+                <para>Provides error management for DevExpress bound and unbound editors.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor(System.Windows.Forms.ContainerControl)">
+            <summary>
+                <para>Initializes a new instance of the DXErrorProvider class with the specified control container.
+</para>
+            </summary>
+            <param name="parentControl">
+		A parent of controls whose errors are monitored by the DXErrorProvider. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ContainerControl"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraEditors.StyleController"/> class with the specified container.
+</para>
+            </summary>
+            <param name="container">
+		An object which implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DXErrorProvider class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.BindToDataAndErrors(System.Object,System.String)">
+            <summary>
+                <para>Sets the data source to be monitored for errors.
+</para>
+            </summary>
+            <param name="newDataSource">
+		A data set to be monitored for errors. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataSource"/> property.
+
+            </param>
+            <param name="newDataMember">
+		The name of the specified data set member. This value is used to initialize the <see cref="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataMember"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.CanExtend(System.Object)">
+            <summary>
+                <para>Gets a value indicating whether a control can be extended.
+</para>
+            </summary>
+            <param name="extendee">
+		The control to be extended. 
+
+            </param>
+            <returns><b>true</b> if the control can be extended; otherwise, <b>false</b>.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ClearErrors">
+            <summary>
+                <para>Visually clears all error icons that have been displayed by the current DXErrorProvider.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.ContainerControl">
+            <summary>
+                <para>Gets or sets a control which owns the controls monitored for errors.
+
+</para>
+            </summary>
+            <value>The <see cref="T:System.Windows.Forms.ContainerControl"/> that contains the controls monitored for errors by the DXErrorProvider.
+
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataMember">
+            <summary>
+                <para>Gets or sets a data source member monitored for errors.
+
+</para>
+            </summary>
+            <value>A string value representing the data source member.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.DataSource">
+            <summary>
+                <para>Gets or sets the data source to be monitored for errors.
+</para>
+            </summary>
+            <value>An object which represents the data source.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetControlsWithError(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
+            <summary>
+                <para>Gets a list of the controls with which errors of the specified type are associated.
+</para>
+            </summary>
+            <param name="errorType">
+		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the type of error that editors to be returned must contain.
+
+            </param>
+            <returns>A list of the controls with which errors are associated.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetControlsWithError">
+            <summary>
+                <para>Gets a list of the controls with which errors are associated.
+</para>
+            </summary>
+            <returns>A list of the controls with which errors are associated.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetError(System.Windows.Forms.Control)">
+            <summary>
+                <para>Gets an error text associated with the specified control.
+</para>
+            </summary>
+            <param name="control">
+		A control whose error text is returned.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> value that represents the error text associated with the specified control.
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIcon">
+            <summary>
+                <para>Allows you to provide custom error icons for editors.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIconInternal(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="type">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorIconInternal(DevExpress.XtraEditors.DXErrorProvider.ErrorType,DevExpress.LookAndFeel.UserLookAndFeel)">
+            <summary>
+                <para>This method supports the internal infrastructure and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="type">
+		 
+
+            </param>
+            <param name="lookAndFeel">
+		 
+
+            </param>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetErrorType(System.Windows.Forms.Control)">
+            <summary>
+                <para>Gets the type of error associated with the specified control.
+</para>
+            </summary>
+            <param name="control">
+		The control whose error type should be obtained.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the error type.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetIconAlignment(System.Windows.Forms.Control)">
+            <summary>
+                <para>Returns the alignment of the error icon associated with the specified control.
+</para>
+            </summary>
+            <param name="control">
+		A control whose error icon alignment is returned.
+
+            </param>
+            <returns>A <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment of the control's error icon.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.GetSvgErrorIcon(System.String)">
+            <summary>
+                <para>Creates an image from the specified manifest resource.
+</para>
+            </summary>
+            <param name="svgPath">
+		The case-sensitive name of the manifest resource being requested.
+
+            </param>
+            <returns>An <b>SvgBitmap</b> object specifying the required image.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.HasErrors">
+            <summary>
+                <para>Gets whether there is any error that is set via the DXErrorProvider's methods or on the data source level.
+</para>
+            </summary>
+            <value><b>true</b> if there is any error; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.HasErrorsOfType(DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
+            <summary>
+                <para>Returns whether there is any error of the specified type.
+</para>
+            </summary>
+            <param name="errorType">
+		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that represents the error type to be located.
+
+            </param>
+            <returns><b>true</b> if there is an error of the specified type; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.RefreshControl(System.Windows.Forms.Control)">
+            <summary>
+                <para>Updates error information for the specified editor.
+</para>
+            </summary>
+            <param name="control">
+		The editor whose error information is to be updated.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.RefreshControls">
+            <summary>
+                <para>Updates error information for all editors managed by the DXErrorProvider.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetError(System.Windows.Forms.Control,System.String,DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
+            <summary>
+                <para>Sets an error, of a specific error type for a control.
+
+</para>
+            </summary>
+            <param name="control">
+		A control with which an error is associated.
+
+            </param>
+            <param name="errorText">
+		A string that specifies the error text.
+
+
+            </param>
+            <param name="errorType">
+		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that represents the error type, and the type of error icon that will be displayed.
+
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetError(System.Windows.Forms.Control,System.String)">
+            <summary>
+                <para>Sets a default type error for a control.
+</para>
+            </summary>
+            <param name="control">
+		A control with which an error is associated.
+
+            </param>
+            <param name="errorText">
+		A string that specifies the error text.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetErrorType(System.Windows.Forms.Control,DevExpress.XtraEditors.DXErrorProvider.ErrorType)">
+            <summary>
+                <para>Sets the type of error associated with the specified control.
+</para>
+            </summary>
+            <param name="control">
+		The control whose error type is specified.
+
+            </param>
+            <param name="errorType">
+		An <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ErrorType"/> value that specifies the error type.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
+            <summary>
+                <para>Specifies the alignment of an error icon for a control.
+</para>
+            </summary>
+            <param name="control">
+		The control for which the error icon alignment is specified.
+
+            </param>
+            <param name="alignment">
+		A <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment of the control's error icon.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider.UpdateBinding">
+            <summary>
+                <para>Updates the binding and display error information, to reflect errors that could have been set on the data store level. 
+
+</para>
+            </summary>
 
 
         </member>
@@ -21812,6 +20869,193 @@ scrolling using the keyboard arrow keys (and the mouse wheel, provided that <see
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit">
+
+            <summary>
+                <para>Contains settings specific to a <see cref="T:DevExpress.XtraEditors.SparklineEdit"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.#ctor">
+            <summary>
+                <para>Initializes a new instance of the RepositoryItemSparklineEdit class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AllowAnimationOnValueChanged">
+            <summary>
+                <para>Gets or sets whether the sparkline reflects changes to the chart values using animation. This property is not in effect for in-place editors.
+
+</para>
+            </summary>
+            <value><b>True</b> if the sparkline reflects changes to the chart values using animation; <b>False</b> if not; <b>Default</b> uses the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode"/> global setting.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AllowInplaceAutoFilter">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.Assign(DevExpress.XtraEditors.Repository.RepositoryItem)">
+            <summary>
+                <para>Copies settings of the specified repository item.
+</para>
+            </summary>
+            <param name="item">
+		A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object or its descendant that represents the source of the operation.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.AutoHeight">
+            <summary>
+                <para>Overrides the <see cref="P:DevExpress.XtraEditors.Repository.RepositoryItem.AutoHeight"/> property to hide it.
+ 
+</para>
+            </summary>
+            <value>Always <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.DataSource">
+            <summary>
+                <para>Gets or sets the data source for the RepositoryItemSparklineEdit control.
+</para>
+            </summary>
+            <value>A System.Object class descendant which represents a datasource for a sparkline.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.EditorTypeName">
+            <summary>
+                <para>Gets the class name of an editor corresponding to the current repository item.
+</para>
+            </summary>
+            <value>The string identifying the class name of a corresponding editor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.EditValueMember">
+            <summary>
+                <para>Gets or sets the name of a data field containing the sparkline's edit value.
+
+
+</para>
+            </summary>
+            <value>A string value specifying a field name in the data source. 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.GetBrick(DevExpress.XtraEditors.PrintCellHelperInfo)">
+            <summary>
+                <para>Returns a brick object that contains information on how the current editor should be printed.
+</para>
+            </summary>
+            <param name="info">
+		A DevExpress.XtraEditors.PrintCellHelperInfo object that provides information on the editor's state and appearance settings that will be used when the editor is printed.
+
+            </param>
+            <returns>A DevExpress.XtraPrinting.IVisualBrick object that provides information on how the current editor should be printed. 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.IsNonSortableEditor">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.Padding">
+            <summary>
+                <para>Specifies the internal space between the editor's content and its edge, in pixels.
+
+ 
+</para>
+            </summary>
+            <value> A <see cref="T:System.Windows.Forms.Padding"/> value.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointSortingMember">
+            <summary>
+                <para>Gets or sets the name of a data field containing values for sorting sparkline data points.
+
+
+
+</para>
+            </summary>
+            <value>A string value specifying a field name in the data source.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointSortOrder">
+            <summary>
+                <para>Specifies how data points are sorted.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.PointValueMember">
+            <summary>
+                <para>Gets or sets the name of a data field containing values for sparkline data points.
+
+
+</para>
+            </summary>
+            <value>A string value specifying a field name in the data source.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.ValueRange">
+            <summary>
+                <para>Provides access to the range settings.
+</para>
+            </summary>
+            <value>A <see cref="SparklineRange"/> object that specifies range settings for the <see cref="T:DevExpress.XtraEditors.SparklineEdit"/> control.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit.View">
+            <summary>
+                <para>Gets or sets the view used to represent sparkline data.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Sparkline.SparklineViewBase"/> class descendant.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.XtraInputBoxArgs">
 
             <summary>
@@ -22242,6 +21486,133 @@ scrolling using the keyboard arrow keys (and the mouse wheel, provided that <see
             </summary>
             <value>A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItemSparklineEdit"/> object.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.TileItemFrameCollection">
+
+            <summary>
+                <para>Provides a collection for the <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> class objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.#ctor(DevExpress.XtraEditors.ITileItem)">
+            <summary>
+                <para>Initializes a new instance of the TileItemFrameCollection class with the specified owner.
+</para>
+            </summary>
+            <param name="item">
+		An object that is the owner of the created collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Add(DevExpress.XtraEditors.TileItemFrame)">
+            <summary>
+                <para>Adds a new <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> into a TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="item">
+		A <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> to be added.
+
+            </param>
+            <returns>An Int32 value indicating the position into which the new frame was added.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Assign(DevExpress.XtraEditors.TileItemFrameCollection)">
+            <summary>
+                <para>Clones all settings from the target TileItemFrameCollection to this TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="collection">
+		A target TileItemFrameCollection object whose settings are to be copied to this TileItemFrameCollection.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Contains(DevExpress.XtraEditors.TileItemFrame)">
+            <summary>
+                <para>Gets if the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> presents within the current TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="item">
+		A TileItemFrame object to be tested.
+
+            </param>
+            <returns><b>true</b> if the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> presents within the current TileItemFrameCollection; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.IndexOf(DevExpress.XtraEditors.TileItemFrame)">
+            <summary>
+                <para>Returns the position of the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> within the current TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="item">
+		A TileItemFrame object whose position within the current collection is to be obtained.
+
+            </param>
+            <returns>A zero-based Int32 value specifying the desired frame's position within the collection. Returns <b>-1</b> if the frame doesn't belong to the current collection.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Insert(System.Int32,DevExpress.XtraEditors.TileItemFrame)">
+            <summary>
+                <para>Adds the specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> into the current TileItemFrameCollection and places it at the desired position.
+</para>
+            </summary>
+            <param name="index">
+		An Integer value indicating the newly added <see cref="T:DevExpress.XtraEditors.TileItem"/>'s position within the TileItemFrameCollection.
+
+            </param>
+            <param name="item">
+		A TileItem to be inserted.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.TileItemFrameCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual items in the TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer specifying the desired frame's position within the TileItemFrameCollection. If it's negative or exceeds the last available index, an exception is raised.
+
+            </param>
+            <value>A TileItemFrame object that is contained within the current TileItemFrameCollection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.TileItemFrameCollection.Owner">
+            <summary>
+                <para>Gets the collection's owner.
+</para>
+            </summary>
+            <value>A ITileItem object that is the collection's owner.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.TileItemFrameCollection.Remove(DevExpress.XtraEditors.TileItemFrame)">
+            <summary>
+                <para>Deletes a specific <see cref="T:DevExpress.XtraEditors.TileItemFrame"/> from the current TileItemFrameCollection.
+</para>
+            </summary>
+            <param name="item">
+		A TileItemFrame to be deleted.
+
+            </param>
 
 
         </member>
@@ -23159,6 +22530,284 @@ This property is now obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileI
 </para>
             </summary>
             <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.Camera.VideoStretchMode">
+
+            <summary>
+                <para>Provides members that specify how the video frame is stretched to fit the <see cref="T:DevExpress.XtraEditors.Camera.CameraControl"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.Default">
+            <summary>
+                <para>The default mode. This value is equivalent to the ZoomInside value.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.None">
+            <summary>
+                <para>The video frame is not stretched.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.Stretch">
+            <summary>
+                <para>The video frame is stretched to fill the available client area.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.ZoomInside">
+            <summary>
+                <para>Zooms the video frame proportionally, so that it is displayed in the client area in its entirety.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Camera.VideoStretchMode.ZoomOutside">
+            <summary>
+                <para>Zooms the video frame proportionally, making its smaller side (width or height) displayed in its entirety. The frame is centered, so the larger side (height or width) is not displayed in its entirety.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraBars.Alerter.AlertInfo">
+
+            <summary>
+                <para>Contains information to be displayed in an alert window.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified window caption, text, image and the text that is to be displayed when the text area is hot-tracked.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
+
+            </param>
+            <param name="text">
+		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
+
+            </param>
+            <param name="hotTrackedText">
+		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
+
+            </param>
+            <param name="image">
+		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
+
+            </param>
+            <param name="text">
+		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
+
+            </param>
+            <param name="hotTrackedText">
+		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
+
+            </param>
+            <param name="image">
+		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
+
+            </param>
+            <param name="tag">
+		Any custom data to be associated with the current object. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Tag"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.Drawing.Image)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the window caption, text and image.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
+
+            </param>
+            <param name="text">
+		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
+
+            </param>
+            <param name="image">
+		An image to be displayed in an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Image"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified window caption and text.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
+
+            </param>
+            <param name="text">
+		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified window caption, text, and the text that is to be displayed when the text area is hot-tracked.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the caption of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption"/> property.
+
+            </param>
+            <param name="text">
+		A string that specifies the text of an alert window. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.Text"/> property.
+
+            </param>
+            <param name="hotTrackedText">
+		A string that specifies the text of an alert window, which is in effect when the text is hot-tracked. This value is assigned to the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.String,System.Drawing.Image,System.Object,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="caption">
+		A String value that is the alert window caption.
+
+            </param>
+            <param name="text">
+		A String value that is the alert window text.
+
+            </param>
+            <param name="hotTrackedText">
+		A String value that is the alert window text, displayed only when hovered (see the <see cref="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText"/> property).
+
+            </param>
+            <param name="image">
+		An Image that is the alert window icon.
+
+            </param>
+            <param name="tag">
+		An object that is the unique ID associated with this AlertInfo.
+
+
+            </param>
+            <param name="autoCloseFormOnClick">
+		<b>true</b>, if the alert window should be closed on click; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraBars.Alerter.AlertInfo.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the AlertInfo class with the specified settings.
+</para>
+            </summary>
+            <param name="caption">
+		A String value that is the alert window caption.
+
+            </param>
+            <param name="text">
+		A String value that is the alert window text.
+
+            </param>
+            <param name="autoCloseFormOnClick">
+		<b>true</b>, if the alert window should be closed on click; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.AutoCloseFormOnClick">
+            <summary>
+                <para>Gets or sets whether or not an alert window associated with this AlertInfo object is automatically closed on click.
+</para>
+            </summary>
+            <value><b>true</b>, if an alert window associated with this AlertInfo object is automatically closed on click; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Caption">
+            <summary>
+                <para>Gets or sets the caption of an alert window. 
+</para>
+            </summary>
+            <value>A string that specifies the caption of an alert window.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.HotTrackedText">
+            <summary>
+                <para>Gets or sets the text of an alert window, displayed when the text is hot-tracked.
+</para>
+            </summary>
+            <value>A string that specifies the hot-tracked text for an alert window.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Image">
+            <summary>
+                <para>Gets or sets an image to be displayed in an alert window.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Image"/> object that specifies an image to be displayed in an alert window.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Tag">
+            <summary>
+                <para>Gets or sets custom data associated with the current AlertInfo object.
+</para>
+            </summary>
+            <value>An object that represents custom data associated with the current AlertInfo object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraBars.Alerter.AlertInfo.Text">
+            <summary>
+                <para>Gets or sets the text of an alert window.
+</para>
+            </summary>
+            <value>A string that specifies the text of an alert window. 
 </value>
 
 
@@ -25850,6 +25499,14 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
 
 
         </member>
+        <member name="E:DevExpress.XtraTab.XtraTabControl.SelectedPageChangeAnimationCompleted">
+            <summary>
+                <para>Fires when the tab change animation completes.
+</para>
+            </summary>
+
+
+        </member>
         <member name="E:DevExpress.XtraTab.XtraTabControl.SelectedPageChanged">
             <summary>
                 <para>Fires after the selected tab page has been changed.
@@ -25988,10 +25645,10 @@ For a <see cref="T:DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView"/> in
         </member>
         <member name="P:DevExpress.XtraTab.XtraTabControl.Transition">
             <summary>
-                <para>Provides access to state animation parameters.
+                <para>Provides access to parameters of the tab switch animation.
 </para>
             </summary>
-            <value>An <see cref="XtraTabControlTransition"/> object that specifies state animation parameters.
+            <value>An <see cref="XtraTabControlTransition"/> object that specifies parameters of the tab switch animation.
 </value>
 
 
@@ -27487,6 +27144,54 @@ This property is now obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileC
 
 
         </member>
+        <member name="T:DevExpress.XtraBars.Docking.TabsPosition">
+
+            <summary>
+                <para>Lists values specifying the position of the tabs in a tab container.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Bottom">
+            <summary>
+                <para>The tabs are located across the bottom of the tab container.
+
+<para></para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Left">
+            <summary>
+                <para>The tabs are located along the left side of the tab container.
+
+<para></para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Right">
+            <summary>
+                <para>The tabs are located along the right side of the tab container.
+
+<para></para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraBars.Docking.TabsPosition.Top">
+            <summary>
+                <para>The tabs are located across the top of the tab container.
+
+<para></para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.FormatConditionUniqueDuplicateType">
 
             <summary>
@@ -27507,6 +27212,59 @@ This property is now obsolete. Use the <see cref="P:DevExpress.XtraEditors.TileC
         <member name="F:DevExpress.XtraEditors.FormatConditionUniqueDuplicateType.Unique">
             <summary>
                 <para>Unique column values.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.DropDownArrowStyle">
+
+            <summary>
+                <para>Contains values that specify whether and how a dropdown arrow is displayed within the <see cref="T:DevExpress.XtraEditors.DropDownButton"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Default">
+            <summary>
+                <para>Identical to the <see cref="F:DevExpress.XtraEditors.DropDownArrowStyle.SplitButton"/> option.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Hide">
+            <summary>
+                <para>The dropdown arrow is hidden. 
+<para>
+
+</para>
+A dropdown control is invoked on clicking the button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.Show">
+            <summary>
+                <para>The dropdown arrow is merged into the button.
+<para>
+
+</para>
+A dropdown control is invoked on clicking the button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.DropDownArrowStyle.SplitButton">
+            <summary>
+                <para>The dropdown arrow is displayed as a separate button. 
+<para>
+
+</para>
+A dropdown control is invoked on clicking the dropdown arrow button unless the <see cref="P:DevExpress.XtraEditors.DropDownButton.ActAsDropDown"/> is set to <b>false</b>.
 </para>
             </summary>
 
@@ -28159,6 +27917,134 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
             </summary>
             <value>The parent <see cref="T:DevExpress.XtraEditors.RangeControl"/> object.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.BaseCheckEdit">
+
+            <summary>
+                <para>The base class for editors that support two or three check states.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.#ctor">
+            <summary>
+                <para>Initializes a new instance of the BaseCheckEdit class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.AutoSizeInLayoutControl">
+            <summary>
+                <para>Gets or sets whether the editor's width is changed to display the editor's content in its entirety. This property is in effect when the editor resides within a <see cref="T:DevExpress.XtraLayout.LayoutControl"/>. 
+
+</para>
+            </summary>
+            <value><b>true</b>, if auto-size mode is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.BorderStyle">
+            <summary>
+                <para>Gets or sets the style used to draw the check editor's border.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.Controls.BorderStyles"/>enumeration value identifying the style used to draw the check editor's border.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.CalcBestSize">
+            <summary>
+                <para>Calculates the minimum size the control needs to be to contain its contents. 
+</para>
+            </summary>
+            <returns>A System.Drawing.Size object representing the minimum size of the control that will best fit its content.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.EditorTypeName">
+            <summary>
+                <para>Gets the editor's class name. 
+
+</para>
+            </summary>
+            <value>A System.String object identifying the class name of the current editor. 
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.BaseCheckEdit.FormatEditValue">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.GetPreferredSize(System.Drawing.Size)">
+            <summary>
+                <para>Retrieves the size of a rectangular area into which the control will fit. 
+
+</para>
+            </summary>
+            <param name="proposedSize">
+		The custom-sized area for the control.
+
+            </param>
+            <returns>A System.Drawing.Size value.
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.BaseCheckEdit.ParseEditValue">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.PreferredSize">
+            <summary>
+                <para>Gets the size of a rectangular area into which the control can fit. 
+</para>
+            </summary>
+            <value>A System.Drawing.Size structure specifying the control's minimum size. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.Properties">
+            <summary>
+                <para>Gets an object containing properties, methods and events specific to a check editor.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.Repository.BaseRepositoryItemCheckEdit"/> object instance containing settings for the control.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.BaseCheckEdit.Text">
+            <summary>
+                <para>Gets or sets the text label associated with a check editor. 
+
+</para>
+            </summary>
+            <value>A System.String value representing the text label associated with a check editor.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.BaseCheckEdit.Toggle">
+            <summary>
+                <para>Changes the state of a check editor.
+</para>
+            </summary>
 
 
         </member>
@@ -29434,7 +29320,8 @@ When setting the <see cref="P:DevExpress.XtraEditors.FormatConditionRule3ColorSc
         <member name="T:DevExpress.XtraEditors.StyleController">
 
             <summary>
-                <para>Provides centralized management over the appearance and paint styles of editors and controls.
+                <para>Provides centralized appearance and paint style management for editors and controls.
+
 </para>
             </summary>
 
@@ -30462,6 +30349,14 @@ In standalone editors, because of the .NET binding mechanism, the <b>Ignore</b> 
 		A TileItemElement object to be added to the current TileItemElementCollection.
 
             </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.TileItemElementCollection.IsAnchorSelfReferenceCheckLocked">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -35146,7 +35041,7 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.BaseImageListBoxControl.ImageIndexMember">
             <summary>
-                <para>Gets or sets the name of the data field whose values supply image indexes for list box items.
+                <para>Gets or sets the name of the data source field that provides image indexes for listbox items. This property is not supported when listbox items are rendered based on Item Templates.
 </para>
             </summary>
             <value>A string value specifying the name of the data source field whose contents represent image indexes.
@@ -35175,7 +35070,8 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.BaseImageListBoxControl.ImageMember">
             <summary>
-                <para>Gets or sets the name of the data field whose values supply images for list box items.
+                <para>Gets or sets the name of the data source field that provides images for listbox items. This property is not supported when listbox items are rendered based on Item Templates.
+
 </para>
             </summary>
             <value>A string value specifying the name of the data source field whose contents represent images.
@@ -35271,7 +35167,7 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.BaseCheckedListBoxControl.CheckMember">
             <summary>
-                <para>Gets or sets the field name in the bound data source whose values specify item check states.
+                <para>Gets or sets the name of the data source field that provides check states for listbox items. This property is not supported when listbox items are rendered based on Item Templates
 </para>
             </summary>
             <value>A string value specifying a field name in the data source.
@@ -35307,7 +35203,8 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.BaseCheckedListBoxControl.CheckStyle">
             <summary>
-                <para>Gets or sets a value that determines the look and feel of the check boxes.
+                <para>Gets or sets a value that determines the look and feel of the check boxes. This property is not supported when listbox items are rendered based on Item Templates
+
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraEditors.Controls.CheckStyles"/> enumeration value specifying the look and feel of the check box.
@@ -37383,19 +37280,24 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="M:DevExpress.XtraEditors.Controls.ImageListBoxItem.#ctor(System.Object,System.String,DevExpress.XtraEditors.Controls.ImageListBoxItemImageOptions,System.Object)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the ImageListBoxItem class with the specified settings.
+</para>
             </summary>
             <param name="value">
-		 
+		An object representing the item's value. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.ListBoxItem.Value"/> property.
+
             </param>
             <param name="description">
-		 
+		A string that specifies the item's display text. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.ImageListBoxItem.Description"/> property.
+
             </param>
             <param name="imageOptions">
-		 
+		An  object that stores image-related options. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.ImageListBoxItem.ImageOptions"/> property.
+
             </param>
             <param name="tag">
-		 
+		Custom data associated with the item. This value is assigned to the <see cref="P:DevExpress.XtraEditors.Controls.ListBoxItem.Tag"/> property.
+
             </param>
 
 
@@ -38266,7 +38168,7 @@ The following screenshots show color editors when the <see cref="P:DevExpress.Xt
         </member>
         <member name="P:DevExpress.XtraEditors.Controls.ChangingEventArgs.NewValue">
             <summary>
-                <para>Gets or sets the value which is about to be assigned to the editor.
+                <para>Gets or sets the value which is about to be assigned to the editor. Setting the <b>NewValue</b> property is not supported if the editor uses masked input (<see cref="P:DevExpress.XtraEditors.Repository.RepositoryItemTextEdit.Mask"/>).
 </para>
             </summary>
             <value>An object representing the editor's potential value.
@@ -42635,6 +42537,13 @@ Return value: Name
 
 
         </member>
+        <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionColumnApplyTo">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionFormat">
             <summary>
                 <para>Returns "Format".
@@ -42647,6 +42556,13 @@ Return value: Name
             <summary>
                 <para>Returns "Rule".
 </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraEditors.Controls.StringId.ManageRuleGridCaptionStopIfTrue">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -44120,10 +44036,10 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.ColumnWidth">
             <summary>
-                <para>Gets or sets column width.
+                <para>Gets or sets column width when the <see cref="P:DevExpress.XtraEditors.BaseListBoxControl.MultiColumn"/> setting is enabled.
 </para>
             </summary>
-            <value>An integer value representing column width in pixels.
+            <value>An integer value representing column width in pixels. <b>0</b> if the column width is automatically calculated.
 </value>
 
 
@@ -44206,10 +44122,10 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.DataSource">
             <summary>
-                <para>Gets or sets the data source whose data is displayed by a list box control.
+                <para>Gets or sets the data source that provides items to display in the control.
 </para>
             </summary>
-            <value>A data source object whose data is displayed by the list box control.
+            <value>A data source object whose data is displayed by the ListBox control.
 </value>
 
 
@@ -44233,7 +44149,7 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.DisplayMember">
             <summary>
-                <para>Gets or sets a field name in the bound data source whose contents are to be displayed by the list box control.
+                <para>Gets or sets the name of the data source field that provides display text for listbox items. This property is not supported when listbox items are rendered based on Item Templates
 </para>
             </summary>
             <value>A string value specifying a field name in a data source.
@@ -44657,10 +44573,10 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.MultiColumn">
             <summary>
-                <para>Gets or sets a value specifying whether the items are displayed in columns.
+                <para>Gets or sets whether listbox items can be arranged across multiple columns.
 </para>
             </summary>
-            <value><b>true</b> if the items are displayed in columns; otherwise, <b>false</b>.
+            <value><b>true</b>, if the items can be arranged in multiple columns; otherwise, <b>false</b>.
 </value>
 
 
@@ -44685,7 +44601,7 @@ Return value: Unknown picture format
         </member>
         <member name="E:DevExpress.XtraEditors.BaseListBoxControl.SelectedIndexChanged">
             <summary>
-                <para>Occurs after the selection has been changed. [focus has been moved from one item to another]
+                <para>Allows you to respond to item selection.
 </para>
             </summary>
 
@@ -44741,7 +44657,7 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.SelectionMode">
             <summary>
-                <para>Gets or sets how list box items are selected.
+                <para>Gets or sets whether a single or multiple items can be selected.
 </para>
             </summary>
             <value>A <b>SelectionMode</b> enumeration member specifying the list box control's selection behavior.
@@ -44823,10 +44739,11 @@ Return value: Unknown picture format
         </member>
         <member name="P:DevExpress.XtraEditors.BaseListBoxControl.Templates">
             <summary>
-                <para>Provides access to the item template collection.
+                <para>Provides access to the collection of item templates used to render listbox items.
 </para>
             </summary>
-            <value> </value>
+            <value>The item template collection.
+</value>
 
 
         </member>
@@ -45876,7 +45793,7 @@ A specific version of the addressed image is automatically chosen based on the a
         <member name="T:DevExpress.XtraEditors.ListBoxControl">
 
             <summary>
-                <para>The list box control that displays a list of items. Can be populated with items from a data source.
+                <para>The list box control that displays a list of items that a user can select. Can be populated with items from a data source.
 </para>
             </summary>
 
@@ -45902,7 +45819,7 @@ A specific version of the addressed image is automatically chosen based on the a
         <member name="T:DevExpress.XtraEditors.ImageListBoxControl">
 
             <summary>
-                <para>The list box control whose items can display images. The control can be populated with items from a data field.
+                <para>The list box control that displays a list of items that a user can select. Can be populated with items from a data source.
 </para>
             </summary>
 
@@ -51545,7 +51462,7 @@ After an end-user enters and completes a specific portion of a date/time value t
 </para>
             </summary>
             <param name="point">
-		A System.Drawing.Point structure which specifies the test point coordinates relative to the owner control's top-left corner.
+		A System.Drawing.Point structure which specifies the test point coordinates relative to the control's top-left corner.
 
             </param>
             <returns>A <see cref="ContextItemHitInfo"/> object which comprises information about the context button elements located at the test point. 
@@ -51579,8 +51496,7 @@ After an end-user enters and completes a specific portion of a date/time value t
         </member>
         <member name="E:DevExpress.XtraEditors.PictureEdit.CustomContextButtonToolTip">
             <summary>
-                <para>Allows hints for context buttons displayed in the current PictureEdit to be customized. This event is only raised for <see cref="T:DevExpress.Utils.RatingContextButton"/> objects.
-
+                <para>Allows hints for grading scale points of rating context buttons to be customized.
 </para>
             </summary>
 
@@ -51736,6 +51652,13 @@ After an end-user enters and completes a specific portion of a date/time value t
 
 
         </member>
+        <member name="E:DevExpress.XtraEditors.PictureEdit.PaintEx">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.XtraEditors.PictureEdit.PasteImage">
             <summary>
                 <para>Pastes the image stored in the clipboard to the PictureEdit.
@@ -51813,6 +51736,14 @@ After an end-user enters and completes a specific portion of a date/time value t
                 <para>Updates the position of the editor's scroll bars, taking into account relevant properties.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.PictureEdit.UseDirectXPaint">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -56728,6 +56659,14 @@ This property is in effect for standalone editors and for editors embedded in to
 
 
         </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit.UseTextEditorForAutoFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.Repository.RepositoryItem">
 
             <summary>
@@ -57861,6 +57800,14 @@ This property is in effect for standalone editors and for editors embedded in to
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItem.UseTextEditorForAutoFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -60406,7 +60353,7 @@ A specific version of the addressed image is automatically chosen based on the a
         </member>
         <member name="M:DevExpress.XtraEditors.Controls.CloseUpEventArgs.#ctor(System.Object)">
             <summary>
-                <para>Creates a new instance of the <see cref="T:DevExpress.XtraEditors.Controls.CloseUpEventArgs"/> class and initializes the <see cref="P:DevExpress.XtraEditors.Controls.CloseUpEventArgs.Value"/> property with the specified value.
+                <para>Creates a new instance of the <see cref="T:DevExpress.XtraEditors.Controls.CloseUpEventArgs"/> class.
 </para>
             </summary>
             <param name="val">
@@ -60568,6 +60515,212 @@ A specific version of the addressed image is automatically chosen based on the a
             </summary>
             <value>The <see cref="T:DevExpress.XtraEditors.Controls.EditorButton"/> object specifying the currently pressed/clicked button.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider">
+
+            <summary>
+                <para>Provides data validation management for DevExpress bound and unbound editors.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor(System.ComponentModel.IContainer)">
+            <summary>
+                <para>Initializes a new instance of the DXValidationProvider class with the specified container control.
+</para>
+            </summary>
+            <param name="container">
+		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface, and owns the created object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor(System.Windows.Forms.ContainerControl)">
+            <summary>
+                <para>Initializes a new instance of the DXValidationProvider class with the specified container control.
+</para>
+            </summary>
+            <param name="parentControl">
+		A <see cref="T:System.Windows.Forms.ContainerControl"/> object that owns the created object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DXValidationProvider class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.CanExtend(System.Object)">
+            <summary>
+                <para>Indicates whether a control can be extended.
+</para>
+            </summary>
+            <param name="extendee">
+		The control to be extended.
+
+            </param>
+            <returns><b>true</b> if the control can be extended; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetIconAlignment(System.Windows.Forms.Control)">
+            <summary>
+                <para>Retrieves the alignment of an error icon for the specified control.
+</para>
+            </summary>
+            <param name="control">
+		A target control.
+
+            </param>
+            <returns>An <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetInvalidControls">
+            <summary>
+                <para>Gets the collection of the controls whose values are invalid.
+</para>
+            </summary>
+            <returns>The collection of the controls whose values are invalid.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.GetValidationRule(System.Windows.Forms.Control)">
+            <summary>
+                <para>Returns a validation rule associated with the specified <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
+</para>
+            </summary>
+            <param name="control">
+		A <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase"/> descendant that represents the validation rule associated with the editor. <b>null</b> (<b>Nothing</b> in Visual Basic) if no validation rule is associated with the specified editor.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.InvalidControls">
+            <summary>
+                <para>Gets the collection of the controls whose values are invalid.
+</para>
+            </summary>
+            <value>The collection of the controls whose values are invalid.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.RemoveControlError(System.Windows.Forms.Control)">
+            <summary>
+                <para>Removes an error associated with the specified control.
+</para>
+            </summary>
+            <param name="control">
+		A control whose error must be removed.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.SetIconAlignment(System.Windows.Forms.Control,System.Windows.Forms.ErrorIconAlignment)">
+            <summary>
+                <para>Sets the alignment of an error icon for the specified control.
+</para>
+            </summary>
+            <param name="control">
+		A target control.
+
+            </param>
+            <param name="alignment">
+		An <see cref="T:System.Windows.Forms.ErrorIconAlignment"/> value that specifies the alignment to be set for the control.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.SetValidationRule(System.Windows.Forms.Control,DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase)">
+            <summary>
+                <para>Associates a validation rule with the specified <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant.
+</para>
+            </summary>
+            <param name="control">
+		A <see cref="T:DevExpress.XtraEditors.BaseEdit"/> descendant that represents the editor.
+
+            </param>
+            <param name="rule">
+		A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationRuleBase"/> descendant that represents the validation rule.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate(System.Windows.Forms.Control)">
+            <summary>
+                <para>Validates the specified editor associated with the DXValidationProvider.
+</para>
+            </summary>
+            <param name="control">
+		A <see cref="T:System.Windows.Forms.Control"/> object or descendant that represents the editor to be validated.
+
+            </param>
+            <returns><b>true</b> if the editor has been successfully validated; otherwise <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate">
+            <summary>
+                <para>Validates all the editors associated with the DXValidationProvider.
+</para>
+            </summary>
+            <returns><b>true</b> if all the editors have been successfully validated; <b>false</b> if one or more editors haven't been validated.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidateHiddenControls">
+            <summary>
+                <para>Gets or sets whether hidden editors are validated when calling the <see cref="M:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.Validate"/> method.
+</para>
+            </summary>
+            <value><b>true</b> if validation of hidden editors is enabled; otherwise, <b>false</b>
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationFailed">
+            <summary>
+                <para>Allows you to perform actions when a control's validation fails.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationMode">
+            <summary>
+                <para>Gets or sets the validation mode.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraEditors.DXErrorProvider.ValidationMode"/> enumeration value that specifies the validation mode.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider.ValidationSucceeded">
+            <summary>
+                <para>Occurs after the validation was successfully passed and allows you to perform certain post-validation actions.
+</para>
+            </summary>
 
 
         </member>

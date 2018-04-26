@@ -13,12 +13,14 @@ namespace HClinic.Reports
         {
             InitializeComponent();
             this.client = client;
-            this.PrinterName = App.RegisterValues.printerDefaultOne;
+            this.PrinterName = App.RegisterValues.heaterPrinter;
             lblSessionId.Text = cardNumber.ToString();
             lblSessionIdBarcode.Text = lblSessionId.Text;
             lblClientId.Text = client.id.ToString();
             lblClientIdBarcode.Text = lblClientId.Text;
             lblClientName.Text = client.name;
+            lblDoctorName.Text = App.tblInfo.values["doctorName"];
+            lblDoctorDescription.Text = App.tblInfo.values["doctorDescription"];
         }
 
     }

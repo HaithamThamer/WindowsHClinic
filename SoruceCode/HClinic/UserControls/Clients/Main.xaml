@@ -20,7 +20,7 @@
                         <ColumnDefinition  />
                     </Grid.ColumnDefinitions>
                     <Label BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Grid.Column="0" Padding="0" FontSize="20" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf007;" />
-                    <Label Name="btnClientsName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnClientsName}" />
+                    <Label Name="btnClientsName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  Content="{x:Static resx:Default.btnClientsName}" />
                 </Grid>
             </Border>
             <Border Name="ClientsDates" DockPanel.Dock="Top" Cursor="Hand" Margin="0,0,0,5" Padding="5,0" MouseLeftButtonUp="ClientsDates_MouseLeftButtonUp">
@@ -30,7 +30,7 @@
                         <ColumnDefinition  />
                     </Grid.ColumnDefinitions>
                     <Label BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Grid.Column="0" Padding="0" FontSize="20" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf073;" />
-                    <Label Name="ClientsDatesName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.ClientsDatesName}" />
+                    <Label Name="ClientsDatesName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  Content="{x:Static resx:Default.ClientsDatesName}" />
                 </Grid>
             </Border>
             <Border Name="ClientsSessions" DockPanel.Dock="Top" Cursor="Hand" Margin="0,0,0,5" Padding="5,0" MouseLeftButtonUp="ClientsSessions_MouseLeftButtonUp">
@@ -40,7 +40,7 @@
                         <ColumnDefinition  />
                     </Grid.ColumnDefinitions>
                     <Label BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Grid.Column="0" Padding="0" FontSize="20" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf2bc;" />
-                    <Label Name="ClientsSessionsName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.ClientsSessionsName}" />
+                    <Label Name="ClientsSessionsName" Grid.Column="1" Padding="5,0" FontSize="12" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  Content="{x:Static resx:Default.ClientsSessionsName}" />
                 </Grid>
             </Border>
             <Label DockPanel.Dock="Top" Style="{StaticResource FontAwesome}" Foreground="{StaticResource backgroundBrush}" FontSize="100" Content="&#xf0c0;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,1,0,0" Margin="15"/>

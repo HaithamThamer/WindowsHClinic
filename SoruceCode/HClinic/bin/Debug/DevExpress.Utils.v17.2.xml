@@ -4,246 +4,332 @@
         <name>DevExpress.Utils.v17.2</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.XtraEditors.ButtonPanel.IButtonProperties">
+        <member name="T:DevExpress.Utils.TextOptions">
 
             <summary>
-                <para>Contains properties for <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> objects.
+                <para>Contains options that specify how text is rendered.
 </para>
             </summary>
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Appearance">
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming)">
             <summary>
-                <para>Provides access to the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's appearance settings. 
+                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
+
 </para>
             </summary>
-            <value>An AppearanceObject that stores the current IButton object's appearance settings.
+            <param name="hAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
+
+
+            </param>
+            <param name="vAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
+
+
+            </param>
+            <param name="wordWrap">
+		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
+
+
+            </param>
+            <param name="trimming">
+		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.AppearanceObject)">
+            <summary>
+                <para>Initializes a new instance of the TextOptions class with the specified owner, the text settings are set to default values.
+
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which becomes the owner of the current object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming,DevExpress.Utils.HKeyPrefix)">
+            <summary>
+                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
+
+</para>
+            </summary>
+            <param name="hAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
+
+            </param>
+            <param name="vAlignment">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
+
+
+            </param>
+            <param name="wordWrap">
+		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
+
+            </param>
+            <param name="trimming">
+		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
+
+            </param>
+            <param name="hotKeyPrefix">
+		A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value that specifies the hotkey prefix for the text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HotkeyPrefix"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.Assign(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>Copies settings from the specified object to the current TextOptions object.
+</para>
+            </summary>
+            <param name="options">
+		A TextOptions object whose settings are copied to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptions">
+            <summary>
+                <para>Gets an object that specifies the default text options.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.TextOptions"/> object that specifies the default text options.
+
 </value>
 
 
         </member>
-        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.BeginUpdate">
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsCenteredWithEllipsis">
             <summary>
-                <para>Locks the <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> by preventing visual updates of the object and its elements until the EndUpdate method is called. 
+                <para>Gets an object whose settings force text to be centered.
+
 </para>
             </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.CancelUpdate">
-            <summary>
-                <para>Unlocks the <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object and its elements without immediate visual update.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption">
-            <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's caption. 
-</para>
-            </summary>
-            <value>A String value that is the current IButton object's caption. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Checked">
-            <summary>
-                <para>Gets or sets if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is checked. 
-</para>
-            </summary>
-            <value>A Boolean value specifying whether the current IButton is checked. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Enabled">
-            <summary>
-                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is enabled. 
-</para>
-            </summary>
-            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is enabled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.EndUpdate">
-            <summary>
-                <para>Unlocks an <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> causing immediate visual update of the object and all its elements.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Glyphs">
-            <summary>
-                <para>Gets or sets a collection of glyphs for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object. 
-</para>
-            </summary>
-            <value>An Object that is the glyphs collection for the current IButton object. 
+            <value>A TextOptions object with its settings set to the corresponding values.
 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.GroupIndex">
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsMultiLine">
             <summary>
-                <para>Gets or sets a group index for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object. 
+                <para>Gets an object whose settings allow text to wrap.
 </para>
             </summary>
-            <value>An Int32 value that is the group index for the current IButton object. The default value is <b>-1</b>. 
+            <value>A TextOptions object with its settings set to the corresponding values.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Image">
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrap">
             <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon. 
+                <para>Gets an object whose settings prevent text from wrapping.
+
 </para>
             </summary>
-            <value>An Image object that is the current IButton object's icon. 
+            <value>A TextOptions object with its settings set to the corresponding values.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageIndex">
+        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrapEx">
             <summary>
-                <para>Gets or sets an <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images"/> collection member used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's glyph. 
+                <para>Gets an object whose settings force text to be centered and prevent it from wrapping.
+
 </para>
             </summary>
-            <value>An Int32 value that points to an <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images"/> collection member used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's glyph. 
+            <value>A TextOptions object with its settings set to the corresponding values.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageLocation">
+        <member name="P:DevExpress.Utils.TextOptions.DefaultStringFormat">
             <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon location relative to its <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/>. 
+                <para>Gets an object that contains the default formatting settings.
 </para>
             </summary>
-            <value>An ImageLocation enumerator value specifying the current IButton object's icon location relative to its <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/>. 
+            <value>A <see cref="T:System.Drawing.StringFormat"/> object containing the default formatting settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageOptions">
+        <member name="M:DevExpress.Utils.TextOptions.ForceUseGenericDefaultStringFormat">
             <summary>
-                <para>Provides access to all properties that allow you to assign and customize an icon for this <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
+                <para>Specifies how the default string format referred to by the <see cref="P:DevExpress.Utils.TextOptions.DefaultStringFormat"/> property is constructed.
 </para>
             </summary>
-            <value>A <see cref="BaseButtonImageOptions"/> object that stores all properties that allow you to assign and customize an icon for this <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat">
+            <summary>
+                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the <see cref="P:DevExpress.Utils.TextOptions.DefaultOptions"/> object.
+
+</para>
+            </summary>
+            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat(DevExpress.Utils.TextOptions)">
+            <summary>
+                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the specified TextOptions object.
+
+</para>
+            </summary>
+            <param name="defaultOptions">
+		A TextOptions object whose settings are used to initialize the corresponding settings of the <see cref="T:System.Drawing.StringFormat"/> object that is to be returned.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
+
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.HAlignment">
+            <summary>
+                <para>Gets or sets the horizontal alignment of text.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the text horizontal alignment.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images">
+        <member name="M:DevExpress.Utils.TextOptions.HorzAlignmentToStringAlignment(DevExpress.Utils.HorzAlignment)">
             <summary>
-                <para>Gets a collection of images that can be used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon. 
+                <para>Converts the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
+
 </para>
             </summary>
-            <value>The Object that is the source of images assigned to the parent dock panel's <see cref="P:DevExpress.XtraBars.Docking.DockPanel.Images"/> property. 
+            <param name="align">
+		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that is to be converted.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.HotkeyPrefix">
+            <summary>
+                <para>Gets or sets the hotkey prefix for the text. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value which represents the hotkey prefix for the text.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageUri">
+        <member name="M:DevExpress.Utils.TextOptions.IsEqual(DevExpress.Utils.TextOptions)">
             <summary>
-                <para>Gets or sets the uniform resource identifier of the image in the DX Image Gallery displayed in the button. 
-A specific version of the addressed image is automatically chosen based on the app context (the current skin and required image size).
+                <para>Tests whether two objects have the same property values.
 </para>
             </summary>
-            <value>A string value that specifies the uniform resource identifier of the image to be displayed in the button.
+            <param name="options">
+		The TextOptions object to which the current object is compared.
+
+            </param>
+            <returns><b>true</b> if the current object has the same property values as the specified object; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.TextOptions.Reset">
+            <summary>
+                <para>Resets all the text settings to their default values.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.RightToLeft">
+            <summary>
+                <para>Gets or sets whether the text is directed from right to left.
+</para>
+            </summary>
+            <value><b>true</b>, if the text is directed from right to left; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.IsUpdateLocked">
+        <member name="M:DevExpress.Utils.TextOptions.ToString">
             <summary>
-                <para>Gets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is locked for any visual update.
+                <para>Returns the text representation of the current object.
 </para>
             </summary>
-            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is locked for any visual update; otherwise, <b>false</b>.
+            <returns>The text representation of the current object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.Trimming">
+            <summary>
+                <para>Gets or sets text trimming mode.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Style">
+        <member name="M:DevExpress.Utils.TextOptions.UpdateDefaultOptions(DevExpress.Utils.TextOptions)">
             <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's type. 
+                <para>For internal use. Copies settings from the specified object to the current object.
 </para>
             </summary>
-            <value>A ButtonStyle enumerator value that specifies the current IButton object's type. 
+            <param name="defaultOptions">
+		A <see cref="T:DevExpress.Utils.TextOptions"/> object whose settings are copied to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.TextOptions.VAlignment">
+            <summary>
+                <para>Gets or sets the vertical alignment of text.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> value that specifies the text vertical alignment.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.SuperTip">
+        <member name="M:DevExpress.Utils.TextOptions.VertAlignmentToStringAlignment(DevExpress.Utils.VertAlignment)">
             <summary>
-                <para>Gets or sets a super tool-tip for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>. 
+                <para>Converts the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Utils.SuperToolTip"/> object associated with the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
-</value>
+            <param name="align">
+		A <see cref="T:DevExpress.Utils.VertAlignment"/> value that is to be converted.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Tag">
+        <member name="P:DevExpress.Utils.TextOptions.WordWrap">
             <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's tag. 
+                <para>Gets or sets text wrapping mode.
 </para>
             </summary>
-            <value>An Object that is the current IButton object's tag. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ToolTip">
-            <summary>
-                <para>Gets or sets a tool-tip for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>. 
-</para>
-            </summary>
-            <value>A String value that is the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>'s tool-tip.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.UseCaption">
-            <summary>
-                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/> is visible. 
-</para>
-            </summary>
-            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/> is visible; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.UseImage">
-            <summary>
-                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon is visible. 
-</para>
-            </summary>
-            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon is visible; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Visible">
-            <summary>
-                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is visible. 
-</para>
-            </summary>
-            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is visible; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.VisibleIndex">
-            <summary>
-                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's relative position. 
-</para>
-            </summary>
-            <value>An Int32 value specifying the current IButton object's relative position. 
+            <value>A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies text wrapping mode.
 </value>
 
 
@@ -1360,77 +1446,6 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="T:DevExpress.Utils.Menu.DXSubMenuItem">
-
-            <summary>
-                <para>Specifies a submenu.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the DXSubMenuItem class with the specified caption.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the text displayed by the menu item. This value is assigned to the <see cref="P:DevExpress.Utils.Menu.DXMenuItem.Caption"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DXSubMenuItem class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor(System.String,System.EventHandler)">
-            <summary>
-                <para>Initializes a new instance of the DXSubMenuItem class with the specified caption and the handler for the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
-</para>
-            </summary>
-            <param name="caption">
-		A string that specifies the text displayed by the menu item. This value is assigned to the <see cref="P:DevExpress.Utils.Menu.DXMenuItem.Caption"/> property.
-
-            </param>
-            <param name="beforePopup">
-		A handler for the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
-
-            </param>
-
-
-        </member>
-        <member name="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup">
-            <summary>
-                <para>Allows you to dynamically provide sub-items for the current DXSubMenuItem object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.GenerateBeforePopupEvent">
-            <summary>
-                <para>Invokes the event handler assigned to the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.Menu.DXSubMenuItem.Items">
-            <summary>
-                <para>Gets a collection of items displayed when the current submenu is expanded.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.Menu.DXMenuItemCollection"/> object which contains menu items displayed when the submenu is expanded.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Utils.Menu.DXMenuCheckItem">
 
             <summary>
@@ -1623,6 +1638,16 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="M:DevExpress.XtraEditors.SidePanel.GetBorderThickness">
+            <summary>
+                <para>Gets or sets the actual SidePanel border thickness scaled according to the current DPI settings.
+</para>
+            </summary>
+            <returns>An Int32 value that specifies the SidePanel border thickness.
+</returns>
+
+
+        </member>
         <member name="P:DevExpress.XtraEditors.SidePanel.LookAndFeel">
             <summary>
                 <para>Provides access to Look and Feel settings of this SidePanel.
@@ -1670,169 +1695,869 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
-        <member name="T:DevExpress.Utils.ContextButtonBase">
+        <member name="T:DevExpress.Utils.ImageCollection">
 
             <summary>
-                <para>A base class for context buttons.
+                <para>The collection of <see cref="T:System.Drawing.Image"/> objects to be used within DevExpress controls. 
+The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.SharedImageCollection"/> component.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Utils.ContextButtonBase.#ctor">
+        <member name="M:DevExpress.Utils.ImageCollection.#ctor">
             <summary>
-                <para>Initializes a new instance of the ContextButtonBase class with the default settings.
+                <para>Initializes a new instance of the ImageCollection class.
 </para>
             </summary>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.AllowHtmlText">
+        <member name="M:DevExpress.Utils.ImageCollection.#ctor(System.ComponentModel.IContainer)">
             <summary>
-                <para>Gets or sets whether the current button's caption is formatted using HTML tags.
+                <para>Initializes a new instance of the ImageCollection class with the specified container.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether the current button's caption is formatted using HTML tags.
-</value>
+            <param name="container">
+		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
+
+            </param>
 
 
         </member>
-        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand(System.Linq.Expressions.Expression`1,System.Object,System.Func`1)">
+        <member name="M:DevExpress.Utils.ImageCollection.#ctor(System.Boolean)">
             <summary>
-                <para>Uses the command selector to find an appropriate parameterized command in the source and binds it to this ContextButtonBase.
-
+                <para>Initializes a new instance of the ImageCollection class with the specified settings.
 </para>
             </summary>
-            <param name="commandSelector">
-		An Expression that selects the appropriate command from the <i>source</i> object. 
+            <param name="allowModifyImages">
+		<b>true</b> to permit image modification; otherwise, <b>false</b>.
+
 
             </param>
-            <param name="source">
-		An Object (typically, a ViewModel) where the <i>commandSelector</i> looks for the required command. 
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Drawing.Image)">
+            <summary>
+                <para>Appends the specified image to the collection.
+</para>
+            </summary>
+            <param name="image">
+		The image to add to the collection.
 
             </param>
-            <param name="queryCommandParameter">
-		A Func delegate that passes the specific Object to the command as a parameter. 
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Object,System.Drawing.Image)">
+            <summary>
+                <para>Appends the specified image to the specified list.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the collection of images.
 
             </param>
-            <returns>An IDisposable object. Disposing of this object unbinds the command from this ContextButtonBase.
+            <param name="image">
+		The image to add to the specified collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Drawing.Image,System.String)">
+            <summary>
+                <para>Adds an image with the specified name to the collection.
+</para>
+            </summary>
+            <param name="image">
+		An Image to be added to the collection.
+
+            </param>
+            <param name="name">
+		A string that specifies the image's name. You can then retrieve images by name via the <see cref="P:DevExpress.Utils.ImageCollection.Images"/> property.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AddImageStrip(System.Drawing.Image)">
+            <summary>
+                <para>Adds the images from the specified horizontal image strip to the collection.
+</para>
+            </summary>
+            <param name="image">
+		The image(s) to add to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AddImageStripVertical(System.Drawing.Image)">
+            <summary>
+                <para>Adds the images from the specified vertical image strip to the collection.
+</para>
+            </summary>
+            <param name="image">
+		The image(s) to add to the collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.AllowDPIAware">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand(System.Object,System.Func`1)">
+        <member name="M:DevExpress.Utils.ImageCollection.BeginInit">
             <summary>
-                <para>Binds the specific parameterized command to this ContextButtonBase.
+                <para>Notifies the image collection that initialization is starting.
 </para>
             </summary>
-            <param name="command">
-		An Object that is the command to be bound to this ContextButtonBase.
+
+
+        </member>
+        <member name="E:DevExpress.Utils.ImageCollection.Changed">
+            <summary>
+                <para>Fires after the image collection has been changed.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.Clear">
+            <summary>
+                <para>Removes all images from the collection.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsInfoArgs,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+                <para>Draws the specified image in the specified state and at the specified location.
+</para>
+            </summary>
+            <param name="info">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsInfoArgs"/> object.
 
             </param>
-            <param name="queryCommandParameter">
-		A Func delegate that passes the specific Object to the <i>command</i> as a parameter. 
+            <param name="images">
+		An object that represents the source of the images.
 
             </param>
-            <returns>An IDisposable object. Disposing of this object unbinds the <i>command</i> from this ContextButtonBase.
+            <param name="index">
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
+
+            </param>
+            <param name="enabled">
+		<b>true</b> to draw the image in the enabled state; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle)">
+            <summary>
+                <para>Draws the specified image at the specified location.
+</para>
+            </summary>
+            <param name="cache">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that specifies the storage for the most  used pens, fonts and brushes.
+
+            </param>
+            <param name="images">
+		An object that represents the source of the images.
+
+
+            </param>
+            <param name="index">
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+                <para>Draws the image.
+</para>
+            </summary>
+            <param name="cache">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
+
+            </param>
+            <param name="images">
+		An object that represents the image source.
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
+            </param>
+            <param name="enabled">
+		<b>true</b> to draw an image in enabled state; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Drawing.Image,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+                <para>Draws the image.
+</para>
+            </summary>
+            <param name="cache">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
+
+            </param>
+            <param name="image">
+		The <see cref="T:System.Drawing.Image"/> to draw.
+
+            </param>
+            <param name="images">
+		An object that represents the image source. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
+            </param>
+            <param name="enabled">
+		<b>true</b>, to draw an image in enabled state; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Drawing.Image,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)">
+            <summary>
+                <para>Draws the specified image using the specified paint settings.
+</para>
+            </summary>
+            <param name="cache">
+		Provides the paint surface and storage of the recently used pens, fonts and brushes.
+
+            </param>
+            <param name="image">
+		The <see cref="T:System.Drawing.Image"/> to draw.
+
+            </param>
+            <param name="images">
+		An object that represents the source of images. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
+
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
+
+
+            </param>
+            <param name="attributes">
+		Contains information about how image colors are manipulated during rendering. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)">
+            <summary>
+                <para>Draws the specified image using the specified paint settings.
+</para>
+            </summary>
+            <param name="cache">
+		Provides the paint surface and storage of the recently used pens, fonts and brushes.
+
+            </param>
+            <param name="images">
+		An object that represents the source of images.
+
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
+
+
+            </param>
+            <param name="attributes">
+		Contains information about how image colors are manipulated during rendering. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean,DevExpress.Utils.Design.ISvgPaletteProvider)">
+            <summary>
+                <para>Draws the specified image using the specified paint settings.
+</para>
+            </summary>
+            <param name="cache">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
+            </param>
+            <param name="images">
+		An object that represents the image source.
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
+            </param>
+            <param name="enabled">
+		<b>true</b>, to draw an image in enabled state; otherwise, <b>false</b>.
+
+            </param>
+            <param name="palette">
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,DevExpress.Utils.Design.ISvgPaletteProvider)">
+            <summary>
+                <para>Draws the specified image using the specified paint settings.
+</para>
+            </summary>
+            <param name="cache">
+		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
+
+            </param>
+            <param name="images">
+		An object that represents the image source.
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
+            </param>
+            <param name="palette">
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes,DevExpress.Utils.Design.ISvgPaletteProvider)">
+            <summary>
+                <para>Draws the specified image using the specified paint settings.
+</para>
+            </summary>
+            <param name="cache">
+		Provides the paint surface and storage of the recently used pens, fonts and brushes.
+
+            </param>
+            <param name="images">
+		An object that represents the image source.
+
+            </param>
+            <param name="index">
+		An integer value that identifies the image within the collection.
+
+            </param>
+            <param name="bounds">
+		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
+
+            </param>
+            <param name="attributes">
+		Contains information about how image colors are manipulated during rendering. 
+
+            </param>
+            <param name="palette">
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.EndInit">
+            <summary>
+                <para>Notifies the image collection that initialization is complete.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.ExportToFile(System.String)">
+            <summary>
+                <para>Saves the contents of the current collection to a file.
+</para>
+            </summary>
+            <param name="fileName">
+		A string that specifies the name of the file to which the contents of the image collection is saved.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32)">
+            <summary>
+                <para>Returns the image at the specified position within the specified image list.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of images.
+
+            </param>
+            <param name="index">
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
+            </param>
+            <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. <b>null</b> (<b>Nothing</b> in Visual Basic) if the image isn't found.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand``1(System.Linq.Expressions.Expression{System.Action`1},System.Object,System.Func{``0})">
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.String)">
             <summary>
-                <para>Uses the command selector to find an appropriate parameterized command of the target type in the source and binds it to this ContextButtonBase.
+                <para>Returns an image from the specified ImageList or ImageCollection.
 </para>
             </summary>
-            <param name="commandSelector">
-		An Expression that selects the appropriate command from the <i>source</i> object. 
+            <param name="images">
+		An ImageList or ImageCollection that stores an image to be returned.
 
             </param>
-            <param name="source">
-		An Object (typically, a ViewModel) where the <i>commandSelector</i> looks for the required command. 
+            <param name="id">
+		A string value that is the key/name of the image to be returned.
 
             </param>
-            <param name="queryCommandParameter">
-		A Func delegate that passes the specific Object to the command as a parameter. 
-
-            </param>
-            <returns>An IDisposable object. Disposing of this object unbinds the command from this ContextButtonBase.
+            <returns>An image with the specified key/name stored in an ImageList/ImageCollection.
 </returns>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.Caption">
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32,DevExpress.Utils.Design.ISvgPaletteProvider,System.Nullable`1)">
             <summary>
-                <para>Gets or sets the current button's caption.
+                <para>Returns the image at the specified position within the specified image list.
 </para>
             </summary>
-            <value>A string value that specifies the current button's caption.
+            <param name="images">
+		An object that represents the source of images.
+
+            </param>
+            <param name="index">
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
+            </param>
+            <param name="palette">
+		An ISvgPaletteProvider object specifying colors used to paint vector images.
+
+            </param>
+            <param name="size">
+		A vector image size.
+
+            </param>
+            <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. <b>null</b> (<b>Nothing</b> in Visual Basic) if the image isn't found.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageCount(System.Object)">
+            <summary>
+                <para>Returns the number of images within the specified source of images.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of images.
+
+            </param>
+            <returns>An integer value that specifies the number of images within the specified image source.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageSize(System.Object,System.Int32)">
+            <summary>
+                <para>Returns the size of the image at the specified position in the image list.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of images.
+
+
+            </param>
+            <param name="index">
+		The index of the required image in the <i>images</i> list. 
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.Size"/> value that specifies the size of a specific image.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Object)">
+            <summary>
+                <para>Returns the size of the images in the specified image list.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of the images.
+
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.Size"/> structure that specifies the height and width of the images in the specified list. <see cref="F:System.Drawing.Size.Empty"/> if <i>images</i> is <b>null</b> (<b>Nothing</b> in Visual Basic) or isn't a source of images.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Drawing.Image,System.Object,System.Int32)">
+            <summary>
+                <para>Gets the size of the specified image or of an image in the image list addressed by a specific index.
+
+</para>
+            </summary>
+            <param name="image">
+		An image whose size is returned.
+
+
+            </param>
+            <param name="images">
+		An object that represents the source of images. This parameter is in effect if the <i>image</i> parameter is set to <b>null</b>.
+
+
+            </param>
+            <param name="index">
+		The index of the required image in the <i>images</i> list.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.Size"/> value that specifies the size of a specific image.
+
+</returns>
+
+
+        </member>
+        <member name="E:DevExpress.Utils.ImageCollection.GetImageSize">
+            <summary>
+                <para>When the <see cref="P:DevExpress.Utils.ImageCollection.IsDpiAware"/> option is enabled, the <b>GetImageSize</b> event allows you to customize the size of images returned by the <see cref="T:DevExpress.Utils.ImageCollection"/>. This event is fired on finishing an <see cref="T:DevExpress.Utils.ImageCollection"/> object initialization.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.ImageFromFile(System.String)">
+            <summary>
+                <para>Returns the image stored in the specified file.
+</para>
+            </summary>
+            <param name="fileName">
+		A string that specifies the full path to the file.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.Image"/> object that represents the image stored in the specified file; <b>null</b> if the image cannot be loaded.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ImageCollection.Images">
+            <summary>
+                <para>Provides access to the collection of images.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.Images"/> object that represents the collection of images.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.Height">
+        <member name="P:DevExpress.Utils.ImageCollection.ImageSize">
             <summary>
-                <para>Gets or sets the button height.
+                <para>Gets or sets the size of images in the image collection.
+For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property specifies the size of images fetched from an image strip (at design time or via the <see cref="M:DevExpress.Utils.ImageCollection.AddImageStrip"/> and <see cref="M:DevExpress.Utils.ImageCollection.AddImageStripVertical"/> methods).
 </para>
             </summary>
-            <value>An integer value that specifies the button height.
+            <value>A <see cref="T:System.Drawing.Size"/> structure which specifies the height and width of the images in the list.
 </value>
 
 
         </member>
-        <member name="E:DevExpress.Utils.ContextButtonBase.HyperlinkClick">
+        <member name="P:DevExpress.Utils.ImageCollection.ImageStream">
             <summary>
-                <para>Fires when a hyperlink in the button caption is clicked.
+                <para>Gets or sets the handle to the <see cref="T:System.Windows.Forms.ImageListStreamer"/> associated with the current image collection.
+
 </para>
             </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.HyperLinkColor">
-            <summary>
-                <para>Gets or sets the color of the hyperlink text in the current button's caption.
-</para>
-            </summary>
-            <value>A <b>Color</b> object that specifies the color of the hyperlink text in the current button's caption.
+            <value>A handle to the <see cref="T:System.Windows.Forms.ImageListStreamer"/> for the current image collection. <b>null</b> (<b>Nothing</b> in Visual Basic) if the current image collection is empty.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.MaxHeight">
+        <member name="M:DevExpress.Utils.ImageCollection.InsertGalleryImage(System.String,System.String,System.Drawing.Image,System.Int32)">
             <summary>
-                <para>Gets or sets the maximum height of the current button.
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
 </para>
             </summary>
-            <value>An integer value that specifies the maximum height of the current button.
+            <param name="name">
+		 
+
+            </param>
+            <param name="uri">
+		 
+
+            </param>
+            <param name="image">
+		 
+
+            </param>
+            <param name="index">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Drawing.Image,System.String,System.Type,System.Int32)">
+            <summary>
+                <para>Inserts an image from project resources.
+</para>
+            </summary>
+            <param name="image">
+		An image to be inserted.
+
+            </param>
+            <param name="name">
+		The name of the image to be inserted.
+
+            </param>
+            <param name="resourceType">
+		The type of the class where the image to be inserted is defined.
+
+            </param>
+            <param name="index">
+		An integer value that specifies the position at which the image needs to be inserted in the image collection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Drawing.Image,System.String,System.Type,System.Int32,System.String)">
+            <summary>
+                <para>Inserts an image from project resources.
+</para>
+            </summary>
+            <param name="image">
+		An image to be inserted.
+
+            </param>
+            <param name="name">
+		The name of the image to be inserted.
+
+            </param>
+            <param name="resourceType">
+		The type of the class where the image to be inserted is defined.
+
+            </param>
+            <param name="index">
+		An integer value that specifies the position at which the image needs to be inserted in the image collection.
+
+            </param>
+            <param name="resName">
+		The name of the class where the image to be inserted is defined.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="assemblyId">
+		 
+
+            </param>
+            <param name="name">
+		 
+
+            </param>
+            <param name="path">
+		 
+
+            </param>
+            <param name="index">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ImageCollection.IsDpiAware">
+            <summary>
+                <para>Gets or sets the value that specifies that when requesting an image from the ImageCollection, another DPI-specific image corresponding to the requested image is returned instead.
+</para>
+            </summary>
+            <value>The <b>DefaultBoolean.True</b> value if a requested image is replaced with a DPI-specific image; <b>DefaultBoolean.False</b> or <b>DefaultBoolean.Default</b> if this feature is disabled.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.MaxWidth">
+        <member name="M:DevExpress.Utils.ImageCollection.IsImageExists(System.Drawing.Image,System.Object,System.Int32)">
             <summary>
-                <para>Gets or sets the maximum width of the current button.
+                <para>This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.
 </para>
             </summary>
-            <value>An integer value that specifies the maximum width of the current button.
+            <param name="image">
+		The <see cref="T:System.Drawing.Image"/>.
+
+            </param>
+            <param name="images">
+		An object that represents the image source.
+
+            </param>
+            <param name="index">
+		An integer value that specifies the position of the image within the collection.
+
+            </param>
+            <returns>The Boolean value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageExists(System.Object,System.Int32)">
+            <summary>
+                <para>Determines whether the image exists at the specified position within the specified source of images.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of images.
+
+            </param>
+            <param name="index">
+		A zero-based integer that specifies the index of the image within the <i>images</i>.
+
+            </param>
+            <returns><b>true</b> if the image exists at the specified position within the specified source of images; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageScaled(System.Object,System.Int32)">
+            <summary>
+                <para>Returns whether the specified collection contains DPI-specific images.
+</para>
+            </summary>
+            <param name="images">
+		An image collection to check for DPI-specific images.
+
+            </param>
+            <param name="index">
+		An integer value specifying a zero-based index to check whether an image with this index exists in the specified collection.
+
+            </param>
+            <returns><b>true</b>, if the specified collection contains DPI-specific images; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageScaled(System.Object)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="images">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.IsSvgImageExists(System.Object,System.Int32)">
+            <summary>
+                <para>Returns whether an image with the specified index exists in the specified collection.
+</para>
+            </summary>
+            <param name="images">
+		An object that represents the source of images.
+
+            </param>
+            <param name="index">
+		The index of the required image in the <i>images</i> list. 
+
+            </param>
+            <returns><b>true</b>, if an image exists; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ImageCollection.RegisterAssemblies(System.String[])">
+            <summary>
+                <para>Registers specific external image-containing assemblies within your application.
+</para>
+            </summary>
+            <param name="assemblies">
+		A String array that contains names of the assemblies that should be registered.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ImageCollection.RegisteredAssemblies">
+            <summary>
+                <para>Provides access to external image-containing assemblies, registered by this ImageCollection.
+</para>
+            </summary>
+            <value>A <see cref="ImageCollectionRegisteredAssemblies"/> object that stores registered assemblies.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.Padding">
+        <member name="E:DevExpress.Utils.ImageCollection.ResolveImage">
             <summary>
-                <para>Gets or sets the amount of space around the current button.
+                <para>When requesting an image from the ImageCollection, the <b>ResolveImage</b> event fires when the project resources do not contain a DPI-specific image that matches the requested image and allows you to provide this DPI-specific image manually. This event is in effect when the <see cref="P:DevExpress.Utils.ImageCollection.IsDpiAware"/> option is enabled and the requested image was loaded into the ImageCollection from the project resources.
 </para>
             </summary>
-            <value>A <b>Padding</b> structure that specifies the amount of space around the current button.
-</value>
 
 
         </member>
-        <member name="P:DevExpress.Utils.ContextButtonBase.Width">
+        <member name="P:DevExpress.Utils.ImageCollection.TransparentColor">
             <summary>
-                <para>Gets or sets the button width.
+                <para>Gets or sets the color to treat as transparent.
 </para>
             </summary>
-            <value>An integer value that specifies the button width.
+            <value>The <see cref="T:System.Drawing.Color"/> which represents the color that is not rendered when the image is drawn.
 </value>
 
 
@@ -2156,6 +2881,16 @@ A specific version of the addressed image is automatically chosen based on the a
 
 
         </member>
+        <member name="P:DevExpress.Utils.ToolTipControlInfo.ToolTipIndent">
+            <summary>
+                <para>Gets or sets the space, in pixels, between the tooltip and the associated visual element.
+</para>
+            </summary>
+            <value>An integer value specifying the space, in pixels, between the tooltip and the associated visual element. The default is <b>16</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.Utils.ToolTipControlInfo.ToolTipLocation">
             <summary>
                 <para>Gets or sets the tooltip location.
@@ -2254,6 +2989,59 @@ A specific version of the addressed image is automatically chosen based on the a
 </para>
             </summary>
             <value><b>true</b> if the current popup control is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Utils.ToolTipController.GetActiveObjectInfo"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.#ctor(System.Windows.Forms.Control,System.Object,DevExpress.Utils.ToolTipControlInfo,System.Drawing.Point)">
+            <summary>
+                <para>Initializes a new instance of the ToolTipControllerGetActiveObjectInfoEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="control">
+		The control for which a tooltip controller's event is fired. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerEventArgsBase.SelectedControl"/> property.
+
+            </param>
+            <param name="obj">
+		The element of the control (or the type of the element) for which the tooltip is displayed. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerEventArgsBase.SelectedObject"/> property.
+
+            </param>
+            <param name="info">
+		An object which uniquely identifies the current element for which the tooltip is displayed. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.Info"/> property.
+
+            </param>
+            <param name="controlMousePosition">
+		A <see cref="T:System.Drawing.Point"/> structure that specifies the position of the mouse cursor relative to the control's upper left corner. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.ControlMousePosition"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.ControlMousePosition">
+            <summary>
+                <para>Gets the position of the mouse cursor relative to the control's upper left corner. 
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Point"/> structure that specifies the position of the mouse cursor relative to the control's upper left corner.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.Info">
+            <summary>
+                <para>Gets or sets an object which uniquely identifies the visual element at the current position.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.ToolTipControlInfo"/> object which identifies the visual element at the current position.
 </value>
 
 
@@ -3023,6 +3811,13 @@ In this mode, the scroll bar thumb supports the auto-hide functionality. It auto
                 <para>Occurs when a <see cref="T:DevExpress.Utils.VisualEffects.Guide"/> is activated and allows you to populate a flyout panel associated with this guide.
 
 </para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.VisualEffects.AdornerUIManager.Refresh">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -5291,6 +6086,250 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
 
 
         </member>
+        <member name="T:DevExpress.XtraEditors.ButtonPanel.IButtonProperties">
+
+            <summary>
+                <para>Contains properties for <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> objects.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Appearance">
+            <summary>
+                <para>Provides access to the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's appearance settings. 
+</para>
+            </summary>
+            <value>An AppearanceObject that stores the current IButton object's appearance settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.BeginUpdate">
+            <summary>
+                <para>Locks the <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> by preventing visual updates of the object and its elements until the EndUpdate method is called. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.CancelUpdate">
+            <summary>
+                <para>Unlocks the <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object and its elements without immediate visual update.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's caption. 
+</para>
+            </summary>
+            <value>A String value that is the current IButton object's caption. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Checked">
+            <summary>
+                <para>Gets or sets if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is checked. 
+</para>
+            </summary>
+            <value>A Boolean value specifying whether the current IButton is checked. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Enabled">
+            <summary>
+                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is enabled. 
+</para>
+            </summary>
+            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.EndUpdate">
+            <summary>
+                <para>Unlocks an <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> causing immediate visual update of the object and all its elements.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Glyphs">
+            <summary>
+                <para>Gets or sets a collection of glyphs for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object. 
+</para>
+            </summary>
+            <value>An Object that is the glyphs collection for the current IButton object. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.GroupIndex">
+            <summary>
+                <para>Gets or sets a group index for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object. 
+</para>
+            </summary>
+            <value>An Int32 value that is the group index for the current IButton object. The default value is <b>-1</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Image">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon. 
+</para>
+            </summary>
+            <value>An Image object that is the current IButton object's icon. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageIndex">
+            <summary>
+                <para>Gets or sets an <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images"/> collection member used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's glyph. 
+</para>
+            </summary>
+            <value>An Int32 value that points to an <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images"/> collection member used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's glyph. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageLocation">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon location relative to its <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/>. 
+</para>
+            </summary>
+            <value>An ImageLocation enumerator value specifying the current IButton object's icon location relative to its <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageOptions">
+            <summary>
+                <para>Provides access to all properties that allow you to assign and customize an icon for this <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
+</para>
+            </summary>
+            <value>A <see cref="BaseButtonImageOptions"/> object that stores all properties that allow you to assign and customize an icon for this <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Images">
+            <summary>
+                <para>Gets a collection of images that can be used as the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon. 
+</para>
+            </summary>
+            <value>The Object that is the source of images assigned to the parent dock panel's <see cref="P:DevExpress.XtraBars.Docking.DockPanel.Images"/> property. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ImageUri">
+            <summary>
+                <para>Gets or sets the uniform resource identifier of the image in the DX Image Gallery displayed in the button. 
+A specific version of the addressed image is automatically chosen based on the app context (the current skin and required image size).
+</para>
+            </summary>
+            <value>A string value that specifies the uniform resource identifier of the image to be displayed in the button.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.IsUpdateLocked">
+            <summary>
+                <para>Gets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is locked for any visual update.
+</para>
+            </summary>
+            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> is locked for any visual update; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Style">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's type. 
+</para>
+            </summary>
+            <value>A ButtonStyle enumerator value that specifies the current IButton object's type. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.SuperTip">
+            <summary>
+                <para>Gets or sets a super tool-tip for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.SuperToolTip"/> object associated with the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Tag">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's tag. 
+</para>
+            </summary>
+            <value>An Object that is the current IButton object's tag. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.ToolTip">
+            <summary>
+                <para>Gets or sets a tool-tip for the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>. 
+</para>
+            </summary>
+            <value>A String value that is the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/>'s tool-tip.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.UseCaption">
+            <summary>
+                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/> is visible. 
+</para>
+            </summary>
+            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's <see cref="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Caption"/> is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.UseImage">
+            <summary>
+                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon is visible. 
+</para>
+            </summary>
+            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's icon is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.Visible">
+            <summary>
+                <para>Gets or sets whether the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is visible. 
+</para>
+            </summary>
+            <value><b>true</b> if the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object is visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.ButtonPanel.IButtonProperties.VisibleIndex">
+            <summary>
+                <para>Gets or sets the current <see cref="T:DevExpress.XtraBars.Docking2010.IButton"/> object's relative position. 
+</para>
+            </summary>
+            <value>An Int32 value specifying the current IButton object's relative position. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Utils.VisualEffects.ValidationHintDefaultProperties">
 
             <summary>
@@ -5373,73 +6412,6 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
             </summary>
             <value>A <see cref="ValidationHintBaseDefaultProperties"/> object that stores behavior settings applied when the target UI element passes validation.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.Trimming">
-
-            <summary>
-                <para>List values that specify how the characters in a string that do not completely fit into a layout shape are trimmed.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.Character">
-            <summary>
-                <para>Specifies that the text is trimmed to the nearest character.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.Default">
-            <summary>
-                <para>Trimming is determined by a control's current settings. The default value is automatically set for a control if an end-user doesn't specify a value.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.EllipsisCharacter">
-            <summary>
-                <para>Specifies that the text is trimmed to the nearest character, and an ellipsis is inserted at the end of a trimmed line.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.EllipsisPath">
-            <summary>
-                <para>The center is removed from trimmed lines and replaced by an ellipsis. The algorithm keeps as much of the last slash-delimited segment of the line as possible.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.EllipsisWord">
-            <summary>
-                <para>Specifies that text is trimmed to the nearest word, and an ellipsis is inserted at the end of a trimmed line.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.None">
-            <summary>
-                <para>Specifies no trimming.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Utils.Trimming.Word">
-            <summary>
-                <para>Specifies that text is trimmed to the nearest word.
-</para>
-            </summary>
 
 
         </member>
@@ -5568,10 +6540,10 @@ The <b>false</b> value restricts the <b>SaveWorkspace</b> method to create new w
         </member>
         <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.AnimationMode">
             <summary>
-                <para>Gets or sets whether DevExpress controls use animation effects by default. This is a static property.
+                <para>Gets or sets whether DevExpress controls animate end-user operations (expand/collapse, tab switch, sorting, etc.). This is a static (shared in VB) property.
 </para>
             </summary>
-            <value>An <see cref="AnimationMode"/> enumeration value that specifies whether DevExpress controls use animation effects by default.
+            <value>An <see cref="AnimationMode"/> enumeration value that specifies whether DevExpress controls use animation effects. The default is <b><see cref="AnimationMode"/>.Default</b>.
 </value>
 
 
@@ -6114,6 +7086,203 @@ This is a static property.
 
 
         </member>
+        <member name="T:DevExpress.Utils.ToolTipItem">
+
+            <summary>
+                <para>A regular tooltip item in a <see cref="T:DevExpress.Utils.SuperToolTip"/> that displays text and/or an image.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.ToolTipItem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <param name="info">
+		 
+
+            </param>
+            <param name="context">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ToolTipItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolTipItem class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.AllowHtmlText">
+            <summary>
+                <para>Gets or sets whether HTML formatting is allowed for the item's text (<see cref="P:DevExpress.Utils.ToolTipItem.Text"/>).
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether HTML formatting is allowed in the tooltip.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.DefaultImageToTextDistance">
+            <summary>
+                <para>Gets the default <see cref="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance"/> property value.
+</para>
+            </summary>
+            <value>An integer value that is the default <see cref="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance"/> property value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ToolTipItem.Dispose">
+            <summary>
+                <para>Releases all unmanaged resources used by the ToolTipItem.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.Font">
+            <summary>
+                <para>Gets or sets the font used to paint the item's text.
+</para>
+            </summary>
+            <value>The font used to display the <see cref="T:DevExpress.Utils.ToolTipItem"/>'s text (specified in the <see cref="P:DevExpress.Utils.ToolTipItem.Text"/> property).
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.Icon">
+            <summary>
+                <para>Gets or sets the icon displayed in the ToolTipItem object.
+</para>
+            </summary>
+            <value>An <b>System.Drawing.Icon</b> that is displayed in the ToolTipItem object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.Image">
+            <summary>
+                <para>Gets or sets the image displayed in the ToolTipItem object.
+</para>
+            </summary>
+            <value>A <b>System.Drawing.Image</b> that is displayed in the tool tip.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.ImageAlign">
+            <summary>
+                <para>Gets or sets the image or icon alignment.
+</para>
+            </summary>
+            <value>The image or icon alignment.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.ImageIndex">
+            <summary>
+                <para>Gets or sets the zero-based index of an image in a <see cref="P:DevExpress.Utils.ToolTipItem.Images"/> collection to be displayed in a ToolTipItem object.
+
+</para>
+            </summary>
+            <value>The zero-based index of an image in an <see cref="P:DevExpress.Utils.ToolTipItem.Images"/> collection to be displayed in a ToolTipItem object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.ImageOptions">
+            <summary>
+                <para>Provides access to properties that allow you to assign and customize an image for this tooltip item.
+</para>
+            </summary>
+            <value>A <see cref="ToolTipItemImageOptions"/> object that stores properties that allow you to assign and customize an image for this tooltip item.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.Images">
+            <summary>
+                <para>Gets or sets the source of images that can be displayed in a ToolTipItem object. 
+</para>
+            </summary>
+            <value>The source of images that can be displayed in a ToolTipItem object. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance">
+            <summary>
+                <para>Gets or sets a space that visually detaches an image and text displayed in a ToolTipItem.
+</para>
+            </summary>
+            <value>The distance between an image and text displayed in a ToolTipItem, in pixels
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.IsEmpty">
+            <summary>
+                <para>Gets whether the ToolTipItem is empty.
+</para>
+            </summary>
+            <value><b>true</b>, if ToolTipItem content (text, image and icon) is empty; otherwise, <b>false</b>
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.LeftIndent">
+            <summary>
+                <para>Gets or sets the indent from the left edge of a ToolTipItem.
+
+</para>
+            </summary>
+            <value>The indent from the left edge of a ToolTipItem, in pixels.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.MaxWidth">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.OwnerAllowHtmlText">
+            <summary>
+                <para>Gets whether the <see cref="T:DevExpress.Utils.SuperToolTip"/> object (the ToolTipItem owner) allows using HTML tags.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the <see cref="T:DevExpress.Utils.SuperToolTip"/> object (the ToolTipItem owner) allows using HTML tags.; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipItem.Text">
+            <summary>
+                <para>Gets or sets the tooltip item text.
+
+</para>
+            </summary>
+            <value>Specifies the text in a ToolTipItem.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Utils.Animation.TransitionManager">
 
             <summary>
@@ -6393,6 +7562,13 @@ This is a static property.
 
 
         </member>
+        <member name="M:DevExpress.Utils.SvgImageCollection.BeginInit">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="M:DevExpress.Utils.SvgImageCollection.Clear">
             <summary>
                 <para>Removes all images from this SvgImageCollection.
@@ -6417,12 +7593,15 @@ This is a static property.
         </member>
         <member name="M:DevExpress.Utils.SvgImageCollection.ContainsKey(System.String)">
             <summary>
-                <para> </para>
+                <para>Determines whether the <see cref="P:DevExpress.Utils.SvgImageCollection.Keys"/> sequence contains the specified element.
+</para>
             </summary>
             <param name="key">
-		 
+		The value to locate in the sequence.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if the <see cref="P:DevExpress.Utils.SvgImageCollection.Keys"/> sequence contains an element that has the specified value; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
@@ -6450,6 +7629,13 @@ This is a static property.
             <value>An Int32 value that is the number of vector icons.
 
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.SvgImageCollection.EndInit">
+            <summary>
+                <para> </para>
+            </summary>
 
 
         </member>
@@ -6935,6 +8121,16 @@ This is a static property.
 
 
         </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.Assign(DevExpress.Utils.ImageCollection)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageCollection">
+		 
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.Utils.DPIAwareImageCollection.BeginInit">
             <summary>
                 <para>Begins the DPIAwareImageCollection initialization.
@@ -6956,6 +8152,28 @@ This is a static property.
                 <para>Finishes the DPIAwareImageCollection initialization.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.GetImage(System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageKey">
+		 
+            </param>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.DPIAwareImageCollection.GetImage(System.Int32)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="imageIndex">
+		 
+            </param>
+            <returns> </returns>
 
 
         </member>
@@ -7224,203 +8442,6 @@ This is a static property.
 
 
         </member>
-        <member name="T:DevExpress.Utils.ToolTipItem">
-
-            <summary>
-                <para>A regular tooltip item in a <see cref="T:DevExpress.Utils.SuperToolTip"/> that displays text and/or an image.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.ToolTipItem.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="info">
-		 
-
-            </param>
-            <param name="context">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ToolTipItem.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolTipItem class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.AllowHtmlText">
-            <summary>
-                <para>Gets or sets whether HTML formatting is allowed for the item's text (<see cref="P:DevExpress.Utils.ToolTipItem.Text"/>).
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value that specifies whether HTML formatting is allowed in the tooltip.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.DefaultImageToTextDistance">
-            <summary>
-                <para>Gets the default <see cref="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance"/> property value.
-</para>
-            </summary>
-            <value>An integer value that is the default <see cref="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance"/> property value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ToolTipItem.Dispose">
-            <summary>
-                <para>Releases all unmanaged resources used by the ToolTipItem.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.Font">
-            <summary>
-                <para>Gets or sets the font used to paint the item's text.
-</para>
-            </summary>
-            <value>The font used to display the <see cref="T:DevExpress.Utils.ToolTipItem"/>'s text (specified in the <see cref="P:DevExpress.Utils.ToolTipItem.Text"/> property).
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.Icon">
-            <summary>
-                <para>Gets or sets the icon displayed in the ToolTipItem object.
-</para>
-            </summary>
-            <value>An <b>System.Drawing.Icon</b> that is displayed in the ToolTipItem object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.Image">
-            <summary>
-                <para>Gets or sets the image displayed in the ToolTipItem object.
-</para>
-            </summary>
-            <value>A <b>System.Drawing.Image</b> that is displayed in the tool tip.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.ImageAlign">
-            <summary>
-                <para>Gets or sets the image or icon alignment.
-</para>
-            </summary>
-            <value>The image or icon alignment.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.ImageIndex">
-            <summary>
-                <para>Gets or sets the zero-based index of an image in a <see cref="P:DevExpress.Utils.ToolTipItem.Images"/> collection to be displayed in a ToolTipItem object.
-
-</para>
-            </summary>
-            <value>The zero-based index of an image in an <see cref="P:DevExpress.Utils.ToolTipItem.Images"/> collection to be displayed in a ToolTipItem object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.ImageOptions">
-            <summary>
-                <para>Provides access to properties that allow you to assign and customize an image for this tooltip item.
-</para>
-            </summary>
-            <value>A <see cref="ToolTipItemImageOptions"/> object that stores properties that allow you to assign and customize an image for this tooltip item.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.Images">
-            <summary>
-                <para>Gets or sets the source of images that can be displayed in a ToolTipItem object. 
-</para>
-            </summary>
-            <value>The source of images that can be displayed in a ToolTipItem object. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.ImageToTextDistance">
-            <summary>
-                <para>Gets or sets a space that visually detaches an image and text displayed in a ToolTipItem.
-</para>
-            </summary>
-            <value>The distance between an image and text displayed in a ToolTipItem, in pixels
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.IsEmpty">
-            <summary>
-                <para>Gets whether the ToolTipItem is empty.
-</para>
-            </summary>
-            <value><b>true</b>, if ToolTipItem content (text, image and icon) is empty; otherwise, <b>false</b>
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.LeftIndent">
-            <summary>
-                <para>Gets or sets the indent from the left edge of a ToolTipItem.
-
-</para>
-            </summary>
-            <value>The indent from the left edge of a ToolTipItem, in pixels.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.MaxWidth">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.OwnerAllowHtmlText">
-            <summary>
-                <para>Gets whether the <see cref="T:DevExpress.Utils.SuperToolTip"/> object (the ToolTipItem owner) allows using HTML tags.
-
-</para>
-            </summary>
-            <value><b>true</b>, if the <see cref="T:DevExpress.Utils.SuperToolTip"/> object (the ToolTipItem owner) allows using HTML tags.; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipItem.Text">
-            <summary>
-                <para>Gets or sets the tooltip item text.
-
-</para>
-            </summary>
-            <value>Specifies the text in a ToolTipItem.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Utils.ToolTipStyle">
 
             <summary>
@@ -7491,6 +8512,173 @@ In other cases, tooltips are painted using the <see cref="F:DevExpress.Utils.Too
                 <para>Borders are not painted around pages at all.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.ContextButtonBase">
+
+            <summary>
+                <para>A base class for context buttons.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.ContextButtonBase.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ContextButtonBase class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.AllowHtmlText">
+            <summary>
+                <para>Gets or sets whether the current button's caption is formatted using HTML tags.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether the current button's caption is formatted using HTML tags.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand(System.Linq.Expressions.Expression`1,System.Object,System.Func`1)">
+            <summary>
+                <para>Uses the command selector to find an appropriate parameterized command in the source and binds it to this ContextButtonBase.
+
+</para>
+            </summary>
+            <param name="commandSelector">
+		An Expression that selects the appropriate command from the <i>source</i> object. 
+
+            </param>
+            <param name="source">
+		An Object (typically, a ViewModel) where the <i>commandSelector</i> looks for the required command. 
+
+            </param>
+            <param name="queryCommandParameter">
+		A Func delegate that passes the specific Object to the command as a parameter. 
+
+            </param>
+            <returns>An IDisposable object. Disposing of this object unbinds the command from this ContextButtonBase.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand(System.Object,System.Func`1)">
+            <summary>
+                <para>Binds the specific parameterized command to this ContextButtonBase.
+</para>
+            </summary>
+            <param name="command">
+		An Object that is the command to be bound to this ContextButtonBase.
+
+            </param>
+            <param name="queryCommandParameter">
+		A Func delegate that passes the specific Object to the <i>command</i> as a parameter. 
+
+            </param>
+            <returns>An IDisposable object. Disposing of this object unbinds the <i>command</i> from this ContextButtonBase.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.ContextButtonBase.BindCommand``1(System.Linq.Expressions.Expression{System.Action`1},System.Object,System.Func{``0})">
+            <summary>
+                <para>Uses the command selector to find an appropriate parameterized command of the target type in the source and binds it to this ContextButtonBase.
+</para>
+            </summary>
+            <param name="commandSelector">
+		An Expression that selects the appropriate command from the <i>source</i> object. 
+
+            </param>
+            <param name="source">
+		An Object (typically, a ViewModel) where the <i>commandSelector</i> looks for the required command. 
+
+            </param>
+            <param name="queryCommandParameter">
+		A Func delegate that passes the specific Object to the command as a parameter. 
+
+            </param>
+            <returns>An IDisposable object. Disposing of this object unbinds the command from this ContextButtonBase.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.Caption">
+            <summary>
+                <para>Gets or sets the current button's caption.
+</para>
+            </summary>
+            <value>A string value that specifies the current button's caption.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.Height">
+            <summary>
+                <para>Gets or sets the button height.
+</para>
+            </summary>
+            <value>An integer value that specifies the button height.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.Utils.ContextButtonBase.HyperlinkClick">
+            <summary>
+                <para>Fires when a hyperlink in the button caption is clicked.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.HyperLinkColor">
+            <summary>
+                <para>Gets or sets the color of the hyperlink text in the current button's caption.
+</para>
+            </summary>
+            <value>A <b>Color</b> object that specifies the color of the hyperlink text in the current button's caption.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.MaxHeight">
+            <summary>
+                <para>Gets or sets the maximum height of the current button.
+</para>
+            </summary>
+            <value>An integer value that specifies the maximum height of the current button.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.MaxWidth">
+            <summary>
+                <para>Gets or sets the maximum width of the current button.
+</para>
+            </summary>
+            <value>An integer value that specifies the maximum width of the current button.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.Padding">
+            <summary>
+                <para>Gets or sets the amount of space around the current button.
+</para>
+            </summary>
+            <value>A <b>Padding</b> structure that specifies the amount of space around the current button.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ContextButtonBase.Width">
+            <summary>
+                <para>Gets or sets the button width.
+</para>
+            </summary>
+            <value>An integer value that specifies the button width.
+</value>
 
 
         </member>
@@ -10795,7 +11983,8 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
                 <para>Gets or sets whether this DXPopupMenu items should display their hints.
 </para>
             </summary>
-            <value><b>true</b> if this DXPopupMenu items should display their hints; otherwise, <b>false</b>.
+            <value><b>true</b>, if these DXPopupMenu items should display their hints; otherwise, <b>false</b>.
+
 </value>
 
 
@@ -10832,6 +12021,77 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 </para>
             </summary>
             <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Utils.Menu.DXSubMenuItem">
+
+            <summary>
+                <para>Specifies a submenu.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the DXSubMenuItem class with the specified caption.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the text displayed by the menu item. This value is assigned to the <see cref="P:DevExpress.Utils.Menu.DXMenuItem.Caption"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DXSubMenuItem class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.#ctor(System.String,System.EventHandler)">
+            <summary>
+                <para>Initializes a new instance of the DXSubMenuItem class with the specified caption and the handler for the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
+</para>
+            </summary>
+            <param name="caption">
+		A string that specifies the text displayed by the menu item. This value is assigned to the <see cref="P:DevExpress.Utils.Menu.DXMenuItem.Caption"/> property.
+
+            </param>
+            <param name="beforePopup">
+		A handler for the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
+
+            </param>
+
+
+        </member>
+        <member name="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup">
+            <summary>
+                <para>Allows you to dynamically provide sub-items for the current DXSubMenuItem object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Menu.DXSubMenuItem.GenerateBeforePopupEvent">
+            <summary>
+                <para>Invokes the event handler assigned to the <see cref="E:DevExpress.Utils.Menu.DXSubMenuItem.BeforePopup"/> event.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.Menu.DXSubMenuItem.Items">
+            <summary>
+                <para>Gets a collection of items displayed when the current submenu is expanded.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.Menu.DXMenuItemCollection"/> object which contains menu items displayed when the submenu is expanded.
 </value>
 
 
@@ -11589,59 +12849,6 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 
 
         </member>
-        <member name="T:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Utils.ToolTipController.GetActiveObjectInfo"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.#ctor(System.Windows.Forms.Control,System.Object,DevExpress.Utils.ToolTipControlInfo,System.Drawing.Point)">
-            <summary>
-                <para>Initializes a new instance of the ToolTipControllerGetActiveObjectInfoEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="control">
-		The control for which a tooltip controller's event is fired. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerEventArgsBase.SelectedControl"/> property.
-
-            </param>
-            <param name="obj">
-		The element of the control (or the type of the element) for which the tooltip is displayed. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerEventArgsBase.SelectedObject"/> property.
-
-            </param>
-            <param name="info">
-		An object which uniquely identifies the current element for which the tooltip is displayed. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.Info"/> property.
-
-            </param>
-            <param name="controlMousePosition">
-		A <see cref="T:System.Drawing.Point"/> structure that specifies the position of the mouse cursor relative to the control's upper left corner. This value is assigned to the <see cref="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.ControlMousePosition"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.ControlMousePosition">
-            <summary>
-                <para>Gets the position of the mouse cursor relative to the control's upper left corner. 
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Point"/> structure that specifies the position of the mouse cursor relative to the control's upper left corner.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs.Info">
-            <summary>
-                <para>Gets or sets an object which uniquely identifies the visual element at the current position.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.ToolTipControlInfo"/> object which identifies the visual element at the current position.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Utils.Images">
 
             <summary>
@@ -12214,336 +13421,6 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 
 
         </member>
-        <member name="T:DevExpress.Utils.TextOptions">
-
-            <summary>
-                <para>Contains options that specify how text is rendered.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
-
-</para>
-            </summary>
-            <param name="hAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
-
-
-            </param>
-            <param name="vAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
-
-
-            </param>
-            <param name="wordWrap">
-		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
-
-
-            </param>
-            <param name="trimming">
-		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.AppearanceObject)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified owner, the text settings are set to default values.
-
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.Utils.AppearanceObject"/> object which becomes the owner of the current object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.#ctor(DevExpress.Utils.HorzAlignment,DevExpress.Utils.VertAlignment,DevExpress.Utils.WordWrap,DevExpress.Utils.Trimming,DevExpress.Utils.HKeyPrefix)">
-            <summary>
-                <para>Initializes a new instance of the TextOptions class with the specified alignments, word wrapping and text trimming options.
-
-</para>
-            </summary>
-            <param name="hAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the horizontal alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HAlignment"/> property.
-
-            </param>
-            <param name="vAlignment">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the vertical alignment of text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.VAlignment"/> property.
-
-
-            </param>
-            <param name="wordWrap">
-		A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies word wrapping mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.WordWrap"/> property.
-
-            </param>
-            <param name="trimming">
-		A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.Trimming"/> property.
-
-            </param>
-            <param name="hotKeyPrefix">
-		A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value that specifies the hotkey prefix for the text. This value is assigned to the <see cref="P:DevExpress.Utils.TextOptions.HotkeyPrefix"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.Assign(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Copies settings from the specified object to the current TextOptions object.
-</para>
-            </summary>
-            <param name="options">
-		A TextOptions object whose settings are copied to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptions">
-            <summary>
-                <para>Gets an object that specifies the default text options.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.TextOptions"/> object that specifies the default text options.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsCenteredWithEllipsis">
-            <summary>
-                <para>Gets an object whose settings force text to be centered.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsMultiLine">
-            <summary>
-                <para>Gets an object whose settings allow text to wrap.
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrap">
-            <summary>
-                <para>Gets an object whose settings prevent text from wrapping.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultOptionsNoWrapEx">
-            <summary>
-                <para>Gets an object whose settings force text to be centered and prevent it from wrapping.
-
-</para>
-            </summary>
-            <value>A TextOptions object with its settings set to the corresponding values.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.DefaultStringFormat">
-            <summary>
-                <para>Gets an object that contains the default formatting settings.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.StringFormat"/> object containing the default formatting settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.ForceUseGenericDefaultStringFormat">
-            <summary>
-                <para>Specifies how the default string format referred to by the <see cref="P:DevExpress.Utils.TextOptions.DefaultStringFormat"/> property is constructed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat">
-            <summary>
-                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the <see cref="P:DevExpress.Utils.TextOptions.DefaultOptions"/> object.
-
-</para>
-            </summary>
-            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.GetStringFormat(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Returns a <see cref="T:System.Drawing.StringFormat"/> object whose settings reflect the alignment, word wrapping and text trimming options of the specified TextOptions object.
-
-</para>
-            </summary>
-            <param name="defaultOptions">
-		A TextOptions object whose settings are used to initialize the corresponding settings of the <see cref="T:System.Drawing.StringFormat"/> object that is to be returned.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringFormat"/> object whose properties are set to match the appropriate values.
-
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.HAlignment">
-            <summary>
-                <para>Gets or sets the horizontal alignment of text.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that specifies the text horizontal alignment.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.HorzAlignmentToStringAlignment(DevExpress.Utils.HorzAlignment)">
-            <summary>
-                <para>Converts the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
-
-</para>
-            </summary>
-            <param name="align">
-		A <see cref="T:DevExpress.Utils.HorzAlignment"/> value that is to be converted.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.HorzAlignment"/> value.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.HotkeyPrefix">
-            <summary>
-                <para>Gets or sets the hotkey prefix for the text. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.HKeyPrefix"/> enumeration value which represents the hotkey prefix for the text.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.IsEqual(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>Tests whether two objects have the same property values.
-</para>
-            </summary>
-            <param name="options">
-		The TextOptions object to which the current object is compared.
-
-            </param>
-            <returns><b>true</b> if the current object has the same property values as the specified object; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.Reset">
-            <summary>
-                <para>Resets all the text settings to their default values.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.RightToLeft">
-            <summary>
-                <para>Gets or sets whether the text is directed from right to left.
-</para>
-            </summary>
-            <value><b>true</b>, if the text is directed from right to left; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.ToString">
-            <summary>
-                <para>Returns the text representation of the current object.
-</para>
-            </summary>
-            <returns>The text representation of the current object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.Trimming">
-            <summary>
-                <para>Gets or sets text trimming mode.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.Trimming"/> value that specifies text trimming mode.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.UpdateDefaultOptions(DevExpress.Utils.TextOptions)">
-            <summary>
-                <para>For internal use. Copies settings from the specified object to the current object.
-</para>
-            </summary>
-            <param name="defaultOptions">
-		A <see cref="T:DevExpress.Utils.TextOptions"/> object whose settings are copied to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.VAlignment">
-            <summary>
-                <para>Gets or sets the vertical alignment of text.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.VertAlignment"/> value that specifies the text vertical alignment.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.TextOptions.VertAlignmentToStringAlignment(DevExpress.Utils.VertAlignment)">
-            <summary>
-                <para>Converts the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value to a corresponding <see cref="T:System.Drawing.StringAlignment"/> value.
-</para>
-            </summary>
-            <param name="align">
-		A <see cref="T:DevExpress.Utils.VertAlignment"/> value that is to be converted.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.StringAlignment"/> value that corresponds to the specified <see cref="T:DevExpress.Utils.VertAlignment"/> value.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.TextOptions.WordWrap">
-            <summary>
-                <para>Gets or sets text wrapping mode.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.WordWrap"/> value that specifies text wrapping mode.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Utils.ToolTipControllerCustomDrawEventHandler">
 
             <summary>
@@ -12632,726 +13509,6 @@ For the <see cref="T:DevExpress.XtraBars.Ribbon.RibbonForm"/>, a shadow is displ
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Utils.ToolTipControllerShowEventArgs"/> object which provides the information required to paint a tooltip.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Utils.ImageCollection">
-
-            <summary>
-                <para>The collection of <see cref="T:System.Drawing.Image"/> objects to be used within DevExpress controls. 
-The ImageCollection is also used as a part of the <see cref="T:DevExpress.Utils.SharedImageCollection"/> component.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ImageCollection class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.#ctor(System.ComponentModel.IContainer)">
-            <summary>
-                <para>Initializes a new instance of the ImageCollection class with the specified container.
-</para>
-            </summary>
-            <param name="container">
-		An object that implements the <see cref="T:System.ComponentModel.IContainer"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.#ctor(System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ImageCollection class with the specified settings.
-</para>
-            </summary>
-            <param name="allowModifyImages">
-		<b>true</b> to permit image modification; otherwise, <b>false</b>.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Drawing.Image)">
-            <summary>
-                <para>Appends the specified image to the collection.
-</para>
-            </summary>
-            <param name="image">
-		The image to add to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Object,System.Drawing.Image)">
-            <summary>
-                <para>Appends the specified image to the specified list.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the collection of images.
-
-            </param>
-            <param name="image">
-		The image to add to the specified collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AddImage(System.Drawing.Image,System.String)">
-            <summary>
-                <para>Adds an image with the specified name to the collection.
-</para>
-            </summary>
-            <param name="image">
-		An Image to be added to the collection.
-
-            </param>
-            <param name="name">
-		A string that specifies the image's name. You can then retrieve images by name via the <see cref="P:DevExpress.Utils.ImageCollection.Images"/> property.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AddImageStrip(System.Drawing.Image)">
-            <summary>
-                <para>Adds the images from the specified horizontal image strip to the collection.
-</para>
-            </summary>
-            <param name="image">
-		The image(s) to add to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AddImageStripVertical(System.Drawing.Image)">
-            <summary>
-                <para>Adds the images from the specified vertical image strip to the collection.
-</para>
-            </summary>
-            <param name="image">
-		The image(s) to add to the collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.AllowDPIAware">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.BeginInit">
-            <summary>
-                <para>Notifies the image collection that initialization is starting.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="E:DevExpress.Utils.ImageCollection.Changed">
-            <summary>
-                <para>Fires after the image collection has been changed.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.Clear">
-            <summary>
-                <para>Removes all images from the collection.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsInfoArgs,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
-            <summary>
-                <para>Draws the specified image in the specified state and at the specified location.
-</para>
-            </summary>
-            <param name="info">
-		A <see cref="T:DevExpress.Utils.Drawing.GraphicsInfoArgs"/> object.
-
-            </param>
-            <param name="images">
-		An object that represents the source of the images.
-
-            </param>
-            <param name="index">
-		A zero-based integer that specifies the index of the image within the <i>images</i>.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
-
-            </param>
-            <param name="enabled">
-		<b>true</b> to draw the image in the enabled state; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle)">
-            <summary>
-                <para>Draws the specified image at the specified location.
-</para>
-            </summary>
-            <param name="cache">
-		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that specifies the storage for the most  used pens, fonts and brushes.
-
-            </param>
-            <param name="images">
-		An object that represents the source of the images.
-
-
-            </param>
-            <param name="index">
-		A zero-based integer that specifies the index of the image within the <i>images</i>.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
-            <summary>
-                <para>Draws the image.
-</para>
-            </summary>
-            <param name="cache">
-		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
-
-
-            </param>
-            <param name="images">
-		An object that represents the image source.
-
-            </param>
-            <param name="index">
-		An integer value that identifies the image within the collection.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
-
-            </param>
-            <param name="enabled">
-		<b>true</b> to draw an image in enabled state; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Drawing.Image,System.Object,System.Int32,System.Drawing.Rectangle,System.Boolean)">
-            <summary>
-                <para>Draws the image.
-</para>
-            </summary>
-            <param name="cache">
-		A <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object that provides storage for pens, fonts and brushes used when painting.
-
-
-            </param>
-            <param name="image">
-		The <see cref="T:System.Drawing.Image"/> to draw.
-
-            </param>
-            <param name="images">
-		An object that represents the image source. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
-
-            </param>
-            <param name="index">
-		An integer value that identifies the image within the collection. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the bounding rectangle of the image.
-
-            </param>
-            <param name="enabled">
-		<b>true</b>, to draw an image in enabled state; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Drawing.Image,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)">
-            <summary>
-                <para>Draws the specified image using the specified paint settings.
-</para>
-            </summary>
-            <param name="cache">
-		Provides the paint surface and storage of the recently used pens, fonts and brushes.
-
-            </param>
-            <param name="image">
-		The <see cref="T:System.Drawing.Image"/> to draw.
-
-            </param>
-            <param name="images">
-		An object that represents the source of images. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
-
-
-            </param>
-            <param name="index">
-		An integer value that identifies the image within the collection. This parameter is in effect if the <i>image</i> parameter is <b>null</b>.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
-
-
-            </param>
-            <param name="attributes">
-		Contains information about how image colors are manipulated during rendering. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.DrawImageListImage(DevExpress.Utils.Drawing.GraphicsCache,System.Object,System.Int32,System.Drawing.Rectangle,System.Drawing.Imaging.ImageAttributes)">
-            <summary>
-                <para>Draws the specified image using the specified paint settings.
-</para>
-            </summary>
-            <param name="cache">
-		Provides the paint surface and storage of the recently used pens, fonts and brushes.
-
-            </param>
-            <param name="images">
-		An object that represents the source of images.
-
-
-            </param>
-            <param name="index">
-		An integer value that identifies the image within the collection.
-
-            </param>
-            <param name="bounds">
-		A <see cref="T:System.Drawing.Rectangle"/> structure that specifies the drawing area.
-
-
-            </param>
-            <param name="attributes">
-		Contains information about how image colors are manipulated during rendering. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.EndInit">
-            <summary>
-                <para>Notifies the image collection that initialization is complete.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.ExportToFile(System.String)">
-            <summary>
-                <para>Saves the contents of the current collection to a file.
-</para>
-            </summary>
-            <param name="fileName">
-		A string that specifies the name of the file to which the contents of the image collection is saved.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.Int32)">
-            <summary>
-                <para>Returns the image at the specified position within the specified image list.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the source of images.
-
-            </param>
-            <param name="index">
-		A zero-based integer that specifies the index of the image within the <i>images</i>.
-
-            </param>
-            <returns>An <see cref="T:System.Drawing.Image"/> descendant that represents the image at the specified position within the specified image list. <b>null</b> (<b>Nothing</b> in Visual Basic) if the image isn't found.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImage(System.Object,System.String)">
-            <summary>
-                <para>Returns an image from the specified ImageList or ImageCollection.
-</para>
-            </summary>
-            <param name="images">
-		An ImageList or ImageCollection that stores an image to be returned.
-
-            </param>
-            <param name="id">
-		A string value that is the key/name of the image to be returned.
-
-            </param>
-            <returns>An image with the specified key/name stored in an ImageList/ImageCollection.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageCount(System.Object)">
-            <summary>
-                <para>Returns the number of images within the specified source of images.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the source of images.
-
-            </param>
-            <returns>An integer value that specifies the number of images within the specified image source.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListImageSize(System.Object,System.Int32)">
-            <summary>
-                <para>Returns the size of the image at the specified position in the image list.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the source of images.
-
-
-            </param>
-            <param name="index">
-		The index of the required image in the <i>images</i> list. 
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.Size"/> value that specifies the size of a specific image.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Object)">
-            <summary>
-                <para>Returns the size of the images in the specified image list.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the source of the images.
-
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.Size"/> structure that specifies the height and width of the images in the specified list. <see cref="F:System.Drawing.Size.Empty"/> if <i>images</i> is <b>null</b> (<b>Nothing</b> in Visual Basic) or isn't a source of images.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.GetImageListSize(System.Drawing.Image,System.Object,System.Int32)">
-            <summary>
-                <para>Gets the size of the specified image or of an image in the image list addressed by a specific index.
-
-</para>
-            </summary>
-            <param name="image">
-		An image whose size is returned.
-
-
-            </param>
-            <param name="images">
-		An object that represents the source of images. This parameter is in effect if the <i>image</i> parameter is set to <b>null</b>.
-
-
-            </param>
-            <param name="index">
-		The index of the required image in the <i>images</i> list.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.Size"/> value that specifies the size of a specific image.
-
-</returns>
-
-
-        </member>
-        <member name="E:DevExpress.Utils.ImageCollection.GetImageSize">
-            <summary>
-                <para>When the <see cref="P:DevExpress.Utils.ImageCollection.IsDpiAware"/> option is enabled, the <b>GetImageSize</b> event allows you to customize the size of images returned by the <see cref="T:DevExpress.Utils.ImageCollection"/>. This event is fired on finishing an <see cref="T:DevExpress.Utils.ImageCollection"/> object initialization.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.ImageFromFile(System.String)">
-            <summary>
-                <para>Returns the image stored in the specified file.
-</para>
-            </summary>
-            <param name="fileName">
-		A string that specifies the full path to the file.
-
-            </param>
-            <returns>A <see cref="T:System.Drawing.Image"/> object that represents the image stored in the specified file; <b>null</b> if the image cannot be loaded.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.Images">
-            <summary>
-                <para>Provides access to the collection of images.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.Images"/> object that represents the collection of images.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.ImageSize">
-            <summary>
-                <para>Gets or sets the size of images in the image collection.
-For the <see cref="T:DevExpress.Utils.SharedImageCollection"/>, this property specifies the size of images fetched from an image strip (at design time or via the <see cref="M:DevExpress.Utils.ImageCollection.AddImageStrip"/> and <see cref="M:DevExpress.Utils.ImageCollection.AddImageStripVertical"/> methods).
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure which specifies the height and width of the images in the list.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.ImageStream">
-            <summary>
-                <para>Gets or sets the handle to the <see cref="T:System.Windows.Forms.ImageListStreamer"/> associated with the current image collection.
-
-</para>
-            </summary>
-            <value>A handle to the <see cref="T:System.Windows.Forms.ImageListStreamer"/> for the current image collection. <b>null</b> (<b>Nothing</b> in Visual Basic) if the current image collection is empty.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.InsertGalleryImage(System.String,System.String,System.Drawing.Image,System.Int32)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="name">
-		 
-
-            </param>
-            <param name="uri">
-		 
-
-            </param>
-            <param name="image">
-		 
-
-            </param>
-            <param name="index">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Drawing.Image,System.String,System.Type,System.Int32)">
-            <summary>
-                <para>Inserts an image from project resources.
-</para>
-            </summary>
-            <param name="image">
-		An image to be inserted.
-
-            </param>
-            <param name="name">
-		The name of the image to be inserted.
-
-            </param>
-            <param name="resourceType">
-		The type of the class where the image to be inserted is defined.
-
-            </param>
-            <param name="index">
-		An integer value that specifies the position at which the image needs to be inserted in the image collection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Drawing.Image,System.String,System.Type,System.Int32,System.String)">
-            <summary>
-                <para>Inserts an image from project resources.
-</para>
-            </summary>
-            <param name="image">
-		An image to be inserted.
-
-            </param>
-            <param name="name">
-		The name of the image to be inserted.
-
-            </param>
-            <param name="resourceType">
-		The type of the class where the image to be inserted is defined.
-
-            </param>
-            <param name="index">
-		An integer value that specifies the position at which the image needs to be inserted in the image collection.
-
-            </param>
-            <param name="resName">
-		The name of the class where the image to be inserted is defined.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.InsertImage(System.Int32,System.String,System.String,System.Int32)">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="assemblyId">
-		 
-
-            </param>
-            <param name="name">
-		 
-
-            </param>
-            <param name="path">
-		 
-
-            </param>
-            <param name="index">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.IsDpiAware">
-            <summary>
-                <para>Gets or sets the value that specifies that when requesting an image from the ImageCollection, another DPI-specific image corresponding to the requested image is returned instead.
-</para>
-            </summary>
-            <value>The <b>DefaultBoolean.True</b> value if a requested image is replaced with a DPI-specific image; <b>DefaultBoolean.False</b> or <b>DefaultBoolean.Default</b> if this feature is disabled.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.IsImageExists(System.Drawing.Image,System.Object,System.Int32)">
-            <summary>
-                <para>This member supports the .NET Framework infrastructure and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <param name="image">
-		The <see cref="T:System.Drawing.Image"/>.
-
-            </param>
-            <param name="images">
-		An object that represents the image source.
-
-            </param>
-            <param name="index">
-		An integer value that specifies the position of the image within the collection.
-
-            </param>
-            <returns>The Boolean value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageExists(System.Object,System.Int32)">
-            <summary>
-                <para>Determines whether the image exists at the specified position within the specified source of images.
-</para>
-            </summary>
-            <param name="images">
-		An object that represents the source of images.
-
-            </param>
-            <param name="index">
-		A zero-based integer that specifies the index of the image within the <i>images</i>.
-
-            </param>
-            <returns><b>true</b> if the image exists at the specified position within the specified source of images; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.IsImageListImageScaled(System.Object,System.Int32)">
-            <summary>
-                <para>Returns whether the specified collection contains DPI-specific images.
-</para>
-            </summary>
-            <param name="images">
-		An image collection to check for DPI-specific images.
-
-            </param>
-            <param name="index">
-		An integer value specifying a zero-based index to check whether an image with this index exists in the specified collection.
-
-            </param>
-            <returns><b>true</b>, if the specified collection contains DPI-specific images; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Utils.ImageCollection.RegisterAssemblies(System.String[])">
-            <summary>
-                <para>Registers specific external image-containing assemblies within your application.
-</para>
-            </summary>
-            <param name="assemblies">
-		A String array that contains names of the assemblies that should be registered.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.RegisteredAssemblies">
-            <summary>
-                <para>Provides access to external image-containing assemblies, registered by this ImageCollection.
-</para>
-            </summary>
-            <value>A <see cref="ImageCollectionRegisteredAssemblies"/> object that stores registered assemblies.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.Utils.ImageCollection.ResolveImage">
-            <summary>
-                <para>When requesting an image from the ImageCollection, the <b>ResolveImage</b> event fires when the project resources do not contain a DPI-specific image that matches the requested image and allows you to provide this DPI-specific image manually. This event is in effect when the <see cref="P:DevExpress.Utils.ImageCollection.IsDpiAware"/> option is enabled and the requested image was loaded into the ImageCollection from the project resources.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Utils.ImageCollection.TransparentColor">
-            <summary>
-                <para>Gets or sets the color to treat as transparent.
-</para>
-            </summary>
-            <value>The <see cref="T:System.Drawing.Color"/> which represents the color that is not rendered when the image is drawn.
 </value>
 
 
@@ -15958,6 +16115,73 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
 
 
         </member>
+        <member name="T:DevExpress.Utils.Trimming">
+
+            <summary>
+                <para>List values that specify how the characters in a string that do not completely fit into a layout shape are trimmed.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.Character">
+            <summary>
+                <para>Specifies that the text is trimmed to the nearest character.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.Default">
+            <summary>
+                <para>Trimming is determined by a control's current settings. The default value is automatically set for a control if an end-user doesn't specify a value.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.EllipsisCharacter">
+            <summary>
+                <para>Specifies that the text is trimmed to the nearest character, and an ellipsis is inserted at the end of a trimmed line.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.EllipsisPath">
+            <summary>
+                <para>The center is removed from trimmed lines and replaced by an ellipsis. The algorithm keeps as much of the last slash-delimited segment of the line as possible.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.EllipsisWord">
+            <summary>
+                <para>Specifies that text is trimmed to the nearest word, and an ellipsis is inserted at the end of a trimmed line.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.None">
+            <summary>
+                <para>Specifies no trimming.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Utils.Trimming.Word">
+            <summary>
+                <para>Specifies that text is trimmed to the nearest word.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Utils.MagnifierDialogResult">
 
             <summary>
@@ -16300,7 +16524,7 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
         </member>
         <member name="P:DevExpress.Utils.AppearanceObject.BackColor">
             <summary>
-                <para>Gets or sets the background color.
+                <para>Gets or sets the background color if the <see cref="P:DevExpress.Utils.AppearanceObject.BackColor2"/> property's value is <b>Color.Empty</b>. Otherwise, it specifies the gradient's starting color.
 </para>
             </summary>
             <value>A <see cref="T:System.Drawing.Color"/> object specifying the background color.
@@ -17620,7 +17844,7 @@ For the PivotGrid control, this option acts as the <see cref="F:DevExpress.Utils
         </member>
         <member name="P:DevExpress.Utils.AppearanceObject.TextOptions">
             <summary>
-                <para>Provides access to the appearance object's text options.
+                <para>Provides access to text rendering options (horizontal and vertical alignment, word wrapping, trimming options, etc.).
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Utils.TextOptions"/> object containing text options.
@@ -18889,6 +19113,16 @@ The <see cref="F:DevExpress.Utils.DefaultBoolean.Default"/> value is equal to <s
 </para>
             </summary>
             <value>An <see cref="T:System.Drawing.Image"/> object that specifies the image to display within the current tooltip.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.ToolTipControllerShowEventArgs.ToolTipIndent">
+            <summary>
+                <para>Gets or sets the space, in pixels, between the tooltip and the associated visual element.
+</para>
+            </summary>
+            <value>An integer value specifying the space, in pixels, between the tooltip and the associated visual element. The default is <b>16</b>.
 </value>
 
 
@@ -21014,6 +21248,14 @@ Prevents the control from being updated until the <see cref="M:DevExpress.XtraEd
 
 
         </member>
+        <member name="P:DevExpress.LookAndFeel.UserLookAndFeel.ActiveSvgPaletteName">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.Assign(DevExpress.LookAndFeel.UserLookAndFeel)">
             <summary>
                 <para>Copies properties of the specified <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/> object to the current object.
@@ -21278,6 +21520,34 @@ Prevents the control from being updated until the <see cref="M:DevExpress.XtraEd
 
 
         </member>
+        <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinStyle(System.String,System.String)">
+            <summary>
+                <para>Applies the specified skin and palette.
+</para>
+            </summary>
+            <param name="skinName">
+		A string value specifying the name of the skin to apply.
+
+            </param>
+            <param name="paletteName">
+		The name of the palette used to color vector images to apply.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetSkinStyle(DevExpress.LookAndFeel.SkinSvgPalette)">
+            <summary>
+                <para>Applies the specified skin and palette.
+</para>
+            </summary>
+            <param name="palette">
+		A <b>SkinSvgPalette</b> object specifying the skin and palette to apply.
+
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetStyle(DevExpress.LookAndFeel.LookAndFeelStyle,System.Boolean,System.Boolean,System.String)">
             <summary>
                 <para>Sets the look and feel settings of the current object to the specified values.
@@ -21442,6 +21712,34 @@ Prevents the control from being updated until the <see cref="M:DevExpress.XtraEd
             </param>
             <param name="touchScaleFactor">
 		The scale factor applied when touch-aware mode is enabled. This value is assigned to the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.TouchScaleFactor"/> property. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.LookAndFeel.UserLookAndFeel.SetStyle(DevExpress.LookAndFeel.LookAndFeelStyle,System.Boolean,System.Boolean,System.String,System.String)">
+            <summary>
+                <para>Sets the look and feel settings of the current object to the specified values.
+</para>
+            </summary>
+            <param name="style">
+		A <see cref="T:DevExpress.LookAndFeel.LookAndFeelStyle"/> enumeration value which specifies the style of the current object. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.Style"/> property.
+
+            </param>
+            <param name="useWindowsXPTheme">
+		<b>true</b>, if a control should be painted using the WindowsXP theme; otherwise, <b>false</b>. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.UseWindowsXPTheme"/> property.
+
+            </param>
+            <param name="useDefaultLookAndFeel">
+		<b>true</b> to use the look and feel settings provided by the parent object or default look and feel object; <b>false</b> to apply the current object's settings. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.UseDefaultLookAndFeel"/> property.
+
+            </param>
+            <param name="skinName">
+		A string value specifying the skin name. This value is assigned to the <see cref="P:DevExpress.LookAndFeel.UserLookAndFeel.SkinName"/> property.
+
+            </param>
+            <param name="paletteName">
+		A string value specifying the name of the palette used to color vector images.
 
             </param>
 
@@ -22143,6 +22441,94 @@ Provides storage for pens, fonts and brushes.
 
 
         </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcTextSize(System.String,System.Drawing.Font,System.Drawing.SizeF)">
+            <summary>
+                <para>Calculates the size of the specified string when it's drawn with the specified font.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value which represents a string to measure.
+
+            </param>
+            <param name="font">
+		A <see cref="T:System.Drawing.Font"/> object which defines the font and the associated settings of the text.
+
+            </param>
+            <param name="layoutArea">
+		A <see cref="T:System.Drawing.SizeF"/> structure that specifies the maximum layout area for the text.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.SizeF"/> structure which represents the size (in pixels) of the string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcTextSize(System.String,System.Drawing.Font,System.Drawing.StringFormat,System.Drawing.SizeF)">
+            <summary>
+                <para>Calculates the size of the specified string when it's drawn with the specified font and using the specified formatting.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value which represents a string to measure.
+
+            </param>
+            <param name="font">
+		A <see cref="T:System.Drawing.Font"/> object which defines the font and the associated settings of the text.
+
+            </param>
+            <param name="format">
+		A <see cref="T:System.Drawing.StringFormat"/> object which represents formatting information, such as the line spacing and alignment, of the string.
+
+            </param>
+            <param name="layoutArea">
+		A <see cref="T:System.Drawing.SizeF"/> structure that specifies the maximum layout area for the text.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.SizeF"/> structure which represents the size (in pixels) of the string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcTextSize(System.String,System.Drawing.Font,System.Int32)">
+            <summary>
+                <para>Calculates the size of the specified string when it's drawn with the specified font.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value which represents a string to measure.
+
+            </param>
+            <param name="font">
+		A <see cref="T:System.Drawing.Font"/> object which defines the font and the associated settings of the text.
+
+            </param>
+            <param name="maxWidth">
+		An integer value specifying the maximum width of the string (in pixels).
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.SizeF"/> structure which represents the size (in pixels) of the string.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.CalcTextSize(System.String,System.Drawing.Font)">
+            <summary>
+                <para>Calculates the size of the specified string when it's drawn with the specified font.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value which represents a string to measure.
+
+            </param>
+            <param name="font">
+		A <see cref="T:System.Drawing.Font"/> object which defines the font and the associated settings of the text.
+
+            </param>
+            <returns>A <see cref="T:System.Drawing.SizeF"/> structure which represents the size (in pixels) of the string.
+</returns>
+
+
+        </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.Clear">
             <summary>
                 <para>Clears the internal hash tables that store the pens, fonts and, solid and linear gradient brushes that have recently been used.
@@ -22173,11 +22559,283 @@ Provides storage for pens, fonts and brushes.
 
 
         </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.CompositingMode">
+            <summary>
+                <para>Gets a value that specifies how composited images are drawn to the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Drawing2D.CompositingMode"/> values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.CompositingQuality">
+            <summary>
+                <para>Gets or sets the rendering quality of composited images drawn to the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Drawing2D.CompositingQuality"/> values.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.Dispose">
             <summary>
                 <para>Releases all resources used by this <see cref="T:DevExpress.Utils.Drawing.GraphicsCache"/> object.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawArc(System.Drawing.Pen,System.Drawing.Rectangle,System.Single,System.Single)">
+            <summary>
+                <para>Draws an arc representing a portion of an ellipse specified by a <see cref="T:System.Drawing.Rectangle"/> structure.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the arc.
+
+            </param>
+            <param name="rect">
+		<see cref="T:System.Drawing.Rectangle"/> structure that defines the boundaries of the ellipse.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to ending point of the arc.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawArc(System.Drawing.Pen,System.Drawing.RectangleF,System.Single,System.Single)">
+            <summary>
+                <para>Draws an arc representing a portion of an ellipse specified by a <see cref="T:System.Drawing.RectangleF"/> structure.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the arc.
+
+            </param>
+            <param name="rect">
+		<see cref="T:System.Drawing.RectangleF"/> structure that defines the boundaries of the ellipse.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to ending point of the arc.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawArc(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                <para>Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, and a height.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the arc.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="width">
+		Width of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="height">
+		Height of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to ending point of the arc.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawArc(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                <para>Draws an arc representing a portion of an ellipse specified by a pair of coordinates, a width, and a height.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the arc.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="width">
+		Width of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="height">
+		Height of the rectangle that defines the ellipse.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the starting point of the arc.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to ending point of the arc.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawBezier(System.Drawing.Pen,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+                <para>Draws a Bezier spline defined by four <see cref="T:System.Drawing.PointF"/> structures.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> structure that determines the color, width, and style of the curve.
+
+            </param>
+            <param name="pt1">
+		<see cref="T:System.Drawing.PointF"/> structure that represents the starting point of the curve.
+
+            </param>
+            <param name="pt2">
+		<see cref="T:System.Drawing.PointF"/> structure that represents the first control point for the curve.
+
+            </param>
+            <param name="pt3">
+		<see cref="T:System.Drawing.PointF"/> structure that represents the second control point for the curve.
+
+            </param>
+            <param name="pt4">
+		<see cref="T:System.Drawing.PointF"/> structure that represents the ending point of the curve.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawBezier(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                <para>Draws a Bezier spline defined by four ordered pairs of coordinates that represent points.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the curve.
+
+            </param>
+            <param name="x1">
+		The x-coordinate of the starting point of the curve.
+
+            </param>
+            <param name="y1">
+		The y-coordinate of the starting point of the curve.
+
+            </param>
+            <param name="x2">
+		The x-coordinate of the first control point of the curve.
+
+            </param>
+            <param name="y2">
+		The y-coordinate of the first control point of the curve.
+
+            </param>
+            <param name="x3">
+		The x-coordinate of the second control point of the curve.
+
+            </param>
+            <param name="y3">
+		The y-coordinate of the second control point of the curve.
+
+            </param>
+            <param name="x4">
+		The x-coordinate of the ending point of the curve.
+
+            </param>
+            <param name="y4">
+		The y-coordinate of the ending point of the curve.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawBezier(System.Drawing.Pen,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+                <para>Draws a Bezier spline defined by four <see cref="T:System.Drawing.Point"/> structures.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> structure that determines the color, width, and style of the curve.
+
+            </param>
+            <param name="pt1">
+		<see cref="T:System.Drawing.Point"/> structure that represents the starting point of the curve.
+
+            </param>
+            <param name="pt2">
+		<see cref="T:System.Drawing.Point"/> structure that represents the first control point for the curve.
+
+            </param>
+            <param name="pt3">
+		<see cref="T:System.Drawing.Point"/> structure that represents the second control point for the curve.
+
+            </param>
+            <param name="pt4">
+		<see cref="T:System.Drawing.Point"/> structure that represents the ending point of the curve.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawBeziers(System.Drawing.Pen,System.Drawing.PointF[])">
+            <summary>
+                <para>Draws a series of Bezier splines from an array of <see cref="T:System.Drawing.PointF"/> structures.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the curve.
+
+            </param>
+            <param name="points">
+		Array of <see cref="T:System.Drawing.PointF"/> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawBeziers(System.Drawing.Pen,System.Drawing.Point[])">
+            <summary>
+                <para>Draws a series of Bezier splines from an array of <see cref="T:System.Drawing.Point"/> structures.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the curve.
+
+            </param>
+            <param name="points">
+		Array of <see cref="T:System.Drawing.Point"/> structures that represent the points that determine the curve. The number of points in the array should be a multiple of 3 plus 1, such as 4, 7, or 10.
+
+            </param>
 
 
         </member>
@@ -22273,6 +22931,58 @@ Provides storage for pens, fonts and brushes.
             </param>
             <param name="rect">
 		A Rectangle structure that defines the ellipse boundaries.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawIcon(System.Drawing.Icon,System.Int32,System.Int32)">
+            <summary>
+                <para>Draws the image represented by the specified <see cref="T:System.Drawing.Icon"/> at the specified coordinates.
+</para>
+            </summary>
+            <param name="icon">
+		<see cref="T:System.Drawing.Icon"/> to draw.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the drawn image.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the drawn image.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawIcon(System.Drawing.Icon,System.Drawing.Rectangle)">
+            <summary>
+                <para>Draws the image represented by the specified <see cref="T:System.Drawing.Icon"/> within the area specified by a <see cref="T:System.Drawing.Rectangle"/> structure.
+</para>
+            </summary>
+            <param name="icon">
+		<see cref="T:System.Drawing.Icon"/> to draw.
+
+            </param>
+            <param name="targetRect">
+		<see cref="T:System.Drawing.Rectangle"/> structure that specifies the location and size of the resulting image on the display surface. The image contained in the <i>icon</i> parameter is scaled to the dimensions of this rectangular area.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawIconUnstretched(System.Drawing.Icon,System.Drawing.Rectangle)">
+            <summary>
+                <para>Draws the image represented by the specified <see cref="T:System.Drawing.Icon"/> without scaling the image.
+</para>
+            </summary>
+            <param name="icon">
+		<see cref="T:System.Drawing.Icon"/> to draw.
+
+            </param>
+            <param name="targetRect">
+		<see cref="T:System.Drawing.Rectangle"/> structure that specifies the location and size of the resulting image. The image is not scaled to fit this rectangle, but retains its original size. If the image is larger than the rectangle, it is clipped to fit inside it.
 
             </param>
 
@@ -23070,6 +23780,126 @@ Provides storage for pens, fonts and brushes.
 
 
         </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawPie(System.Drawing.Pen,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                <para>Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, a height, and two radial lines.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the pie shape.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="width">
+		Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="height">
+		Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="startAngle">
+		Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+
+            </param>
+            <param name="sweepAngle">
+		Angle measured in degrees clockwise from the <i>startAngle</i> parameter to the second side of the pie shape.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawPie(System.Drawing.Pen,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                <para>Draws a pie shape defined by an ellipse specified by a coordinate pair, a width, a height, and two radial lines.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the pie shape.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="width">
+		Width of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="height">
+		Height of the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="startAngle">
+		Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+
+            </param>
+            <param name="sweepAngle">
+		Angle measured in degrees clockwise from the <i>startAngle</i> parameter to the second side of the pie shape.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawPie(System.Drawing.Pen,System.Drawing.Rectangle,System.Single,System.Single)">
+            <summary>
+                <para>Draws a pie shape defined by an ellipse specified by a <see cref="T:System.Drawing.Rectangle"/> structure and two radial lines.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the pie shape.
+
+            </param>
+            <param name="rect">
+		<see cref="T:System.Drawing.Rectangle"/> structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="startAngle">
+		Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+
+            </param>
+            <param name="sweepAngle">
+		Angle measured in degrees clockwise from the <i>startAngle</i> parameter to the second side of the pie shape.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawPie(System.Drawing.Pen,System.Drawing.RectangleF,System.Single,System.Single)">
+            <summary>
+                <para>Draws a pie shape defined by an ellipse specified by a <see cref="T:System.Drawing.RectangleF"/> structure and two radial lines.
+</para>
+            </summary>
+            <param name="pen">
+		<see cref="T:System.Drawing.Pen"/> that determines the color, width, and style of the pie shape.
+
+            </param>
+            <param name="rect">
+		<see cref="T:System.Drawing.RectangleF"/> structure that represents the bounding rectangle that defines the ellipse from which the pie shape comes.
+
+            </param>
+            <param name="startAngle">
+		Angle measured in degrees clockwise from the x-axis to the first side of the pie shape.
+
+            </param>
+            <param name="sweepAngle">
+		Angle measured in degrees clockwise from the <i>startAngle</i> parameter to the second side of the pie shape.
+
+            </param>
+
+
+        </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawPolygon(System.Drawing.PointF[],System.Drawing.Color,System.Int32)">
             <summary>
                 <para>Draws a polygon defined by an array of PointF structures.
@@ -23476,7 +24306,8 @@ Provides storage for pens, fonts and brushes.
         </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.EnableDirectXPaint(DevExpress.Utils.DirectXPaint.DirectXPaint)">
             <summary>
-                <para>Allows the target painter to utilize DirectX API.
+                <para>Allows the target painter to utilize the DirectX API.
+
 </para>
             </summary>
             <param name="painter">
@@ -23585,6 +24416,102 @@ Provides storage for pens, fonts and brushes.
             </param>
             <param name="path">
 		<see cref="T:System.Drawing.Drawing2D.GraphicsPath"/> that represents the path to fill.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.FillPie(System.Drawing.Brush,System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+                <para>Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a width, a height, and two radial lines.
+</para>
+            </summary>
+            <param name="brush">
+		<see cref="T:System.Drawing.Brush"/> that determines the characteristics of the fill.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="width">
+		Width of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="height">
+		Height of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to the second side of the pie section.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.FillPie(System.Drawing.Brush,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+                <para>Fills the interior of a pie section defined by an ellipse specified by a pair of coordinates, a width, a height, and two radial lines.
+</para>
+            </summary>
+            <param name="brush">
+		<see cref="T:System.Drawing.Brush"/> that determines the characteristics of the fill.
+
+            </param>
+            <param name="x">
+		The x-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="y">
+		The y-coordinate of the upper-left corner of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="width">
+		Width of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="height">
+		Height of the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the startAngle parameter to the second side of the pie section.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Utils.Drawing.GraphicsCache.FillPie(System.Drawing.Brush,System.Drawing.Rectangle,System.Single,System.Single)">
+            <summary>
+                <para>Fills the interior of a pie section defined by an ellipse specified by a <see cref="T:System.Drawing.Rectangle"/> structure and two radial lines.
+</para>
+            </summary>
+            <param name="brush">
+		<see cref="T:System.Drawing.Brush"/> that determines the characteristics of the fill.
+
+            </param>
+            <param name="rect">
+		<see cref="T:System.Drawing.Rectangle"/> structure that represents the bounding rectangle that defines the ellipse from which the pie section comes.
+
+            </param>
+            <param name="startAngle">
+		Angle in degrees measured clockwise from the x-axis to the first side of the pie section.
+
+            </param>
+            <param name="sweepAngle">
+		Angle in degrees measured clockwise from the <i>startAngle</i> parameter to the second side of the pie section.
 
             </param>
 
@@ -23922,6 +24849,16 @@ Provides storage for pens, fonts and brushes.
 
 
         </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.InterpolationMode">
+            <summary>
+                <para>Gets or sets the interpolation mode associated with the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Drawing2D.InterpolationMode"/> values.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.IsNeedDrawRect(System.Drawing.Rectangle)">
             <summary>
                 <para>Returns whether the region which is bounded by the specified rectangle needs to be redrawn.
@@ -23991,6 +24928,16 @@ Provides storage for pens, fonts and brushes.
 
 
         </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.PixelOffsetMode">
+            <summary>
+                <para>Gets or set a value specifying how pixels are offset during rendering of the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Drawing2D.PixelOffsetMode"/> values.
+</value>
+
+
+        </member>
         <member name="M:DevExpress.Utils.Drawing.GraphicsCache.PrepareClipRegion">
             <summary>
                 <para>Retrieves clip regions from a display device context.
@@ -24004,6 +24951,26 @@ Provides storage for pens, fonts and brushes.
                 <para>Resets a Matrix object used to perform geometric transformations.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.SmoothingMode">
+            <summary>
+                <para>Gets or sets the rendering quality for the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Drawing2D.SmoothingMode"/> values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Utils.Drawing.GraphicsCache.TextRenderingHint">
+            <summary>
+                <para>Gets or sets the rendering mode for text associated with the cached <see cref="P:DevExpress.Utils.Drawing.GraphicsCache.Graphics"/>.
+</para>
+            </summary>
+            <value>One of the <see cref="T:System.Drawing.Text.TextRenderingHint"/> values.
+</value>
 
 
         </member>

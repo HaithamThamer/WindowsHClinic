@@ -9,6 +9,11 @@
         mc:Ignorable="d"
         Title="Main" Height="600" Width="800" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" FlowDirection="LeftToRight" Loaded="Window_Loaded" Activated="Window_Activated">
     <Grid Name="GridMain">
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Calibri" />
+            </Style>
+        </Grid.Resources>
         <Grid.Effect>
             <BlurEffect Radius="0" KernelType="Gaussian"/>
         </Grid.Effect>
@@ -30,30 +35,30 @@
                         <ColumnDefinition MinWidth="350" Width="450" MaxWidth="450" />
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Label Name="lblMainTitle" Foreground="{StaticResource backgroundBrush}" Content="{x:Static resx:Default.lblMainTitle}" Style="{StaticResource DroidKufiBold}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="35" Padding="5"  MouseDown="lblTitle_MouseDown"/>
+                    <Label Name="lblMainTitle" Foreground="{StaticResource backgroundBrush}" Content="{x:Static resx:Default.lblMainTitle}"  VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="35" Padding="5"  MouseDown="lblTitle_MouseDown"/>
                     <DockPanel Grid.Column="1" LastChildFill="True">
                         <Border Padding="15,0" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  VerticalAlignment="Center">
                             <StackPanel x:Name="btnShortcutOne" MouseLeftButtonUp="btnShortcutOne_MouseLeftButtonUp" DockPanel.Dock="Left" Orientation="Vertical" Cursor="Hand">
                                 <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="45" Content="&#xF1D9;" Style="{StaticResource FontAwesome}"  />
-                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut" Style="{StaticResource DroidKufiRegular}"  />
+                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut"   />
                             </StackPanel>
                         </Border>
                         <Border Padding="15,0" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  VerticalAlignment="Center">
                             <StackPanel x:Name="btnShortcutTwo" MouseLeftButtonUp="btnShortcutTwo_MouseLeftButtonUp" DockPanel.Dock="Left" Orientation="Vertical" Cursor="Hand">
                                 <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="45" Content="&#xF1D9;" Style="{StaticResource FontAwesome}"  />
-                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut" Style="{StaticResource DroidKufiRegular}"  />
+                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut"   />
                             </StackPanel>
                         </Border>
                         <Border Padding="15,0" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  VerticalAlignment="Center">
                             <StackPanel x:Name="btnShortcutThree" MouseLeftButtonUp="btnShortcutThree_MouseLeftButtonUp" DockPanel.Dock="Left" Orientation="Vertical" Cursor="Hand">
                                 <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="45" Content="&#xF1D9;" Style="{StaticResource FontAwesome}"  />
-                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut" Style="{StaticResource DroidKufiRegular}"  />
+                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut"   />
                             </StackPanel>
                         </Border>
                         <Border Padding="15,0" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,1,0"  VerticalAlignment="Center">
                             <StackPanel x:Name="btnShortcutFour" MouseLeftButtonUp="btnShortcutFour_MouseLeftButtonUp" DockPanel.Dock="Left" Orientation="Vertical" Cursor="Hand">
                                 <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="45" Content="&#xF1D9;" Style="{StaticResource FontAwesome}"  />
-                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut" Style="{StaticResource DroidKufiRegular}"  />
+                                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="15" Content="Shortcut"   />
                             </StackPanel>
                         </Border>
                         <Label MouseDown="lblTitle_MouseDown">
@@ -63,77 +68,114 @@
                 </Grid>
             </DockPanel>
         </Border>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Name="gridMain">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="200" />
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <DockPanel Grid.Column="0" LastChildFill="True" Background="#ccc">
+            <DockPanel Grid.Column="0" LastChildFill="True" >
+                <DockPanel.Resources>
+                    <Style TargetType="DockPanel">
+                        <Setter Property="Background" Value="#ccc" />
+                        <Style.Resources>
+                            <Style TargetType="Label" >
+                                <Setter Property="Foreground" Value="{StaticResource foregroundBrush}" />
+                                <Setter Property="HorizontalContentAlignment" Value="Left" />
+                                <Setter Property="VerticalContentAlignment" Value="Center" />
+                                <Setter Property="FontSize" Value="16" />
+                            </Style>
+                            
+                        </Style.Resources>
+                    </Style>
+                    <Style TargetType="Label" x:Key="icon" BasedOn="{StaticResource FontAwesome}">
+                        <Setter Property="Padding" Value="10"/>
+                        <Setter Property="FontSize" Value="20" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="Foreground" Value="{StaticResource foregroundBrush}" />
+                    </Style>
+                </DockPanel.Resources>
+                <Border Name="btnSlide" MouseLeftButtonUp="btnSlide_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,1" Cursor="Hand">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="&#xf0c9;" Style="{DynamicResource icon}" />
+                    </Grid>
+                </Border>
                 <Border Name="btnHome" MouseLeftButtonUp="btnHome_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,1" Cursor="Hand">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition  />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Padding="10" FontSize="30" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf015;" />
-                        <Label Name="btnHomeName" Grid.Column="1" Padding="15" FontSize="20" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnHomeName}" />
+                        <Label Grid.Column="0" Content="&#xf015;" Style="{DynamicResource icon}" />
+                        <Label Name="btnHomeName" Grid.Column="1" Content="{x:Static resx:Default.btnHomeName}" />
                     </Grid>
                 </Border>
                 <Border Name="btnClientsManager" MouseLeftButtonUp="btnClients_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,1" Cursor="Hand">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition  />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Padding="10" FontSize="30" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0c0;" />
-                        <Label Name="btnClientsManagerName" Grid.Column="1" Padding="15" FontSize="20" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnClientsManagerName}" />
+                        <Label Grid.Column="0" Content="&#xf0c0;" Style="{DynamicResource icon}"/>
+                        <Label Name="btnClientsManagerName" Grid.Column="1" Content="{x:Static resx:Default.btnClientsManagerName}" />
                     </Grid>
                 </Border>
                 <Border Name="btnAssistantDoctor" MouseLeftButtonUp="btnAssistantDoctor_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,1" Cursor="Hand">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="140" />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Padding="10" FontSize="30" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf013;" />
-                        <Label Name="btnAssistantDoctorName" Grid.Column="1" Padding="15" FontSize="20" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnAssistantDoctorName}" />
+                        <Label Grid.Column="0" Style="{DynamicResource icon}" Content="&#xf013;" />
+                        <Label Name="btnAssistantDoctorName" Grid.Column="1" Content="{x:Static resx:Default.btnAssistantDoctorName}" />
                     </Grid>
                 </Border>
                 <Border Name="btnDoctor" MouseLeftButtonUp="btnDoctor_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,1" Cursor="Hand">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Padding="10" FontSize="30" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf013;" />
-                        <Label Name="btnDoctorName" Grid.Column="1" Padding="15" FontSize="20" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnDoctorName}" />
+                        <Label Grid.Column="0" Style="{DynamicResource icon}" Content="&#xf013;" />
+                        <Label Name="btnDoctorName" Grid.Column="1" Content="{x:Static resx:Default.btnDoctorName}" />
                     </Grid>
                 </Border>
 
                 <Border Name="btnSettings" MouseLeftButtonUp="btnSettings_MouseLeftButtonUp" DockPanel.Dock="Top" Margin="5" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,0,0" Cursor="Hand">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="70" />
+                            <ColumnDefinition Width="50" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Padding="10" FontSize="30" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf013;" />
-                        <Label Name="btnSettingsName" Grid.Column="1" Padding="15" FontSize="20" Foreground="{StaticResource foregroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnSettingsName}" />
+                        <Label Grid.Column="0" Style="{DynamicResource icon}" Content="&#xf013;" />
+                        <Label Name="btnSettingsName" Grid.Column="1" Content="{x:Static resx:Default.btnSettingsName}" />
                     </Grid>
                 </Border>
-                <Label DockPanel.Dock="Top" Style="{StaticResource FontAwesome}" Foreground="{StaticResource foregroundBrush}" FontSize="100" Content="&#xf0f0;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,1,0,0" Margin="15"/>
+                <Label DockPanel.Dock="Top" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,1,0,0" Margin="15"/>
             </DockPanel>
             <Grid Grid.Column="1" Name="MainContent">
                 
             </Grid>
         </Grid>
         <DockPanel Grid.Row="2" Background="{StaticResource foregroundBrush}" LastChildFill="False">
-            <DockPanel DockPanel.Dock="Right" LastChildFill="True" Margin="5">
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource DroidKufiRegular}" BorderBrush="{StaticResource backgroundBrush}" Content="00:00:00 20.20.2017" x:Name="lblDate"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0" Content="&#xF017;"/>
+            <DockPanel DockPanel.Dock="Left" LastChildFill="True" Margin="5">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Content="&#xF017;"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}"  BorderBrush="{StaticResource backgroundBrush}" Content="00:00:00 20.20.2017" x:Name="lblDate"/>
             </DockPanel>
-            <DockPanel DockPanel.Dock="Right" LastChildFill="True" Margin="5">
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0" Style="{StaticResource DroidKufiRegular}" Content="User1" x:Name="lblUsername"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" Content="&#xF007;"/>
+            <DockPanel DockPanel.Dock="Left" LastChildFill="True" Margin="5">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" Content="&#xF007;"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  Content="User1" x:Name="lblUsername"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Left" LastChildFill="True" Margin="5">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" Content="&#xf129;"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  Content="Every thing is okay" x:Name="lblStatus"/>
+            </DockPanel>
+            <DockPanel DockPanel.Dock="Left" LastChildFill="True" Margin="5">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="0,0,1,0" Style="{StaticResource FontAwesome}" BorderBrush="{StaticResource backgroundBrush}" Content="&#xf095;"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5,0" Foreground="{StaticResource backgroundBrush}" BorderThickness="1,0,0,0"  Content="GSM is Okay" x:Name="lblGSMStatus"/>
             </DockPanel>
         </DockPanel>
     </Grid>

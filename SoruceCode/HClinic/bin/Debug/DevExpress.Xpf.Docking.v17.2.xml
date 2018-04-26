@@ -324,6 +324,36 @@ When applied to a <see cref="T:DevExpress.Xpf.Docking.BaseLayoutItem"/> via the 
 
 
         </member>
+        <member name="T:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomizationChanged"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the IsCustomizationChangedEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="newValue">
+		A new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs.Value">
+            <summary>
+                <para>Gets the new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
+</para>
+            </summary>
+            <value>A Boolean value that specifies the new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Xpf.Docking.Base.ShowingMenuEventHandler">
 
             <summary>
@@ -1764,36 +1794,6 @@ This is a dependency property.
 </para>
             </summary>
             <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomizationChanged"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs.#ctor(System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the IsCustomizationChangedEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="newValue">
-		A new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Docking.Base.IsCustomizationChangedEventArgs.Value">
-            <summary>
-                <para>Gets the new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
-</para>
-            </summary>
-            <value>A Boolean value that specifies the new value of the <see cref="P:DevExpress.Xpf.Docking.DockLayoutManager.IsCustomization"/> property.
-</value>
 
 
         </member>

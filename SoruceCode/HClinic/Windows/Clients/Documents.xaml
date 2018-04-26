@@ -4,33 +4,39 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HClinic.Windows.Clients"
+        xmlns:resx="clr-namespace:HClinic.Assets.Languages"
         mc:Ignorable="d"
-        Title="Documents" Height="400" Width="500" AllowsTransparency="True" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" Margin="5" Padding="5" Background="Transparent" FlowDirection="LeftToRight">
-    <Border Margin="5">
+        Title="Documents" Height="400" Width="500" AllowsTransparency="True" WindowStyle="None" WindowState="Normal" WindowStartupLocation="CenterScreen" Margin="5" Padding="5" Background="Transparent" FlowDirection="LeftToRight" KeyDown="Window_KeyDown">
+    <Border Margin="5" >
+        
         <Border.Effect>
             <DropShadowEffect Direction="0" ShadowDepth="0" RenderingBias="Performance" BlurRadius="5" Color="Black" />
         </Border.Effect>
         <Grid>
+            
             <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
                 <RowDefinition />
                 <RowDefinition Height="40" />
             </Grid.RowDefinitions>
             <DockPanel Grid.Row="0" LastChildFill="True" Background="{StaticResource foregroundBrush}">
                 <Label Cursor="Hand" Name="btnClose" MouseLeftButtonUp="btnClose_MouseLeftButtonUp" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf00d;" />
-                <Label Name="lblName" MouseDown="lblName_MouseDown" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource DroidKufiBold}" Content="المستندات" />
-
+                <Border Name="btnPrint" MouseLeftButtonUp="btnPrint_MouseLeftButtonUp" BorderBrush="{StaticResource backgroundBrush}" BorderThickness="1,0,1,0" Margin="2" Cursor="Hand">
+                    <StackPanel Orientation="Horizontal">
+                        <Label FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="2" Style="{StaticResource FontAwesome}" Content="&#xf02f;"/>
+                        <Label FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="2"  Content="{x:Static resx:Default.btnPrintName}"/>
+                    </StackPanel>
+                </Border>
+                <Label Name="lblName" MouseDown="lblName_MouseDown" VerticalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" Padding="5" Style="{StaticResource DroidKufiBold}" Content="{x:Static resx:Default.btnDocumentsTitle}" />
             </DockPanel>
-            <Grid Grid.Row="1" Background="{StaticResource backgroundBrush}">
-                <ScrollViewer>
-                    <WrapPanel Name="images">
-                    </WrapPanel>
-                </ScrollViewer>
+            <Grid Name="imgCurrent" Grid.Row="1" Background="{StaticResource backgroundBrush}">
+
             </Grid>
+            
             <DockPanel Grid.Row="2" LastChildFill="True" Background="{StaticResource foregroundBrush}">
                 <StackPanel DockPanel.Dock="Left" Name="btnAdd" Cursor="Hand" Orientation="Horizontal" MouseLeftButtonUp="btnAdd_MouseLeftButtonUp">
                     <Label Name="btnAddIcon" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="25" Padding="5" Style="{StaticResource FontAwesome}" Content="&#xf07b;" />
-                    <Label Name="btnAddName" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="18" Style="{StaticResource DroidKufiRegular}" Content="أختيار الملف" BorderBrush="{StaticResource backgroundBrush}" Margin="5" Padding="3,0" BorderThickness="0,0,1,0" />
+                    <Label Name="btnAddName" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="{StaticResource backgroundBrush}" FontSize="18"  Content="أختيار الملف" BorderBrush="{StaticResource backgroundBrush}" Margin="5" Padding="3,0" BorderThickness="0,0,1,0" />
                 </StackPanel>
                 <TextBox Name="txtDescription" Margin="3" DockPanel.Dock="Left" Text="وصف"  AcceptsReturn="True" TextWrapping="Wrap" />
             </DockPanel>

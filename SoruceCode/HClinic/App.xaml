@@ -3,9 +3,6 @@
              xmlns:System="clr-namespace:System;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
-        <Style x:Key="DroidKufiRegular">
-            <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Assets/Fonts/#Droid Arabic Kufi" />
-        </Style>
         <Style x:Key="FontAwesome">
             <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/Assets/Fonts/#FontAwesome" />
         </Style>

@@ -36,8 +36,14 @@ namespace HClinic.UserControls.Settings
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
                 cmbHeaterPrinter.Items.Add(printer);
+                cmbLaserPrinter.Items.Add(printer);
             }
-            cmbHeaterPrinter.Text = App.RegisterValues.printerDefaultOne;
+            cmbHeaterPrinter.Text = App.RegisterValues.heaterPrinter;
+            cmbLaserPrinter.Text = App.RegisterValues.laserPrinter;
+
+            //info
+            txtDoctorName.Text = App.tblInfo.values["doctorName"];
+            txtDoctorDescription.Text = App.tblInfo.values["doctorDescription"];
         }
 
         private void btnServerApply_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -67,8 +73,20 @@ namespace HClinic.UserControls.Settings
 
         private void btnPrinterApply_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            App.registerConnection.setValue((int)App.RegisterNames.PrinterDefaultOne, HCrypt.StringCipher.Encrypt(cmbHeaterPrinter.Text));
-            App.RegisterValues.printerDefaultOne = cmbHeaterPrinter.Text;
+            App.registerConnection.setValue((int)App.RegisterNames.HeaterPrinter, HCrypt.StringCipher.Encrypt(cmbHeaterPrinter.Text));
+            App.registerConnection.setValue((int)App.RegisterNames.LaserPrinter, HCrypt.StringCipher.Encrypt(cmbLaserPrinter.Text));
+            App.RegisterValues.heaterPrinter = cmbHeaterPrinter.Text;
+            App.RegisterValues.laserPrinter = cmbLaserPrinter.Text;
+
+        }
+
+        private void btnInfoApply_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            App.databasceConnection.queryNonReader(string.Format("" +
+                "update tbl_info set value = '{0}' where tbl_info.name = 'doctorName';" +
+                "update tbl_info set value = '{1}' where tbl_info.name = 'doctorDescription';"
+                , txtDoctorName.Text, txtDoctorDescription.Text));
+            App.tblInfo = new Classes.Tables.Info();
         }
     }
 }

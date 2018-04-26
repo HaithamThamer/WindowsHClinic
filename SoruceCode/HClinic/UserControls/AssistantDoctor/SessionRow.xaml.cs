@@ -45,7 +45,7 @@ namespace HClinic.UserControls.AssistantDoctor
         {
             if (session != null)
             {
-                new Windows.Clients.Documents(session).ShowDialog();
+                new Windows.Clients.Documents(session,true).ShowDialog();
             }
         }
     }

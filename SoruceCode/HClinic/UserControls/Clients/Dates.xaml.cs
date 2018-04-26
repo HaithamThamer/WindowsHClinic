@@ -28,11 +28,15 @@ namespace HClinic.UserControls.Clients
         public Client selectedClient = null;
         public User selectedUser = null;
         public Date selectedDate = null;
+        public bool isAdd = true;
         private Dates() { }
         public Dates(Main parent)
         {
             InitializeComponent();
             this.parent = parent;
+            dateFrom.Text = DateTime.Now.ToString("yyyy-MM-dd 00:00:00");
+            dateTo.Text = DateTime.Now.ToString("yyyy-MM-dd 23:59:59");
+            dateAdd.Text = "";
             header = new DateItem(this);
             //header = new DateItem(this, 0, false, DateTime.Now, DateTime.Now, "", "");
             dates = new List<DateItem>();
@@ -115,19 +119,10 @@ namespace HClinic.UserControls.Clients
             dates.Clear();
             DatesContent.Children.Add(header);
             //System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_dates.id,tbl_dates.is_reported,tbl_dates.creation,tbl_dates.datetime,tbl_clients.name,tbl_clients.phone from tbl_clients,tbl_dates,tbl_users where tbl_clients.id = tbl_dates.client_id and tbl_dates.user_id = tbl_users.id and tbl_dates.datetime between '{0}' and '{1}' {2} {3} {4}", from.ToString("yyyy-MM-dd 00:00:00"), to.ToString("yyyy-MM-dd 23:59:59"), client == string.Empty ? "" : " and tbl_clients.name = '" + client + "'", user == string.Empty ? "" : " and tbl_users.name = '" + user + "' ", (bool)chkAll.IsChecked ? "" : " and tbl_dates.is_reported = '" + ((bool)chkDelivered.IsChecked ? "1" : "0") + "'"));
-            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_dates.id as date_id, tbl_dates.is_reported as date_is_reported, tbl_dates.creation as date_creation, tbl_dates.datetime as date_datetime, tbl_dates.user_id as date_user_id, tbl_dates.client_id as date_client_id, tbl_clients.id as client_id, tbl_clients.name as client_name, tbl_clients.phone as client_phone, tbl_clients.job as client_job, tbl_clients.address as client_address, tbl_clients.birthday as client_birthday, tbl_clients.diabetesType as client_diabetesType, tbl_clients.is_active as client_is_active, tbl_clients.is_male as client_is_male, tbl_clients.creation as client_creation, tbl_clients.user_id as client_user_id, tbl_users.id as user_id, tbl_users.name as user_name, tbl_users.password as user_password, tbl_users.email as user_email, tbl_users.phone as user_phone, tbl_users.`type` as user_type from tbl_clients, tbl_dates, tbl_users where tbl_dates.client_id = tbl_clients.id and tbl_dates.user_id = tbl_users.id and tbl_dates.datetime between '{0}' and '{1}' {2} {3} {4}", from.ToString("yyyy-MM-dd 00:00:00"), to.ToString("yyyy-MM-dd 23:59:59"), client == string.Empty ? "" : " and tbl_clients.name = '" + client + "'", user == string.Empty ? "" : " and tbl_users.name = '" + user + "' ", (bool)chkAll.IsChecked ? "" : " and tbl_dates.is_reported = '" + ((bool)chkDelivered.IsChecked ? "1" : "0") + "'"));
+            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_dates.id as date_id, tbl_dates.is_reported as date_is_reported, tbl_dates.creation as date_creation, tbl_dates.datetime as date_datetime, tbl_dates.user_id as date_user_id, tbl_dates.client_id as date_client_id, tbl_clients.id as client_id, tbl_clients.name as client_name, tbl_clients.phone as client_phone, tbl_clients.job as client_job, tbl_clients.address as client_address, tbl_clients.birthday as client_birthday, tbl_clients.diabetesType as client_diabetesType, tbl_clients.language as client_language, tbl_clients.is_active as client_is_active, tbl_clients.is_male as client_is_male, tbl_clients.creation as client_creation, tbl_clients.user_id as client_user_id, tbl_users.id as user_id, tbl_users.name as user_name, tbl_users.password as user_password, tbl_users.email as user_email, tbl_users.phone as user_phone, tbl_users.`type` as user_type from tbl_clients, tbl_dates, tbl_users where tbl_dates.client_id = tbl_clients.id and tbl_dates.user_id = tbl_users.id and tbl_dates.datetime between '{0}' and '{1}' {2} {3} {4}", from.ToString("yyyy-MM-dd 00:00:00"), to.ToString("yyyy-MM-dd 23:59:59"), client == string.Empty ? "" : " and tbl_clients.name = '" + client + "'", user == string.Empty ? "" : " and tbl_users.name = '" + user + "' ", (bool)chkAll.IsChecked ? "" : " and tbl_dates.is_reported = '" + ((bool)chkDelivered.IsChecked ? "1" : "0") + "'"));
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                //dates.Add(new DateItem(
-                //    this,
-                //    int.Parse(dt.Rows[i]["id"].ToString()),
-                //    bool.Parse(dt.Rows[i]["is_reported"].ToString()),
-                //    DateTime.Parse(dt.Rows[i]["creation"].ToString()),
-                //    DateTime.Parse(dt.Rows[i]["datetime"].ToString()),
-                //    dt.Rows[i]["name"].ToString(),
-                //    dt.Rows[i]["phone"].ToString()
-                //    ));
                 dates.Add(new DateItem(
                     this,
                     new Date(
@@ -146,6 +141,7 @@ namespace HClinic.UserControls.Clients
                         dt.Rows[i]["client_address"].ToString(),
                         DateTime.Parse(dt.Rows[i]["client_birthday"].ToString()),
                         (Client.DiabetesTypes)int.Parse(dt.Rows[i]["client_diabetesType"].ToString()),
+                        (Client.Languages)int.Parse(dt.Rows[i]["client_language"].ToString()),
                         dt.Rows[i]["client_is_active"].ToString() == "True",
                         dt.Rows[i]["client_is_male"].ToString() == "True",
                         DateTime.Parse(dt.Rows[i]["client_creation"].ToString()),
@@ -174,10 +170,6 @@ namespace HClinic.UserControls.Clients
 
         private void txtClient_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //ignore non clients
-            //if (selectedClient != null)
-            //    return;
-
             //clear all clients from before query
             ClientViewerStack.Children.Clear();
 
@@ -200,6 +192,7 @@ namespace HClinic.UserControls.Clients
                         dt.Rows[i]["address"].ToString(),
                         DateTime.Parse(dt.Rows[i]["birthday"].ToString()),
                         (Client.DiabetesTypes)int.Parse(dt.Rows[i]["diabetesType"].ToString()),
+                        (Client.Languages)int.Parse(dt.Rows[i]["language"].ToString()),
                         dt.Rows[i]["is_active"].ToString() == "True",
                         dt.Rows[i]["is_male"].ToString() == "True",
                         DateTime.Parse(dt.Rows[i]["creation"].ToString()),
@@ -233,12 +226,21 @@ namespace HClinic.UserControls.Clients
                 }
             }
         }
-
+        
         private void btnAddDate_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            if (btnAddDate.Cursor == Cursors.Hand && selectedClient != null)
+            if (selectedClient != null && dateAdd.Text != string.Empty)
             {
-                App.databasceConnection.query(string.Format("insert into tbl_dates (datetime,client_id,user_id) values ('{0}','{1}','{2}');", DateTime.Parse(dateAdd.Text).ToString(App.Constants.DateTimeFormatForMySQL), selectedClient.id, App.currentUser.id));
+                if (isAdd)
+                {
+                    App.databasceConnection.query(string.Format("insert into tbl_dates (datetime,client_id,user_id) values ('{0}','{1}','{2}');", DateTime.Parse(dateAdd.Text).ToString(App.Constants.DateTimeFormatForMySQL), selectedClient.id, App.currentUser.id));
+                }
+                else
+                {
+                    App.databasceConnection.query(string.Format("update tbl_dates set datetime = '{1}',client_id = '{2}' where id = '{0}';",selectedDate.id, DateTime.Parse(dateAdd.Text).ToString(App.Constants.DateTimeFormatForMySQL), selectedClient.id));
+                }
+                
+
                 btnSearch_MouseLeftButtonUp(null, null);
                 selectedClient = null;
                 selectedDate = null;
@@ -249,10 +251,12 @@ namespace HClinic.UserControls.Clients
                 btnAddDateIcon.Content = "\uf067";
                 txtClient.Text = "";
                 txtUser.Text = "";
+                isAdd = true;
+                dateAdd.Text = "";
             }
             else
             {
-                new HClinic.Windows.Confirm("خطأ", "لم يتم اختيار المراجع").ShowDialog(); ;
+                new HClinic.Windows.Confirm(Assets.Languages.Default.lblError, Assets.Languages.Default.lblErrorEmptyRequires).ShowDialog(); ;
             }
         }
     }

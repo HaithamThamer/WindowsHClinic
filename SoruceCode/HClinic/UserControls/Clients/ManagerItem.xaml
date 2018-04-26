@@ -19,7 +19,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Label Name="iconName" Grid.Column="0" Style="{StaticResource FontAwesome}" Content="&#xf007;"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Label Name="lblName" Grid.Column="1" FontSize="12" Padding="0" Style="{StaticResource DroidKufiRegular}" Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Name="lblName" Grid.Column="1" FontSize="12" Padding="0"  Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             </Grid>
             <Grid Name="ClientBirthday" DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
@@ -27,7 +27,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Label Name="iconBirthday" Grid.Column="0" FontSize="12" Padding="0" Style="{StaticResource FontAwesome}" Content="&#xf073;"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Label Name="lblBirthday" Grid.Column="1" FontSize="12" Padding="0" Style="{StaticResource DroidKufiRegular}" Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Name="lblBirthday" Grid.Column="1" FontSize="12" Padding="0"  Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             </Grid>
             <Grid Name="ClientPhone" DockPanel.Dock="Top">
                 <Grid.ColumnDefinitions>
@@ -35,7 +35,7 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Label Name="iconPhone" Grid.Column="0" FontSize="12" Padding="0" Style="{StaticResource FontAwesome}" Content="&#xf095;"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                <Label Name="lblPhone" Grid.Column="1" FontSize="12" Padding="0" Style="{StaticResource DroidKufiRegular}" Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                <Label Name="lblPhone" Grid.Column="1" FontSize="12" Padding="0"  Content="هيثم ثامر عبد القادر"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
             </Grid>
         </DockPanel>
     </Border>

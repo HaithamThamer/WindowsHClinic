@@ -1624,15 +1624,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.ClearNavigationHistory">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether clicking the button clears the menu's navigation history.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b> to clear the navigation history when the end-user clicks the button; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.ClearNavigationHistoryProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1640,15 +1643,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetParameter">
             <summary>
-                <para> </para>
+                <para>Gets or sets the parameter to be passed to the target page, invoked when clicking the menu item.
+</para>
             </summary>
-            <value> </value>
+            <value>A parameter to be passed to the page specified by the <see cref="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetType"/> or <see cref="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetTypeName"/> property, which is invoked on clicking the menu item.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetParameterProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1656,23 +1662,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetType">
             <summary>
-                <para> </para>
+                <para>Allows you to specify the Page class to be opened when an end-user clicks the menu item.
+</para>
             </summary>
-            <value> </value>
+            <value>A System.Type value that specifies the Page class to be opened when an end-user clicks the menu item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetTypeName">
             <summary>
-                <para> </para>
+                <para>Allows you to specify the name of the Page class to be opened when an end-user clicks the menu item.
+</para>
             </summary>
-            <value> </value>
+            <value>A String value that specifies the name of the Page class to be opened when an end-user clicks the menu item.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetTypeNameProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -1680,7 +1691,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.Internal.HamburgerMenuNavigationButtonBase`1.NavigationTargetTypeProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -3602,141 +3614,6 @@ This is a dependency property.
 
 
         </member>
-        <member name="T:DevExpress.Xpf.Navigation.TileNavCategory">
-
-            <summary>
-                <para>Represents a navigation element on the root level of the <see cref="T:DevExpress.Xpf.Navigation.TileNavPane"/> navigation hierarchy.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Xpf.Navigation.TileNavCategory.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TileNavCategory class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.HasItems">
-            <summary>
-                <para>Gets whether the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.Items"/> collection of the current TileNavCategory is not empty.
-</para>
-            </summary>
-            <value><b>true</b>, if the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.Items"/> collection is not empty; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.HasItemsProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.Items">
-            <summary>
-                <para>Provides access to the collection of TileNavItem objects that belong to the current TileNavCategory. This is a dependency property.
-</para>
-            </summary>
-            <value>A <b>TileNavItemCollection</b> object representing the collection of child <b>TileNavItem</b> objects.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemsProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource">
-            <summary>
-                <para>Gets or sets an object that provides information to generate and initialize child items for the current TileNavCategory. This is a dependency property.
-</para>
-            </summary>
-            <value>An Object that provides information to generate and initialize child items for the current TileNavCategory. 
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSourceProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemStyle">
-            <summary>
-                <para>Gets or sets the style applied to a <see cref="T:DevExpress.Xpf.Navigation.TileNavItem"/> object defined as the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplate"/>'s content.
-
-
-This is a dependency property. 
-</para>
-            </summary>
-            <value>A Style object providing corresponding style settings.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemStyleProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplate">
-            <summary>
-                <para>Gets or sets the template used to visualize objects stored as elements in the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource"/> collection.
- This is a dependency property. 
-</para>
-            </summary>
-            <value>A DataTemplate object that specifies the corresponding template.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateSelector">
-            <summary>
-                <para>Gets or sets an object that chooses a template used to visualize objects stored as elements in the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource"/> collection.
- This is a dependency property. 
-</para>
-            </summary>
-            <value>A System.Windows.Controls.DataTemplateSelector descendant that applies a template based on custom logic.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateSelectorProperty">
-            <summary>
-                <para>Identifies the  dependency property.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
         <member name="T:DevExpress.Xpf.Navigation.TileNavPane">
 
             <summary>
@@ -4172,21 +4049,24 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenuMoreButtonVisibility.Auto">
             <summary>
-                <para> </para>
+                <para>The More predefined button is automatically displayed if not all items are shown in the preview.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenuMoreButtonVisibility.Hidden">
             <summary>
-                <para> </para>
+                <para>The More predefined button is hidden.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenuMoreButtonVisibility.Visible">
             <summary>
-                <para> </para>
+                <para>The More predefined button is visible.
+</para>
             </summary>
 
 
@@ -4251,14 +4131,16 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuItemPlacement.Bottom">
             <summary>
-                <para> </para>
+                <para>The item is aligned to the bottom of the menu.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuItemPlacement.Top">
             <summary>
-                <para> </para>
+                <para>The item is aligned to the top of the menu.
+</para>
             </summary>
 
 
@@ -4303,7 +4185,7 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuAvailableViewStates.Flyout">
             <summary>
-                <para>The flyout view state is enabled. 
+                <para>The flyout view state is enabled. The menu is hidden. With a click on the hamburger button, the menu is displayed in a fly-out overlaying the currently displayed page.
 </para>
             </summary>
 
@@ -4311,7 +4193,7 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuAvailableViewStates.Inline">
             <summary>
-                <para>The inline view state is enabled. 
+                <para>The inline view state is enabled. The menu is displayed expanded inline with the current page. With a click on the hamburger button, the menu is displayed in the compact mode.
 </para>
             </summary>
 
@@ -4319,7 +4201,7 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuAvailableViewStates.Overlay">
             <summary>
-                <para>The overlay view state is enabled. 
+                <para>The overlay view state is enabled. The menu is displayed in the compact mode. With a click on the hamburger button, the menu is expanded overlaying the currently displayed page.
 </para>
             </summary>
 
@@ -4335,7 +4217,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerSubMenuNavigationButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerSubMenuNavigationButton class with default settings.
+</para>
             </summary>
 
 
@@ -4485,7 +4368,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerSubMenu class.
+</para>
             </summary>
 
 
@@ -4506,7 +4390,7 @@ This is a dependency property.
 
 
         </member>
-        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ActualFlyoutPaneWidth">
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ActualFlyoutPaneMinWidth">
             <summary>
                 <para> </para>
             </summary>
@@ -4514,7 +4398,7 @@ This is a dependency property.
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ActualFlyoutPaneWidthProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ActualFlyoutPaneMinWidthProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -4540,23 +4424,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeader">
             <summary>
-                <para> </para>
+                <para>Gets or sets the header of the sub-menu's fly-out panel.
+</para>
             </summary>
-            <value> </value>
+            <value>The header of the sub-menu's fly-out panel.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderFontSize">
             <summary>
-                <para> </para>
+                <para>Gets or sets the size of the text font of the fly-out panel's header. This is a dependency property
+</para>
             </summary>
-            <value> </value>
+            <value>A double value that represents the font size.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderFontSizeProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4564,15 +4453,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height, in pixels, of the flyout panel header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the flyout panel header.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4580,15 +4472,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderPadding">
             <summary>
-                <para> </para>
+                <para>Gets or sets the amount of space around the flyout panel header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Thickness"/> structure that specifies the amount of space around the flyout panel header.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderPaddingProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4596,7 +4491,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4604,13 +4500,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderTemplate">
             <summary>
+                <para>Gets or sets the <b>DataTemplate</b> used to render the header of the sub-menu's fly-out panel.
+</para>
+            </summary>
+            <value>A DataTemplate used to render the header of the sub-menu's fly-out panel.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderTemplateProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutPaneMinWidth">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutHeaderTemplateProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.FlyoutPaneMinWidthProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -4636,23 +4551,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.Glyph">
             <summary>
-                <para> </para>
+                <para>Gets or sets an image displayed within the Sub Menu item. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>ImageSource</b> object that specifies the image displayed within the sub menu item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4660,7 +4580,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4668,13 +4589,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphStretch">
             <summary>
+                <para>Gets or sets how the glyph is stretched to fill the button. This is a dependency property.
+</para>
+            </summary>
+            <value>A <see cref="Stretch"/> enumeration value that specifies how the glyph is stretched to fill the button. The default is <b>Stretch.Uniform</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphStretchProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphTemplate">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphStretchProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphTemplateProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -4684,15 +4624,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the width of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the width, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.GlyphWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4724,15 +4667,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsMoreButtonSelected">
             <summary>
-                <para> </para>
+                <para>Gets whether the <b>More</b> predefined button, which invokes a fly-out panel containing all sub-menu items, is selected.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the More predefined button is selected; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsMoreButtonSelectedProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4740,15 +4686,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsMoreButtonVisible">
             <summary>
-                <para> </para>
+                <para>Gets whether the <b>More</b> predefined button, which invokes a fly-out panel containing all sub-menu items, is visible.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the More predefined button is visible; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsMoreButtonVisibleProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4756,15 +4705,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsStandaloneSelectionItemMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether selecting an item in the current sub-menu discards the selection in the main menu, or the item selection in the current sub-menu and the main menu are independent.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the selection in the current sub-menu and the main menu are independent; otherwise, <b>false</b>. The default is <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.IsStandaloneSelectionItemModeProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4772,23 +4724,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.Items">
             <summary>
-                <para> </para>
+                <para>Provides access to a collection of objects that represent sub-menu items.
+</para>
             </summary>
-            <value> </value>
+            <value>The read-only collection of objects implementing the DevExpress.Xpf.WindowsUI.IHamburgerMenuItem interface that represent items contained within the sub-menu.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemsSource">
             <summary>
-                <para> </para>
+                <para>Gets or sets an object that represents a source of items for the sub-menu.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that represents a source of items for the sub-menu.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemsSourceProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4796,15 +4753,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemTemplate">
             <summary>
-                <para> </para>
+                <para>Gets or sets the data template used to render each item from the data source.
+</para>
             </summary>
-            <value> </value>
+            <value>The <b>System.Windows.DataTemplate</b> object that specifies the visualization for the data objects.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemTemplateProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4812,15 +4772,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemTemplateSelector">
             <summary>
-                <para> </para>
+                <para>Gets or sets a custom data template selection logic.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Windows.Controls.DataTemplateSelector</b> object that implements a custom data template selection logic. Typically, this is a keyed resource, which you reference through a {StaticResource} markup extension.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.ItemTemplateSelectorProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4828,15 +4791,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.MoreButtonVisibilityMode">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the <b>More</b> predefined button, which invokes a fly-out panel containing all sub-menu items, is displayed below the sub-menu items shown in preview.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="HamburgerSubMenuMoreButtonVisibility"/> enumeration value that specifies whether the More predefined button is displayed. The default is <b>Auto</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.MoreButtonVisibilityModeProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4844,22 +4810,26 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.OnApplyTemplate">
             <summary>
-                <para> </para>
+                <para>Called after the template is completely generated and attached to the visual tree. 
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.Placement">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the sub-menu button is positioned at the top or bottom of the <see cref="T:DevExpress.Xpf.WindowsUI.HamburgerMenu"/>.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="HamburgerMenuItemPlacement"/> enumeration constant, such as <b>Top</b> or <b>Bottom</b>, that specifies how the button is positioned in the menu. The default is <b>Top</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.PlacementProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4867,30 +4837,36 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.PreviewItems">
             <summary>
-                <para> </para>
+                <para>Gets the collection of items shown in the preview.
+</para>
             </summary>
-            <value> </value>
+            <value>A collection of <see cref="T:DevExpress.Xpf.WindowsUI.HamburgerSubMenuNavigationButton"/> objects.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.SelectedItem">
             <summary>
-                <para> </para>
+                <para>Gets or sets the item that is selected in the current sub-menu.
+</para>
             </summary>
-            <value> </value>
+            <value>The item that is currently selected in the current sub-menu.
+</value>
 
 
         </member>
         <member name="E:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.SelectedItemChanged">
             <summary>
-                <para> </para>
+                <para>Occurs when the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.SelectedItem"/> property value changes.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.SelectedItemChangedEvent">
             <summary>
-                <para> </para>
+                <para>Identifies the  routed event.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4898,7 +4874,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerSubMenu.SelectedItemProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -4930,7 +4907,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuToggleStateButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuToggleStateButton class with default settings.
+</para>
             </summary>
 
 
@@ -4961,17 +4939,21 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuSelectedItemChangedEventArgs.NewItem">
             <summary>
-                <para> </para>
+                <para>Gets the item that has been selected.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that represents the item that has been selected.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuSelectedItemChangedEventArgs.OldItem">
             <summary>
-                <para> </para>
+                <para>Gets the previously selected item.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that represents the item that was previously selected.
+</value>
 
 
         </member>
@@ -4985,30 +4967,36 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuNavigationButton class with default settings.
+</para>
             </summary>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.Glyph">
             <summary>
-                <para> </para>
+                <para>Gets or sets an image displayed within the Main Menu item. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>ImageSource</b> object that specifies the image displayed within the menu item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5016,7 +5004,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5024,13 +5013,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphStretch">
             <summary>
+                <para>Gets or sets how the glyph is stretched to fill the button. This is a dependency property.
+</para>
+            </summary>
+            <value>A <see cref="Stretch"/> enumeration value that specifies how the glyph is stretched to fill the button. The default is <b>Stretch.Uniform</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphStretchProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphTemplate">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphStretchProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphTemplateProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -5040,15 +5048,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the width of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the width, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuNavigationButton.GlyphWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5080,7 +5091,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuHyperlinkButton class with default settings.
+</para>
             </summary>
 
 
@@ -5094,25 +5106,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.Command">
             <summary>
-                <para> </para>
+                <para>Gets or sets the command to invoke when the hyperlink item is clicked.
+</para>
             </summary>
-            <value> </value>
+            <value>An ICommand object to invoke when the hyperlink item is clicked.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.CommandParameter">
             <summary>
-                <para> </para>
+                <para>Gets or sets the parameter to pass to the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.Command"/>. 
+</para>
             </summary>
-            <value> </value>
+            <value>The Object specifying the parameter to pass to the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.Command"/>. 
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.CommandTarget">
             <summary>
-                <para> </para>
+                <para>Gets or sets the element on which to raise the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.Command"/>.
+
+</para>
             </summary>
-            <value> </value>
+            <value>The IInputElement on which to raise the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerMenuHyperlinkButton.Command"/>.
+</value>
 
 
         </member>
@@ -5181,7 +5200,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuBottomBarRadioButton class with default settings.
+</para>
             </summary>
 
 
@@ -5228,23 +5248,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.Glyph">
             <summary>
-                <para> </para>
+                <para>Gets or sets an image displayed within the Bottom Bar item. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>ImageSource</b> object that specifies the image displayed within the bottom bar item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5252,7 +5277,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5260,13 +5286,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphStretch">
             <summary>
+                <para>Gets or sets how the glyph is stretched to fill the button. This is a dependency property.
+</para>
+            </summary>
+            <value>A <see cref="Stretch"/> enumeration value that specifies how the glyph is stretched to fill the button. The default is <b>Stretch.Uniform</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphStretchProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphTemplate">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphStretchProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphTemplateProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -5276,15 +5321,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the width of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the width, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarRadioButton.GlyphWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5316,7 +5364,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuBottomBarNavigationButton class with default settings.
+</para>
             </summary>
 
 
@@ -5347,23 +5396,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.Glyph">
             <summary>
-                <para> </para>
+                <para>Gets or sets an image displayed within the Bottom Bar item. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>ImageSource</b> object that specifies the image displayed within the bottom bar item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5371,7 +5425,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5379,13 +5434,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphStretch">
             <summary>
+                <para>Gets or sets how the glyph is stretched to fill the button. This is a dependency property.
+</para>
+            </summary>
+            <value>A <see cref="Stretch"/> enumeration value that specifies how the glyph is stretched to fill the button. The default is <b>Stretch.Uniform</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphStretchProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphTemplate">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphStretchProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphTemplateProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -5395,15 +5469,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the width of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the width, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarNavigationButton.GlyphWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5435,7 +5512,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuBottomBarCheckBox class with default settings.
+</para>
             </summary>
 
 
@@ -5482,23 +5560,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.Glyph">
             <summary>
-                <para> </para>
+                <para>Gets or sets an image displayed within the Bottom Bar item. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An <b>ImageSource</b> object that specifies the image displayed within the bottom bar item.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5506,7 +5589,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5514,13 +5598,32 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphStretch">
             <summary>
+                <para>Gets or sets how the glyph is stretched to fill the button. This is a dependency property.
+</para>
+            </summary>
+            <value>A <see cref="Stretch"/> enumeration value that specifies how the glyph is stretched to fill the button. The default is <b>Stretch.Uniform</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphStretchProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphTemplate">
+            <summary>
                 <para> </para>
             </summary>
             <value> </value>
 
 
         </member>
-        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphStretchProperty">
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphTemplateProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -5530,15 +5633,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the width of the frame into which the glyph is fitted. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the width, in pixels, of the frame into which the glyph is fitted.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenuBottomBarCheckBox.GlyphWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5570,7 +5676,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenuAdaptiveLayoutController.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenuAdaptiveLayoutController class with default settings.
+</para>
             </summary>
 
 
@@ -5672,7 +5779,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenu.#ctor">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the HamburgerMenu class. 
+</para>
             </summary>
 
 
@@ -5686,6 +5794,22 @@ This is a dependency property.
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ActualGoBackCommandProperty">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.ActualIsHorizontalHeaderVisible">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ActualIsHorizontalHeaderVisibleProperty">
             <summary>
                 <para> </para>
             </summary>
@@ -5727,15 +5851,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.AllowBuiltInNavigation">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether to automatically set the Hamburger Menu content to a <see cref="T:DevExpress.Xpf.WindowsUI.NavigationFrame"/> instance, enabling the navigation capability. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, to enable navigation by automatically set the menu content to a NavigationFrame; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.AllowBuiltInNavigationProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5759,15 +5886,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.AvailableViewStates">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the menu can be displayed in the Flyout, Overlay and/or Inline state. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="HamburgerMenuAvailableViewStates"/> enumeration constant or their bitwise combination, that specifies the menu's available view states.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.AvailableViewStatesProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5791,23 +5921,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItems">
             <summary>
-                <para> </para>
+                <para>Provides access to a collection of objects that represent Bottom Bar items.
+</para>
             </summary>
-            <value> </value>
+            <value>The read-only collection of objects implementing the DevExpress.Xpf.WindowsUI.IHamburgerMenuBottomBarItem interface that represent items contained within the menu.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemsSource">
             <summary>
-                <para> </para>
+                <para>Gets or sets an object that represents a source of items for the menu's bottom bar. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that represents a source of items for the menu's bottom bar.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemsSourceProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5815,15 +5950,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemTemplate">
             <summary>
-                <para> </para>
+                <para>Gets or sets the data template used to render each item in the menu's bottom bar from the data source. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Windows.DataTemplate</b> object that specifies the visualization for the data objects.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemTemplateProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5831,15 +5969,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemTemplateSelector">
             <summary>
-                <para> </para>
+                <para>Gets or sets a custom data template selection logic for items in the menu's bottom bar. This is a dependency property.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Windows.Controls.DataTemplateSelector</b> object that implements a custom data template selection logic. Typically this is a keyed resource, which you reference through a {StaticResource} markup extension.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.BottomBarItemTemplateSelectorProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5855,15 +5996,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.CompactOverlayStateThreshold">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window width, in pixels, at which the menu is automatically displayed in the Overlay state. This property supports the adaptive layout.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the window width, in pixels, at which the menu is automatically displayed in the Overlay state. The default is <b>1024</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.CompactOverlayStateThresholdProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5871,15 +6015,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.CompactWidth">
             <summary>
-                <para> </para>
+                <para>Gets or sets the menu pane width, in pixels, in its compact display mode.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the menu pane width, in pixels, in its compact display mode.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.CompactWidthProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5925,9 +6072,11 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.Header">
             <summary>
-                <para> </para>
+                <para>Gets or sets the menu header displayed next to the hamburger button.
+</para>
             </summary>
-            <value> </value>
+            <value>The menu header.
+</value>
 
 
         </member>
@@ -5965,15 +6114,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderHeight">
             <summary>
-                <para> </para>
+                <para>Gets or sets the height of the menu header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the height of the menu header.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderHeightProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5981,15 +6133,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderPadding">
             <summary>
-                <para> </para>
+                <para>Gets or sets the outer margin of the menu header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Thickness"/> structure that specifies the outer margin of the menu header.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderPaddingProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -5997,7 +6152,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6005,15 +6161,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderTemplate">
             <summary>
-                <para> </para>
+                <para>Gets or sets the data template used to render the menu header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="DataTemplate"/> object that specifies the data template used to render the menu header.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderTemplateProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6021,15 +6180,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderTemplateSelector">
             <summary>
-                <para> </para>
+                <para>Gets or sets a custom data template selection logic to render the menu header.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Windows.Controls.DataTemplateSelector</b> object that implements a custom data template selection logic. Typically, this is a keyed resource, which you reference through a {StaticResource} markup extension.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HeaderTemplateSelectorProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6037,15 +6199,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.HideMenuWhenActivePageItemNotFound">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the menu is automatically hidden when the navigated page is not represented in the Main Menu by a navigation button.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the menu is automatically hidden when the navigated page is not represented in the menu by a navigation button; otherwise, <b>false</b>. The default is <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.HideMenuWhenActivePageItemNotFoundProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6069,15 +6234,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsCompact">
             <summary>
-                <para> </para>
+                <para>Gets whether the menu is in compact mode.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the menu is in compact mode; otherwise, <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsCompactProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6085,15 +6253,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsInitiallyCompact">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the menu is initially displayed in the compact mode.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the menu is initially displayed in the compact mode; otherwise, <b>false</b>. The default is <b>false</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsInitiallyCompactProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6101,15 +6272,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsMenuVisible">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the menu is visible.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the menu is visible; otherwise, <b>false</b>. The default is <b>true</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.IsMenuVisibleProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6133,23 +6307,28 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.Items">
             <summary>
-                <para> </para>
+                <para>Provides access to a collection of objects that represent Main Menu items.
+</para>
             </summary>
-            <value> </value>
+            <value>The read-only collection of objects implementing the DevExpress.Xpf.WindowsUI.IHamburgerMenuItem interface that represent items contained within the menu.
+</value>
 
 
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemsSource">
             <summary>
-                <para> </para>
+                <para>Gets or sets an object that represents a source of items for the menu.
+</para>
             </summary>
-            <value> </value>
+            <value>An object that represents a source of items for the menu.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemsSourceProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6157,15 +6336,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemTemplate">
             <summary>
-                <para> </para>
+                <para>Gets or sets the data template used to render each item from the data source.
+</para>
             </summary>
-            <value> </value>
+            <value>The <b>System.Windows.DataTemplate</b> object that specifies the visualization for the data objects.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemTemplateProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6173,15 +6355,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemTemplateSelector">
             <summary>
-                <para> </para>
+                <para>Gets or sets a custom data template selection logic.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>System.Windows.Controls.DataTemplateSelector</b> object that implements a custom data template selection logic. Typically, this is a keyed resource, which you reference through a {StaticResource} markup extension.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ItemTemplateSelectorProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6189,15 +6374,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.MinimizedFlyoutStateThreshold">
             <summary>
-                <para> </para>
+                <para>Gets or sets the window width, in pixels, at which the menu is automatically displayed in the Flyout state. This property supports the adaptive layout.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="Double"/> value that specifies the window width, in pixels, at which the menu is automatically displayed in the Flyout state. The default is <b>720</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.MinimizedFlyoutStateThresholdProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6205,15 +6393,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.NavigationTarget">
             <summary>
-                <para> </para>
+                <para>Gets or sets the menu's navigation target.
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:DevExpress.Xpf.WindowsUI.NavigationFrame"/> or a <see cref="T:DevExpress.Xpf.WindowsUI.Navigation.FrameNavigationService"/> object.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.NavigationTargetProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6221,7 +6412,8 @@ This is a dependency property.
         </member>
         <member name="M:DevExpress.Xpf.WindowsUI.HamburgerMenu.OnApplyTemplate">
             <summary>
-                <para> </para>
+                <para>Called after the template is completely generated and attached to the visual tree. 
+</para>
             </summary>
 
 
@@ -6283,22 +6475,26 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.SelectedItem">
             <summary>
-                <para> </para>
+                <para>Gets or sets the menu item which is currently selected.
+</para>
             </summary>
-            <value> </value>
+            <value>The menu item which is currently selected.
+</value>
 
 
         </member>
         <member name="E:DevExpress.Xpf.WindowsUI.HamburgerMenu.SelectedItemChanged">
             <summary>
-                <para> </para>
+                <para>Occurs when the <see cref="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.SelectedItem"/> property value changes.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.SelectedItemChangedEvent">
             <summary>
-                <para> </para>
+                <para>Identifies the  routed event.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6306,7 +6502,8 @@ This is a dependency property.
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.SelectedItemProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6314,15 +6511,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.ShowMenuOnEmptySpaceBarClick">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the menu displayed in the compact mode can be expanded with a click on an empty space.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the menu displayed in the compact mode can be expanded with a click on an empty space; otherwise, <b>false</b>. The default is <b>true</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.ShowMenuOnEmptySpaceBarClickProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6330,15 +6530,18 @@ This is a dependency property.
         </member>
         <member name="P:DevExpress.Xpf.WindowsUI.HamburgerMenu.SyncWithActivePage">
             <summary>
-                <para> </para>
+                <para>Gets or sets whether the button selection in the menu is automatically synchronized with the navigated page.
+</para>
             </summary>
-            <value> </value>
+            <value><b>true</b>, if the button selection in the menu is automatically synchronized with the navigated page; otherwise, <b>false</b>. The default is <b>true</b>.
+</value>
 
 
         </member>
         <member name="F:DevExpress.Xpf.WindowsUI.HamburgerMenu.SyncWithActivePageProperty">
             <summary>
-                <para> </para>
+                <para>Identifies the  dependency property.
+</para>
             </summary>
             <returns> </returns>
 
@@ -6928,6 +7131,22 @@ This is a dependency property.
             <summary>
                 <para>Identifies the  dependency property.
 </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.WindowsUI.AppBar.IsAnimationEnabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.WindowsUI.AppBar.IsAnimationEnabledProperty">
+            <summary>
+                <para> </para>
             </summary>
             <returns> </returns>
 
@@ -9904,6 +10123,141 @@ This is a dependency property.
 
 
         </member>
+        <member name="T:DevExpress.Xpf.Navigation.TileNavCategory">
+
+            <summary>
+                <para>Represents a navigation element on the root level of the <see cref="T:DevExpress.Xpf.Navigation.TileNavPane"/> navigation hierarchy.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Xpf.Navigation.TileNavCategory.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TileNavCategory class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.HasItems">
+            <summary>
+                <para>Gets whether the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.Items"/> collection of the current TileNavCategory is not empty.
+</para>
+            </summary>
+            <value><b>true</b>, if the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.Items"/> collection is not empty; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.HasItemsProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.Items">
+            <summary>
+                <para>Provides access to the collection of TileNavItem objects that belong to the current TileNavCategory. This is a dependency property.
+</para>
+            </summary>
+            <value>A <b>TileNavItemCollection</b> object representing the collection of child <b>TileNavItem</b> objects.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemsProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource">
+            <summary>
+                <para>Gets or sets an object that provides information to generate and initialize child items for the current TileNavCategory. This is a dependency property.
+</para>
+            </summary>
+            <value>An Object that provides information to generate and initialize child items for the current TileNavCategory. 
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSourceProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemStyle">
+            <summary>
+                <para>Gets or sets the style applied to a <see cref="T:DevExpress.Xpf.Navigation.TileNavItem"/> object defined as the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplate"/>'s content.
+
+
+This is a dependency property. 
+</para>
+            </summary>
+            <value>A Style object providing corresponding style settings.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemStyleProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplate">
+            <summary>
+                <para>Gets or sets the template used to visualize objects stored as elements in the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource"/> collection.
+ This is a dependency property. 
+</para>
+            </summary>
+            <value>A DataTemplate object that specifies the corresponding template.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateSelector">
+            <summary>
+                <para>Gets or sets an object that chooses a template used to visualize objects stored as elements in the <see cref="P:DevExpress.Xpf.Navigation.TileNavCategory.ItemsSource"/> collection.
+ This is a dependency property. 
+</para>
+            </summary>
+            <value>A System.Windows.Controls.DataTemplateSelector descendant that applies a template based on custom logic.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Navigation.TileNavCategory.ItemTemplateSelectorProperty">
+            <summary>
+                <para>Identifies the  dependency property.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.Xpf.Controls.WizardService">
 
             <summary>
@@ -9917,6 +10271,22 @@ This is a dependency property.
                 <para>Initializes a new instance of the WizardService class with the default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Xpf.Controls.WizardService.ClearDataContextOnNavigation">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="F:DevExpress.Xpf.Controls.WizardService.ClearDataContextOnNavigationProperty">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
 
 
         </member>

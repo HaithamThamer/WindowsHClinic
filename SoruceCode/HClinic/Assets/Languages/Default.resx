@@ -313,4 +313,55 @@
   <data name="btnPrintName" xml:space="preserve">
     <value>Print</value>
   </data>
+  <data name="lblError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="lblErrorDuplicated" xml:space="preserve">
+    <value>One of values was duplicated, try a differnce value</value>
+  </data>
+  <data name="cmbLanguageTitle" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblDoneSentToAll" xml:space="preserve">
+    <value>{0} client(s) has received message to remember them his session date tomorrow</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="errorGsm" xml:space="preserve">
+    <value>Error with GSM</value>
+  </data>
+  <data name="lblErrorEmptyRequires" xml:space="preserve">
+    <value>Some values is requires</value>
+  </data>
+  <data name="lblDateNextDateTimeTitle" xml:space="preserve">
+    <value>Next Date</value>
+  </data>
+  <data name="cmbHeaterPrinterTitle" xml:space="preserve">
+    <value>Heater Printer</value>
+  </data>
+  <data name="cmbLaserPrinterTitle" xml:space="preserve">
+    <value>Laser Printer</value>
+  </data>
+  <data name="lblApplyTitle" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="lblDoctorDescription" xml:space="preserve">
+    <value>Doctor Description</value>
+  </data>
+  <data name="lblDoctorName" xml:space="preserve">
+    <value>Doctor Name</value>
+  </data>
+  <data name="lblGSMSettingsTitle" xml:space="preserve">
+    <value>GSM Settings</value>
+  </data>
+  <data name="lblInfoSettings" xml:space="preserve">
+    <value>Informations</value>
+  </data>
+  <data name="lblNetworkSettingsTitle" xml:space="preserve">
+    <value>Network Settings</value>
+  </data>
+  <data name="lblPrintersSettingsTitle" xml:space="preserve">
+    <value>Printers Settings</value>
+  </data>
 </root>

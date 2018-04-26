@@ -38,8 +38,8 @@ namespace HClinic.UserControls.Clients
             //Set variables
             lblClientName.Content = session.client.name;
             lblClientPhone.Content = session.client.phone;
-            lblClientBirthday.Content = session.client.birthday.ToString(App.Constants.DateFormat);
-            lblClientGender.Content = session.client.isMale ? "ذكر" : "أنثى";
+            lblClientBirthday.Content = session.client.birthday.ToString("yyyy");
+            lblClientGender.Content = session.client.isMale ? "Male" : "Female";
 
             lblSessionDate.Content = session.creation.ToString(App.Constants.DateFormat);
             lblSessionBloodPressure.Content = string.Format("{0} mmHg", session.BP);
@@ -48,9 +48,16 @@ namespace HClinic.UserControls.Clients
             lblSessionWeight.Content = string.Format("{0} KG", session.weight);
 
             lblDateDateTime.Content = session.lastDate.ToString(App.Constants.DateFormat);
+            lblDateDateTime.Content = (lblDateDateTime.Content.ToString() == "01.01.2017" ? "None" : lblDateDateTime.Content);
             lblLastSession.Content = session.lastSession.ToString(App.Constants.DateFormat);
 
             lblSessionDiabetesType.Content = session.client.DiabetesType;
+            dateNextDate.SelectedDateChanged -= dateNextDate_SelectedDateChanged;
+            dateNextDate.Text = session.nextDate.ToString(App.Constants.DateTimeFormatForMySQL);
+            dateNextDate.Text = (dateNextDate.Text == "2017-01-01" ? null : dateNextDate.Text);
+            dateNextDate.IsEnabled = !session.isReported;
+            dateNextDate.SelectedDateChanged += dateNextDate_SelectedDateChanged;
+
         }
         private void btnPrint_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -68,7 +75,27 @@ namespace HClinic.UserControls.Clients
 
         private void btnDocuments_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            new Windows.Clients.Documents( this.session).ShowDialog();
+            new Windows.Clients.Documents(this.session, true).ShowDialog();
+        }
+        private void dateNextDate_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DateTime date;
+            if (dateNextDate.Text != string.Empty && DateTime.TryParse(dateNextDate.Text,out date))
+            {
+                App.databasceConnection.query(string.Format("delete from tbl_dates where tbl_dates.session_id = '{3}';insert into tbl_dates (datetime,client_id,user_id,session_id) values ('{1}','{0}','{2}','{3}');", session.client.id, date.ToString(App.Constants.DateTimeFormatForMySQL),App.currentUser.id,session.id));
+            }
+        }
+
+        private void btnSlideAdditionalContent_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            if (gridContent.ColumnDefinitions[2].Width == new GridLength(0))
+            {
+                gridContent.ColumnDefinitions[2].Width = GridLength.Auto;
+            }
+            else
+            {
+                gridContent.ColumnDefinitions[2].Width = new GridLength(0);
+            }
         }
     }
 }

@@ -148,6 +148,51 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.PopupMenuShowing"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.#ctor(DevExpress.Utils.Menu.DXPopupMenu,DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+            <summary>
+                <para>Initializes a new instance of the PopupMenuShowingEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="menu">
+		A <see cref="T:DevExpress.Utils.Menu.DXPopupMenu"/> object that is the menu to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Menu"/> property.
+
+            </param>
+            <param name="row">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object that specifies the row where the menu is to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Row"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Menu">
+            <summary>
+                <para>Gets or sets the control's popup menu that will be shown.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.Menu.DXPopupMenu"/> object that is the menu that will be shown.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Row">
+            <summary>
+                <para>Gets the row where the popup menu will be displayed.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object that specifies the row where the popup menu will be displayed.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraVerticalGrid.Events.CustomPropertyDescriptorsEventArgs">
 
             <summary>
@@ -357,47 +402,215 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs">
+        <member name="T:DevExpress.XtraVerticalGrid.BaseOptionsView">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.PopupMenuShowing"/> event.
+                <para>Provides view options for vertical grid controls.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.#ctor(DevExpress.Utils.Menu.DXPopupMenu,DevExpress.XtraVerticalGrid.Rows.BaseRow)">
+        <member name="M:DevExpress.XtraVerticalGrid.BaseOptionsView.#ctor">
             <summary>
-                <para>Initializes a new instance of the PopupMenuShowingEventArgs class with the specified settings.
+                <para>Initializes a new instance of the BaseOptionsView class.
 </para>
             </summary>
-            <param name="menu">
-		A <see cref="T:DevExpress.Utils.Menu.DXPopupMenu"/> object that is the menu to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Menu"/> property.
-
-            </param>
-            <param name="row">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object that specifies the row where the menu is to be displayed. This value is assigned to the <see cref="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Row"/> property.
-
-            </param>
 
 
         </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Menu">
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.AllowGlyphSkinning">
             <summary>
-                <para>Gets or sets the control's popup menu that will be shown.
+                <para>Gets or sets whether row and band icons are painted using the foreground color of these rows and bands.
+
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Utils.Menu.DXPopupMenu"/> object that is the menu that will be shown.
+            <value><b>true</b>, if row and band icons are painted using the foreground color of these rows and bands; otherwise, <b>false</b>.
 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.XtraVerticalGrid.Events.PopupMenuShowingEventArgs.Row">
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.AllowHtmlText">
             <summary>
-                <para>Gets the row where the popup menu will be displayed.
+                <para>Gets or sets whether row captions are formatted using HTML tags.
+
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraVerticalGrid.Rows.BaseRow"/> object that specifies the row where the popup menu will be displayed.
+            <value><b>true</b>, if row captions are formatted using HTML tags; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.BaseOptionsView.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies all the settings from the options object passed as the parameter to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> descendant whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.AutoScaleBands">
+            <summary>
+                <para>Gets or sets whether bands are stretched to occupy the entire control.
+</para>
+            </summary>
+            <value><b>true</b>, if bands are stretched to occupy the entire control; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.CategoryLevelIndentStyle">
+            <summary>
+                <para>Gets or sets how to draw indents for categories and row headers.
+</para>
+            </summary>
+            <value>A <see cref="CategoryLevelIndentStyle"/> enumeration value that specifies the style used to indent row headers. The default is <b>Vertical</b>.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.XtraVerticalGrid.BaseOptionsView.DefaultLevelIndent">
+            <summary>
+                <para>The default value for the <see cref="P:DevExpress.XtraVerticalGrid.BaseOptionsView.LevelIndent"/> property.
+The <b>DefaultLevelIndent</b> field is set to -1.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.FixedLineWidth">
+            <summary>
+                <para>Gets or sets the width of fixed row dividers.
+</para>
+            </summary>
+            <value>An integer value that specifies the width of horizontal lines, in pixels, that separate anchored rows from other rows.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.FixRowHeaderPanelWidth">
+            <summary>
+                <para>Gets or sets whether the width of row headers remain constant when the control's size or layout style is changed.
+</para>
+            </summary>
+            <value><b>true</b>, if the width of row headers remain constant  when the control's size or layout style is changed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.LevelIndent">
+            <summary>
+                <para>Gets or sets the horizontal indent for child rows.
+</para>
+            </summary>
+            <value>An integer value that specifies the horizontal indent for child rows. <b>-1</b> if the indent is automatically calculated.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.MaxRowAutoHeight">
+            <summary>
+                <para>Gets or sets the maximum height for rows, when the row auto-height feature is enabled.
+
+</para>
+            </summary>
+            <value>The maximum row height, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.MinRowAutoHeight">
+            <summary>
+                <para>Gets or sets the minimum height for rows, when the row auto-height feature is enabled.
+
+</para>
+            </summary>
+            <value>The minimum row height, in pixels.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowButtons">
+            <summary>
+                <para>Gets or sets whether expand buttons are displayed within parent rows. 
+</para>
+            </summary>
+            <value><b>true</b>, if expand buttons are displayed within parent rows; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowEmptyRowImage">
+            <summary>
+                <para>Gets or sets whether the captions of row headers are shifted right regardless of whether an image is shown within the row header.
+</para>
+            </summary>
+            <value><b>true</b>, if the captions of row headers are shifted right regardless of whether an image is shown within the row header; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowFocusedFrame">
+            <summary>
+                <para>Gets or sets whether a focus frame is displayed around the focused cell.
+</para>
+            </summary>
+            <value><b>true</b>, to display a focus frame around the focused cell; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowHorzLines">
+            <summary>
+                <para>Gets or sets whether horizontal lines are displayed.
+</para>
+            </summary>
+            <value><b>true</b>, to display horizontal lines; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowRootCategories">
+            <summary>
+                <para>Gets or sets whether top-level category rows are visible.
+</para>
+            </summary>
+            <value><b>true</b>, if root category rows are visible; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowRootLevelIndent">
+            <summary>
+                <para>Gets or sets whether root-level rows are indented.
+</para>
+            </summary>
+            <value><b>true</b>, if rows at the root level are indented; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowRows">
+            <summary>
+                <para>Gets or sets whether row headers are displayed.
+</para>
+            </summary>
+            <value><b>true</b>, to display row headers; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.BaseOptionsView.ShowVertLines">
+            <summary>
+                <para>Gets or sets whether vertical lines are visible.
+</para>
+            </summary>
+            <value><b>true</b>, to display vertical lines; otherwise, <b>false</b>.
 </value>
 
 
@@ -481,7 +694,7 @@
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.ImmediateUpdatePopupExcelFilter">
             <summary>
-                <para>Gets or sets whether filter conditions immediately apply to data, or only when the filter dropdown closes.
+                <para>Gets or sets whether filter conditions immediately apply to data, or only when the Excel-style Filter Dropdown closes.
 </para>
             </summary>
             <value><b>True</b> or <b>Default</b>, if filter conditions immediately apply to data; otherwise, <b>False</b>.
@@ -491,7 +704,7 @@
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.PopupExcelFilterDateTimeValuesTabFilterType">
             <summary>
-                <para>If the current row contains dates, gets or sets  whether to display available data values as a list or a tree in the <i>'Values'</i> tab of the filter dropdown.
+                <para>If the current row contains dates, gets or sets  whether to display available data values as a list or a tree in the <i>'Values'</i> tab of the Excel-style Filter Dropdown.
 
 </para>
             </summary>
@@ -502,28 +715,28 @@
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.PopupExcelFilterDefaultTab">
             <summary>
-                <para>Gets or sets whether the tab with a list of available data values or a list of predefined filter conditions is active by default in the filter dropdown.
+                <para>Gets or sets whether the tab with a list of available data values or a list of predefined filter conditions is active by default in the Excel-style Filter Dropdown.
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the <i>'Values'</i> or <i>'Filters'</i> tab opens by default in the filter dropdown. By <b>Default</b>, the opened tab depends on the column data type.
+            <value>An <see cref="ExcelFilterDefaultTab"/> enumeration value that specifies whether the <i>'Values'</i> or <i>'Filters'</i> tab opens by default in the Excel-style Filter Dropdown. By <b>Default</b>, the opened tab depends on the column data type.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.PopupExcelFilterEnumFilters">
             <summary>
-                <para>If the current column contains enumeration data, gets or sets whether to show relational (equality and inequalities) filter conditions in the filter dropdown.
+                <para>If the current row contains enumeration data, gets or sets whether to show relational (equality and inequalities) filter conditions in the Excel-style Filter Dropdown.
 
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterEnumFilters"/> enumeration value that specifies whether to show relational (equality and inequalities) filter conditions in the filter dropdown. By <b>Default</b>, the <i>'Filters'</i> tab is hidden.
+            <value>An <see cref="ExcelFilterEnumFilters"/> enumeration value that specifies whether to show relational (equality and inequalities) filter conditions in the Excel-style Filter Dropdown. <b>Default</b>, if the <i>'Filters'</i> tab is hidden.
 </value>
 
 
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.PopupExcelFilterNumericValuesTabFilterType">
             <summary>
-                <para>If the current row contains numeric data, gets or sets whether to display a list of available data values or a range track bar in the <i>'Values'</i> tab of the filter dropdown.
+                <para>If the current row contains numeric data, gets or sets whether to display a list of available data values or a range track bar in the <i>'Values'</i> tab of the Excel-style Filter Dropdown.
 
 </para>
             </summary>
@@ -534,11 +747,11 @@
         </member>
         <member name="P:DevExpress.XtraVerticalGrid.Rows.VGridOptionsRowFilter.PopupExcelFilterTextFilters">
             <summary>
-                <para>If the current column contains text data, gets or sets whether to show inequality (<i>'GreaterThan'</i>, <i>'LessThan'</i>, etc.) relational operators in the <i>'Text Filters'</i> tab of the filter dropdown.
+                <para>If the current row contains text data, gets or sets whether to show inequality (<i>'GreaterThan'</i>, <i>'LessThan'</i>, etc.) relational operators in the <i>'Text Filters'</i> tab of the Excel-style Filter Dropdown.
 
 </para>
             </summary>
-            <value>An <see cref="ExcelFilterTextFilters"/> enumeration value that specifies whether to show inequality relational operators in the filter dropdown. By <b>Default</b>, the inequality relational operators are hidden.
+            <value>An <see cref="ExcelFilterTextFilters"/> enumeration value that specifies whether to show inequality relational operators in the Excel-style Filter Dropdown. <b>Default</b>, if the inequality relational operators are hidden.
 </value>
 
 
@@ -1683,6 +1896,14 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
 
 
         </member>
+        <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.ActiveViewType">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.AutoGenerateRows">
             <summary>
                 <para>Gets or sets whether rows are automatically created in the control for all fields in the bound object.
@@ -1814,32 +2035,6 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
             </param>
             <returns>A <see cref="T:System.ComponentModel.PropertyDescriptor"/> value.
 </returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.GridView">
-            <summary>
-                <para>Gets or sets the currently applied PropertyGridControl View.
-</para>
-            </summary>
-            <value>A <see cref="PropertyGridView"/> enumerator value that specifies the currently applied PropertyGridControl View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.HeaderButtons">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraVerticalGrid.PropertyGridControl.HeaderPanelCustomize">
-            <summary>
-                <para>Allows you to modify the PropertyGridControl header panel and populate it with tabs, which organize PropertyGridControl properties when the control has the <b>Office</b> View applied.
-</para>
-            </summary>
 
 
         </member>
@@ -1981,6 +2176,21 @@ This property is only in effect for the <see cref="T:DevExpress.XtraVerticalGrid
                 <para>Allows context menus for rows to be customized.
 </para>
             </summary>
+
+
+        </member>
+        <member name="E:DevExpress.XtraVerticalGrid.PropertyGridControl.TabPanelCustomize">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraVerticalGrid.PropertyGridControl.Tabs">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -5008,6 +5218,30 @@ For the <see cref="T:DevExpress.XtraVerticalGrid.PropertyGridControl"/>, this me
             </summary>
             <value>A <see cref="T:DevExpress.XtraVerticalGrid.GridRowReadOnlyCollection"/> object that represents the collection of visible rows.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler.Invoke(System.Object,DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender (the <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/>).
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs"/> object that contains event data.
+
+            </param>
 
 
         </member>
@@ -8404,30 +8638,6 @@ Office2003 style:
 
 
         </member>
-        <member name="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventHandler.Invoke(System.Object,DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs)">
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraVerticalGrid.VGridControlBase.CustomDrawRowValueCell"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender (the <see cref="T:DevExpress.XtraVerticalGrid.VGridControl"/>).
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraVerticalGrid.Events.CustomDrawRowValueCellEventArgs">
 
             <summary>
@@ -9058,7 +9268,8 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.CustomColumnDisplayText">
             <summary>
-                <para> </para>
+                <para>Fires before the Filter Dropdown for a particular row is displayed, allowing you to provide custom display text for filter values.
+</para>
             </summary>
 
 
@@ -9081,7 +9292,8 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.CustomRecordFilter">
             <summary>
-                <para> </para>
+                <para>Allows you to hide a particular record regardless of the applied data filter.
+</para>
             </summary>
 
 
@@ -9125,14 +9337,15 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelCustomizeTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to customize templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelData">
             <summary>
-                <para>Allows you to remove and modify items in the filter dropdown, as well as add your own custom items that apply specific filtering conditions.
+                <para>Allows you to remove and modify items in the Excel-style Filter Dropdown, as well as add your own custom items that apply specific filtering conditions.
 </para>
             </summary>
 
@@ -9140,14 +9353,16 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelPrepareTemplate">
             <summary>
-                <para> </para>
+                <para>Allows you to replace templates used by Excel-style Filter Dropdowns and external editors generated using Filtering UI Context.
+</para>
             </summary>
 
 
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.FilterPopupExcelQueryFilterCriteria">
             <summary>
-                <para> </para>
+                <para>Fires when a new data filter is about to be applied to the control using the Excel-style Filter Dropdown, and allows you to substitute the filter.
+</para>
             </summary>
 
 
@@ -9254,7 +9469,7 @@ Office2003 style:
         </member>
         <member name="E:DevExpress.XtraVerticalGrid.VGridControl.ShowFilterPopupExcel">
             <summary>
-                <para>Allows you to hide specific filter conditions from the <i>'Filters'</i> tab of the filter dropdown.
+                <para>Allows you to hide specific filter conditions from the <i>'Filters'</i> tab of the Excel-style Filter Dropdown.
 </para>
             </summary>
 

@@ -32,48 +32,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner">
-
-            <summary>
-                <para>Specifies a <b>Print</b> dialog to select a printer, specify the print options (number of copies, page range, and paper source) and print the document.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner.#ctor">
-            <summary>
-                <para>Initializes a new instance of the DefaultPrintDialogRunner class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner.Run(System.Drawing.Printing.PrintDocument,DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,DevExpress.XtraPrinting.Preview.PrintDialogAllowFlags)">
-            <summary>
-                <para>Invokes a customized <b>Print</b> dialog.
-</para>
-            </summary>
-            <param name="document">
-		A <see cref="T:System.Drawing.Printing.PrintDocument"/>.
-
-            </param>
-            <param name="lookAndFeel">
-		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/>.
-
-            </param>
-            <param name="owner">
-		An object implementing the <see cref="T:System.Windows.Forms.IWin32Window"/> interface that is the dialog owner.
-
-            </param>
-            <param name="flags">
-		A <see cref="T:DevExpress.XtraPrinting.Preview.PrintDialogAllowFlags"/> enumeration value that enables editing of specific settings in the invoked dialog.
-
-            </param>
-            <returns>A <see cref="T:System.Windows.Forms.DialogResult"/> enumeration value that specifies identifiers to indicate the return value of a dialog box.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraPrinting.Preview.RibbonImageCollection">
 
             <summary>
@@ -2577,6 +2535,48 @@
             </summary>
             <value><b>true</b>, to use vector images; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner">
+
+            <summary>
+                <para>Specifies a <b>Print</b> dialog to select a printer, specify the print options (number of copies, page range, and paper source) and print the document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner.#ctor">
+            <summary>
+                <para>Initializes a new instance of the DefaultPrintDialogRunner class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraPrinting.Preview.DefaultPrintDialogRunner.Run(System.Drawing.Printing.PrintDocument,DevExpress.LookAndFeel.UserLookAndFeel,System.Windows.Forms.IWin32Window,DevExpress.XtraPrinting.Preview.PrintDialogAllowFlags)">
+            <summary>
+                <para>Invokes a customized <b>Print</b> dialog.
+</para>
+            </summary>
+            <param name="document">
+		A <see cref="T:System.Drawing.Printing.PrintDocument"/>.
+
+            </param>
+            <param name="lookAndFeel">
+		A <see cref="T:DevExpress.LookAndFeel.UserLookAndFeel"/>.
+
+            </param>
+            <param name="owner">
+		An object implementing the <see cref="T:System.Windows.Forms.IWin32Window"/> interface that is the dialog owner.
+
+            </param>
+            <param name="flags">
+		A <see cref="T:DevExpress.XtraPrinting.Preview.PrintDialogAllowFlags"/> enumeration value that enables editing of specific settings in the invoked dialog.
+
+            </param>
+            <returns>A <see cref="T:System.Windows.Forms.DialogResult"/> enumeration value that specifies identifiers to indicate the return value of a dialog box.
+</returns>
 
 
         </member>

@@ -250,6 +250,33 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Heater Printer.
+        /// </summary>
+        public static string cmbHeaterPrinterTitle {
+            get {
+                return ResourceManager.GetString("cmbHeaterPrinterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        public static string cmbLanguageTitle {
+            get {
+                return ResourceManager.GetString("cmbLanguageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Laser Printer.
+        /// </summary>
+        public static string cmbLaserPrinterTitle {
+            get {
+                return ResourceManager.GetString("cmbLaserPrinterTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to From.
         /// </summary>
         public static string dateFromName {
@@ -264,6 +291,24 @@ namespace HClinic.Assets.Languages {
         public static string dateToName {
             get {
                 return ResourceManager.GetString("dateToName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string error {
+            get {
+                return ResourceManager.GetString("error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error with GSM.
+        /// </summary>
+        public static string errorGsm {
+            get {
+                return ResourceManager.GetString("errorGsm", resourceCulture);
             }
         }
         
@@ -291,6 +336,15 @@ namespace HClinic.Assets.Languages {
         public static string lblAddress {
             get {
                 return ResourceManager.GetString("lblAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Apply.
+        /// </summary>
+        public static string lblApplyTitle {
+            get {
+                return ResourceManager.GetString("lblApplyTitle", resourceCulture);
             }
         }
         
@@ -403,6 +457,15 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next Date.
+        /// </summary>
+        public static string lblDateNextDateTimeTitle {
+            get {
+                return ResourceManager.GetString("lblDateNextDateTimeTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Datetime.
         /// </summary>
         public static string lblDatetime {
@@ -412,11 +475,83 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Doctor Description.
+        /// </summary>
+        public static string lblDoctorDescription {
+            get {
+                return ResourceManager.GetString("lblDoctorDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doctor Name.
+        /// </summary>
+        public static string lblDoctorName {
+            get {
+                return ResourceManager.GetString("lblDoctorName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} client(s) has received message to remember them his session date tomorrow.
+        /// </summary>
+        public static string lblDoneSentToAll {
+            get {
+                return ResourceManager.GetString("lblDoneSentToAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Leave it empty to mean all.
         /// </summary>
         public static string lblEmptyMeanAll {
             get {
                 return ResourceManager.GetString("lblEmptyMeanAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string lblError {
+            get {
+                return ResourceManager.GetString("lblError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to One of values was duplicated, try a differnce value.
+        /// </summary>
+        public static string lblErrorDuplicated {
+            get {
+                return ResourceManager.GetString("lblErrorDuplicated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Some values is requires.
+        /// </summary>
+        public static string lblErrorEmptyRequires {
+            get {
+                return ResourceManager.GetString("lblErrorEmptyRequires", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GSM Settings.
+        /// </summary>
+        public static string lblGSMSettingsTitle {
+            get {
+                return ResourceManager.GetString("lblGSMSettingsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Informations.
+        /// </summary>
+        public static string lblInfoSettings {
+            get {
+                return ResourceManager.GetString("lblInfoSettings", resourceCulture);
             }
         }
         
@@ -484,6 +619,15 @@ namespace HClinic.Assets.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Network Settings.
+        /// </summary>
+        public static string lblNetworkSettingsTitle {
+            get {
+                return ResourceManager.GetString("lblNetworkSettingsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         public static string lblPassword {
@@ -507,6 +651,15 @@ namespace HClinic.Assets.Languages {
         public static string lblPhone {
             get {
                 return ResourceManager.GetString("lblPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Printers Settings.
+        /// </summary>
+        public static string lblPrintersSettingsTitle {
+            get {
+                return ResourceManager.GetString("lblPrintersSettingsTitle", resourceCulture);
             }
         }
         

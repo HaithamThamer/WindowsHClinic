@@ -32,115 +32,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfNamedAction">
-
-            <summary>
-                <para>Represents a named action. 
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfNamedAction.ActionName">
-            <summary>
-                <para>The name of the named action that should be performed.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that is the name of the action.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfAcroFormRadioGroupField">
-
-            <summary>
-                <para>Represents a radio group field.  
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.#ctor(System.String,System.Int32)">
-            <summary>
-                <para>Initializes a new instance of the PdfAcroFormRadioGroupField class with the specified radio group field name and page number where the field will be created.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of radio group field.
-
-            </param>
-            <param name="pageNumber">
-		An integer value that specifies the page number where the form field will be created.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.AddButton(System.String,DevExpress.Pdf.PdfRectangle)">
-            <summary>
-                <para>Adds a radio button to the radio group field using the radio button name and a rectangle that specifies the location of this button on a PDF page.    
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of a radio button.
-
-            </param>
-            <param name="rect">
-		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a radio button is located on a page.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.ButtonStyle">
-            <summary>
-                <para>Specifies the style that defines the appearance of a radio button within a radio group field.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormButtonStyle"/> enumeration value that determines the style of a radio button within a radio group field.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.ClearButtons">
-            <summary>
-                <para>Removes all radio buttons from the radio group field.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.RadioButtonCount">
-            <summary>
-                <para>Gets the number of radio buttons in the radio group field.
-</para>
-            </summary>
-            <value>An integer value that is the number of radio buttons in the radio group field.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.SelectedIndex">
-            <summary>
-                <para>Specifies index of the selected item in a radio group field.
-
-</para>
-            </summary>
-            <value>An integer value, representing the zero-based index of the radio group's selected item. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.ShouldGeneratePressedAppearance">
-            <summary>
-                <para>Specifies whether to generate a down appearance that will appear when the mouse button is pressed within a radio button area.
-
-</para>
-            </summary>
-            <value><b>true</b>, if a down appearance is generated within the radio button area; otherwise, <b>false</b>. Default value is <b>true</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfWord">
 
             <summary>
@@ -498,6 +389,426 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfDocument">
+
+            <summary>
+                <para>A document contained in a PDF file.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AcroForm">
+            <summary>
+                <para>Provides access to the document's interactive form (AcroForm) properties.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfInteractiveForm"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Actions">
+            <summary>
+                <para>Provides access to the <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> class  that contains references to JavaScript actions which should be taken in response to some events.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowAccessibility">
+            <summary>
+                <para>Enables copying or otherwise extracting text and graphics from the document (in support of accessibility to users with disabilities or for other purposes).
+</para>
+            </summary>
+            <value><b>true</b> to support PDF accessibility; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowAnnotationsAndFormsModifying">
+            <summary>
+                <para>Enables adding and modifying text annotations and interactive form fields in the PDF.
+</para>
+            </summary>
+            <value><b>true</b> to allow making changes to the PDF annotations and form fields; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowDataExtraction">
+            <summary>
+                <para>Enables extracting data from the PDF.
+</para>
+            </summary>
+            <value><b>true</b> to allow extracting the PDF data; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowDocumentAssembling">
+            <summary>
+                <para>Enables inserting, rotating, or deleting PDF pages and creating navigation elements such as bookmarks or thumbnail images.
+</para>
+            </summary>
+            <value><b>true</b> to allow assembling the document; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowFormsFilling">
+            <summary>
+                <para>Enables filling in interactive form fields of the PDF file, as well as signing the document (which amounts to filling in existing signature fields, a type of interactive form field).
+</para>
+            </summary>
+            <value><b>true</b> to allow filling in interactive form fields in the PDF; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowHighQualityPrinting">
+            <summary>
+                <para>Enables printing the PDF in high resolution, so that a faithful digital copy of the PDF content is generated. 
+
+</para>
+            </summary>
+            <value><b>true</b> to high quality printing; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowModifying">
+            <summary>
+                <para>Enables modifying the PDF.
+</para>
+            </summary>
+            <value><b>true</b> to allow modifying the PDF; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.AllowPrinting">
+            <summary>
+                <para>Enables printing the PDF.
+</para>
+            </summary>
+            <value><b>true</b> to allow printing the PDF; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Author">
+            <summary>
+                <para>Returns the name of the person who created the document.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Bookmarks">
+            <summary>
+                <para>Gets or sets the bookmarks that are used to navigate from one part of a document to another.
+</para>
+            </summary>
+            <value>A list of <see cref="T:DevExpress.Pdf.PdfBookmark"/> objects that are the collection of bookmarks. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.CreationDate">
+            <summary>
+                <para>The date and time the document was created, in human-readable form.
+</para>
+            </summary>
+            <value>A <see cref="T:System.DateTimeOffset"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Creator">
+            <summary>
+                <para>If the document was converted to PDF from another format, the name of the conforming product that created the original document from which it was converted.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Destinations">
+            <summary>
+                <para>Gets named destinations for targets in the document. 
+</para>
+            </summary>
+            <value>A dictionary, containing the <see cref="T:DevExpress.Pdf.PdfDestination"/> objects, along with their <see cref="T:System.String"/> key values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.FileAttachments">
+            <summary>
+                <para>Gets the file attachments from a document.
+
+</para>
+            </summary>
+            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface that represents the collection of <see cref="T:DevExpress.Pdf.PdfFileAttachment"/>s.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Keywords">
+            <summary>
+                <para>Returns the keywords associated with the document. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.LanguageCulture">
+            <summary>
+                <para>Returns the culture-specific settings of the document.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Globalization.CultureInfo"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.LogicalStructure">
+            <summary>
+                <para>Provides access to the document's structure tree root dictionary.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfLogicalStructure object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.MarkInfo">
+            <summary>
+                <para>Provides access to the mark information dictionary that contains information about the document's usage of Tagged PDF conventions.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfMarkInfo object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Metadata">
+            <summary>
+                <para>Provides access to a stream that contains the document metadata.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfMetadata"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.ModDate">
+            <summary>
+                <para>The date and time the document was most recently modified, in human-readable form.
+</para>
+            </summary>
+            <value>A <see cref="T:System.DateTimeOffset"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Names">
+            <summary>
+                <para>Provides access to the document's name dictionary.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfNames"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.NeedsRendering">
+            <summary>
+                <para>Indicates whether or not to expedite the display of PDF documents containing XFA forms.
+</para>
+            </summary>
+            <value><b>true</b> if the document shall be regenerated when the document is first opened; otherwise <b>false</b>. The default value is <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.OpenAction">
+            <summary>
+                <para>Indicates an action that shall be performed when the document is opened.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfAction object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.OpenDestination">
+            <summary>
+                <para>Indicates a destination that shall be displayed when the document is opened.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfDestination"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.OptionalContentProperties">
+            <summary>
+                <para>Provides access to the document's optional content properties dictionary.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentProperties"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Outlines">
+            <summary>
+                <para>Provides access to the outline dictionary that shall be the root of the document's outline hierarchy.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfOutlines"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.OutputIntents">
+            <summary>
+                <para>Provides access to the array of output intent dictionaries that specify the color characteristics of output devices on which the document might be rendered.
+</para>
+            </summary>
+            <value>A collection of DevExpress.Pdf.PdfOutputIntent objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.PageLabels">
+            <summary>
+                <para>Provides access to the number tree defining the page labeling for the document.
+</para>
+            </summary>
+            <value>A dictionary, containing the DevExpress.Pdf.PdfPageLabel objects, along with their integer key values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.PageLayout">
+            <summary>
+                <para>Indicates the page layout of the opened document.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfPageLayout"/> enumeration value. The default value is <see cref="F:DevExpress.Pdf.PdfPageLayout.OneColumn"/>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.PageMode">
+            <summary>
+                <para>Indicates the mode of displaying the opened document.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfPageMode enumeration value. The default value is <b>UseNone</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Pages">
+            <summary>
+                <para>Provides access to the collection of document pages.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfPage"/> objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.PieceInfo">
+            <summary>
+                <para>Provides access to the page-piece dictionary associated with the document.
+</para>
+            </summary>
+            <value>A dictionary, containing the DevExpress.Pdf.PdfPieceInfoEntry objects, along with their <see cref="T:System.String"/> key values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Producer">
+            <summary>
+                <para>If the document was converted to PDF from another format, the name of the conforming product that converted it to PDF.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Subject">
+            <summary>
+                <para>Returns the subject of the document.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Threads">
+            <summary>
+                <para>Provides access to the array of thread dictionaries that contains the document's article threads.
+</para>
+            </summary>
+            <value>A collection of DevExpress.Pdf.PdfArticleThread objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Title">
+            <summary>
+                <para>Returns the document's title.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Trapped">
+            <summary>
+                <para>A name object indicating whether the document has been modified to include trapping information.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.Version">
+            <summary>
+                <para>Indicates the version of the PDF specification to which the document conforms if later than the version specified in the file's header.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfFileVersion object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocument.ViewerPreferences">
+            <summary>
+                <para>Provides access to the viewer preferences dictionary specifying how to display the document on the screen.
+</para>
+            </summary>
+            <value>A DevExpress.Pdf.PdfViewerPreferences object.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfCharacter">
 
             <summary>
@@ -765,6 +1076,102 @@
             </summary>
             <value>A <see cref="T:System.Double"/> value. The default value is <b>1.0</b> (user space unit is <b>1</b>/<b>72</b> inch).
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfAcroFormButtonStyle">
+
+            <summary>
+                <para>Lists values specifying the appearance of the form field's  button.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Check">
+            <summary>
+                <para>Check button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Circle">
+            <summary>
+                <para>Circle button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Cross">
+            <summary>
+                <para>Cross button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Diamond">
+            <summary>
+                <para>Diamond button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Square">
+            <summary>
+                <para>Square button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Star">
+            <summary>
+                <para>Star button style.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfDocumentContentType">
+
+            <summary>
+                <para>Lists the values indicating the type of the PDF content corresponding to a specific document point.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Annotation">
+            <summary>
+                <para>The PDF content is an annotation. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Image">
+            <summary>
+                <para>The PDF content is an image.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentContentType.None">
+            <summary>
+                <para>The PDF content is not defined.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Text">
+            <summary>
+                <para>The PDF content is text.
+</para>
+            </summary>
 
 
         </member>
@@ -1430,128 +1837,6 @@
 </para>
             </summary>
             <value>A PdfTransformationMatrix object that represents the pattern matrix.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfOptionalContentConfiguration">
-
-            <summary>
-                <para>Represents different presentations of a document's optional content groups.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.BaseState">
-            <summary>
-                <para>Gets a state value that is used to initialize the states of all the optional content groups in a document when this configuration is applied.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentState"/> enumeration value that initializes the states of all the optional content groups in a document when this configuration is applied.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Creator">
-            <summary>
-                <para>Gets the name of the application or feature that created this content configuration.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that is the name of the application or feature. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Intent">
-            <summary>
-                <para>Gets intent names that are used to determine which optional content groups' states to consider and which to ignore in calculating the visibility of content.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentIntent"/> enumeration values that list intent names.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Locked">
-            <summary>
-                <para>Gets a collection of optional content groups that shall be locked when this configuration is applied.
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups that shall be locked when this configuration is applied
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Name">
-            <summary>
-                <para>Gets the name of the optional content configuration. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that is the configuration name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Off">
-            <summary>
-                <para>Gets the collection of optional content groups whose state shall be set to Off when this configuration is applied.
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups whose state shall be set to Off when this configuration is applied.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.On">
-            <summary>
-                <para>Gets the collection of optional content groups whose state shall be set to On when this configuration is applied.
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups whose state shall be set to On when this configuration is applied.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Order">
-            <summary>
-                <para>Gets the order for presentation of optional content groups.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentOrder"/> object that is the order for presentation of optional content groups.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.OrderListMode">
-            <summary>
-                <para>Gets a name specifying which optional content groups in the <see cref="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Order"/> property will be displayed to the user.
-</para>
-            </summary>
-            <value><see cref="T:DevExpress.Pdf.PdfOptionalContentOrderListMode"/> enumeration values that list the optional content order. 
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.RadioButtonGroups">
-            <summary>
-                <para>Gets a collection consisting of one or more collections, each of which represents a collection of optional content groups whose states shall be intended to follow a radio button paradigm.
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentRadioButtonGroup"/> objects. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.UsageApplication">
-            <summary>
-                <para>Gets a collection of usage applications specifying which usage categories will be used to automatically manipulate the state of optional content groups. 
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentUsageApplication"/> objects.
 </value>
 
 
@@ -2614,157 +2899,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfFormData">
-
-            <summary>
-                <para>Contains data values stored in the PDF Form.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream,DevExpress.Pdf.PdfFormDataFormat)">
-            <summary>
-                <para>Initializes a new instance of the PdfFormData class with the predefined stream and data format.
-</para>
-            </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> class descendant containing a file with the form data (Fdf, Txt, Xfdf or Xml format).
-
-            </param>
-            <param name="format">
-		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.
-
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String,DevExpress.Pdf.PdfFormDataFormat)">
-            <summary>
-                <para>Initializes a new instance of the PdfFormData class with the predefined file name and data format.
-</para>
-            </summary>
-            <param name="fileName">
-		A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
-
-            </param>
-            <param name="format">
-		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the PdfFormData class with the predefined file name.
-</para>
-            </summary>
-            <param name="fileName">
-		A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream)">
-            <summary>
-                <para>Initializes a new instance of the PdfFormData class with the predefined stream.
-
-</para>
-            </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> class descendant containing a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.#ctor">
-            <summary>
-                <para>Initializes a new instance of the PdfFormData class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.GetFieldNames">
-            <summary>
-                <para>Returns the name of all fields contained in this PDF form.
-</para>
-            </summary>
-            <returns>A list of <see cref="T:System.String"/> values.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFormData.Item(System.String)">
-            <summary>
-                <para>Returns an individual field by its name on the PDF Form.
-
-</para>
-            </summary>
-            <param name="name">
-		A string representing the field name.
-
-            </param>
-            <value>A <see cref="T:DevExpress.Pdf.PdfFormData"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFormData.Name">
-            <summary>
-                <para>Returns the name of the field represented by this PdfFormData object.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.Save(System.IO.Stream,DevExpress.Pdf.PdfFormDataFormat)">
-            <summary>
-                <para>Saves the interactive form data to a stream using form data format.
-</para>
-            </summary>
-            <param name="stream">
-		A <see cref="T:System.IO.Stream"/> class descendant, specifying the stream into which the interactive form should be saved.
-
-            </param>
-            <param name="format">
-		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value, specifying into which format interactive form values should be saved.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfFormData.Save(System.String,DevExpress.Pdf.PdfFormDataFormat)">
-            <summary>
-                <para>Saves the interactive form data into a file using form data format.
-</para>
-            </summary>
-            <param name="fileName">
-		A <see cref="T:System.String"/> specifying the file path and file name.
-
-            </param>
-            <param name="format">
-		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value, specifying into which format interactive form values should be saved.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFormData.Value">
-            <summary>
-                <para>Specifies a value to the interactive form field represented by this PdfFormData object.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Object"/> class descendant.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfAction">
 
             <summary>
@@ -3194,77 +3328,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfWidgetAnnotation">
-
-            <summary>
-                <para>Represents the widget annotation for the interactive forms in a document.  
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.Action">
-            <summary>
-                <para>Gets an action that will be performed when the widget annotation is active. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAction"/> object that is the widget annotation action. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.Actions">
-            <summary>
-                <para>Gets actions that will be performed when the annotation is activated.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationActions"/> object that represents actions that will be performed when the annotation is activated.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.AppearanceCharacteristics">
-            <summary>
-                <para>Gets the appearance characteristics specifying the widget annotation's visual presentation on the page. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfWidgetAppearanceCharacteristics"/> object that represents the appearance characteristics of the widget annotation.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.BorderStyle">
-            <summary>
-                <para>Gets a value specifying the width and line style that shall be used in drawing the widget annotation's border.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationBorderStyle"/> object that represents the widget annotation border style.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.HighlightingMode">
-            <summary>
-                <para>Gets the widget annotation's highlighting mode - the visual effect that shall be used when the mouse button is pressed or held down inside its active area.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationHighlightingMode"/> enumeration value that represents the widget annotation's highlighting mode.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.InteractiveFormField">
-            <summary>
-                <para>Gets an interactive form field that the widget annotation used to represent the appearance of fields and to manage user interactions.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfInteractiveFormField"/> object that is the interactive form field for the widget annotation.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfAnnotation">
 
             <summary>
@@ -3507,6 +3570,24 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfNamedAction">
+
+            <summary>
+                <para>Represents a named action. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfNamedAction.ActionName">
+            <summary>
+                <para>The name of the named action that should be performed.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that is the name of the action.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfOutlineItem">
 
             <summary>
@@ -3741,40 +3822,6 @@
             <value>A <see cref="T:System.String"/> object implementing the System.Collections.Generic.ISet interface that represent the forbidden names.
 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfDocumentInteractivityPermissions">
-
-            <summary>
-                <para>Lists the values specifying permissions that are used to restrict or allow access to document interaction operations.   
-
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.Allowed">
-            <summary>
-                <para>Permit interactive operations (adding or modifying text annotations, filling in interactive form fields, and creating or modifying interactive form fields) in the PDF document. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.FormFillingAndSigning">
-            <summary>
-                <para>Prohibit interactive operations in the PDF document except filling existing form fields and document signing. 
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.NotAllowed">
-            <summary>
-                <para>Prohibit all interactive operations (adding or modifying text annotations, filling in interactive form fields, and creating or modifying interactive form fields) in the PDF document. 
-</para>
-            </summary>
 
 
         </member>
@@ -4125,99 +4172,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfAcroFormTextBoxField">
-
-            <summary>
-                <para>Represents a text box field.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormTextBoxField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
-            <summary>
-                <para>Initializes a new instance of the PdfAcroFormTextBoxField class with the specified text box field name, page number, where the field will be created, and the field rectangle.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of text box field.
-
-            </param>
-            <param name="pageNumber">
-		An integer value that specifies the page number where the form field will be created.
-
-            </param>
-            <param name="rectangle">
-		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a text box field is located on a page.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.MaxLength">
-            <summary>
-                <para>Specifies the maximum text length for a text box field.
-
-</para>
-            </summary>
-            <value>A positive integer value specifying the maximum number of characters allowed in a text box field or <b>0</b> indicating that the number of characters in a text box field is not limited.
-<para>The default value is <b>0</b>.</para>
-
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Multiline">
-            <summary>
-                <para> Specifies whether the text box field should contain multiple lines of text.
-</para>
-            </summary>
-            <value><b>true</b>, if the text box field can contain multiple lines of text; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Scrollable">
-            <summary>
-                <para>Specifies whether a text box field can be scrollable when the entered text exceeds the field area.
-</para>
-            </summary>
-            <value><b>true</b>, if a text box field is scrollable when the entered text exceeds the field area; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.SpellCheck">
-            <summary>
-                <para>Specifies whether text entered to a text box field is spell checked.
-</para>
-            </summary>
-            <value><b>true</b>, if text entered to a text box field is spell checked; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Text">
-            <summary>
-                <para>Specifies text of the text box field.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value which represents the text displayed in the text box field.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Type">
-            <summary>
-                <para>Specifies the type of the text box field. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormTextFieldType"/> enumeration value that represents the text box field type. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfRGBColor">
 
             <summary>
@@ -4296,273 +4250,6 @@
             </summary>
             <value>A double value that is the red color component value in a range of 0 to 1. 
 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfDestination">
-
-            <summary>
-                <para>Represents a destination (a particular view of a document) to which a document target (e.g. a bookmark) is referred to.  
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDestination.Page">
-            <summary>
-                <para>Gets the page of a document where the corresponding destination is located. 
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page where the destination is located.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDestination.PageIndex">
-            <summary>
-                <para>Gets the zero-based index of a page where the destination is located.
-</para>
-            </summary>
-            <value>An integer value that is the zero-based index of the destination page. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfCompatibility">
-
-            <summary>
-                <para>Lists the values specifying the compatibility mode of a document.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfCompatibility.Pdf">
-            <summary>
-                <para>The document supports the ISO 32000-1:2008 standard.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA1b">
-            <summary>
-                <para>The document supports the ISO 19005-1:2005 standard. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA2b">
-            <summary>
-                <para>The document supports the ISO 19005-2:2011 standard.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA3b">
-            <summary>
-                <para>The document supports the ISO 19005-3:2012 standard.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfAcroFormButtonStyle">
-
-            <summary>
-                <para>Lists values specifying the appearance of the form field's  button.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Check">
-            <summary>
-                <para>Check button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Circle">
-            <summary>
-                <para>Circle button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Cross">
-            <summary>
-                <para>Cross button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Diamond">
-            <summary>
-                <para>Diamond button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Square">
-            <summary>
-                <para>Square button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfAcroFormButtonStyle.Star">
-            <summary>
-                <para>Star button style.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfFormDataFormat">
-
-            <summary>
-                <para>Lists formats allowed for PDF Form data values.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Fdf">
-            <summary>
-                <para>Data is represented as FDF (Forms Data Format).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Txt">
-            <summary>
-                <para>Data is represented as text.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Xfdf">
-            <summary>
-                <para>Data is represented as XFDF (XML Forms Data Format).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Xml">
-            <summary>
-                <para>Data is represented as XML.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfAcroFormSignatureField">
-
-            <summary>
-                <para>Represents a signature field.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormSignatureField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
-            <summary>
-                <para>Initializes a new instance of the PdfAcroFormSignatureField class with the specified signature field name, page number, where the field will be created, and the field rectangle.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of the signature field.
-
-
-            </param>
-            <param name="pageNumber">
-		An integer value that specifies the page number where the form field will be created.
-
-            </param>
-            <param name="rect">
-		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a signature field is located on a page.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormSignatureField.LineAlignment">
-            <summary>
-                <para>Specifies the vertical alignment of the string within the signature field. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormStringAlignment"/> enumeration value that represents vertical line alignment.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormSignatureField.Text">
-            <summary>
-                <para>Specifies text displayed in a signature field.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value which represents the text displayed in the signature field.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfAcroFormListBoxField">
-
-            <summary>
-                <para>Represents a list box field.  
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfAcroFormListBoxField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
-            <summary>
-                <para>Initializes a new instance of the PdfAcroFormListBoxField class with the specified list box field name, page number, where the field will be created, and the field rectangle.
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> that specifies the name of list box field.
-
-            </param>
-            <param name="pageNumber">
-		An integer value that specifies the page number where the form field will be created.
-
-            </param>
-            <param name="rectangle">
-		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a list box field is located on a page.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormListBoxField.MultiSelect">
-            <summary>
-                <para>Specifies whether multiple items can be selected simultaneously in the list box field.
-</para>
-            </summary>
-            <value><b>true</b>, if multiple selections of list box items are allowed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfAcroFormListBoxField.TopIndex">
-            <summary>
-                <para>Specifies the index of the first visible item in the list box field.
-</para>
-            </summary>
-            <value>An integer value that is the zero-based index of the first visible item in the list box. Default value is <b>0</b>.
 </value>
 
 
@@ -4664,6 +4351,394 @@
             </summary>
             <value>An integer value that is the file attachment size, in bytes.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfDestination">
+
+            <summary>
+                <para>Represents a destination (a particular view of a document) to which a document target (e.g. a bookmark) is referred to.  
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDestination.Page">
+            <summary>
+                <para>Gets the page of a document where the corresponding destination is located. 
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the page where the destination is located.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDestination.PageIndex">
+            <summary>
+                <para>Gets the zero-based index of a page where the destination is located.
+</para>
+            </summary>
+            <value>An integer value that is the zero-based index of the destination page. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfCompatibility">
+
+            <summary>
+                <para>Lists the values specifying the compatibility mode of a document.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfCompatibility.Pdf">
+            <summary>
+                <para>The document supports the ISO 32000-1:2008 standard.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA1b">
+            <summary>
+                <para>The document supports the ISO 19005-1:2005 standard. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA2b">
+            <summary>
+                <para>The document supports the ISO 19005-2:2011 standard.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfCompatibility.PdfA3b">
+            <summary>
+                <para>The document supports the ISO 19005-3:2012 standard.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfAcroFormTextBoxField">
+
+            <summary>
+                <para>Represents a text box field.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormTextBoxField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
+            <summary>
+                <para>Initializes a new instance of the PdfAcroFormTextBoxField class with the specified text box field name, page number, where the field will be created, and the field rectangle.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of text box field.
+
+            </param>
+            <param name="pageNumber">
+		An integer value that specifies the page number where the form field will be created.
+
+            </param>
+            <param name="rectangle">
+		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a text box field is located on a page.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.MaxLength">
+            <summary>
+                <para>Specifies the maximum text length for a text box field.
+
+</para>
+            </summary>
+            <value>A positive integer value specifying the maximum number of characters allowed in a text box field or <b>0</b> indicating that the number of characters in a text box field is not limited.
+<para>The default value is <b>0</b>.</para>
+
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Multiline">
+            <summary>
+                <para> Specifies whether the text box field should contain multiple lines of text.
+</para>
+            </summary>
+            <value><b>true</b>, if the text box field can contain multiple lines of text; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Scrollable">
+            <summary>
+                <para>Specifies whether a text box field can be scrollable when the entered text exceeds the field area.
+</para>
+            </summary>
+            <value><b>true</b>, if a text box field is scrollable when the entered text exceeds the field area; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.SpellCheck">
+            <summary>
+                <para>Specifies whether text entered to a text box field is spell checked.
+</para>
+            </summary>
+            <value><b>true</b>, if text entered to a text box field is spell checked; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Text">
+            <summary>
+                <para>Specifies text of the text box field.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value which represents the text displayed in the text box field.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormTextBoxField.Type">
+            <summary>
+                <para>Specifies the type of the text box field. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormTextFieldType"/> enumeration value that represents the text box field type. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfDocumentInteractivityPermissions">
+
+            <summary>
+                <para>Lists the values specifying permissions that are used to restrict or allow access to document interaction operations.   
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.Allowed">
+            <summary>
+                <para>Permit interactive operations (adding or modifying text annotations, filling in interactive form fields, and creating or modifying interactive form fields) in the PDF document. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.FormFillingAndSigning">
+            <summary>
+                <para>Prohibit interactive operations in the PDF document except filling existing form fields and document signing. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfDocumentInteractivityPermissions.NotAllowed">
+            <summary>
+                <para>Prohibit all interactive operations (adding or modifying text annotations, filling in interactive form fields, and creating or modifying interactive form fields) in the PDF document. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfFormData">
+
+            <summary>
+                <para>Contains data values stored in the PDF Form.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream,DevExpress.Pdf.PdfFormDataFormat)">
+            <summary>
+                <para>Initializes a new instance of the PdfFormData class with the predefined stream and data format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> class descendant containing a file with the form data (Fdf, Txt, Xfdf or Xml format).
+
+            </param>
+            <param name="format">
+		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.
+
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String,DevExpress.Pdf.PdfFormDataFormat)">
+            <summary>
+                <para>Initializes a new instance of the PdfFormData class with the predefined file name and data format.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
+
+            </param>
+            <param name="format">
+		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value specifying the format in which interactive form values are stored.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the PdfFormData class with the predefined file name.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> containing the path to a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.#ctor(System.IO.Stream)">
+            <summary>
+                <para>Initializes a new instance of the PdfFormData class with the predefined stream.
+
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> class descendant containing a file with the interactive form data (Fdf, Txt, Xfdf or Xml format).
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PdfFormData class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.GetFieldNames">
+            <summary>
+                <para>Returns the name of all fields contained in this PDF form.
+</para>
+            </summary>
+            <returns>A list of <see cref="T:System.String"/> values.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFormData.Item(System.String)">
+            <summary>
+                <para>Returns an individual field by its name on the PDF Form.
+
+</para>
+            </summary>
+            <param name="name">
+		A string representing the field name.
+
+            </param>
+            <value>A <see cref="T:DevExpress.Pdf.PdfFormData"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFormData.Name">
+            <summary>
+                <para>Returns the name of the field represented by this PdfFormData object.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.Save(System.IO.Stream,DevExpress.Pdf.PdfFormDataFormat)">
+            <summary>
+                <para>Saves the interactive form data to a stream using form data format.
+</para>
+            </summary>
+            <param name="stream">
+		A <see cref="T:System.IO.Stream"/> class descendant, specifying the stream into which the interactive form should be saved.
+
+            </param>
+            <param name="format">
+		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value, specifying into which format interactive form values should be saved.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfFormData.Save(System.String,DevExpress.Pdf.PdfFormDataFormat)">
+            <summary>
+                <para>Saves the interactive form data into a file using form data format.
+</para>
+            </summary>
+            <param name="fileName">
+		A <see cref="T:System.String"/> specifying the file path and file name.
+
+            </param>
+            <param name="format">
+		A <see cref="T:DevExpress.Pdf.PdfFormDataFormat"/> enumeration value, specifying into which format interactive form values should be saved.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFormData.Value">
+            <summary>
+                <para>Specifies a value to the interactive form field represented by this PdfFormData object.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Object"/> class descendant.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfFormDataFormat">
+
+            <summary>
+                <para>Lists formats allowed for PDF Form data values.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Fdf">
+            <summary>
+                <para>Data is represented as FDF (Forms Data Format).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Txt">
+            <summary>
+                <para>Data is represented as text.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Xfdf">
+            <summary>
+                <para>Data is represented as XFDF (XML Forms Data Format).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFormDataFormat.Xml">
+            <summary>
+                <para>Data is represented as XML.
+</para>
+            </summary>
 
 
         </member>
@@ -4931,6 +5006,34 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfSaveOptions">
+
+            <summary>
+                <para>A class that provides document encryption options and document signature to save the document. 
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfSaveOptions.EncryptionOptions">
+            <summary>
+                <para>Specifies encryption options of a PDF document.  
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfEncryptionOptions"/> object that represents encryption options of a PDF document. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfSaveOptions.Signature">
+            <summary>
+                <para>Gets or sets the signature, which can contain signing info, reason and location, to be used to save the signed document.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfSignature"/> object that represents the PDF signature. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfSignature">
 
             <summary>
@@ -5191,94 +5294,6 @@
         <member name="F:DevExpress.Pdf.PdfFontStretch.UltraExpanded">
             <summary>
                 <para><para>"UltraExpanded"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfFontFlags">
-
-            <summary>
-                <para>Lists the values that correspond to flags defining various characteristics of the font.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.AllCap">
-            <summary>
-                <para><para>"0x10000"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.FixedPitch">
-            <summary>
-                <para><para>"0x00001"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.ForceBold">
-            <summary>
-                <para><para>"0x40000"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.Italic">
-            <summary>
-                <para><para>"0x00040"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.None">
-            <summary>
-                <para><para>"0x00000"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.Nonsymbolic">
-            <summary>
-                <para><para>"0x00020"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.Script">
-            <summary>
-                <para><para>"0x00008"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.Serif">
-            <summary>
-                <para><para>"0x00002"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.SmallCap">
-            <summary>
-                <para><para>"0x20000"</para>
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfFontFlags.Symbolic">
-            <summary>
-                <para><para>"0x00004"</para>
 </para>
             </summary>
 
@@ -5648,75 +5663,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfXYZDestination">
-
-            <summary>
-                <para>Represents a destination that displays the PDF page with the <see cref="P:DevExpress.Pdf.PdfXYZDestination.Left"/>, <see cref="P:DevExpress.Pdf.PdfXYZDestination.Top"/> coordinates positioned at the upper-left corner of the window and the contents of the page magnified by the factor zoom (the <see cref="P:DevExpress.Pdf.PdfXYZDestination.Zoom"/> property). 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfXYZDestination.#ctor(DevExpress.Pdf.PdfPage,System.Nullable`1,System.Nullable`1,System.Nullable`1)">
-            <summary>
-                <para>Initializes a new instance of the PdfXYZDestination class with the specified page, top and left coordinates that will be shown on the upper-left corner of the window, and zoom level to show the page.
-</para>
-            </summary>
-            <param name="page">
-		A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the PDF page with contents.
-
-            </param>
-            <param name="left">
-		A nullable double value that is the left page coordinate.
-
-            </param>
-            <param name="top">
-		A nullable double value that is the top page coordinate.
-
-            </param>
-            <param name="zoom">
-		A nullable double value that is the zoom factor by which the page is magnified.  
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfXYZDestination.Left">
-            <summary>
-                <para>Gets the left horizontal coordinate positioned at the left edge of the window. 
-
-</para>
-            </summary>
-            <value>A nullable double value that it the left horizontal coordinate.  
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfXYZDestination.Top">
-            <summary>
-                <para>Gets the top vertical page coordinate positioned at the top edge of the window. 
-
-</para>
-            </summary>
-            <value>A nullable double value that is the vertical page coordinate.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfXYZDestination.Zoom">
-            <summary>
-                <para>Gets the contents of the page magnified by the zoom factor.
-
-</para>
-            </summary>
-            <value>A nullable double value that is the zoom factor.
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Pdf.PdfPoint">
 
             <summary>
@@ -5881,78 +5827,6 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Pdf.PdfPoint"/> structure.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfTextSearchResults">
-
-            <summary>
-                <para>Provides the information related to a PDF text search result.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Page">
-            <summary>
-                <para>Provides access to the page containing the text found.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfPage"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.PageIndex">
-            <summary>
-                <para>Indicates the zero-based index of a page that contains the found text.
-</para>
-            </summary>
-            <value>An integer value, specifying the zero-based page index.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.PageNumber">
-            <summary>
-                <para>Indicates the number of a page that contains the text that was found.
-
-</para>
-            </summary>
-            <value>An integer value, specifying the page number.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Rectangles">
-            <summary>
-                <para>Provides access to the document area containing the text found.
-
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> objects.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Status">
-            <summary>
-                <para>Indicates the current text search operation status.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfTextSearchStatus"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Words">
-            <summary>
-                <para>Returns the collection of words corresponding to the text that was found.
-
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfWord"/> objects.
 </value>
 
 
@@ -7215,6 +7089,78 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfTextSearchResults">
+
+            <summary>
+                <para>Provides the information related to a PDF text search result.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Page">
+            <summary>
+                <para>Provides access to the page containing the text found.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfPage"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.PageIndex">
+            <summary>
+                <para>Indicates the zero-based index of a page that contains the found text.
+</para>
+            </summary>
+            <value>An integer value, specifying the zero-based page index.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.PageNumber">
+            <summary>
+                <para>Indicates the number of a page that contains the text that was found.
+
+</para>
+            </summary>
+            <value>An integer value, specifying the page number.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Rectangles">
+            <summary>
+                <para>Provides access to the document area containing the text found.
+
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> objects.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Status">
+            <summary>
+                <para>Indicates the current text search operation status.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfTextSearchStatus"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfTextSearchResults.Words">
+            <summary>
+                <para>Returns the collection of words corresponding to the text that was found.
+
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfWord"/> objects.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfRenderingSettings">
 
             <summary>
@@ -7243,6 +7189,77 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfWidgetAnnotation">
+
+            <summary>
+                <para>Represents the widget annotation for the interactive forms in a document.  
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.Action">
+            <summary>
+                <para>Gets an action that will be performed when the widget annotation is active. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAction"/> object that is the widget annotation action. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.Actions">
+            <summary>
+                <para>Gets actions that will be performed when the annotation is activated.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationActions"/> object that represents actions that will be performed when the annotation is activated.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.AppearanceCharacteristics">
+            <summary>
+                <para>Gets the appearance characteristics specifying the widget annotation's visual presentation on the page. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfWidgetAppearanceCharacteristics"/> object that represents the appearance characteristics of the widget annotation.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.BorderStyle">
+            <summary>
+                <para>Gets a value specifying the width and line style that shall be used in drawing the widget annotation's border.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationBorderStyle"/> object that represents the widget annotation border style.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.HighlightingMode">
+            <summary>
+                <para>Gets the widget annotation's highlighting mode - the visual effect that shall be used when the mouse button is pressed or held down inside its active area.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationHighlightingMode"/> enumeration value that represents the widget annotation's highlighting mode.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfWidgetAnnotation.InteractiveFormField">
+            <summary>
+                <para>Gets an interactive form field that the widget annotation used to represent the appearance of fields and to manage user interactions.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfInteractiveFormField"/> object that is the interactive form field for the widget annotation.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfWordSegment">
 
             <summary>
@@ -7263,10 +7280,10 @@
         </member>
         <member name="P:DevExpress.Pdf.PdfWordSegment.Rectangle">
             <summary>
-                <para>Returns a rectangle surrounding the word segment.
+                <para>Returns a rectangle surrounding the word's segment.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> object that is the rectangle surrounding the word segment.
+            <value>A <see cref="T:DevExpress.Pdf.PdfOrientedRectangle"/> object that is the rectangle surrounding the word's segment.
 </value>
 
 
@@ -7277,623 +7294,6 @@
 </para>
             </summary>
             <value>A System.String value. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfSaveOptions">
-
-            <summary>
-                <para>A class that provides document encryption options and document signature to save the document. 
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfSaveOptions.EncryptionOptions">
-            <summary>
-                <para>Specifies encryption options of a PDF document.  
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfEncryptionOptions"/> object that represents encryption options of a PDF document. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfSaveOptions.Signature">
-            <summary>
-                <para>Gets or sets the signature, which can contain signing info, reason and location, to be used to save the signed document.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfSignature"/> object that represents the PDF signature. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfBookmark">
-
-            <summary>
-                <para>Contains settings that are used to specify bookmarks in a document.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfBookmark.#ctor">
-            <summary>
-                <para>Initializes a new instance of the PdfBookmark class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.Action">
-            <summary>
-                <para>Provides access to the bookmark action being executed.  
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfAction"/> object that is an action that is performed with bookmarks.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.Children">
-            <summary>
-                <para>Gets or sets the collection of bookmark children for a document with a tree-structured hierarchy.  
-
-</para>
-            </summary>
-            <value>A list of <see cref="T:DevExpress.Pdf.PdfBookmark"/> objects that are the collection of bookmark child nodes. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.Destination">
-            <summary>
-                <para>Gets or sets a destination (a particular view of a document) to which a bookmark is referred to.  
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDestination"/> object that is a bookmark destination.  
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.IsBold">
-            <summary>
-                <para>Gets or sets the value indicating whether the bookmark text is formatted as bold.
-</para>
-            </summary>
-            <value><b>true</b>, if the bookmark text is bold; otherwise, <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.IsInitiallyClosed">
-            <summary>
-                <para>Gets or sets a value that indicates whether bookmarks are initially closed (bookmark children are hidden) in the navigation panel after a document is loaded.
-</para>
-            </summary>
-            <value><b>true</b>, if the bookmark children are initially hidden (closed) in the navigation panel; otherwise, <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.IsItalic">
-            <summary>
-                <para>Gets or sets the value indicating whether the bookmark text is formatted as italic.
-</para>
-            </summary>
-            <value><b>true</b>, if the bookmark text is italic; otherwise, <b>false</b>. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.TextColor">
-            <summary>
-                <para>Gets or sets the color for a bookmark's text in the navigation pane.  
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfRGBColor"/> object that is a single color in the RGB (red, green, blue) color scheme for a bookmark's text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfBookmark.Title">
-            <summary>
-                <para>Gets or sets the text that is displayed for a bookmark on the navigation pane. 
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> that is the text for a bookmark on the navigation pane.  
-
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfDocument">
-
-            <summary>
-                <para>A document contained in a PDF file.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AcroForm">
-            <summary>
-                <para>Provides access to the document's interactive form (AcroForm) properties.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfInteractiveForm"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Actions">
-            <summary>
-                <para>Provides access to the <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> class  that contains references to JavaScript actions which should be taken in response to some events.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentActions"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowAccessibility">
-            <summary>
-                <para>Enables copying or otherwise extracting text and graphics from the document (in support of accessibility to users with disabilities or for other purposes).
-</para>
-            </summary>
-            <value><b>true</b> to support PDF accessibility; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowAnnotationsAndFormsModifying">
-            <summary>
-                <para>Enables adding and modifying text annotations and interactive form fields in the PDF.
-</para>
-            </summary>
-            <value><b>true</b> to allow making changes to the PDF annotations and form fields; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowDataExtraction">
-            <summary>
-                <para>Enables extracting data from the PDF.
-</para>
-            </summary>
-            <value><b>true</b> to allow extracting the PDF data; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowDocumentAssembling">
-            <summary>
-                <para>Enables inserting, rotating, or deleting PDF pages and creating navigation elements such as bookmarks or thumbnail images.
-</para>
-            </summary>
-            <value><b>true</b> to allow assembling the document; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowFormsFilling">
-            <summary>
-                <para>Enables filling in interactive form fields of the PDF file, as well as signing the document (which amounts to filling in existing signature fields, a type of interactive form field).
-</para>
-            </summary>
-            <value><b>true</b> to allow filling in interactive form fields in the PDF; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowHighQualityPrinting">
-            <summary>
-                <para>Enables printing the PDF in high resolution, so that a faithful digital copy of the PDF content is generated. 
-
-</para>
-            </summary>
-            <value><b>true</b> to high quality printing; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowModifying">
-            <summary>
-                <para>Enables modifying the PDF.
-</para>
-            </summary>
-            <value><b>true</b> to allow modifying the PDF; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.AllowPrinting">
-            <summary>
-                <para>Enables printing the PDF.
-</para>
-            </summary>
-            <value><b>true</b> to allow printing the PDF; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Author">
-            <summary>
-                <para>Returns the name of the person who created the document.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Bookmarks">
-            <summary>
-                <para>Gets or sets the bookmarks that are used to navigate from one part of a document to another.
-</para>
-            </summary>
-            <value>A list of <see cref="T:DevExpress.Pdf.PdfBookmark"/> objects that are the collection of bookmarks. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.CreationDate">
-            <summary>
-                <para>The date and time the document was created, in human-readable form.
-</para>
-            </summary>
-            <value>A <see cref="T:System.DateTimeOffset"/> structure.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Creator">
-            <summary>
-                <para>If the document was converted to PDF from another format, the name of the conforming product that created the original document from which it was converted.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Destinations">
-            <summary>
-                <para>Gets named destinations for targets in the document. 
-</para>
-            </summary>
-            <value>A dictionary, containing the <see cref="T:DevExpress.Pdf.PdfDestination"/> objects, along with their <see cref="T:System.String"/> key values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.FileAttachments">
-            <summary>
-                <para>Gets the file attachments from a document.
-
-</para>
-            </summary>
-            <value>An object implementing the <see cref="T:System.Collections.IEnumerable"/> interface that represents the collection of <see cref="T:DevExpress.Pdf.PdfFileAttachment"/>s.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Keywords">
-            <summary>
-                <para>Returns the keywords associated with the document. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.LanguageCulture">
-            <summary>
-                <para>Returns the culture-specific settings of the document.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Globalization.CultureInfo"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.LogicalStructure">
-            <summary>
-                <para>Provides access to the document's structure tree root dictionary.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfLogicalStructure object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.MarkInfo">
-            <summary>
-                <para>Provides access to the mark information dictionary that contains information about the document's usage of Tagged PDF conventions.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfMarkInfo object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Metadata">
-            <summary>
-                <para>Provides access to a stream that contains the document metadata.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfMetadata"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.ModDate">
-            <summary>
-                <para>The date and time the document was most recently modified, in human-readable form.
-</para>
-            </summary>
-            <value>A <see cref="T:System.DateTimeOffset"/> structure.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Names">
-            <summary>
-                <para>Provides access to the document's name dictionary.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfNames"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.NeedsRendering">
-            <summary>
-                <para>Indicates whether or not to expedite the display of PDF documents containing XFA forms.
-</para>
-            </summary>
-            <value><b>true</b> if the document shall be regenerated when the document is first opened; otherwise <b>false</b>. The default value is <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.OpenAction">
-            <summary>
-                <para>Indicates an action that shall be performed when the document is opened.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfAction object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.OpenDestination">
-            <summary>
-                <para>Indicates a destination that shall be displayed when the document is opened.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDestination"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.OptionalContentProperties">
-            <summary>
-                <para>Provides access to the document's optional content properties dictionary.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentProperties"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Outlines">
-            <summary>
-                <para>Provides access to the outline dictionary that shall be the root of the document's outline hierarchy.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfOutlines"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.OutputIntents">
-            <summary>
-                <para>Provides access to the array of output intent dictionaries that specify the color characteristics of output devices on which the document might be rendered.
-</para>
-            </summary>
-            <value>A collection of DevExpress.Pdf.PdfOutputIntent objects.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.PageLabels">
-            <summary>
-                <para>Provides access to the number tree defining the page labeling for the document.
-</para>
-            </summary>
-            <value>A dictionary, containing the DevExpress.Pdf.PdfPageLabel objects, along with their integer key values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.PageLayout">
-            <summary>
-                <para>Indicates the page layout of the opened document.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfPageLayout"/> enumeration value. The default value is <see cref="F:DevExpress.Pdf.PdfPageLayout.OneColumn"/>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.PageMode">
-            <summary>
-                <para>Indicates the mode of displaying the opened document.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfPageMode enumeration value. The default value is <b>UseNone</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Pages">
-            <summary>
-                <para>Provides access to the collection of document pages.
-</para>
-            </summary>
-            <value>A collection of <see cref="T:DevExpress.Pdf.PdfPage"/> objects.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.PieceInfo">
-            <summary>
-                <para>Provides access to the page-piece dictionary associated with the document.
-</para>
-            </summary>
-            <value>A dictionary, containing the DevExpress.Pdf.PdfPieceInfoEntry objects, along with their <see cref="T:System.String"/> key values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Producer">
-            <summary>
-                <para>If the document was converted to PDF from another format, the name of the conforming product that converted it to PDF.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Subject">
-            <summary>
-                <para>Returns the subject of the document.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Threads">
-            <summary>
-                <para>Provides access to the array of thread dictionaries that contains the document's article threads.
-</para>
-            </summary>
-            <value>A collection of DevExpress.Pdf.PdfArticleThread objects.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Title">
-            <summary>
-                <para>Returns the document's title.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Trapped">
-            <summary>
-                <para>A name object indicating whether the document has been modified to include trapping information.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.Version">
-            <summary>
-                <para>Indicates the version of the PDF specification to which the document conforms if later than the version specified in the file's header.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfFileVersion object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfDocument.ViewerPreferences">
-            <summary>
-                <para>Provides access to the viewer preferences dictionary specifying how to display the document on the screen.
-</para>
-            </summary>
-            <value>A DevExpress.Pdf.PdfViewerPreferences object.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfFont">
-
-            <summary>
-                <para>A font assigned to a document text.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.BaseFont">
-            <summary>
-                <para>The <b>PostScript</b> name of the font. 
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
-            <summary>
-                <para>Provides access to the PDF font options.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
-            <summary>
-                <para>Provides access to the PDF font options. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.FontName">
-            <summary>
-                <para>The <b>PostScript</b> name of the font.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the font name.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.SubsetName">
-            <summary>
-                <para>Specifies a font subset.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfFont.ToUnicode">
-            <summary>
-                <para>Converts PDF character codes to Unicode values.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfCharacterMapping"/> object, providing a <b>CMap</b> table that maps character codes to Unicode values.
-
 </value>
 
 
@@ -8045,6 +7445,147 @@
 </para>
             </summary>
             <value><b>true</b>, if the form field is visible; otherwise, <b>false</b>. The default value is <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfAcroFormRadioGroupField">
+
+            <summary>
+                <para>Represents a radio group field.  
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.#ctor(System.String,System.Int32)">
+            <summary>
+                <para>Initializes a new instance of the PdfAcroFormRadioGroupField class with the specified radio group field name and page number where the field will be created.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of radio group field.
+
+            </param>
+            <param name="pageNumber">
+		An integer value that specifies the page number where the form field will be created.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.AddButton(System.String,DevExpress.Pdf.PdfRectangle)">
+            <summary>
+                <para>Adds a radio button to the radio group field using the radio button name and a rectangle that specifies the location of this button on a PDF page.    
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of a radio button.
+
+            </param>
+            <param name="rect">
+		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a radio button is located on a page.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.ButtonStyle">
+            <summary>
+                <para>Specifies the style that defines the appearance of a radio button within a radio group field.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormButtonStyle"/> enumeration value that determines the style of a radio button within a radio group field.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormRadioGroupField.ClearButtons">
+            <summary>
+                <para>Removes all radio buttons from the radio group field.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.RadioButtonCount">
+            <summary>
+                <para>Gets the number of radio buttons in the radio group field.
+</para>
+            </summary>
+            <value>An integer value that is the number of radio buttons in the radio group field.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.SelectedIndex">
+            <summary>
+                <para>Specifies index of the selected item in a radio group field.
+
+</para>
+            </summary>
+            <value>An integer value, representing the zero-based index of the radio group's selected item. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormRadioGroupField.ShouldGeneratePressedAppearance">
+            <summary>
+                <para>Specifies whether to generate a down appearance that will appear when the mouse button is pressed within a radio button area.
+
+</para>
+            </summary>
+            <value><b>true</b>, if a down appearance is generated within the radio button area; otherwise, <b>false</b>. Default value is <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfAcroFormListBoxField">
+
+            <summary>
+                <para>Represents a list box field.  
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormListBoxField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
+            <summary>
+                <para>Initializes a new instance of the PdfAcroFormListBoxField class with the specified list box field name, page number, where the field will be created, and the field rectangle.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of list box field.
+
+            </param>
+            <param name="pageNumber">
+		An integer value that specifies the page number where the form field will be created.
+
+            </param>
+            <param name="rectangle">
+		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a list box field is located on a page.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormListBoxField.MultiSelect">
+            <summary>
+                <para>Specifies whether multiple items can be selected simultaneously in the list box field.
+</para>
+            </summary>
+            <value><b>true</b>, if multiple selections of list box items are allowed; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormListBoxField.TopIndex">
+            <summary>
+                <para>Specifies the index of the first visible item in the list box field.
+</para>
+            </summary>
+            <value>An integer value that is the zero-based index of the first visible item in the list box. Default value is <b>0</b>.
 </value>
 
 
@@ -8495,6 +8036,57 @@
                 <para>Solid border.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfAcroFormSignatureField">
+
+            <summary>
+                <para>Represents a signature field.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfAcroFormSignatureField.#ctor(System.String,System.Int32,DevExpress.Pdf.PdfRectangle)">
+            <summary>
+                <para>Initializes a new instance of the PdfAcroFormSignatureField class with the specified signature field name, page number, where the field will be created, and the field rectangle.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> that specifies the name of the signature field.
+
+
+            </param>
+            <param name="pageNumber">
+		An integer value that specifies the page number where the form field will be created.
+
+            </param>
+            <param name="rect">
+		A <see cref="T:DevExpress.Pdf.PdfRectangle"/> object that represents a rectangle inside which a signature field is located on a page.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormSignatureField.LineAlignment">
+            <summary>
+                <para>Specifies the vertical alignment of the string within the signature field. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAcroFormStringAlignment"/> enumeration value that represents vertical line alignment.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfAcroFormSignatureField.Text">
+            <summary>
+                <para>Specifies text displayed in a signature field.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value which represents the text displayed in the signature field.
+</value>
 
 
         </member>
@@ -9252,102 +8844,91 @@
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfDocumentContentType">
+        <member name="T:DevExpress.Pdf.PdfFontFlags">
 
             <summary>
-                <para>Lists the values indicating the type of the PDF content corresponding to a specific document point.
+                <para>Lists the values that correspond to flags defining various characteristics of the font.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Annotation">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.AllCap">
             <summary>
-                <para>The PDF content is an annotation. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Image">
-            <summary>
-                <para>The PDF content is an image.
+                <para><para>"0x10000"</para>
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentContentType.None">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.FixedPitch">
             <summary>
-                <para>The PDF content is not defined.
+                <para><para>"0x00001"</para>
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.Pdf.PdfDocumentContentType.Text">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.ForceBold">
             <summary>
-                <para>The PDF content is text.
+                <para><para>"0x40000"</para>
 </para>
             </summary>
 
 
         </member>
-        <member name="T:DevExpress.Pdf.PdfDocumentContent">
-
+        <member name="F:DevExpress.Pdf.PdfFontFlags.Italic">
             <summary>
-                <para>Provides information about the PDF content type at a specific document point.
-
+                <para><para>"0x00040"</para>
 </para>
             </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfDocumentContent.#ctor(DevExpress.Pdf.PdfDocumentPosition,DevExpress.Pdf.PdfDocumentContentType,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the PdfDocumentContent class with the specified settings.
-</para>
-            </summary>
-            <param name="documentPosition">
-		A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.DocumentPosition"/> property.
-
-            </param>
-            <param name="contentType">
-		A <see cref="T:DevExpress.Pdf.PdfDocumentContentType"/> enumeration value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.ContentType"/> property.
-
-            </param>
-            <param name="selected">
-		<b>true</b> if the document content has been selected; otherwise <b>false</b>. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.IsSelected"/> property.
-
-            </param>
 
 
         </member>
-        <member name="P:DevExpress.Pdf.PdfDocumentContent.ContentType">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.None">
             <summary>
-                <para>Indicates the type of the PDF content corresponding to a specific document point.
+                <para><para>"0x00000"</para>
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentContentType"/> enumeration value.
-</value>
 
 
         </member>
-        <member name="P:DevExpress.Pdf.PdfDocumentContent.DocumentPosition">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.Nonsymbolic">
             <summary>
-                <para>Indicates the document position corresponding to the PDF content.
+                <para><para>"0x00020"</para>
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object.
-</value>
 
 
         </member>
-        <member name="P:DevExpress.Pdf.PdfDocumentContent.IsSelected">
+        <member name="F:DevExpress.Pdf.PdfFontFlags.Script">
             <summary>
-                <para>Indicates whether or not the PDF content has been selected.
+                <para><para>"0x00008"</para>
 </para>
             </summary>
-            <value><b>true</b> if the document content has been selected; otherwise <b>false</b>. 
-</value>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFontFlags.Serif">
+            <summary>
+                <para><para>"0x00002"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFontFlags.SmallCap">
+            <summary>
+                <para><para>"0x20000"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Pdf.PdfFontFlags.Symbolic">
+            <summary>
+                <para><para>"0x00004"</para>
+</para>
+            </summary>
 
 
         </member>
@@ -9453,6 +9034,216 @@
 </para>
             </summary>
 
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfFont">
+
+            <summary>
+                <para>A font assigned to a document text.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.BaseFont">
+            <summary>
+                <para>The <b>PostScript</b> name of the font. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
+            <summary>
+                <para>Provides access to the PDF font options.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.FontDescriptor">
+            <summary>
+                <para>Provides access to the PDF font options. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfFontDescriptor"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.FontName">
+            <summary>
+                <para>The <b>PostScript</b> name of the font.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the font name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.SubsetName">
+            <summary>
+                <para>Specifies a font subset.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfFont.ToUnicode">
+            <summary>
+                <para>Converts PDF character codes to Unicode values.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfCharacterMapping"/> object, providing a <b>CMap</b> table that maps character codes to Unicode values.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfXYZDestination">
+
+            <summary>
+                <para>Represents a destination that displays the PDF page with the <see cref="P:DevExpress.Pdf.PdfXYZDestination.Left"/>, <see cref="P:DevExpress.Pdf.PdfXYZDestination.Top"/> coordinates positioned at the upper-left corner of the window and the contents of the page magnified by the factor zoom (the <see cref="P:DevExpress.Pdf.PdfXYZDestination.Zoom"/> property). 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfXYZDestination.#ctor(DevExpress.Pdf.PdfPage,System.Nullable`1,System.Nullable`1,System.Nullable`1)">
+            <summary>
+                <para>Initializes a new instance of the PdfXYZDestination class with the specified page, top and left coordinates that will be shown on the upper-left corner of the window, and zoom level to show the page.
+</para>
+            </summary>
+            <param name="page">
+		A <see cref="T:DevExpress.Pdf.PdfPage"/> object that is the PDF page with contents.
+
+            </param>
+            <param name="left">
+		A nullable double value that is the left page coordinate.
+
+            </param>
+            <param name="top">
+		A nullable double value that is the top page coordinate.
+
+            </param>
+            <param name="zoom">
+		A nullable double value that is the zoom factor by which the page is magnified.  
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfXYZDestination.Left">
+            <summary>
+                <para>Gets the left horizontal coordinate positioned at the left edge of the window. 
+
+</para>
+            </summary>
+            <value>A nullable double value that it the left horizontal coordinate.  
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfXYZDestination.Top">
+            <summary>
+                <para>Gets the top vertical page coordinate positioned at the top edge of the window. 
+
+</para>
+            </summary>
+            <value>A nullable double value that is the vertical page coordinate.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfXYZDestination.Zoom">
+            <summary>
+                <para>Gets the contents of the page magnified by the zoom factor.
+
+</para>
+            </summary>
+            <value>A nullable double value that is the zoom factor.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfColorSpace">
+
+            <summary>
+                <para>Represents a PDF color space.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfColorSpace.ComponentsCount">
+            <summary>
+                <para>Gets the number of color components in the color space.
+</para>
+            </summary>
+            <value>An integer value that is the components count. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfRange">
+
+            <summary>
+                <para>Represents a range of colors. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfRange.#ctor(System.Double,System.Double)">
+            <summary>
+                <para>Initializes a new instance of the PdfRange class with the specified settings.
+</para>
+            </summary>
+            <param name="min">
+		A <see cref="T:System.Double"/> value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfRange.Min"/> property.
+
+            </param>
+            <param name="max">
+		A <see cref="T:System.Double"/> value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfRange.Max"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfRange.Max">
+            <summary>
+                <para>Gets the upper value to which the corresponding sample value in the image is mapped.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> value that is the upper value to which the corresponding sample value in the image is mapped.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfRange.Min">
+            <summary>
+                <para>Gets the lower value to which the corresponding sample value in the image is mapped.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Double"/> value that is the lower value to which the corresponding sample value in the image is mapped.
+
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfFilter">
+
+            <summary>
+                <para>Represents an image filter.
+</para>
+            </summary>
 
         </member>
         <member name="T:DevExpress.Pdf.PdfRenderingIntent">
@@ -9643,78 +9434,6 @@
             <value>An integer value that is the image width.
 </value>
 
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfColorSpace">
-
-            <summary>
-                <para>Represents a PDF color space.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfColorSpace.ComponentsCount">
-            <summary>
-                <para>Gets the number of color components in the color space.
-</para>
-            </summary>
-            <value>An integer value that is the components count. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfRange">
-
-            <summary>
-                <para>Represents a range of colors. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Pdf.PdfRange.#ctor(System.Double,System.Double)">
-            <summary>
-                <para>Initializes a new instance of the PdfRange class with the specified settings.
-</para>
-            </summary>
-            <param name="min">
-		A <see cref="T:System.Double"/> value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfRange.Min"/> property.
-
-            </param>
-            <param name="max">
-		A <see cref="T:System.Double"/> value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfRange.Max"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfRange.Max">
-            <summary>
-                <para>Gets the upper value to which the corresponding sample value in the image is mapped.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> value that is the upper value to which the corresponding sample value in the image is mapped.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Pdf.PdfRange.Min">
-            <summary>
-                <para>Gets the lower value to which the corresponding sample value in the image is mapped.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Double"/> value that is the lower value to which the corresponding sample value in the image is mapped.
-
-
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Pdf.PdfFilter">
-
-            <summary>
-                <para>Represents an image filter.
-</para>
-            </summary>
 
         </member>
         <member name="T:DevExpress.Pdf.PdfOptionsFormFieldOption">
@@ -10018,6 +9737,106 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfBookmark">
+
+            <summary>
+                <para>Contains settings that are used to specify bookmarks in a document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfBookmark.#ctor">
+            <summary>
+                <para>Initializes a new instance of the PdfBookmark class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.Action">
+            <summary>
+                <para>Provides access to the bookmark action being executed.  
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfAction"/> object that is an action that is performed with bookmarks.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.Children">
+            <summary>
+                <para>Gets or sets the collection of bookmark children for a document with a tree-structured hierarchy.  
+
+</para>
+            </summary>
+            <value>A list of <see cref="T:DevExpress.Pdf.PdfBookmark"/> objects that are the collection of bookmark child nodes. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.Destination">
+            <summary>
+                <para>Gets or sets a destination (a particular view of a document) to which a bookmark is referred to.  
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfDestination"/> object that is a bookmark destination.  
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.IsBold">
+            <summary>
+                <para>Gets or sets the value indicating whether the bookmark text is formatted as bold.
+</para>
+            </summary>
+            <value><b>true</b>, if the bookmark text is bold; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.IsInitiallyClosed">
+            <summary>
+                <para>Gets or sets a value that indicates whether bookmarks are initially closed (bookmark children are hidden) in the navigation panel after a document is loaded.
+</para>
+            </summary>
+            <value><b>true</b>, if the bookmark children are initially hidden (closed) in the navigation panel; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.IsItalic">
+            <summary>
+                <para>Gets or sets the value indicating whether the bookmark text is formatted as italic.
+</para>
+            </summary>
+            <value><b>true</b>, if the bookmark text is italic; otherwise, <b>false</b>. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.TextColor">
+            <summary>
+                <para>Gets or sets the color for a bookmark's text in the navigation pane.  
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfRGBColor"/> object that is a single color in the RGB (red, green, blue) color scheme for a bookmark's text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfBookmark.Title">
+            <summary>
+                <para>Gets or sets the text that is displayed for a bookmark on the navigation pane. 
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> that is the text for a bookmark on the navigation pane.  
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfCreationOptions">
 
             <summary>
@@ -10228,6 +10047,65 @@
 
 
         </member>
+        <member name="T:DevExpress.Pdf.PdfDocumentContent">
+
+            <summary>
+                <para>Provides information about the PDF content type at a specific document point.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Pdf.PdfDocumentContent.#ctor(DevExpress.Pdf.PdfDocumentPosition,DevExpress.Pdf.PdfDocumentContentType,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the PdfDocumentContent class with the specified settings.
+</para>
+            </summary>
+            <param name="documentPosition">
+		A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.DocumentPosition"/> property.
+
+            </param>
+            <param name="contentType">
+		A <see cref="T:DevExpress.Pdf.PdfDocumentContentType"/> enumeration value. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.ContentType"/> property.
+
+            </param>
+            <param name="selected">
+		<b>true</b> if the document content has been selected; otherwise <b>false</b>. This value is assigned to the <see cref="P:DevExpress.Pdf.PdfDocumentContent.IsSelected"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocumentContent.ContentType">
+            <summary>
+                <para>Indicates the type of the PDF content corresponding to a specific document point.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentContentType"/> enumeration value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocumentContent.DocumentPosition">
+            <summary>
+                <para>Indicates the document position corresponding to the PDF content and the page number.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfDocumentPosition"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfDocumentContent.IsSelected">
+            <summary>
+                <para>Indicates whether or not the PDF content has been selected.
+</para>
+            </summary>
+            <value><b>true</b> if the document content has been selected; otherwise <b>false</b>. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Pdf.PdfAcroFormFieldRotation">
 
             <summary>
@@ -10313,6 +10191,128 @@
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Pdf.PdfAnnotationAppearance"/> object that is the rollover appearance.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Pdf.PdfOptionalContentConfiguration">
+
+            <summary>
+                <para>Represents different presentations of a document's optional content groups.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.BaseState">
+            <summary>
+                <para>Gets a state value that is used to initialize the states of all the optional content groups in a document when this configuration is applied.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentState"/> enumeration value that initializes the states of all the optional content groups in a document when this configuration is applied.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Creator">
+            <summary>
+                <para>Gets the name of the application or feature that created this content configuration.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that is the name of the application or feature. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Intent">
+            <summary>
+                <para>Gets intent names that are used to determine which optional content groups' states to consider and which to ignore in calculating the visibility of content.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentIntent"/> enumeration values that list intent names.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Locked">
+            <summary>
+                <para>Gets a collection of optional content groups that shall be locked when this configuration is applied.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups that shall be locked when this configuration is applied
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Name">
+            <summary>
+                <para>Gets the name of the optional content configuration. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that is the configuration name.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Off">
+            <summary>
+                <para>Gets the collection of optional content groups whose state shall be set to Off when this configuration is applied.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups whose state shall be set to Off when this configuration is applied.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.On">
+            <summary>
+                <para>Gets the collection of optional content groups whose state shall be set to On when this configuration is applied.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentGroup"/> objects that represent optional content groups whose state shall be set to On when this configuration is applied.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Order">
+            <summary>
+                <para>Gets the order for presentation of optional content groups.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Pdf.PdfOptionalContentOrder"/> object that is the order for presentation of optional content groups.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.OrderListMode">
+            <summary>
+                <para>Gets a name specifying which optional content groups in the <see cref="P:DevExpress.Pdf.PdfOptionalContentConfiguration.Order"/> property will be displayed to the user.
+</para>
+            </summary>
+            <value><see cref="T:DevExpress.Pdf.PdfOptionalContentOrderListMode"/> enumeration values that list the optional content order. 
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.RadioButtonGroups">
+            <summary>
+                <para>Gets a collection consisting of one or more collections, each of which represents a collection of optional content groups whose states shall be intended to follow a radio button paradigm.
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentRadioButtonGroup"/> objects. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Pdf.PdfOptionalContentConfiguration.UsageApplication">
+            <summary>
+                <para>Gets a collection of usage applications specifying which usage categories will be used to automatically manipulate the state of optional content groups. 
+</para>
+            </summary>
+            <value>A collection of <see cref="T:DevExpress.Pdf.PdfOptionalContentUsageApplication"/> objects.
 </value>
 
 

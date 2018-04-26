@@ -13,8 +13,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المراجعين في النظام" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المراجعين في النظام" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -22,8 +22,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="جلسات اليوم" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="جلسات اليوم" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -31,8 +31,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المبلغين برسالة" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المبلغين برسالة" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -40,8 +40,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المبلغين برسالة" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المبلغين برسالة" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -49,8 +49,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المبلغين برسالة" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المبلغين برسالة" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -58,8 +58,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المبلغين برسالة" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المبلغين برسالة" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>
@@ -67,8 +67,8 @@
                     <Grid>
                         <Label Style="{StaticResource FontAwesome}" Panel.ZIndex="1" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Content="&#xf0c0;" Opacity="0.3" FontSize="100" />
                         <DockPanel Panel.ZIndex="2" LastChildFill="True">
-                            <Label Style="{StaticResource DroidKufiRegular}" DockPanel.Dock="Top" Content="المبلغين برسالة" />
-                            <Label Style="{StaticResource DroidKufiRegular}" FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
+                            <Label  DockPanel.Dock="Top" Content="المبلغين برسالة" />
+                            <Label  FontWeight="Bold" DockPanel.Dock="Top" FontSize="50" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="99,999" />
                         </DockPanel>
                     </Grid>
                 </Border>

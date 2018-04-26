@@ -1538,6 +1538,62 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
+        <member name="T:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest">
+
+            <summary>
+                <para>Lists the values that identify the Layout Control's visual elements. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.ControlsArea">
+            <summary>
+                <para>The test point belongs to a control which is located within a layout item.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.HSizing">
+            <summary>
+                <para>A layout item is being or about to be resized horizontally. See the <see cref="P:DevExpress.XtraLayout.HitInfo.BaseLayoutItemHitInfo.IsSizing"/> topic.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.Item">
+            <summary>
+                <para>The test point belongs to a layout item, group or tabbed group.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.None">
+            <summary>
+                <para>The test point does not belong to any visual element or is outside the LayoutControl.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.TextArea">
+            <summary>
+                <para>The test point belongs to a layout item's text area.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.VSizing">
+            <summary>
+                <para>A layout item is being or about to be resized vertically. See the <see cref="P:DevExpress.XtraLayout.HitInfo.BaseLayoutItemHitInfo.IsSizing"/> topic.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraLayout.BaseLayoutItemOptionsToolTip">
 
             <summary>
@@ -2040,6 +2096,245 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
+        <member name="T:DevExpress.XtraLayout.EmptySpaceItem">
+
+            <summary>
+                <para>Used to insert empty regions in the Layout Control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the EmptySpaceItem class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.#ctor(DevExpress.XtraLayout.LayoutControlGroup)">
+            <summary>
+                <para>Initializes a new instance of the EmptySpaceItem class with the specified parent group.
+</para>
+            </summary>
+            <param name="parent">
+		A <see cref="T:DevExpress.XtraLayout.LayoutControlGroup"/> object that owns the created item.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.AllowHotTrack">
+            <summary>
+                <para>This property is not supported by the EmptySpaceItem class.
+</para>
+            </summary>
+            <value><b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ContentVisible">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.Control">
+            <summary>
+                <para>Not supported.
+</para>
+            </summary>
+            <value><b>null</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlAlignment">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlMaxSize">
+            <summary>
+                <para>Not supported.
+</para>
+            </summary>
+            <value>A <see cref="F:System.Drawing.Size.Empty"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlMinSize">
+            <summary>
+                <para>Not supported.
+</para>
+            </summary>
+            <value>A <see cref="F:System.Drawing.Size.Empty"/> structure.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.FillControlToClientArea">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.GetDefaultText">
+            <summary>
+                <para>Returns the default value of the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> value that specifies the default value of  the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.HighlightFocusedItem">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.Image">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageAlignment">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageIndex">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageOptions">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageToTextDistance">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.MaxSize">
+            <summary>
+                <para>Gets or sets the maximum size of the EmptySpaceItem.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure that defines the item's maximum width and height.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.MinSize">
+            <summary>
+                <para>Gets or sets the minimum size of the EmptySpaceItem.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Size"/> structure that defines the item's minimum width and height.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextLocation">
+            <summary>
+                <para>Not supported.
+</para>
+            </summary>
+            <value>The  <see cref="F:DevExpress.Utils.Locations.Default"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextToControlDistance">
+            <summary>
+                <para>Not supported.
+</para>
+            </summary>
+            <value>Zero.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextVisible">
+            <summary>
+                <para>Gets or sets whether the text region is visible.
+</para>
+            </summary>
+            <value><b>true</b> if the text region is visible; otherwise, <b>false</b>.
+
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TrimClientAreaToControl">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TypeName">
+            <summary>
+                <para>Gets the name of the item's type.
+</para>
+            </summary>
+            <value>The EmptySpaceItem value.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraLayout.Localization.LayoutResLocalizer">
 
             <summary>
@@ -2128,6 +2423,103 @@ This property indicates when changes to the bound editor property are propagated
             </summary>
             <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, which provides resources based on the thread's culture.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraLayout.LayoutAppearanceCollection">
+
+            <summary>
+                <para>Provides the appearance settings used to paint a LayoutControl.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraLayout.LayoutAppearanceCollection.#ctor">
+            <summary>
+                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.LayoutAppearanceCollection"/> class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.Control">
+            <summary>
+                <para>Gets the appearance settings used to paint the contents of all the editors owned by the LayoutControl.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the editor's contents.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDisabled">
+            <summary>
+                <para>Gets the appearance settings used to paint the contents of the editors owned by the LayoutControl when they are disabled. This option is only in effect for DevExpress controls that support the Style Controller mechanism.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the contents of the editors when they are disabled.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDropDown">
+            <summary>
+                <para>Gets the appearance settings used to paint the popup window of all the editors owned by the LayoutControl.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the editor's popup window.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDropDownHeader">
+            <summary>
+                <para>Gets the appearance settings used to paint the header panel within the popup windows of all the editors owned by the LayoutControl.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the header panel within the popup window.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlFocused">
+            <summary>
+                <para>Gets the appearance settings used to paint the currently focused editor within the LayoutControl.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance setting used to paint the currently focused editor within the LayoutControl.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlReadOnly">
+            <summary>
+                <para>Gets the appearance settings used to paint the contents of the editors owned by the LayoutControl when they are in the read-only state. This option is only in effect for DevExpress controls that support the Style Controller mechanism.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the corresponding appearance settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.DisabledLayoutGroupCaption">
+            <summary>
+                <para>Gets the appearance settings used to paint captions of disabled layout groups.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains corresponding appearance settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.DisabledLayoutItem">
+            <summary>
+                <para>Gets the appearance settings used to paint captions of disabled layout items or items that display disabled controls.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains corresponding appearance settings.
+</value>
 
 
         </member>
@@ -2474,6 +2866,14 @@ This property indicates when changes to the bound editor property are propagated
 
 
         </member>
+        <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreGroupEnabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreGroupPadding">
             <summary>
                 <para>Gets or sets whether layout groups' padding settings (<see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Padding"/>) are restored when restoring the control's layout from a data store.
@@ -2511,6 +2911,14 @@ This property indicates when changes to the bound editor property are propagated
             </summary>
             <value><b>true</b> to restore the corresponding settings; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraLayout.LayoutSerializationOptions.RestoreLayoutItemEnabled">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -3978,245 +4386,6 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
 
 
         </member>
-        <member name="T:DevExpress.XtraLayout.EmptySpaceItem">
-
-            <summary>
-                <para>Used to insert empty regions in the Layout Control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.#ctor">
-            <summary>
-                <para>Initializes a new instance of the EmptySpaceItem class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.#ctor(DevExpress.XtraLayout.LayoutControlGroup)">
-            <summary>
-                <para>Initializes a new instance of the EmptySpaceItem class with the specified parent group.
-</para>
-            </summary>
-            <param name="parent">
-		A <see cref="T:DevExpress.XtraLayout.LayoutControlGroup"/> object that owns the created item.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.AllowHotTrack">
-            <summary>
-                <para>This property is not supported by the EmptySpaceItem class.
-</para>
-            </summary>
-            <value><b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ContentVisible">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.Control">
-            <summary>
-                <para>Not supported.
-</para>
-            </summary>
-            <value><b>null</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlAlignment">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlMaxSize">
-            <summary>
-                <para>Not supported.
-</para>
-            </summary>
-            <value>A <see cref="F:System.Drawing.Size.Empty"/> structure.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ControlMinSize">
-            <summary>
-                <para>Not supported.
-</para>
-            </summary>
-            <value>A <see cref="F:System.Drawing.Size.Empty"/> structure.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.FillControlToClientArea">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.EmptySpaceItem.GetDefaultText">
-            <summary>
-                <para>Returns the default value of the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> value that specifies the default value of  the <see cref="P:DevExpress.XtraLayout.BaseLayoutItem.Text"/> property.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.HighlightFocusedItem">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.Image">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageAlignment">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageIndex">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageOptions">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.ImageToTextDistance">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.MaxSize">
-            <summary>
-                <para>Gets or sets the maximum size of the EmptySpaceItem.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure that defines the item's maximum width and height.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.MinSize">
-            <summary>
-                <para>Gets or sets the minimum size of the EmptySpaceItem.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Size"/> structure that defines the item's minimum width and height.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextLocation">
-            <summary>
-                <para>Not supported.
-</para>
-            </summary>
-            <value>The  <see cref="F:DevExpress.Utils.Locations.Default"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextToControlDistance">
-            <summary>
-                <para>Not supported.
-</para>
-            </summary>
-            <value>Zero.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TextVisible">
-            <summary>
-                <para>Gets or sets whether the text region is visible.
-</para>
-            </summary>
-            <value><b>true</b> if the text region is visible; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TrimClientAreaToControl">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.EmptySpaceItem.TypeName">
-            <summary>
-                <para>Gets the name of the item's type.
-</para>
-            </summary>
-            <value>The EmptySpaceItem value.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraLayout.LayoutItemContainer">
 
             <summary>
@@ -4355,159 +4524,6 @@ For the root group, its parent is the LayoutControl itself (the LayoutControl's 
 </para>
             </summary>
             <value>Zero.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest">
-
-            <summary>
-                <para>Lists the values that identify the Layout Control's visual elements. 
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.ControlsArea">
-            <summary>
-                <para>The test point belongs to a control which is located within a layout item.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.HSizing">
-            <summary>
-                <para>A layout item is being or about to be resized horizontally. See the <see cref="P:DevExpress.XtraLayout.HitInfo.BaseLayoutItemHitInfo.IsSizing"/> topic.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.Item">
-            <summary>
-                <para>The test point belongs to a layout item, group or tabbed group.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.None">
-            <summary>
-                <para>The test point does not belong to any visual element or is outside the LayoutControl.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.TextArea">
-            <summary>
-                <para>The test point belongs to a layout item's text area.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraLayout.HitInfo.LayoutItemHitTest.VSizing">
-            <summary>
-                <para>A layout item is being or about to be resized vertically. See the <see cref="P:DevExpress.XtraLayout.HitInfo.BaseLayoutItemHitInfo.IsSizing"/> topic.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraLayout.LayoutAppearanceCollection">
-
-            <summary>
-                <para>Provides the appearance settings used to paint a LayoutControl.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraLayout.LayoutAppearanceCollection.#ctor">
-            <summary>
-                <para>Initializes a new instance of the <see cref="T:DevExpress.XtraLayout.LayoutAppearanceCollection"/> class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.Control">
-            <summary>
-                <para>Gets the appearance settings used to paint the contents of all the editors owned by the LayoutControl.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the editor's contents.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDisabled">
-            <summary>
-                <para>Gets the appearance settings used to paint the contents of the editors owned by the LayoutControl when they are disabled. This option is only in effect for DevExpress controls that support the Style Controller mechanism.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the contents of the editors when they are disabled.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDropDown">
-            <summary>
-                <para>Gets the appearance settings used to paint the popup window of all the editors owned by the LayoutControl.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the editor's popup window.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlDropDownHeader">
-            <summary>
-                <para>Gets the appearance settings used to paint the header panel within the popup windows of all the editors owned by the LayoutControl.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance settings used to paint the header panel within the popup window.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlFocused">
-            <summary>
-                <para>Gets the appearance settings used to paint the currently focused editor within the LayoutControl.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the appearance setting used to paint the currently focused editor within the LayoutControl.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.ControlReadOnly">
-            <summary>
-                <para>Gets the appearance settings used to paint the contents of the editors owned by the LayoutControl when they are in the read-only state. This option is only in effect for DevExpress controls that support the Style Controller mechanism.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.AppearanceObject"/> object which provides the corresponding appearance settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.DisabledLayoutGroupCaption">
-            <summary>
-                <para>Gets the appearance settings used to paint captions of disabled layout groups.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains corresponding appearance settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraLayout.LayoutAppearanceCollection.DisabledLayoutItem">
-            <summary>
-                <para>Gets the appearance settings used to paint captions of disabled layout items or items that display disabled controls.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.AppearanceObject"/> object that contains corresponding appearance settings.
 </value>
 
 

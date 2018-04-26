@@ -9,7 +9,7 @@
              d:DesignHeight="600" d:DesignWidth="600" FlowDirection="LeftToRight">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="220" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <DockPanel Grid.Column="0" Background="#ccc" LastChildFill="True">
@@ -21,7 +21,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf272;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.dateFromName}" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.dateFromName}" />
                 </Grid>
                 <DatePicker Name="dateSessionFrom" SelectedDate="2017-01-01" />
             </StackPanel>
@@ -32,7 +32,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf271;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.dateToName}" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.dateToName}" />
                 </Grid>
                 <DatePicker Name="dateSessionTo" SelectedDate="2018-01-01"/>
             </StackPanel>
@@ -45,27 +45,33 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf007;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblClientNameTitle}" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.lblClientNameTitle}" />
                 </Grid>
                 <!--<ComboBox Name="cmbClients" Text="الكل" IsEditable="True" >
                     <Button/>
                 </ComboBox>-->
                 <TextBox Name="txtClient" FontSize="18" TextChanged="txtClient_TextChanged"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
             </StackPanel>
-            <StackPanel DockPanel.Dock="Top" Name="ClientViewerStack" Orientation="Vertical">
+            
+            <StackPanel DockPanel.Dock="Top"  Orientation="Vertical">
+                <ScrollViewer MaxHeight="300" >
+                    <StackPanel DockPanel.Dock="Top"  Orientation="Vertical" Name="ClientViewerStack">
+                        
+                    </StackPanel>
+                </ScrollViewer>
             </StackPanel>
-            <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="5">
+            <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="5" Visibility="Hidden">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="40" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf0f0;" FontSize="20" />
-                    <Label Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.txtUserName}" />
+                    <Label Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.txtUserName}" />
                 </Grid>
                 <TextBox FontSize="18" Name="txtUser" TextChanged="txtUser_TextChanged"/>
-                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Left"  Content="{x:Static resx:Default.lblEmptyMeanAll}" FontSize="9"/>
             </StackPanel>
             <StackPanel Name="UserViewerStack" DockPanel.Dock="Top" Orientation="Vertical">
             </StackPanel>
@@ -76,7 +82,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Foreground="{StaticResource backgroundBrush}" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf002;" FontSize="20" />
-                    <Label Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnSearchName}" FontSize="20"/>
+                    <Label Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.btnSearchName}" FontSize="20"/>
                 </Grid>
             </StackPanel>
             <StackPanel Name="btnSessionNew" MouseLeftButtonUp="btnSessionNew_MouseLeftButtonUp" DockPanel.Dock="Top" Orientation="Vertical" Margin="5" Cursor="Arrow" Background="#2d2d2d">
@@ -86,7 +92,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
                     <Label Name="btnSessionNewIcon" Foreground="{StaticResource backgroundBrush}" Grid.Column="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Content="&#xf067;" FontSize="20" />
-                    <Label Name="btnSessionNewTitle" Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center" Style="{StaticResource DroidKufiRegular}" Content="{x:Static resx:Default.btnSessionNewTitle}" FontSize="20"/>
+                    <Label Name="btnSessionNewTitle" Foreground="{StaticResource backgroundBrush}" Grid.Column="1" VerticalContentAlignment="Center"  Content="{x:Static resx:Default.btnSessionNewTitle}" FontSize="20"/>
                 </Grid>
             </StackPanel>
             <StackPanel DockPanel.Dock="Top" Orientation="Vertical" Margin="5">
@@ -100,7 +106,7 @@
             
             <Label Content="&#xf29a;" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" FontSize="40" />
         </DockPanel>
-        <Grid  Grid.Column="1">
+        <Grid  Grid.Column="1" Background="{StaticResource backgroundBrush}">
             <ScrollViewer>
                 <StackPanel Name="SessionsContent" Orientation="Vertical">
                     

@@ -1178,81 +1178,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraGauges.Core.Base.ColorScheme">
-
-            <summary>
-                <para>An object that allows you to paint multiple gauge elements at once using the same color.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ColorScheme class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.Color">
-            <summary>
-                <para>Gets or sets the color that all target gauge elements should be painted.
-
-</para>
-            </summary>
-            <value>A <see cref="Color"/> object that all target gauge elements should be painted.
-
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGauges.Core.Base.ColorScheme.PropertyChanged">
-            <summary>
-                <para>Occurs whenever any of these ColorScheme's properties changes its value.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.Reset">
-            <summary>
-                <para>Restores default values for all ColorScheme properties.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ShouldSerialize">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.TargetElements">
-            <summary>
-                <para>Gets or sets which gauge elements this ColorScheme affects.
-</para>
-            </summary>
-            <value>A <see cref="TargetElement"/> enumerator value that specifies which gauge elements this ColorScheme affects.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ToString">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraGauges.Core.Model.BaseGauge">
 
             <summary>
@@ -4689,6 +4614,81 @@
 
             </param>
             <returns>A <see cref="T:System.String"/> corresponding to the specified identifier.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Base.ColorScheme">
+
+            <summary>
+                <para>An object that allows you to paint multiple gauge elements at once using the same color.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ColorScheme class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.Color">
+            <summary>
+                <para>Gets or sets the color that all target gauge elements should be painted.
+
+</para>
+            </summary>
+            <value>A <see cref="Color"/> object that all target gauge elements should be painted.
+
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGauges.Core.Base.ColorScheme.PropertyChanged">
+            <summary>
+                <para>Occurs whenever any of these ColorScheme's properties changes its value.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.Reset">
+            <summary>
+                <para>Restores default values for all ColorScheme properties.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ShouldSerialize">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.TargetElements">
+            <summary>
+                <para>Gets or sets which gauge elements this ColorScheme affects.
+</para>
+            </summary>
+            <value>A <see cref="TargetElement"/> enumerator value that specifies which gauge elements this ColorScheme affects.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ToString">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
 </returns>
 
 

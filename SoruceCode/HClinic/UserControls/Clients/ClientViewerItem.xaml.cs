@@ -74,8 +74,17 @@ namespace HClinic.UserControls.Clients
                     this.parentDates.ClientViewerStack.Children.Clear();
                     this.parentDates.btnAddDate.Background = (Brush)new BrushConverter().ConvertFromString(FindResource("foregroundColor").ToString());
                     this.parentDates.btnAddDate.Cursor = Cursors.Hand;
-                    this.parentDates.btnAddDateName.Content = HClinic.Assets.Languages.Default.lblAddDate;
-                    this.parentDates.btnAddDateIcon.Content = "\uf067";
+                    if (parentDates.isAdd)
+                    {
+                        this.parentDates.btnAddDateName.Content = HClinic.Assets.Languages.Default.lblAddDate;
+                        this.parentDates.btnAddDateIcon.Content = "\uf067";
+                    }
+                    else
+                    {
+                        this.parentDates.btnAddDateName.Content = HClinic.Assets.Languages.Default.btnUpdateName;
+                        this.parentDates.btnAddDateIcon.Content = "\uf021";
+                    }
+                    
                 }
                 else
                 {
@@ -84,6 +93,7 @@ namespace HClinic.UserControls.Clients
                     this.parentSessions.ClientViewerStack.Children.Clear();
                     this.parentSessions.btnSessionNew.Background = (Brush)new BrushConverter().ConvertFromString(FindResource("foregroundColor").ToString());
                     this.parentSessions.btnSessionNew.Cursor = Cursors.Hand;
+                    this.parentSessions.btnSearch_MouseLeftButtonUp(null, null);
                 }
             }
             else

@@ -799,94 +799,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraRichEdit.RichEditMenuType">
-
-            <summary>
-                <para>Lists menu types respective to visual elements for which a popup menu is invoked. 
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Comment">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a comment. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Field">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a field. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.FloatingObject">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a floating object - a picture or text box. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Footer">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a footer.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Header">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a header.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Hyperlink">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a hyperlink.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.InlinePicture">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking an inline picture.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.TableCell">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a table cell.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Text">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking a text in the document.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.TextBox">
-            <summary>
-                <para>Specifies a context menu which can be invoked by right-clicking inside a text box.
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.XtraRichEdit.ImeCloseStatus">
 
             <summary>
@@ -1224,7 +1136,7 @@
         <member name="T:DevExpress.XtraRichEdit.RichEditControl">
 
             <summary>
-                <para>The editor that allows you to create, load, modify, print, save and convert rich text documents in different formats. Provides numerous features, such as importing and exporting options, multiple predefined document layouts, conversion between different measurement units, field support, etc. See Rich Text Editor.
+                <para>The editor that allows you to create, load, modify, print, save and convert rich text documents in different formats. Provides numerous features, such as importing and exporting options, multiple predefined document layouts, conversion between different measurement units, field support, etc.
 </para>
             </summary>
 
@@ -1502,7 +1414,7 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditControl.AutoSizeMode">
             <summary>
-                <para>For internal use.
+                <para>Gets or sets whether the RichEditControl resizes to accommodate the displayed text.
 </para>
             </summary>
             <value>An <see cref="T:DevExpress.XtraRichEdit.AutoSizeMode"/> enumeration value.
@@ -2449,7 +2361,7 @@ The default is <b>DocumentLayoutUnit.Pixel</b>.
 </para>
             </summary>
             <param name="parent">
-		The <see cref="T:System.Windows.Forms.IWin32Window"/> that represents the parent window.
+		The <see cref="T:System.Windows.Forms.IWin32Window"/> object that is the parent window.
 
             </param>
 
@@ -3537,6 +3449,94 @@ The default is <b>DocumentLayoutUnit.Pixel</b>.
 
 
         </member>
+        <member name="T:DevExpress.XtraRichEdit.RichEditMenuType">
+
+            <summary>
+                <para>Lists menu types respective to visual elements for which a popup menu is invoked. 
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Comment">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a comment. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Field">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a field. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.FloatingObject">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a floating object - a picture or text box. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Footer">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a footer.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Header">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a header.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Hyperlink">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a hyperlink.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.InlinePicture">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking an inline picture.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.TableCell">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a table cell.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.Text">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking a text in the document.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraRichEdit.RichEditMenuType.TextBox">
+            <summary>
+                <para>Specifies a context menu which can be invoked by right-clicking inside a text box.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit">
 
             <summary>
@@ -3754,6 +3754,14 @@ The default is <b>DocumentLayoutUnit.Pixel</b>.
             </summary>
             <value><b>true</b> if the mouse caret is displayed in read-only mode; otherwise, <b>false</b>.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemRichTextEdit.UseTextEditorForAutoFilter">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

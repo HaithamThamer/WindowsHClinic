@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator2 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator2 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblClientIdBarcode = new DevExpress.XtraReports.UI.XRBarCode();
+            this.lblClientId = new DevExpress.XtraReports.UI.XRLabel();
             this.lblClientName = new DevExpress.XtraReports.UI.XRLabel();
             this.lblSessionId = new DevExpress.XtraReports.UI.XRLabel();
             this.lblSessionIdBarcode = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
-            this.lblClinicName = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblDoctorName = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.lblClientId = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblClientIdBarcode = new DevExpress.XtraReports.UI.XRBarCode();
+            this.lblDoctorDescription = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -51,13 +52,41 @@
             this.lblClientIdBarcode,
             this.lblClientId,
             this.lblClientName,
-            this.lblSessionId,
             this.lblSessionIdBarcode,
             this.xrLabel2});
-            this.Detail.HeightF = 285.4167F;
+            this.Detail.HeightF = 177.2733F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // lblClientIdBarcode
+            // 
+            this.lblClientIdBarcode.AutoModule = true;
+            this.lblClientIdBarcode.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 63.08333F);
+            this.lblClientIdBarcode.Name = "lblClientIdBarcode";
+            this.lblClientIdBarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.lblClientIdBarcode.ShowText = false;
+            this.lblClientIdBarcode.SizeF = new System.Drawing.SizeF(259.375F, 32.37498F);
+            this.lblClientIdBarcode.StylePriority.UseTextAlignment = false;
+            this.lblClientIdBarcode.Symbology = code128Generator1;
+            this.lblClientIdBarcode.Text = "999";
+            this.lblClientIdBarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // lblClientId
+            // 
+            this.lblClientId.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblClientId.BorderWidth = 2F;
+            this.lblClientId.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientId.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 0F);
+            this.lblClientId.Name = "lblClientId";
+            this.lblClientId.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblClientId.SizeF = new System.Drawing.SizeF(259.3751F, 63.08333F);
+            this.lblClientId.StylePriority.UseBorders = false;
+            this.lblClientId.StylePriority.UseBorderWidth = false;
+            this.lblClientId.StylePriority.UseFont = false;
+            this.lblClientId.StylePriority.UseTextAlignment = false;
+            this.lblClientId.Text = "999";
+            this.lblClientId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblClientName
             // 
@@ -75,20 +104,19 @@
             // 
             // lblSessionId
             // 
-            this.lblSessionId.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblSessionId.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.lblSessionId.BorderWidth = 2F;
-            this.lblSessionId.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSessionId.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 0F);
+            this.lblSessionId.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSessionId.LocationFloat = new DevExpress.Utils.PointFloat(217.7083F, 6.333294F);
             this.lblSessionId.Name = "lblSessionId";
             this.lblSessionId.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSessionId.SizeF = new System.Drawing.SizeF(10.62498F, 63.08333F);
+            this.lblSessionId.SizeF = new System.Drawing.SizeF(72.29176F, 33.30651F);
             this.lblSessionId.StylePriority.UseBorders = false;
             this.lblSessionId.StylePriority.UseBorderWidth = false;
             this.lblSessionId.StylePriority.UseFont = false;
             this.lblSessionId.StylePriority.UseTextAlignment = false;
             this.lblSessionId.Text = "999";
             this.lblSessionId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.lblSessionId.Visible = false;
             // 
             // lblSessionIdBarcode
             // 
@@ -121,8 +149,9 @@
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblDoctorDescription,
             this.xrLine2,
-            this.lblClinicName});
+            this.lblDoctorName});
             this.TopMargin.HeightF = 81F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -136,30 +165,32 @@
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.SizeF = new System.Drawing.SizeF(290F, 6.333319F);
             // 
-            // lblClinicName
+            // lblDoctorName
             // 
-            this.lblClinicName.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.lblClinicName.BorderWidth = 2F;
-            this.lblClinicName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClinicName.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
-            this.lblClinicName.Name = "lblClinicName";
-            this.lblClinicName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblClinicName.SizeF = new System.Drawing.SizeF(270F, 60.99999F);
-            this.lblClinicName.StylePriority.UseBorders = false;
-            this.lblClinicName.StylePriority.UseBorderWidth = false;
-            this.lblClinicName.StylePriority.UseFont = false;
-            this.lblClinicName.StylePriority.UseTextAlignment = false;
-            this.lblClinicName.Text = "أسم الدكتور العيادة";
-            this.lblClinicName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblDoctorName.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblDoctorName.BorderWidth = 2F;
+            this.lblDoctorName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctorName.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
+            this.lblDoctorName.Name = "lblDoctorName";
+            this.lblDoctorName.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.lblDoctorName.SizeF = new System.Drawing.SizeF(270F, 32.875F);
+            this.lblDoctorName.StylePriority.UseBorders = false;
+            this.lblDoctorName.StylePriority.UseBorderWidth = false;
+            this.lblDoctorName.StylePriority.UseFont = false;
+            this.lblDoctorName.StylePriority.UsePadding = false;
+            this.lblDoctorName.StylePriority.UseTextAlignment = false;
+            this.lblDoctorName.Text = "lblDoctorName";
+            this.lblDoctorName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // BottomMargin
             // 
             this.BottomMargin.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.BottomMargin.BorderWidth = 1F;
             this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblSessionId,
             this.xrLine1,
             this.xrPageInfo1});
-            this.BottomMargin.HeightF = 54F;
+            this.BottomMargin.HeightF = 54.75331F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.StylePriority.UseBorders = false;
@@ -179,44 +210,31 @@
             this.xrPageInfo1.AnchorHorizontal = ((DevExpress.XtraReports.UI.HorizontalAnchorStyles)((DevExpress.XtraReports.UI.HorizontalAnchorStyles.Left | DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right)));
             this.xrPageInfo1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrPageInfo1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 6.333319F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 6.333288F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(290F, 47.66668F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(217.7083F, 33.29501F);
             this.xrPageInfo1.StylePriority.UseFont = false;
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrPageInfo1.TextFormatString = "{0:yyyy-MM-dd hh:mm:ss tt}";
             // 
-            // lblClientId
+            // lblDoctorDescription
             // 
-            this.lblClientId.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.lblClientId.BorderWidth = 2F;
-            this.lblClientId.Font = new System.Drawing.Font("Calibri", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientId.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 0F);
-            this.lblClientId.Name = "lblClientId";
-            this.lblClientId.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblClientId.SizeF = new System.Drawing.SizeF(259.3751F, 63.08333F);
-            this.lblClientId.StylePriority.UseBorders = false;
-            this.lblClientId.StylePriority.UseBorderWidth = false;
-            this.lblClientId.StylePriority.UseFont = false;
-            this.lblClientId.StylePriority.UseTextAlignment = false;
-            this.lblClientId.Text = "999";
-            this.lblClientId.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // lblClientIdBarcode
-            // 
-            this.lblClientIdBarcode.AutoModule = true;
-            this.lblClientIdBarcode.LocationFloat = new DevExpress.Utils.PointFloat(20.62499F, 63.08333F);
-            this.lblClientIdBarcode.Name = "lblClientIdBarcode";
-            this.lblClientIdBarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
-            this.lblClientIdBarcode.ShowText = false;
-            this.lblClientIdBarcode.SizeF = new System.Drawing.SizeF(259.375F, 32.37498F);
-            this.lblClientIdBarcode.StylePriority.UseTextAlignment = false;
-            this.lblClientIdBarcode.Symbology = code128Generator1;
-            this.lblClientIdBarcode.Text = "999";
-            this.lblClientIdBarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblDoctorDescription.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.lblDoctorDescription.BorderWidth = 2F;
+            this.lblDoctorDescription.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctorDescription.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 42.875F);
+            this.lblDoctorDescription.Name = "lblDoctorDescription";
+            this.lblDoctorDescription.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblDoctorDescription.SizeF = new System.Drawing.SizeF(270F, 28.125F);
+            this.lblDoctorDescription.StylePriority.UseBorders = false;
+            this.lblDoctorDescription.StylePriority.UseBorderWidth = false;
+            this.lblDoctorDescription.StylePriority.UseFont = false;
+            this.lblDoctorDescription.StylePriority.UseTextAlignment = false;
+            this.lblDoctorDescription.Text = "lblDoctorDescription";
+            this.lblDoctorDescription.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // SessionTicket
             // 
@@ -224,7 +242,7 @@
             this.Detail,
             this.TopMargin,
             this.BottomMargin});
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 81, 54);
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 81, 55);
             this.PageHeight = 300;
             this.PageWidth = 290;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
@@ -243,7 +261,7 @@
         private DevExpress.XtraReports.UI.DetailBand Detail;
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
-        private DevExpress.XtraReports.UI.XRLabel lblClinicName;
+        private DevExpress.XtraReports.UI.XRLabel lblDoctorName;
         private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.XRLine xrLine1;
         private DevExpress.XtraReports.UI.XRLabel lblClientName;
@@ -253,5 +271,6 @@
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRBarCode lblClientIdBarcode;
         private DevExpress.XtraReports.UI.XRLabel lblClientId;
+        private DevExpress.XtraReports.UI.XRLabel lblDoctorDescription;
     }
 }

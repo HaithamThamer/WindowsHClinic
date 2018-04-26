@@ -42,7 +42,6 @@ namespace HClinic.UserControls.Clients
             this.date = date;
             this.client = client;
             this.user = user;
-
             lblClientName.Content = client.name;
             lblClientPhone.Content = client.phone;
             lblDateCreation.Content = date.creation.ToString(App.Constants.DateFormat);
@@ -52,30 +51,11 @@ namespace HClinic.UserControls.Clients
                 lblClientName.Foreground = lblClientPhone.Foreground = lblDateCreation.Foreground = lblDatetime.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#ccc");
             }
             btnRemove.Cursor = btnUpdate.Cursor = Cursors.Hand;
-        }
-        public DateItem(Dates parent,int dateId,bool isRepored, DateTime dateCreation, DateTime dateDatetime, string clientName,string clientPhone):this()
-        {
-            this.parent = parent;
-            this.dateId = dateId;
-            if (dateId == 0)
-            {
-                lblClientName.Content = "أسم المراجع";
-                lblClientPhone.Content = "الهاتف";
-                lblDateCreation.Content = "تاريخ الانشاء";
-                lblDatetime.Content = "تاريخ الموعد";
-                BorderMain.Cursor = Cursors.Arrow;
-            }
-            else
-            {
-                lblClientName.Content = clientName;
-                lblClientPhone.Content = clientPhone;
-                lblDateCreation.Content = dateCreation.ToString(App.Constants.DateFormat);
-                lblDatetime.Content = dateDatetime.ToString(App.Constants.DateFormat);
-                if (isRepored)
-                {
-                    lblClientName.Foreground = lblClientPhone.Foreground = lblDateCreation.Foreground = lblDatetime.Foreground = (SolidColorBrush)new BrushConverter().ConvertFrom("#ccc");
-                }
-            }
+            lblClientName.FontWeight = lblClientPhone.FontWeight = lblDateCreation.FontWeight = lblDatetime.FontWeight = FontWeights.Regular;
+            lblClientName.HorizontalContentAlignment =  lblClientPhone.HorizontalAlignment = lblDateCreation.HorizontalContentAlignment = lblDatetime.HorizontalContentAlignment = HorizontalAlignment.Left;
+            BorderMain.BorderThickness = new Thickness(0, 0, 0, 2);
+            BorderMain.Margin = new Thickness(5, 0, 5, 0);
+            BorderMain.Padding = new Thickness(2);
         }
         private void btnRemove_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -84,7 +64,7 @@ namespace HClinic.UserControls.Clients
             if ((bool)new Windows.Confirm("","").ShowDialog())
             {
                 App.databasceConnection.query(string.Format("delete from tbl_dates where id = '{0}';", date.id));
-                this.parent.btnAddDateName.Content = "أضافة";
+                this.parent.btnAddDateName.Content = "Add";
                 this.parent.btnAddDateIcon.Content = "\uf067";
                 this.parent.btnAddDate.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#2d2d2d"));
                 this.parent.btnSearch_MouseLeftButtonUp(null, null);
@@ -97,8 +77,11 @@ namespace HClinic.UserControls.Clients
                 return;
             this.parent.selectedClient = client;
             this.parent.txtClient.Text = client.name;
-            this.parent.btnAddDateName.Content = "تعديل";
+            this.parent.selectedDate = date;
+            this.parent.btnAddDateName.Content = Assets.Languages.Default.btnUpdateName;
             this.parent.btnAddDateIcon.Content = "\uf021";
+            this.parent.btnAddDate.Cursor = Cursors.Hand;
+            this.parent.isAdd = false;
             this.parent.btnAddDate.Background = (Brush)new BrushConverter().ConvertFromString(FindResource("foregroundColor").ToString());
             this.parent.ClientViewerStack.Children.Clear();
         }

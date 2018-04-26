@@ -19,17 +19,24 @@ namespace HClinic.Classes.Clients
         public DateTime creation;
         public User user;
         public DiabetesTypes DiabetesType;
+        public Languages language;
         public enum DiabetesTypes
         {
             TypeOne,
             TypeTwo,
             GDM
         }
+        public enum Languages
+        {
+            Arabic,
+            Kurdish,
+            English
+        }
         public Client()
         {
 
         }
-        public Client(int id,string name,string phone,string job,string address,DateTime birthday, DiabetesTypes DiabetesType, bool isActive,bool isMale,DateTime creation,User user)
+        public Client(int id,string name,string phone,string job,string address,DateTime birthday, DiabetesTypes DiabetesType, Languages language, bool isActive,bool isMale,DateTime creation,User user)
         {
             this.id = id;
             this.name = name;
@@ -38,6 +45,7 @@ namespace HClinic.Classes.Clients
             this.address = address;
             this.birthday = birthday;
             this.DiabetesType = DiabetesType;
+            this.language = language;
             this.isActive = isActive;
             this.isMale = isMale;
             this.creation = creation;
@@ -46,7 +54,7 @@ namespace HClinic.Classes.Clients
         public static List<Client> get()
         {
             List<Client> clients = new List<Client>();
-            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select 	tbl_clients.id as client_id,	tbl_clients.name as client_name,	tbl_clients.phone as client_phone,	tbl_clients.job as client_job,	tbl_clients.address as client_address,	tbl_clients.birthday as client_birthday,	tbl_clients.diabetesType as client_diabetesType,	tbl_clients.is_active as client_is_active,tbl_clients.is_active as client_is_male,	tbl_clients.creation as client_creation,	tbl_users.id as user_id,	tbl_users.name as user_name,	tbl_users.password as user_password,	tbl_users.email as user_email,	tbl_users.phone as user_phone,	tbl_users.`type` as user_type from 	tbl_users,tbl_clients where	tbl_clients.user_id = tbl_users.id"));
+            System.Data.DataTable dt = App.databasceConnection.query(string.Format("select 	tbl_clients.id as client_id,	tbl_clients.name as client_name,	tbl_clients.phone as client_phone,	tbl_clients.job as client_job,	tbl_clients.address as client_address,	tbl_clients.birthday as client_birthday,	tbl_clients.diabetesType as client_diabetesType,tbl_clients.diabetesType as client_language,	tbl_clients.is_active as client_is_active,tbl_clients.is_active as client_is_male,	tbl_clients.creation as client_creation,	tbl_users.id as user_id,	tbl_users.name as user_name,	tbl_users.password as user_password,	tbl_users.email as user_email,	tbl_users.phone as user_phone,	tbl_users.`type` as user_type from 	tbl_users,tbl_clients where	tbl_clients.user_id = tbl_users.id"));
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 clients.Add(new Client(
@@ -57,6 +65,7 @@ namespace HClinic.Classes.Clients
                     dt.Rows[i]["client_address"].ToString(),
                     DateTime.Parse(dt.Rows[i]["client_birthday"].ToString()),
                     (Client.DiabetesTypes)int.Parse(dt.Rows[i]["client_diabetesType"].ToString()),
+                    (Client.Languages)int.Parse(dt.Rows[i]["client_language"].ToString()),
                     bool.Parse(dt.Rows[i]["client_is_active"].ToString()),
                     bool.Parse(dt.Rows[i]["client_is_male"].ToString()),
                     DateTime.Parse(dt.Rows[i]["client_creation"].ToString()),

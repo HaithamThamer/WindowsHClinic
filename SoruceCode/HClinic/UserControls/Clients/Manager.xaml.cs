@@ -50,6 +50,7 @@ namespace HClinic.UserControls.Clients
                         dt.Rows[i]["address"].ToString(),
                         DateTime.Parse(dt.Rows[i]["birthday"].ToString()),
                         (Client.DiabetesTypes)int.Parse(dt.Rows[i]["diabetesType"].ToString()),
+                        (Client.Languages)int.Parse(dt.Rows[i]["language"].ToString()),
                         dt.Rows[i]["is_active"].ToString() == "True",
                         dt.Rows[i]["is_male"].ToString() == "True",
                         DateTime.Parse(dt.Rows[i]["creation"].ToString()),

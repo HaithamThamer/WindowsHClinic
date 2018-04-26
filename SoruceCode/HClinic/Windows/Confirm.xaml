@@ -18,12 +18,12 @@
             </Grid.RowDefinitions>
             <DockPanel Name="TitleBar" Grid.Row="0" Background="{StaticResource foregroundBrush}" LastChildFill="True">
                 <Label Name="btnCloseSmall" DockPanel.Dock="Right" Style="{StaticResource FontAwesome}" Content="&#xf00d;" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="5" Cursor="Hand" MouseLeftButtonUp="btnCloseLarge_MouseLeftButtonUp"/>
-                <Label Name="lblTitle" DockPanel.Dock="Right" Style="{StaticResource DroidKufiRegular}" Content="lblTitle" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" MouseDown="lblTitle_MouseDown"/>
+                <Label Name="lblTitle" DockPanel.Dock="Right"  Content="lblTitle" Foreground="{StaticResource backgroundBrush}" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="5" MouseDown="lblTitle_MouseDown"/>
 
             </DockPanel>
             <Grid Name="MainContent" Grid.Row="1" Background="{StaticResource backgroundBrush}">
                 <Label Content="&#xf128;" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="182" Width="112" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource FontAwesome}" Foreground="{StaticResource foregroundBrush}" FontSize="100" BorderBrush="{StaticResource foregroundBrush}" BorderThickness="0,0,2,0"/>
-                <TextBlock Name="txtDescription" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Margin="127,10,0,0" Text="txtDescription" VerticalAlignment="Top" Width="155" Height="182" Foreground="{StaticResource foregroundBrush}" Style="{StaticResource DroidKufiRegular}"/>
+                <TextBlock Name="txtDescription" TextWrapping="WrapWithOverflow" HorizontalAlignment="Left" Margin="127,10,0,0" Text="txtDescription" VerticalAlignment="Top" Width="155" Height="182" Foreground="{StaticResource foregroundBrush}" />
 
             </Grid>
             <Grid Name="Buttons" Grid.Row="2" Background="{StaticResource foregroundBrush}">

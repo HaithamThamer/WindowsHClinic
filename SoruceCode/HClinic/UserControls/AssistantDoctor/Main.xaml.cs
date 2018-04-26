@@ -26,6 +26,11 @@ namespace HClinic.UserControls.AssistantDoctor
         {
             InitializeComponent();
             this.parent = parent;
+            foreach (var DiabetesType in Enum.GetValues(typeof(Classes.Clients.Client.DiabetesTypes)))
+            {
+                cmbClientDiabeteType.Items.Add(DiabetesType);
+            }
+            cmbClientDiabeteType.Text = "";
         }
 
         private void btnApply_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -34,7 +39,7 @@ namespace HClinic.UserControls.AssistantDoctor
 
             if (txtIdentify.Text != string.Empty)
             {
-                System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_clients.id as client_id, tbl_clients.name as client_name, tbl_clients.phone as client_phone, tbl_clients.job as client_job, tbl_clients.address as client_address, tbl_clients.birthday as client_birthday, tbl_clients.diabetesType as client_diabetesType, tbl_clients.is_active as client_is_active, tbl_clients.is_male as client_is_male, tbl_clients.creation as client_creation, tbl_clients.user_id as client_user_id, tbl_sessions.id as session_is, tbl_sessions.client_id as session_client_id, tbl_sessions.user_id as session_user_id, tbl_sessions.card_number as session_card_number,tbl_sessions.creation as session_creation, tbl_sessions.BP as session_BP, tbl_sessions.RBS as session_RBS, tbl_sessions.PR as session_PR, tbl_sessions.HbAlC as session_HbAlC,tbl_sessions.weight as session_weight, tbl_sessions.note as session_note,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.client_id = tbl_sessions.client_id order by tbl_dates.datetime desc limit 0,1),'2017-01-01 00:00:00') as date_last_datetime,getLastSessionDatetime(tbl_sessions.client_id,tbl_sessions.id) as session_last_datetime from tbl_clients, tbl_sessions where tbl_sessions.client_id = tbl_clients.id and " + ((bool)btnIdentifyTitle.IsChecked ? " tbl_clients.id = '{0}'" : "tbl_sessions.card_number = '{0}'") +" order by tbl_sessions.creation desc limit 0,1", txtIdentify.Text));
+                System.Data.DataTable dt = App.databasceConnection.query(string.Format("select tbl_clients.id as client_id, tbl_clients.name as client_name, tbl_clients.phone as client_phone, tbl_clients.job as client_job, tbl_clients.address as client_address, tbl_clients.birthday as client_birthday, tbl_clients.diabetesType as client_diabetesType, tbl_clients.language as client_language, tbl_clients.is_active as client_is_active, tbl_clients.is_male as client_is_male, tbl_clients.creation as client_creation, tbl_clients.user_id as client_user_id, tbl_sessions.id as session_is, tbl_sessions.client_id as session_client_id, tbl_sessions.user_id as session_user_id, tbl_sessions.card_number as session_card_number,tbl_sessions.creation as session_creation, tbl_sessions.BP as session_BP, tbl_sessions.RBS as session_RBS, tbl_sessions.PR as session_PR, tbl_sessions.HbAlC as session_HbAlC,tbl_sessions.weight as session_weight, tbl_sessions.note as session_note,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.client_id = tbl_sessions.client_id order by tbl_dates.datetime desc limit 0,1),'2017-01-01 00:00:00') as date_last_datetime,getLastSessionDatetime(tbl_sessions.client_id,tbl_sessions.id) as session_last_datetime,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.session_id = tbl_sessions.id),'2017-01-01 00:00:00') as `date_next_datetime`,ifnull((select tbl_dates.is_reported from tbl_dates where tbl_dates.session_id = tbl_sessions.id),'0') as `date_is_reported` from tbl_clients, tbl_sessions where tbl_sessions.client_id = tbl_clients.id and " + ((bool)btnIdentifyTitle.IsChecked ? " tbl_clients.id = '{0}'" : "tbl_sessions.card_number = '{0}'") +" order by tbl_sessions.creation desc limit 0,1", txtIdentify.Text));
                 if (dt.Rows.Count > 0)
                 {
                     session = new Classes.Clients.Session(
@@ -47,6 +52,7 @@ namespace HClinic.UserControls.AssistantDoctor
                                 dt.Rows[0]["client_address"].ToString(),
                                 DateTime.Parse(dt.Rows[0]["client_birthday"].ToString()),
                                 (Classes.Clients.Client.DiabetesTypes)int.Parse(dt.Rows[0]["client_diabetesType"].ToString()),
+                                (Classes.Clients.Client.Languages)int.Parse(dt.Rows[0]["client_language"].ToString()),
                                 dt.Rows[0]["client_is_active"].ToString() == "True",
                                 dt.Rows[0]["client_is_male"].ToString() == "True",
                                 DateTime.Parse(dt.Rows[0]["client_creation"].ToString()),
@@ -62,16 +68,19 @@ namespace HClinic.UserControls.AssistantDoctor
                             int.Parse(dt.Rows[0]["session_weight"].ToString()),
                             DateTime.Parse(dt.Rows[0]["date_last_datetime"].ToString()),
                             DateTime.Parse(dt.Rows[0]["session_last_datetime"].ToString()),
+                            DateTime.Parse(dt.Rows[0]["date_next_datetime"].ToString()),
+                            dt.Rows[0]["date_is_reported"].ToString() == "1",
                             dt.Rows[0]["session_note"].ToString()
                         );
 
                     lblClientName.Content = session.client.name;
                     lblClientPhone.Content = session.client.phone;
                     lblClientJob.Content = session.client.job;
-                    lblClientGender.Content = session.client.isMale ? "ذكر" : "أنثى";
+                    lblClientGender.Content = session.client.isMale ? "Male" : "Female";
                     lblClientBirthday.Content = session.client.birthday.ToString(App.Constants.DateFormat);
                     lblClientAddress.Content = session.client.address;
-                    lblClientDiabeteType.Content = session.client.DiabetesType;
+                    cmbClientDiabeteType.Text = session.client.DiabetesType.ToString();
+                    
 
                     txtBloodPressure.Text = string.Format("{0}", session.BP); 
                     txtWeight.Text = session.weight.ToString();
@@ -83,7 +92,7 @@ namespace HClinic.UserControls.AssistantDoctor
 
                     lastSessions.Children.Clear();
                     lastSessions.Children.Add(new SessionRow(this));
-                    dt = App.databasceConnection.query(string.Format("select tbl_sessions.*,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.client_id = tbl_sessions.client_id order by tbl_dates.datetime desc limit 0,1),'2017-01-01 00:00:00') as date_last_datetime,getLastSessionDatetime(tbl_sessions.client_id,tbl_sessions.id) as session_last_datetime from tbl_sessions where tbl_sessions.client_id = '{0}' order by tbl_sessions.creation desc", session.client.id));
+                    dt = App.databasceConnection.query(string.Format("select tbl_sessions.*,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.client_id = tbl_sessions.client_id order by tbl_dates.datetime desc limit 0,1),'2017-01-01 00:00:00') as date_last_datetime,getLastSessionDatetime(tbl_sessions.client_id,tbl_sessions.id) as session_last_datetime,ifnull((select tbl_dates.datetime from tbl_dates where tbl_dates.session_id = tbl_sessions.id),'2017-01-01 00:00:00') as `date_next_datetime`,ifnull((select tbl_dates.is_reported from tbl_dates where tbl_dates.session_id = tbl_sessions.id),'0') as `date_is_reported` from tbl_sessions where tbl_sessions.client_id = '{0}' order by tbl_sessions.creation desc", session.client.id));
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         lastSessions.Children.Add(new SessionRow(
@@ -101,6 +110,8 @@ namespace HClinic.UserControls.AssistantDoctor
                                 int.Parse(dt.Rows[i]["weight"].ToString()),
                                 DateTime.Parse(dt.Rows[i]["date_last_datetime"].ToString()),
                                 DateTime.Parse(dt.Rows[i]["session_last_datetime"].ToString()),
+                                DateTime.Parse(dt.Rows[i]["date_next_datetime"].ToString()),
+                                dt.Rows[i]["date_is_reported"].ToString() == "1",
                                 dt.Rows[i]["note"].ToString()
                                 )
                             ));
@@ -115,7 +126,7 @@ namespace HClinic.UserControls.AssistantDoctor
                     lblClientGender.Content = "";
                     lblClientBirthday.Content = "";
                     lblClientAddress.Content = "";
-                    lblClientDiabeteType.Content = "";
+                    cmbClientDiabeteType.Text = "";
                     txtIdentify.Text = "";
                     txtPR.Text = "";
                     txtBloodPressure.Text = "";
@@ -156,7 +167,12 @@ namespace HClinic.UserControls.AssistantDoctor
                 txtWeight.Text,
                 txtNote.Text,
                 txtHbAlC.Text));
-
+            if (session.client.DiabetesType.ToString() != cmbClientDiabeteType.Text)
+            {
+                Classes.Clients.Client.DiabetesTypes DiabetesType;
+                Enum.TryParse<Classes.Clients.Client.DiabetesTypes>(cmbClientDiabeteType.Text, out DiabetesType);
+                App.databasceConnection.query(string.Format("update tbl_clients set diabetesType = '{0}' where tbl_clients.id = '{1}'", (int)DiabetesType, session.client.id));
+            }
             lastSessions.Children.Clear();
             lblClientName.Content = "";
             lblClientPhone.Content = "";
@@ -171,6 +187,8 @@ namespace HClinic.UserControls.AssistantDoctor
             txtRBS.Text = "";
             txtWeight.Text = "";
             session = null;
+            cmbClientDiabeteType.Text = "";
+            lblClientAddress.Content = "";
             txtIdentify.Focus();
         }
 
